@@ -1,0 +1,15 @@
+Os textos deste corpus estão distribuídOs da seguinte forma:
+
+1) pasta "Textos-fonte":
+
+- subpasta "Textos-fonte com origem e título": os textos-fonte completos estão distribuídos em pastas que indicam o jornal de origem e sua seção;
+
+- subpasta "Textos-fonte com título": contém os textos-fonte completos;
+
+- subpasta "Textos-fonte sem título": contém os textos-fonte sem título;
+
+2) pasta "Sumários":
+
+- subpasta "Sumários manuais": contém os sumários dos textos-fonte, feitos pelo profissinal, em arquivos em formato txt. Estes estão diferenciados das subpasta "Sumários manuais marcados": são os sumários dos textos-fonte, feitos pelo profissinal, mas agora com indicação em vermelho das sentenças (ou de segmentos delas) que se relacionam à idéia principal dos textos-fonte, conforme a percepção do profissional;
+
+- subpasta "Extratos ideais automáticos": contém as versões extrativas dos sumários profissinais, geradas automaticamente por meio da medida do cosseno de Salton (1989).

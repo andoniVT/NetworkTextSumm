@@ -1,3 +1,10 @@
+from configuration import corpus_dir
+import codecs
+import unicodedata
+from nltk import word_tokenize , sent_tokenize
+import string
+import xml.etree.ElementTree as ET
+import re
 
 def parameter_extractor(network_type, data):
     parameters = dict()
@@ -48,6 +55,56 @@ def parameter_extractor(network_type, data):
     parameters['intra_edge'] = intra_edge
 
     return parameters
+
+def read_document(file, language='ptg'):
+	document = codecs.open(file, encoding="utf-8", errors='ignore')
+	content = ""
+	for i in document:
+		i = i.rstrip()
+		i = unicodedata.normalize('NFKD', i).encode('ascii', 'ignore')
+		content+=i + " "
+
+	if language == 'ptg':
+		sentences = sent_tokenize(content, language='portuguese')
+	else:
+		sentences = sent_tokenize(content, language='english')
+	return sentences
+
+
+def wordCountString(source):
+    for c in string.punctuation:
+        source =source.replace(c, "")
+    return len(word_tokenize(source))
+
+
+def count_words(file, language):
+	sentences = read_document(file, language)
+	words=0
+	for i in sentences:
+		words+= wordCountString(i)
+	return words
+
+
+def clean_sentences(sentences):
+    result = []
+    for i in sentences:
+        i = i.replace('\n', ' ')
+        result.append(i)
+    return result
+
+def read_document_english(document):
+    data = ""
+    tree = ET.parse(document)
+    root = tree.getroot()
+    for i in root.iter('TEXT'):
+        data+= i.text + " "
+    data = re.sub("\s\s+", " ", data)
+
+    sentences = sent_tokenize(data)
+    sentences = clean_sentences(sentences)
+    return sentences
+
+
 
 
 if __name__ == '__main__':

@@ -48,7 +48,8 @@ class Summarizer(object):
         obj = Loader(language=language, type_summary=type_summary, corpus=corpus_name, size=resumo_size_parameter, mln=mln_type_flag)
         loaded_corpus = obj.load()  # diccionario que tiene como key el nombre del documento o nombre del grupo y como claves los documentos y sus sizes
 
-        print loaded_corpus
+        for i in loaded_corpus.items():
+            print i
 
 
 
@@ -58,8 +59,9 @@ class Summarizer(object):
         inter = 0
         dictionary = dict()
         dictionary['language'] = 'ptg'
-        # dictionary['type'] = ('SDS' , 0)
-        dictionary['type'] = ('MDS', 1)
+        #dictionary['language'] = 'eng'
+        dictionary['type'] = ('SDS' , 0)
+        #dictionary['type'] = ('MDS', 1)
         dictionary['corpus'] = 0
         dictionary['size'] = 'w'
 
