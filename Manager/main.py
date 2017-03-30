@@ -56,11 +56,9 @@ class Summarizer(object):
 
         obj = CorpusConversion(loaded_corpus, language, network_type, mln_type, sw_removal)
         processed_corpus = obj.convert()
-        print processed_corpus
 
-
-
-
+        for i in processed_corpus.items():
+            print i
 
 
 
@@ -101,8 +99,8 @@ class Summarizer(object):
         # ('mln', ['noun', intra, inter]), ('mln', ['tfidf', intra, inter, True, 0, 'dist_cos']), ('mln' , ['d2v', intra, inter, 300, True, 1, 'dist_euc', True])]
 
 
-        dictionary['network'] = ('noun', [])
-        #dictionary['network'] = ('tfidf', [False, -1, 'cos'])
+        #dictionary['network'] = ('noun', [])
+        dictionary['network'] = ('tfidf', [True, -1, 'cos'])
         # dictionary['network'] = ('d2v', [True, 0, 'euc', 100, False])
         #dictionary['network'] = ('mln', ['noun', 0.5, 0.5])
         #dictionary['network'] = ('mln', ['tfidf', True, -1, 'cos', 0.5, 0.5])

@@ -4,7 +4,8 @@ import nltk
 from morphological_analysis import lemma
 from configuration import extras
 from utils import load_data_from_disk
-
+from nltk import word_tokenize
+from  nltk.stem.wordnet import WordNetLemmatizer
 noun_list = []
 
 class CorpusConversion(object):
@@ -36,10 +37,15 @@ class CorpusConversion(object):
             for j in sentences:
                 tp = proccesing(j, only_nouns, self.remove_sw, self.noun_list)
                 value = tp.process()
-                print value
+                if len(value)!=0:
+                    processed_sentences.append(value)
+                    valid_sentences.append(j)
 
+            corpus_data = self.corpus[doc_name]
+            sizes = corpus_data[1] #### ahi difiere el corpus para ptg y el corpus para ingles (el corpus de ingles son 100 o 200)
+            processed_corpus[doc_name] = [valid_sentences, processed_sentences, sizes]
 
-        return ""
+        return processed_corpus
 
 
 class PortugueseProcessing(object):
@@ -50,11 +56,15 @@ class PortugueseProcessing(object):
         self.remove_sw = remove_sw
         self.noun_list = noun_list
 
-    def remove_stop_words(self, text):
+    def remove_unused(self, text): # aqui se decide si se remove o no los stopwords
         text = text.lower()
         for c in string.punctuation:
             text = text.replace(c, "")
         text = ''.join([i for i in text if not i.isdigit()])
+
+        if self.remove_sw == False:
+            return word_tokenize(text)
+
         stopwords = nltk.corpus.stopwords.words('portuguese')
         words = text.split()
         result = []
@@ -77,36 +87,80 @@ class PortugueseProcessing(object):
 
     def process(self):
         pSentence = []
-        if self.remove_nouns:
-            # print "removerrrr nouns"
-
-            procesed = self.remove_stop_words(self.text)
-            procesed = self.lemas(procesed)
+        procesed = self.remove_unused(self.text)
+        procesed = self.lemas(procesed)
+        if self.remove_nouns: # print "removerrrr nouns"
             for i in procesed:
                 if self.noun_list.has_key(i):
                     pSentence.append(i)
-
         else:
+            pSentence = procesed
+            '''
             if self.remove_sw:
-                print "con stopwords removidos"
-            else:
-                print "incluyendo los stopwrods en el procesamiento"
-        return pSentence
-        #procesed = self.remove_stop_words(self.text)
-        #print self.lemas(procesed)
-        #return "procesado(ptg): " + self.text
+                #print "con stopwords removidos"
+                procesed = self.remove_stop_words(self.text)
+                procesed = self.lemas(procesed)
+                pSentence = procesed
 
+            else:
+                #print "incluyendo los stopwrods en el procesamiento"
+                procesed = self.special_removal(self.text)
+                procesed = self.lemas(procesed)
+                pSentence = procesed
+            '''
+        return pSentence
 
 
 class EnglishProcessing(object):
 
-    def __init__(self, text, remove_nouns, remove_sw):
+    def __init__(self, text, remove_nouns, remove_sw, noun_list=None):
         self.text = text
         self.remove_nouns = remove_nouns
         self.remove_sw = remove_sw
 
+
+    def remove_unused(self, text):
+        text = text.lower()
+        for c in string.punctuation:
+            text = text.replace(c, '')
+
+        text = ''.join([i for i in text if not i.isdigit()])
+
+        if self.remove_sw == False:
+            return word_tokenize(text)
+
+        stopwords = nltk.corpus.stopwords.words('english')
+        words = text.split()
+
+        result = []
+
+        for word in words:
+            if not word in stopwords:
+                result.append(word)
+        return result
+
     def process(self):
-        return "procesado(eng): " + self.text
+        pSentence = []
+        tags = ['NN', 'NNP', 'NNPS', 'NNS']
+        verbTags = ['VB', 'VBD', 'VBG', 'VBN', 'VBP', 'VBZ']
+        #tagged = nltk.pos_tag(text)
+        procesed = self.remove_unused(self.text)
+        tagged = nltk.pos_tag(procesed)
+
+        if self.remove_nouns:
+            for i in tagged:
+                if i[1] in tags:
+                    pSentence.append(WordNetLemmatizer().lemmatize(i[0], 'n') + " ")
+        else:
+            for i in tagged:
+                if i[1] in verbTags:
+                    pSentence.append(WordNetLemmatizer().lemmatize(i[0], 'v') + " ")
+                else:
+                    pSentence.append(WordNetLemmatizer().lemmatize(i[0]) + " ")
+
+        return pSentence
+        #return "procesado(eng): " + self.text
+
 
 
 if __name__ == '__main__':

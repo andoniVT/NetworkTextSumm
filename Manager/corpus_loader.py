@@ -123,7 +123,7 @@ class Loader(object):
 
                     name = i + "_" + j
                     name = name[:name.find('_') - 1] + '-' + name[name.find('_') + 1:]
-                    corpus_dictionary[name] = [document_sentences]
+                    corpus_dictionary[name] = [document_sentences, 100]
 
         else:
             print "MDS"
@@ -137,7 +137,7 @@ class Loader(object):
                     allSentences.extend(document_sentences)
 
                 name = i[:len(i) - 1]
-                corpus_dictionary[name] = [allSentences]
+                corpus_dictionary[name] = [allSentences, 200]
 
             print len(corpus_dictionary)
 
