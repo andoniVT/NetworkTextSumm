@@ -1,10 +1,19 @@
-from configuration import corpus_dir
 import codecs
 import unicodedata
 from nltk import word_tokenize , sent_tokenize
 import string
 import xml.etree.ElementTree as ET
 import re
+import cPickle
+
+def write_data_to_disk(file, data):
+    with open(file, 'wb') as fid:
+        cPickle.dump(data, fid)
+
+def load_data_from_disk(file):
+    with open(file, 'rb') as fid:
+        data = cPickle.load(fid)
+    return data
 
 def parameter_extractor(network_type, data):
     parameters = dict()

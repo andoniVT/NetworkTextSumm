@@ -1,6 +1,7 @@
 from corpus_loader import Loader
 from utils import parameter_extractor
-
+from embeddings_generator import Vectorization
+from text_conversion import CorpusConversion
 
 class Summarizer(object):
     def __init__(self, test):
@@ -48,8 +49,39 @@ class Summarizer(object):
         obj = Loader(language=language, type_summary=type_summary, corpus=corpus_name, size=resumo_size_parameter, mln=mln_type_flag)
         loaded_corpus = obj.load()  # diccionario que tiene como key el nombre del documento o nombre del grupo y como claves los documentos y sus sizes
 
-        for i in loaded_corpus.items():
-            print i
+
+        '''
+        1. Pre-procesamiento de los corpus
+        '''
+
+        obj = CorpusConversion(loaded_corpus, language, network_type, mln_type, sw_removal)
+        processed_corpus = obj.convert()
+        print processed_corpus
+
+
+
+
+
+
+
+        '''
+        2. Vectorizacion de los corpus (auxiliar - caso sea requerido)
+
+
+        vectorized_corpus = None
+
+        if network_type == 'noun' or mln_type == 'noun':
+            pass
+        else:
+            obj = Vectorization(processed_corpus, network_type, inference_d2v, size_d2v)
+            vectorized_corpus = obj.calculate()
+
+
+        print vectorized_corpus
+        '''
+
+
+
 
 
 
@@ -69,11 +101,11 @@ class Summarizer(object):
         # ('mln', ['noun', intra, inter]), ('mln', ['tfidf', intra, inter, True, 0, 'dist_cos']), ('mln' , ['d2v', intra, inter, 300, True, 1, 'dist_euc', True])]
 
 
-        # dictionary['network'] = ('noun', [])
-        # dictionary['network'] = ('tfidf', [True, -1, 'cos'])
+        dictionary['network'] = ('noun', [])
+        #dictionary['network'] = ('tfidf', [False, -1, 'cos'])
         # dictionary['network'] = ('d2v', [True, 0, 'euc', 100, False])
-        dictionary['network'] = ('mln', ['noun', 0.5, 0.5])
-        # dictionary['network'] = ('mln', ['tfidf', True, -1, 'cos', 0.5, 0.5])
+        #dictionary['network'] = ('mln', ['noun', 0.5, 0.5])
+        #dictionary['network'] = ('mln', ['tfidf', True, -1, 'cos', 0.5, 0.5])
         # dictionary['network'] = ('mln', ['d2v', True, 0, 'euc', 100, False, 0.5, 0.5])
 
 

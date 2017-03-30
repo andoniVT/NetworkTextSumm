@@ -15,3 +15,8 @@ summaries_dir['temario_v1'] = '../Corpus/Temario2004/Summaries/Summarios/'
 summaries_dir['cstnews_v1'] = '../Corpus/CSTNews/'
 summaries_dir['duc2002'] = '../Corpus/DUC2002/'
 
+
+extras = dict()
+
+extras['MarisaTree'] = '../Extras/lexicon/DELAF_PT.marisa'
+extras['NounsList'] = '../Extras/substantivosDict.pk'
