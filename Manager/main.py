@@ -57,13 +57,14 @@ class Summarizer(object):
         obj = CorpusConversion(loaded_corpus, language, network_type, mln_type, sw_removal)
         processed_corpus = obj.convert()
 
-        for i in processed_corpus.items():
-            print i
+        #for i in processed_corpus.items():
+        #    print i
 
 
 
         '''
         2. Vectorizacion de los corpus (auxiliar - caso sea requerido)
+        '''
 
 
         vectorized_corpus = None
@@ -76,7 +77,12 @@ class Summarizer(object):
 
 
         print vectorized_corpus
+
+
         '''
+        return matutils.cossim(vec_tfidf, vec_tfidf2)  gemsim
+        '''
+
 
 
 
@@ -100,8 +106,8 @@ class Summarizer(object):
 
 
         #dictionary['network'] = ('noun', [])
-        dictionary['network'] = ('tfidf', [True, -1, 'cos'])
-        # dictionary['network'] = ('d2v', [True, 0, 'euc', 100, False])
+        #dictionary['network'] = ('tfidf', [True, -1, 'cos'])
+        dictionary['network'] = ('d2v', [True, 0, 'euc', 100, False])
         #dictionary['network'] = ('mln', ['noun', 0.5, 0.5])
         #dictionary['network'] = ('mln', ['tfidf', True, -1, 'cos', 0.5, 0.5])
         # dictionary['network'] = ('mln', ['d2v', True, 0, 'euc', 100, False, 0.5, 0.5])
