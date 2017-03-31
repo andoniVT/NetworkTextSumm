@@ -2,6 +2,7 @@ from corpus_loader import Loader
 from utils import parameter_extractor
 from embeddings_generator import Vectorization
 from text_conversion import CorpusConversion
+from network import NetworkManager
 
 class Summarizer(object):
     def __init__(self, test):
@@ -88,21 +89,39 @@ class Summarizer(object):
                 obj = Vectorization(processed_corpus, network_type, inference_d2v, size_d2v, processed_auxiliar)
                 vectorized_corpus = obj.calculate()
 
-
+        '''
         for i in vectorized_corpus.items():
             print len(i[1][0])
+        '''
+
+
+
+        '''
+        3. Creacion de la red  y  4. Eliminacion de nodos, limiares
+
+        obj = CNetwork(network_type, mln_type, processed_corpus, vectorized_corpus, distance, inter_edge, intra_edge, limiar_value)
+        networks = obj.generate_networks()
+        print networks
+        '''
+
+        obj = NetworkManager(network_type, mln_type, processed_corpus, vectorized_corpus, distance, inter_edge, intra_edge, limiar_value)
+        complex_networks = obj.create_networks()
+        print complex_networks
+
+        '''
+        for i in complex_networks.items():
+            network = i[1][0]
+            print network.es['weight']
+        '''
 
 
 
 
         '''
         return matutils.cossim(vec_tfidf, vec_tfidf2)  gemsim
+        from scipy import spatial
+        return 1 - spatial.distance.cosine(vec_sentence1, vec_sentence2)
         '''
-
-
-
-
-
 
 
 
@@ -122,8 +141,8 @@ class Summarizer(object):
 
 
         #dictionary['network'] = ('noun', [])
-        #dictionary['network'] = ('tfidf', [True, -1, 'cos'])
-        dictionary['network'] = ('d2v', [True, 0, 'euc', 102, False])
+        dictionary['network'] = ('tfidf', [True, -1, 'cos'])
+        #dictionary['network'] = ('d2v', [True, 0, 'euc', 102, False])
         #dictionary['network'] = ('mln', ['noun', 0.5, 0.5])
         #dictionary['network'] = ('mln', ['tfidf', True, -1, 'cos', 0.5, 0.5])
         # dictionary['network'] = ('mln', ['d2v', True, 0, 'euc', 100, False, 0.5, 0.5])

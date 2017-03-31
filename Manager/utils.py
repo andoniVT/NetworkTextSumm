@@ -118,6 +118,12 @@ def permutate_data(data):
     shuffle(data)
     return data
 
+def has_common_elements(vec, vec2):
+    value = 0
+    for i in vec:
+        if i in vec2:
+            value+=1
+    return value
 
 
 
