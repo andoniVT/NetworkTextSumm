@@ -60,8 +60,6 @@ class Summarizer(object):
         #for i in processed_corpus.items():
         #    print i
 
-
-
         '''
         2. Vectorizacion de los corpus (auxiliar - caso sea requerido)
         '''
@@ -72,11 +70,29 @@ class Summarizer(object):
         if network_type == 'noun' or mln_type == 'noun':
             pass
         else:
-            obj = Vectorization(processed_corpus, network_type, inference_d2v, size_d2v)
-            vectorized_corpus = obj.calculate()
+            '''
+            cargar corpus auxiliar para entrenamiento
+            '''
+            if language == 'eng':
+                obj = Vectorization(processed_corpus, network_type, inference_d2v, size_d2v)
+                vectorized_corpus = obj.calculate()
+            else:
+                print "cargando nuevo"
+                type_summary_inverted = 0
+                if type_summary==0:
+                    type_summary_inverted=1
+                obj = Loader(language=language, type_summary=type_summary_inverted, corpus=corpus_name, size=resumo_size_parameter, mln=mln_type_flag)
+                auxiliar_corpus = obj.load()
+                obj = CorpusConversion(auxiliar_corpus, language, network_type, mln_type, sw_removal)
+                processed_auxiliar = obj.convert()
+                obj = Vectorization(processed_corpus, network_type, inference_d2v, size_d2v, processed_auxiliar)
+                vectorized_corpus = obj.calculate()
 
 
-        print vectorized_corpus
+        for i in vectorized_corpus.items():
+            print len(i[1][0])
+
+
 
 
         '''
@@ -107,7 +123,7 @@ class Summarizer(object):
 
         #dictionary['network'] = ('noun', [])
         #dictionary['network'] = ('tfidf', [True, -1, 'cos'])
-        dictionary['network'] = ('d2v', [True, 0, 'euc', 100, False])
+        dictionary['network'] = ('d2v', [True, 0, 'euc', 102, False])
         #dictionary['network'] = ('mln', ['noun', 0.5, 0.5])
         #dictionary['network'] = ('mln', ['tfidf', True, -1, 'cos', 0.5, 0.5])
         # dictionary['network'] = ('mln', ['d2v', True, 0, 'euc', 100, False, 0.5, 0.5])

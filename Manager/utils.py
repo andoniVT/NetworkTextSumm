@@ -5,6 +5,7 @@ import string
 import xml.etree.ElementTree as ET
 import re
 import cPickle
+from random import shuffle
 
 def write_data_to_disk(file, data):
     with open(file, 'wb') as fid:
@@ -112,6 +113,10 @@ def read_document_english(document):
     sentences = sent_tokenize(data)
     sentences = clean_sentences(sentences)
     return sentences
+
+def permutate_data(data):
+    shuffle(data)
+    return data
 
 
 
