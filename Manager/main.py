@@ -106,7 +106,7 @@ class Summarizer(object):
 
         obj = NetworkManager(network_type, mln_type, processed_corpus, vectorized_corpus, distance, inter_edge, intra_edge, limiar_value)
         complex_networks = obj.create_networks()
-        print complex_networks
+        #print complex_networks
 
         '''
         for i in complex_networks.items():
@@ -117,11 +117,8 @@ class Summarizer(object):
 
 
 
-        '''
-        return matutils.cossim(vec_tfidf, vec_tfidf2)  gemsim
-        from scipy import spatial
-        return 1 - spatial.distance.cosine(vec_sentence1, vec_sentence2)
-        '''
+
+
 
 
 
@@ -141,8 +138,8 @@ class Summarizer(object):
 
 
         #dictionary['network'] = ('noun', [])
-        dictionary['network'] = ('tfidf', [True, -1, 'cos'])
-        #dictionary['network'] = ('d2v', [True, 0, 'euc', 102, False])
+        #dictionary['network'] = ('tfidf', [True, -1, 'cos'])
+        dictionary['network'] = ('d2v', [True, 3, 'cos', 300, False])
         #dictionary['network'] = ('mln', ['noun', 0.5, 0.5])
         #dictionary['network'] = ('mln', ['tfidf', True, -1, 'cos', 0.5, 0.5])
         # dictionary['network'] = ('mln', ['d2v', True, 0, 'euc', 100, False, 0.5, 0.5])

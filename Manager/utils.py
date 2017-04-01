@@ -6,6 +6,9 @@ import xml.etree.ElementTree as ET
 import re
 import cPickle
 from random import shuffle
+from collections import Counter
+from gensim import matutils
+from scipy import spatial
 
 def write_data_to_disk(file, data):
     with open(file, 'wb') as fid:
@@ -125,6 +128,32 @@ def has_common_elements(vec, vec2):
             value+=1
     return value
 
+
+def cosineSimilarity(sentence1, sentence2):
+   a_vals = Counter(sentence1)
+   b_vals = Counter(sentence2)
+   words = list(set(a_vals) | set(b_vals))
+   a_vect = [a_vals.get(word, 0) for word in words]
+   b_vect = [b_vals.get(word, 0) for word in words]
+   len_a = sum(av * av for av in a_vect) ** 0.5
+   len_b = sum(bv * bv for bv in b_vect) ** 0.5
+   dot = sum(av * bv for av, bv in zip(a_vect, b_vect))
+   cosine = dot / (len_a * len_b)
+   return cosine
+
+'''
+        return matutils.cossim(vec_tfidf, vec_tfidf2)  gemsim
+        from scipy import spatial
+        return 1 - spatial.distance.cosine(vec_sentence1, vec_sentence2)  doc2vec
+        '''
+
+def calculate_similarity(vec_sentence1 , vec_sentence2, network_type, distance_method):
+    if distance_method=='euc':
+        return ['falta implementar']
+    if network_type=='tfidf':
+        return matutils.cossim(vec_sentence1, vec_sentence2)
+    if network_type=='d2v':
+        return 1 - spatial.distance.cosine(vec_sentence1, vec_sentence2)
 
 
 if __name__ == '__main__':
