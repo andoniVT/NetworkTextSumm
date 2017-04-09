@@ -1,6 +1,6 @@
 import igraph
 from igraph import *
-from utils import has_common_elements, cosineSimilarity, calculate_similarity
+from utils import has_common_elements, cosineSimilarity, calculate_similarity, reverseSortList, sortList, average
 
 class NetworkManager(object):
 
@@ -166,47 +166,139 @@ class CNMeasures(object):
     def __init__(self, network):
         self.network = network
 
-    def degree(self):
-        pass
+    def degree(self, paremeters=None):
+        print "measuring degree"
+        graph_degree = self.network.degree()
+        graph_stg = self.network.strength(weights=self.network.es['weight'])
+        ranked_by_degree = reverseSortList(graph_degree)
+        ranked_by_stg = reverseSortList(graph_stg)
+        print ranked_by_degree
+        print ranked_by_stg
+        return [ranked_by_degree, ranked_by_stg]
 
-    def shortest_path(self):
-        pass
+    def shortest_path(self, paremeters=None):
+        print "measuring sp" # falta basada en pesos, hay que modificar
+        measure = []
+        network_size = self.network.vcount()
+        for i in range(network_size):
+            lenghts = self.network.shortest_paths(i)[0]
+            sp = average(lenghts)
+            measure.append(sp)
+        ranked_by_sp = sortList(measure)
+        print ranked_by_sp
 
-    def page_rank(self):
-        pass
 
-    def betweenness(self):
-        pass
+    def page_rank(self, paremeters=None):
+        print "measuring pr"
 
-    def clustering_coefficient(self):
-        pass
+    def betweenness(self, paremeters=None):
+        print "measuring btw"
 
-    def absortion_time(self):
-        pass
+    def clustering_coefficient(self, paremeters=None):
+        print "measuring cc"
+
+    def absortion_time(self, paremeters=None):
+        print "measuring at"
 
     '''
     type = backbone / merged
     order = greater / less
     '''
-    def symmetry(self, type, order, h):
-        pass
+    #def symmetry(self, type, order, h):
+    def symmetry(self, parameters):
+        print "measuring symetry"
+        if len(parameters)!=0:
+            order = parameters[0]
+            type = parameters[1]
+            h = parameters[2]
+            print "type: " , type
+            print "order: " , order
+            print "h:" , h
+        else:
+            print "todas las simetrias"
 
     def accessibility(self, h):
-        pass
+        print "measuring accesibility"
+        print "h:" , h
 
-    def generalized_accessibility(self, h):
-        pass
+    def generalized_accessibility(self):
+        print "measuring generalized accesibility"
 
-    def concentrics(self, type, h):
-        pass
+    #def concentrics(self, type, h):
+    def concentrics(self, parameters):
+        print "measuring concentrics"
+        if len(parameters)!=0:
+            type = parameters[0]
+            h = parameters[1]
+            print "type", type
+            print "h", h
+        else:
+            print "todas las concentricas con todas las h, o solo un subconjunto de las mejores"
+
+
+    def all_measures(self, parameters=None):
+        print "measuring all"
+        '''
+        [self.degree, self.shortest_path, self.page_rank, self.betweenness, self.clustering_coefficient,
+         self.concentrics, self.symmetry, self.accessibility, self.generalized_accessibility,
+         self.absortion_time]
+         '''
+
+    def traditional_measures(self, parameters=None):
+        print "measuring traditional measures"
+        '''
+        [self.degree, self.shortest_path, self.page_rank, self.betweenness, self.clustering_coefficient]
+        '''
 
 
 
+    def manage_measures(self):
+        dictionary = dict()
+        dictionary['dg'] = self.degree
+        dictionary['sp'] = self.shortest_path
+        dictionary['pr'] = self.page_rank
+        dictionary['btw'] = self.betweenness
+        dictionary['cc'] = self.clustering_coefficient
+        dictionary['at'] = self.absortion_time
+        dictionary['gaccs'] = self.generalized_accessibility
+        dictionary['sym'] = self.symmetry
+        dictionary['accs'] = self.accessibility
+        dictionary['ccts'] = self.concentrics # con parametrossss
+
+        dictionary['trad'] = self.traditional_measures
+        dictionary['*'] = self.all_measures
+
+
+        return dictionary
 
 
 
+class NodeManager(object):
+
+    def __init__(self, networks, measures):
+        self.networks = networks
+        self.measures = measures
+
+    def ranking(self):
+        actual_network = self.networks['op94ag07-a'][0]
+        #print actual_network
+        obj = CNMeasures(actual_network)
+        dictionary = obj.manage_measures()
+        #print self.measures
+        #print dictionary
+
+        for i in self.measures:
+            measure_parameter =  i.split('_')
+            measure = measure_parameter[0]
+            parameters = measure_parameter[1:]
+
+            dictionary[measure](parameters)
 
 
 
+        '''
+        *
+
+        '''
 
 

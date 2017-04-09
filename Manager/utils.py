@@ -156,6 +156,27 @@ def calculate_similarity(vec_sentence1 , vec_sentence2, network_type, distance_m
         return 1 - spatial.distance.cosine(vec_sentence1, vec_sentence2)
 
 
+def sortList(vector):
+    return [i[0] for i in sorted(enumerate(vector), key=lambda x:x[1])]
+
+def reverseSortList(vector):
+    return [i[0] for i in sorted(enumerate(vector), key=lambda x:x[1], reverse=True)]
+
+
+def average(lenghts):
+    result = 0.0
+    N = len(lenghts)
+    for i in lenghts:
+        if i == float('inf'):
+            N-=1
+        else:
+            result+=i
+    if result == 0:
+        return 99999
+    else:
+        return result/N
+
+
 if __name__ == '__main__':
 
     pass

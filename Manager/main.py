@@ -2,7 +2,7 @@ from corpus_loader import Loader
 from utils import parameter_extractor
 from embeddings_generator import Vectorization
 from text_conversion import CorpusConversion
-from network import NetworkManager
+from network import NetworkManager , NodeManager
 
 class Summarizer(object):
     def __init__(self, test):
@@ -111,8 +111,19 @@ class Summarizer(object):
         '''
         for i in complex_networks.items():
             network = i[1][0]
-            print network.es['weight']
+            #print network.es['weight']
+            print network
         '''
+
+        '''
+        5. Node weighting and node ranking
+        '''
+
+
+        obj = NodeManager(complex_networks, network_measures)
+        obj.ranking()
+        #documentRankings = obj.ranking()
+        #print documentRankings
 
 
 
@@ -138,15 +149,16 @@ class Summarizer(object):
 
 
         #dictionary['network'] = ('noun', [])
-        #dictionary['network'] = ('tfidf', [True, -1, 'cos'])
-        dictionary['network'] = ('d2v', [True, 3, 'cos', 300, False])
+        dictionary['network'] = ('tfidf', [True, -1, 'cos'])
+        #dictionary['network'] = ('d2v', [True, 3, 'cos', 300, False])
         #dictionary['network'] = ('mln', ['noun', 0.5, 0.5])
         #dictionary['network'] = ('mln', ['tfidf', True, -1, 'cos', 0.5, 0.5])
         # dictionary['network'] = ('mln', ['d2v', True, 0, 'euc', 100, False, 0.5, 0.5])
 
 
 
-        dictionary['measures'] = ['dg', 'st', 'acc_h2']  # postions pode ser
+        #dictionary['measures'] = ['dg', 'pr', 'accs_h2' , 'ccts_2_h2', 'sym_h_b_h3']  # postions pode ser
+        dictionary['measures'] = ['dg', 'sp', 'accs_h2', 'ccts', 'sym']  # postions pode ser
 
         dictionary['selection'] = 1  # simple
         # dictionary['selection'] = 2 # votacion
