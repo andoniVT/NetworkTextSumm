@@ -9,6 +9,8 @@ from random import shuffle
 from collections import Counter
 from gensim import matutils
 from scipy import spatial
+from configuration import extras
+from igraph import *
 
 def write_data_to_disk(file, data):
     with open(file, 'wb') as fid:
@@ -175,6 +177,40 @@ def average(lenghts):
         return 99999
     else:
         return result/N
+
+'''
+['dg', 'gaccs', 'accs_h2', 'ccts', 'sym']
+['dg', 'pr', 'accs_h2', 'ccts_2_h2', 'sym_h_b_h3']
+'''
+
+def manage_vector_measures(measures):
+    print "managing vector measures"
+    parameter = 'ccts'
+    allConcentrics = parameter in measures
+    if allConcentrics:
+        print "todasssss"
+        return measures
+
+    others = []
+    concentrics = ""
+
+    for i in measures:
+        if i.find(parameter)!=-1:
+            i = i[i.find('_')+1:]
+            concentrics+=i + "_"
+        else:
+            others.append(i)
+    concentrics = concentrics[:-1]
+    concentrics = parameter + '_' + concentrics
+    others.append(concentrics)
+    return others
+
+def generate_net(graph):
+    location = extras['NetAux']
+    graph.write_pajek(location)
+    #print location
+
+
 
 
 if __name__ == '__main__':

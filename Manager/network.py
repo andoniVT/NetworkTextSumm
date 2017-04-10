@@ -1,6 +1,9 @@
 import igraph
 from igraph import *
 from utils import has_common_elements, cosineSimilarity, calculate_similarity, reverseSortList, sortList, average
+import utils
+
+import hierarchical
 
 class NetworkManager(object):
 
@@ -172,8 +175,8 @@ class CNMeasures(object):
         graph_stg = self.network.strength(weights=self.network.es['weight'])
         ranked_by_degree = reverseSortList(graph_degree)
         ranked_by_stg = reverseSortList(graph_stg)
-        print ranked_by_degree
-        print ranked_by_stg
+        #print ranked_by_degree
+        #print ranked_by_stg
         return [ranked_by_degree, ranked_by_stg]
 
     def shortest_path(self, paremeters=None):
@@ -185,17 +188,44 @@ class CNMeasures(object):
             sp = average(lenghts)
             measure.append(sp)
         ranked_by_sp = sortList(measure)
-        print ranked_by_sp
+        ranked_by_sp_w = 'hay que modificar los pesoss'
+        return [ranked_by_sp]
+        #print ranked_by_sp
 
 
     def page_rank(self, paremeters=None):
         print "measuring pr"
+        graph_pr = self.network.pagerank()
+        graph_pr_w = self.network.pagerank(weights=self.network.es['weight'])
+        ranked_by_pr = reverseSortList(graph_pr)
+        ranked_by_pr_w = reverseSortList(graph_pr_w)
+        #print ranked_by_pr
+        #print ranked_by_pr_w
+        return [ranked_by_pr, ranked_by_pr_w]
+
 
     def betweenness(self, paremeters=None):
         print "measuring btw"
+        graph_btw = self.network.betweenness()
+        graph_btw_w = self.network.betweenness(weights=self.network.es['weight'])
+        ranked_by_btw = reverseSortList(graph_btw)
+        ranked_by_btw_w = reverseSortList(graph_btw_w)
+        #print ranked_by_btw
+        #print ranked_by_btw_w
+        return [ranked_by_btw , ranked_by_btw_w]
+
 
     def clustering_coefficient(self, paremeters=None):
         print "measuring cc"
+        graph__cc = self.network.transitivity_local_undirected()
+        graph__cc_w = self.network.transitivity_local_undirected(weights=self.network.es['weight'])
+        ranked_by_cc = reverseSortList(graph__cc)
+        ranked_by_cc_w = reverseSortList(graph__cc_w)
+        #print ranked_by_cc
+        #print ranked_by_cc_w
+        return [ranked_by_cc, ranked_by_cc_w]
+
+
 
     def absortion_time(self, paremeters=None):
         print "measuring at"
@@ -221,19 +251,28 @@ class CNMeasures(object):
         print "measuring accesibility"
         print "h:" , h
 
-    def generalized_accessibility(self):
+    def generalized_accessibility(self, parameters=None):
         print "measuring generalized accesibility"
+        obj = hierarchical.GeneralizedAccesibility(self.network)
+        sorted_by_generalized = obj.sort_by_accesibility()
+        print sorted_by_generalized
+        return sorted_by_generalized
 
     #def concentrics(self, type, h):
     def concentrics(self, parameters):
         print "measuring concentrics"
+        obj = hierarchical.Concentric(self.network)
+
+
+
         if len(parameters)!=0:
             type = parameters[0]
             h = parameters[1]
-            print "type", type
-            print "h", h
+            #print "type", type
+            #print "h", h
+            print "algunas measures" , parameters
         else:
-            print "todas las concentricas con todas las h, o solo un subconjunto de las mejores"
+            print "todas las concentricas con todas las h, o solo un subconjunto de las mejores, devuelve las 16"
 
 
     def all_measures(self, parameters=None):
@@ -246,6 +285,9 @@ class CNMeasures(object):
 
     def traditional_measures(self, parameters=None):
         print "measuring traditional measures"
+        sorted_by_degree = self.degree()
+        #sorted_by_shortest_path
+        #print sorted_by_degree
         '''
         [self.degree, self.shortest_path, self.page_rank, self.betweenness, self.clustering_coefficient]
         '''
@@ -286,6 +328,9 @@ class NodeManager(object):
         dictionary = obj.manage_measures()
         #print self.measures
         #print dictionary
+
+        self.measures = utils.manage_vector_measures(self.measures)
+        print self.measures
 
         for i in self.measures:
             measure_parameter =  i.split('_')
