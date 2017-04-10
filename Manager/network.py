@@ -258,21 +258,25 @@ class CNMeasures(object):
         print sorted_by_generalized
         return sorted_by_generalized
 
-    #def concentrics(self, type, h):
     def concentrics(self, parameters):
         print "measuring concentrics"
+        results = []
         obj = hierarchical.Concentric(self.network)
 
-
-
         if len(parameters)!=0:
-            type = parameters[0]
-            h = parameters[1]
-            #print "type", type
-            #print "h", h
             print "algunas measures" , parameters
+            for i in range(0, len(parameters), 2):
+                type = int(parameters[i])-1
+                h = int(parameters[i+1][1])
+                sorted_by_ccts = obj.sort_by_concentric(type, h)
+                results.append(sorted_by_ccts)
         else:
             print "todas las concentricas con todas las h, o solo un subconjunto de las mejores, devuelve las 16"
+            for h in range(2,4):
+                for type in range(8):
+                    sorted_by_ccts = obj.sort_by_concentric(type, h)
+                    results.append(sorted_by_ccts)
+        return results
 
 
     def all_measures(self, parameters=None):
@@ -291,8 +295,6 @@ class CNMeasures(object):
         '''
         [self.degree, self.shortest_path, self.page_rank, self.betweenness, self.clustering_coefficient]
         '''
-
-
 
     def manage_measures(self):
         dictionary = dict()

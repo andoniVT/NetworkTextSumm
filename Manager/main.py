@@ -159,7 +159,8 @@ class Summarizer(object):
 
         #dictionary['measures'] = ['dg', 'pr', 'accs_h2' , 'ccts_2_h2', 'ccts_4_h3' , 'sym_h_b_h3']  # postions pode ser
         #dictionary['measures'] = ['dg', 'gaccs', 'accs_h2', 'ccts', 'sym']  # postions pode ser
-        dictionary['measures'] = ['dg', 'ccts_2_h2', 'ccts_4_h3']
+        #dictionary['measures'] = ['dg', 'ccts_2_h2', 'ccts_4_h3', 'ccts_7_h2']
+        dictionary['measures'] = ['dg', 'ccts']
 
         dictionary['selection'] = 1  # simple
         # dictionary['selection'] = 2 # votacion

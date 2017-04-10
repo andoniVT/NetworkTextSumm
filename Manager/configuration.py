@@ -21,4 +21,4 @@ extras = dict()
 extras['MarisaTree'] = '../Extras/lexicon/DELAF_PT.marisa'
 extras['NounsList'] = '../Extras/substantivosDict.pk'
 extras['NetAux'] = '../Extras/auxiliar.NET'
-extras['FolderAux'] = '../Extras/concentrics'
+extras['FolderAux'] = '../Extras/concentrics/'

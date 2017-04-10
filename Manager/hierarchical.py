@@ -1,6 +1,7 @@
 import numpy as np
 import utils
 from configuration import extras
+from utils import execute_concentric , read_dat_files, reverseSortList
 
 class Concentric(object):
 
@@ -15,7 +16,17 @@ class Concentric(object):
         output = extras['FolderAux']
         command2 = self.location + " " + output + " false false"
         execute_command = command + command2
-        print execute_command
+        execute_concentric(execute_command)
+
+    def sort_by_concentric(self, type, h):
+        results = read_dat_files()
+        measure_type = results[type]
+        if h == 2:
+            measure = measure_type[0]
+        else:
+            measure = measure_type[1]
+        return reverseSortList(measure)
+
 
 
 

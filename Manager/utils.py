@@ -11,6 +11,8 @@ from gensim import matutils
 from scipy import spatial
 from configuration import extras
 from igraph import *
+from subprocess import call
+
 
 def write_data_to_disk(file, data):
     with open(file, 'wb') as fid:
@@ -210,6 +212,44 @@ def generate_net(graph):
     graph.write_pajek(location)
     #print location
 
+
+def execute_concentric(command):
+    # tener cuidado,, single ok ,, multi noseeeee
+    print command
+    sub_espace = command[command.find('..'):]
+    sub_espace = sub_espace[:sub_espace.rfind('..') - 1]
+    first_part = command[:command.find('..') - 1]
+    second_part = command[command.rfind('..'):]
+    values = first_part.split(' ')
+    values.append(sub_espace)
+    values.extend(second_part.split(' '))
+    call(values)
+
+def  read_dat_file(file):
+    h2 = []
+    h3 = []
+    file = open(file)
+    for i in file:
+        i = i.rstrip("\n")
+        values = i.split(' ')
+        values = values[:len(values)-1]
+        if 2 < len(values):
+            h2.append(float(values[2]))
+        else:
+            h2.append(0.0)
+        if 3 < len(values):
+            h3.append(float(values[3]))
+        else:
+            h3.append(0.0)
+    return [h2, h3]
+
+def read_dat_files():
+    base = extras['FolderAux']
+    result = []
+    for i in range(8):
+        file =  base + 'OutNet_hier' + str(i+1) + '.dat'
+        result.append(read_dat_file(file))
+    return result
 
 
 
