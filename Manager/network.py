@@ -1,6 +1,7 @@
 import igraph
 from igraph import *
 from utils import has_common_elements, cosineSimilarity, calculate_similarity, reverseSortList, sortList, average
+from utils import inverse_weights , find_term
 import utils
 
 import hierarchical
@@ -182,15 +183,31 @@ class CNMeasures(object):
     def shortest_path(self, paremeters=None):
         print "measuring sp" # falta basada en pesos, hay que modificar
         measure = []
+        measure2 = []
+        measure3 = []
         network_size = self.network.vcount()
+        new_weights = inverse_weights(self.network.es['weight'])
+        weight = new_weights[0]
+        weight2 = new_weights[1]
+
         for i in range(network_size):
             lenghts = self.network.shortest_paths(i)[0]
+            lenghts2 = self.network.shortest_paths(i, weights=weight)[0]
+            lenghts3 = self.network.shortest_paths(i, weights=weight2)[0]
             sp = average(lenghts)
+            sp2= average(lenghts2)
+            sp3 = average(lenghts3)
             measure.append(sp)
+            measure2.append(sp2)
+            measure3.append(sp3)
         ranked_by_sp = sortList(measure)
-        ranked_by_sp_w = 'hay que modificar los pesoss'
-        return [ranked_by_sp]
+        ranked_by_sp_w = sortList(measure2)
+        ranked_by_sp_w2 = sortList(measure3)
         #print ranked_by_sp
+        #print ranked_by_sp_w
+        #print ranked_by_sp_w2
+        return [ranked_by_sp, ranked_by_sp_w, ranked_by_sp_w2]
+
 
 
     def page_rank(self, paremeters=None):
@@ -237,26 +254,39 @@ class CNMeasures(object):
     #def symmetry(self, type, order, h):
     def symmetry(self, parameters):
         print "measuring symetry"
+        obj = hierarchical.Symmetry(self.network)
+        results = []
+        # order : h - l
+        # type: b - m
+        # h: 2-3
+
         if len(parameters)!=0:
-            order = parameters[0]
-            type = parameters[1]
-            h = parameters[2]
-            print "type: " , type
-            print "order: " , order
-            print "h:" , h
+            #order = parameters[0]
+            #type = parameters[1]
+            #h = parameters[2]
+            #print "order: ", order
+            #print "type: " , type
+            #print "h:" , h
+            print "algnunas measures" , parameters
+            for i in range(0, len(parameters), 3):
+                order = parameters[i]
+                type = parameters[i+1]
+                h = parameters[i+2][1]
+                sorted_by_syms = obj.sort_by_symmetry(order, type, h)
+                results.append(sorted_by_syms)
         else:
             print "todas las simetrias"
-
-    def accessibility(self, h):
-        print "measuring accesibility"
-        print "h:" , h
-
-    def generalized_accessibility(self, parameters=None):
-        print "measuring generalized accesibility"
-        obj = hierarchical.GeneralizedAccesibility(self.network)
-        sorted_by_generalized = obj.sort_by_accesibility()
-        print sorted_by_generalized
-        return sorted_by_generalized
+            sorted_h_b_h2 = obj.sort_by_symmetry('h', 'b', '2')
+            sorted_h_b_h3 = obj.sort_by_symmetry('h', 'b', '3')
+            sorted_h_m_h2 = obj.sort_by_symmetry('h', 'm', '2')
+            sorted_h_m_h3 = obj.sort_by_symmetry('h', 'm', '3')
+            sorted_l_b_h2 = obj.sort_by_symmetry('l', 'b', '2')
+            sorted_l_b_h3 = obj.sort_by_symmetry('l', 'b', '3')
+            sorted_l_m_h2 = obj.sort_by_symmetry('l', 'm', '2')
+            sorted_l_m_h3 = obj.sort_by_symmetry('l', 'm', '3')
+            results = [sorted_h_b_h2, sorted_h_b_h3, sorted_h_m_h2, sorted_h_m_h3, sorted_l_b_h2,
+                       sorted_l_b_h3, sorted_l_m_h2, sorted_l_m_h3]
+        return results
 
     def concentrics(self, parameters):
         print "measuring concentrics"
@@ -277,6 +307,17 @@ class CNMeasures(object):
                     sorted_by_ccts = obj.sort_by_concentric(type, h)
                     results.append(sorted_by_ccts)
         return results
+
+    def accessibility(self, h):
+        print "measuring accesibility"
+        print "h:" , h
+
+    def generalized_accessibility(self, parameters=None):
+        print "measuring generalized accesibility"
+        obj = hierarchical.GeneralizedAccesibility(self.network)
+        sorted_by_generalized = obj.sort_by_accesibility()
+        print sorted_by_generalized
+        return sorted_by_generalized
 
 
     def all_measures(self, parameters=None):
@@ -331,8 +372,14 @@ class NodeManager(object):
         #print self.measures
         #print dictionary
 
-        self.measures = utils.manage_vector_measures(self.measures)
-        print self.measures
+        if find_term(self.measures, 'ccts'):
+            self.measures = utils.manage_vector(self.measures, 'ccts')
+
+        if find_term(self.measures, 'sym'):
+            self.measures = utils.manage_vector(self.measures, 'sym')
+
+
+        print "haberrrr" , self.measures
 
         for i in self.measures:
             measure_parameter =  i.split('_')

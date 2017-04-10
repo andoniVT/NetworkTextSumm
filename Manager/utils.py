@@ -163,6 +163,10 @@ def calculate_similarity(vec_sentence1 , vec_sentence2, network_type, distance_m
 def sortList(vector):
     return [i[0] for i in sorted(enumerate(vector), key=lambda x:x[1])]
 
+
+def specialSortList(vector):
+    return vector[::-1]
+
 def reverseSortList(vector):
     return [i[0] for i in sorted(enumerate(vector), key=lambda x:x[1], reverse=True)]
 
@@ -185,9 +189,18 @@ def average(lenghts):
 ['dg', 'pr', 'accs_h2', 'ccts_2_h2', 'sym_h_b_h3']
 '''
 
-def manage_vector_measures(measures):
+
+def find_term(measures, parameter):
+    for i in measures:
+        if i.find(parameter)!=-1:
+            return True
+    return False
+
+
+
+def manage_vector(measures, parameter):
     print "managing vector measures"
-    parameter = 'ccts'
+    #parameter = 'ccts'
     allConcentrics = parameter in measures
     if allConcentrics:
         print "todasssss"
@@ -207,10 +220,25 @@ def manage_vector_measures(measures):
     others.append(concentrics)
     return others
 
+def save_file(data, file_name):
+	with codecs.open(file_name , "w" , "utf-8" , errors='replace') as temp:
+		temp.write(data)
+
 def generate_net(graph):
     location = extras['NetAux']
     graph.write_pajek(location)
     #print location
+
+
+def generate_xnet(graph):
+    result = "#vertices " + str(graph.vcount()) + " nonweighted \n"
+    result = result + "#edges nonweighted undirected \n"
+    lista = graph.get_edgelist()
+    for i in lista:
+        edge = str(i[0]) + " " + str(i[1]) + "\n"
+        result = result + edge
+    save_file(result, extras['XNetAux'])
+
 
 
 def execute_concentric(command):
@@ -224,6 +252,19 @@ def execute_concentric(command):
     values.append(sub_espace)
     values.extend(second_part.split(' '))
     call(values)
+
+def execute_symmetry(command):
+    # os.system(command)  # cuando es singleeeeeeeeeeeeeeeee
+
+    sub_espace = command[command.find('..'):]
+    sub_espace = sub_espace[:sub_espace.rfind('..')-1]
+    first_part = command[:command.find('..')-1]
+    second_part = command[command.rfind('..'):]
+    values = first_part.split(' ')
+    values.append(sub_espace)
+    values.append(second_part)
+    call(values)
+
 
 def  read_dat_file(file):
     h2 = []
@@ -252,7 +293,52 @@ def read_dat_files():
     return result
 
 
+def read_csv_file():
+    base = extras['CSVAux']
+    file = open(base, 'r')
+    aux=0
+    backbone_h2 = []
+    merged_h2 = []
+    backbone_h3 = []
+    merged_h3 = []
+    for i in file:
+        i = i.rstrip("\n")
+        i = " ".join(i.split())
+        if aux!=0:
+            values = i.split(" ")
+            backbone_h2.append(float(values[0]))
+            merged_h2.append(float(values[1]))
+            backbone_h3.append(float(values[2]))
+            merged_h3.append(float(values[3]))
+        aux+=1
+    return [[backbone_h2, backbone_h3] , [merged_h2,  merged_h3]]
+
+
+def inverse_weights(weights):
+    nuevo = []
+    nuevo2 = []
+    maximo = max(weights)
+    for i in weights:
+        if i==0:
+            nuevo.append(0)
+            nuevo2.append(0)
+        else:
+            nuevo.append(maximo-i+1)
+            nuevo2.append(1/float(i))
+
+    return [nuevo, nuevo2]
+
+
+
+
 
 if __name__ == '__main__':
 
-    pass
+    haber = [0, 5, 8, 15, 19, 21, 23, 11, 7, 1, 12, 24, 4, 10, 9, 17, 6, 14, 22, 16, 18, 3, 20, 2, 13]
+    #haber2 = [13, 2, 20, 3, 18, 16, 22, 14, 6, 17, 9, 10, 4, 24, 12, 1, 7, 11, 0, 5, 8, 15, 19, 21, 23]
+    print specialSortList(haber)
+
+
+
+
+

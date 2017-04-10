@@ -1,7 +1,7 @@
 import numpy as np
 import utils
 from configuration import extras
-from utils import execute_concentric , read_dat_files, reverseSortList
+from utils import execute_concentric , read_dat_files, reverseSortList, execute_symmetry, read_csv_file, sortList, specialSortList
 
 class Concentric(object):
 
@@ -16,6 +16,7 @@ class Concentric(object):
         output = extras['FolderAux']
         command2 = self.location + " " + output + " false false"
         execute_command = command + command2
+        print execute_command
         execute_concentric(execute_command)
 
     def sort_by_concentric(self, type, h):
@@ -32,14 +33,55 @@ class Concentric(object):
 
 class Symmetry(object):
 
-    def __init__(self):
-        pass
+    def __init__(self, graph):
+        self.graph = graph
+        utils.generate_xnet(self.graph)  # no paso la locacion porque por defecto se guardara en extras
+        self.location = extras['XNetAux']
+        self.generate_measures()
+
+    def generate_measures(self):
+        command = "./CVSymmetry.exe -c -M -l 3 " + self.location + " " + extras['CSVAux']
+        print command
+        execute_symmetry(command)
+
+    def sort_by_symmetry(self, order, type, h):
+        #order : h - l
+        #type: b - m
+        #h: 2-3
+        if type == 'b':
+            nType = 0
+        else:
+            nType = 1
+        if h=='2':
+            nH = 0
+        else:
+            nH = 1
+
+        symmetries = read_csv_file()
+        #[[backbone_h2, backbone_h3] , [merged_h2,  merged_h3]]
+        measure = symmetries[nType][nH]
+
+        the_high = reverseSortList(measure)
+
+        if order == 'h':
+            return the_high
+        else:
+            return specialSortList(the_high)
+            #return sortList(measure)
+
 
 
 class Accessibility(object):
 
-    def __init__(self):
-        pass
+    def __init__(self, graph):
+        self.graph = graph
+        utils.generate_xnet(self.graph)  # no paso la locacion porque por defecto se guardara en extras
+        self.location = extras['XNetAux']
+
+    def sort_by_accessibility(self, h):
+        command = "./CVAccessibility -l " + h + " " + self.graph
+
+
 
 
 class GeneralizedAccesibility(object):
