@@ -2,27 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d1670ea-0095-471a-9959-e5c303d54b2c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Manager/summarization.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Manager/validation.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Extras/auxiliar.NET" afterPath="$PROJECT_DIR$/Extras/auxiliar.NET" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Extras/auxiliarX.xnet" afterPath="$PROJECT_DIR$/Extras/auxiliarX.xnet" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Extras/auxiliar_symmetry.csv" afterPath="$PROJECT_DIR$/Extras/auxiliar_symmetry.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Extras/concentrics/OutNet.net" afterPath="$PROJECT_DIR$/Extras/concentrics/OutNet.net" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Extras/concentrics/OutNet_MEANS.mean" afterPath="$PROJECT_DIR$/Extras/concentrics/OutNet_MEANS.mean" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Extras/concentrics/OutNet_SUMMARY.txt" afterPath="$PROJECT_DIR$/Extras/concentrics/OutNet_SUMMARY.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Extras/concentrics/OutNet_hier1.dat" afterPath="$PROJECT_DIR$/Extras/concentrics/OutNet_hier1.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Extras/concentrics/OutNet_hier2.dat" afterPath="$PROJECT_DIR$/Extras/concentrics/OutNet_hier2.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Extras/concentrics/OutNet_hier3.dat" afterPath="$PROJECT_DIR$/Extras/concentrics/OutNet_hier3.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Extras/concentrics/OutNet_hier4.dat" afterPath="$PROJECT_DIR$/Extras/concentrics/OutNet_hier4.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Extras/concentrics/OutNet_hier5.dat" afterPath="$PROJECT_DIR$/Extras/concentrics/OutNet_hier5.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Extras/concentrics/OutNet_hier6.dat" afterPath="$PROJECT_DIR$/Extras/concentrics/OutNet_hier6.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Extras/concentrics/OutNet_hier7.dat" afterPath="$PROJECT_DIR$/Extras/concentrics/OutNet_hier7.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Extras/concentrics/OutNet_hier8.dat" afterPath="$PROJECT_DIR$/Extras/concentrics/OutNet_hier8.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/hierarchical.py" afterPath="$PROJECT_DIR$/Manager/hierarchical.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/main.py" afterPath="$PROJECT_DIR$/Manager/main.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/network.py" afterPath="$PROJECT_DIR$/Manager/network.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/utils.py" afterPath="$PROJECT_DIR$/Manager/utils.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/configuration.py" afterPath="$PROJECT_DIR$/Manager/configuration.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -40,8 +20,8 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Manager/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="183" column="8" lean-forward="false" selection-start-line="183" selection-start-column="8" selection-end-line="183" selection-end-column="8" />
+            <state relative-caret-position="75">
+              <caret line="65" column="8" lean-forward="true" selection-start-line="65" selection-start-column="8" selection-end-line="65" selection-end-column="8" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -52,18 +32,18 @@
       <file leaf-file-name="summarization.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Manager/summarization.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+            <state relative-caret-position="150">
+              <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="validation.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="validation.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Manager/validation.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="15">
-              <caret line="1" column="12" lean-forward="false" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
+              <caret line="1" column="13" lean-forward="true" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -93,11 +73,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="configuration.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="configuration.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Manager/configuration.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="25" column="39" lean-forward="false" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
+            <state relative-caret-position="345">
+              <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -134,13 +114,13 @@
         <option value="$PROJECT_DIR$/Manager/corpus_loader.py" />
         <option value="$PROJECT_DIR$/Manager/text_conversion.py" />
         <option value="$PROJECT_DIR$/Manager/embeddings_generator.py" />
-        <option value="$PROJECT_DIR$/Manager/configuration.py" />
         <option value="$PROJECT_DIR$/Manager/hierarchical.py" />
         <option value="$PROJECT_DIR$/Manager/network.py" />
         <option value="$PROJECT_DIR$/Manager/main.py" />
         <option value="$PROJECT_DIR$/Manager/utils.py" />
         <option value="$PROJECT_DIR$/Manager/summarization.py" />
         <option value="$PROJECT_DIR$/Manager/validation.py" />
+        <option value="$PROJECT_DIR$/Manager/configuration.py" />
       </list>
     </option>
   </component>
@@ -432,14 +412,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1368" height="741" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24816984" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34536892" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34536892" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -794,14 +774,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Manager/configuration.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="25" column="39" lean-forward="false" selection-start-line="25" selection-start-column="39" selection-end-line="25" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Manager/hierarchical.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="296">
@@ -828,26 +800,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Manager/network.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="432" column="26" lean-forward="false" selection-start-line="432" selection-start-column="26" selection-end-line="432" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Manager/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="183" column="8" lean-forward="false" selection-start-line="183" selection-start-column="8" selection-end-line="183" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Manager/utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
@@ -858,18 +810,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Manager/network.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="432" column="26" lean-forward="false" selection-start-line="432" selection-start-column="26" selection-end-line="432" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Manager/summarization.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+        <state relative-caret-position="150">
+          <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Manager/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="65" column="8" lean-forward="true" selection-start-line="65" selection-start-column="8" selection-end-line="65" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Manager/validation.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
-          <caret line="1" column="12" lean-forward="false" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
+          <caret line="1" column="13" lean-forward="true" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Manager/configuration.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding />
         </state>
       </provider>

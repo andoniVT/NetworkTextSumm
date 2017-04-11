@@ -16,6 +16,14 @@ summaries_dir['cstnews_v1'] = '../Corpus/CSTNews/'
 summaries_dir['duc2002'] = '../Corpus/DUC2002/'
 
 
+references_dir = dict()
+references_dir['temario_v1'] = 'References/Portuguese/temario2003/'
+references_dir['cstnews_v1'] = 'References/Portuguese/cstnews/'
+references_dir['duc2002_s'] = 'References/English/duc2002-single/'
+references_dir['duc2002_m'] = 'References/English/duc2002-multi/'
+
+
+
 extras = dict()
 
 extras['MarisaTree'] = '../Extras/lexicon/DELAF_PT.marisa'
