@@ -3,6 +3,7 @@ from utils import parameter_extractor
 from embeddings_generator import Vectorization
 from text_conversion import CorpusConversion
 from network import NetworkManager , NodeManager
+from summarization import SummaryGenerator
 
 class Summarizer(object):
     def __init__(self, test):
@@ -121,9 +122,21 @@ class Summarizer(object):
 
 
         obj = NodeManager(complex_networks, network_measures)
-        obj.ranking()
-        #documentRankings = obj.ranking()
-        #print documentRankings
+        all_documentRankings = obj.ranking()
+        '''
+        for i in all_documentRankings.items():
+            print i
+        '''
+
+
+
+        '''
+        6. Summarization
+        #corpus, rankings, sentence_selection, anti_redundancy
+        '''
+        print "Summarization!!!"
+        obj = SummaryGenerator(processed_corpus, complex_networks, all_documentRankings, selection_method, anti_redundancy_method)
+        obj.generate_summaries()
 
 
 
@@ -139,7 +152,7 @@ class Summarizer(object):
         dictionary = dict()
         dictionary['language'] = 'ptg'
         #dictionary['language'] = 'eng'
-        dictionary['type'] = ('SDS' , 0)
+        dictionary['type'] = ('SDS' , None)
         #dictionary['type'] = ('MDS', 1)
         dictionary['corpus'] = 0
         dictionary['size'] = 'w'
@@ -148,8 +161,8 @@ class Summarizer(object):
         # ('mln', ['noun', intra, inter]), ('mln', ['tfidf', intra, inter, True, 0, 'dist_cos']), ('mln' , ['d2v', intra, inter, 300, True, 1, 'dist_euc', True])]
 
 
-        #dictionary['network'] = ('noun', [])
-        dictionary['network'] = ('tfidf', [True, -1, 'cos'])
+        dictionary['network'] = ('noun', [])
+        #dictionary['network'] = ('tfidf', [True, -1, 'cos'])
         #dictionary['network'] = ('d2v', [True, 3, 'cos', 300, False])
         #dictionary['network'] = ('mln', ['noun', 0.5, 0.5])
         #dictionary['network'] = ('mln', ['tfidf', True, -1, 'cos', 0.5, 0.5])
@@ -161,13 +174,16 @@ class Summarizer(object):
         #dictionary['measures'] = ['dg', 'gaccs', 'accs_h2', 'ccts', 'sym']  # postions pode ser
         #dictionary['measures'] = ['dg', 'ccts_2_h2', 'ccts_4_h3', 'ccts_7_h2']
         #dictionary['measures'] = ['dg', 'ccts']
-        #dictionary['measures'] = ['sym_h_m_h2', 'sym_l_m_h2']
-        dictionary['measures'] = ['sym']
-        ##dictionary['measures'] = ['ccts_2_h2', 'ccts_4_h3']
+        #dictionary['measures'] = ['sym_h_m_h2', 'sym_l_b_h3' , 'dg', 'sym_h_b_h3']
+        dictionary['measures'] = ['dg' , 'sp' ]
+        #dictionary['measures'] = ['accs_h2' , 'ccts_4_h3' , 'dg', 'sym_h_m_h2']
+        #dictionary['measures'] = ['sp' , 'pr' , 'btw' , 'cc']
+        #dictionary['measures'] = ['ccts_2_h2', 'ccts_4_h3']
+        #dictionary['measures'] = ['accs' , 'sym' , 'ccts']
 
-        dictionary['selection'] = 1  # simple
-        # dictionary['selection'] = 2 # votacion
-        # dictionary['selection'] = 3 # machine learning
+        dictionary['selection'] = 's'  # simple    s
+        #dictionary['selection'] = 'v' # votacion  v
+        # dictionary['selection'] = 'ml' # machine learning  ml
 
 
         dictionary['validation'] = '*'  # todos

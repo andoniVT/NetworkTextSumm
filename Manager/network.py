@@ -169,6 +169,10 @@ class CNMeasures(object):
 
     def __init__(self, network):
         self.network = network
+        self.node_rankings = dict()
+
+    def get_node_rankings(self):
+        return self.node_rankings
 
     def degree(self, paremeters=None):
         print "measuring degree"
@@ -178,7 +182,9 @@ class CNMeasures(object):
         ranked_by_stg = reverseSortList(graph_stg)
         #print ranked_by_degree
         #print ranked_by_stg
-        return [ranked_by_degree, ranked_by_stg]
+        self.node_rankings['dg'] = ranked_by_degree
+        self.node_rankings['stg'] = ranked_by_stg
+        #return [ranked_by_degree, ranked_by_stg]
 
     def shortest_path(self, paremeters=None):
         print "measuring sp" # falta basada en pesos, hay que modificar
@@ -206,7 +212,10 @@ class CNMeasures(object):
         #print ranked_by_sp
         #print ranked_by_sp_w
         #print ranked_by_sp_w2
-        return [ranked_by_sp, ranked_by_sp_w, ranked_by_sp_w2]
+        self.node_rankings['sp'] = ranked_by_sp
+        self.node_rankings['sp_w'] = ranked_by_sp_w
+        self.node_rankings['sp_w2'] = ranked_by_sp_w2
+        #return [ranked_by_sp, ranked_by_sp_w, ranked_by_sp_w2]
 
 
 
@@ -218,7 +227,9 @@ class CNMeasures(object):
         ranked_by_pr_w = reverseSortList(graph_pr_w)
         #print ranked_by_pr
         #print ranked_by_pr_w
-        return [ranked_by_pr, ranked_by_pr_w]
+        self.node_rankings['pr'] = ranked_by_pr
+        self.node_rankings['pr_w'] = ranked_by_pr_w
+        #return [ranked_by_pr, ranked_by_pr_w]
 
 
     def betweenness(self, paremeters=None):
@@ -229,7 +240,9 @@ class CNMeasures(object):
         ranked_by_btw_w = reverseSortList(graph_btw_w)
         #print ranked_by_btw
         #print ranked_by_btw_w
-        return [ranked_by_btw , ranked_by_btw_w]
+        self.node_rankings['btw'] = ranked_by_btw
+        self.node_rankings['btw_w'] = ranked_by_btw_w
+        #return [ranked_by_btw , ranked_by_btw_w]
 
 
     def clustering_coefficient(self, paremeters=None):
@@ -240,7 +253,9 @@ class CNMeasures(object):
         ranked_by_cc_w = reverseSortList(graph__cc_w)
         #print ranked_by_cc
         #print ranked_by_cc_w
-        return [ranked_by_cc, ranked_by_cc_w]
+        self.node_rankings['cc'] = ranked_by_cc
+        self.node_rankings['cc_w'] = ranked_by_cc_w
+        #return [ranked_by_cc, ranked_by_cc_w]
 
 
 
@@ -273,7 +288,8 @@ class CNMeasures(object):
                 type = parameters[i+1]
                 h = parameters[i+2][1]
                 sorted_by_syms = obj.sort_by_symmetry(order, type, h)
-                results.append(sorted_by_syms)
+                key = 'sym_' + order + '_' + type + '_' + parameters[i+2]
+                self.node_rankings[key] = sorted_by_syms
         else:
             print "todas las simetrias"
             sorted_h_b_h2 = obj.sort_by_symmetry('h', 'b', '2')
@@ -284,9 +300,17 @@ class CNMeasures(object):
             sorted_l_b_h3 = obj.sort_by_symmetry('l', 'b', '3')
             sorted_l_m_h2 = obj.sort_by_symmetry('l', 'm', '2')
             sorted_l_m_h3 = obj.sort_by_symmetry('l', 'm', '3')
-            results = [sorted_h_b_h2, sorted_h_b_h3, sorted_h_m_h2, sorted_h_m_h3, sorted_l_b_h2,
-                       sorted_l_b_h3, sorted_l_m_h2, sorted_l_m_h3]
-        return results
+            self.node_rankings['sym_h_b_h2'] = sorted_h_b_h2
+            self.node_rankings['sym_h_b_h3'] = sorted_h_b_h3
+            self.node_rankings['sym_h_m_h2'] = sorted_h_m_h2
+            self.node_rankings['sym_h_m_h3'] = sorted_h_m_h3
+            self.node_rankings['sym_l_b_h2'] = sorted_l_b_h2
+            self.node_rankings['sym_l_b_h3'] = sorted_l_b_h3
+            self.node_rankings['sym_l_m_h2'] = sorted_l_m_h2
+            self.node_rankings['sym_l_m_h3'] = sorted_l_m_h3
+            #results = [sorted_h_b_h2, sorted_h_b_h3, sorted_h_m_h2, sorted_h_m_h3, sorted_l_b_h2,
+            #           sorted_l_b_h3, sorted_l_m_h2, sorted_l_m_h3]
+        #return results
 
     def concentrics(self, parameters):
         print "measuring concentrics"
@@ -299,25 +323,47 @@ class CNMeasures(object):
                 type = int(parameters[i])-1
                 h = int(parameters[i+1][1])
                 sorted_by_ccts = obj.sort_by_concentric(type, h)
-                results.append(sorted_by_ccts)
+                key = 'ccts_' + str(type+1) + '_h' + str(h)
+                self.node_rankings[key] = sorted_by_ccts
+                #results.append(sorted_by_ccts)
         else:
             print "todas las concentricas con todas las h, o solo un subconjunto de las mejores, devuelve las 16"
             for h in range(2,4):
                 for type in range(8):
                     sorted_by_ccts = obj.sort_by_concentric(type, h)
-                    results.append(sorted_by_ccts)
-        return results
+                    key = 'ccts_' + str(type+1) + '_h' + str(h)
+                    self.node_rankings[key] = sorted_by_ccts
+                    #results.append(sorted_by_ccts)
+        #return results
 
     def accessibility(self, h):
         print "measuring accesibility"
-        print "h:" , h
+        results = []
+        obj = hierarchical.Accessibility(self.network)
+        if len(h)==0:
+            h2 = obj.sort_by_accessibility("2")
+            h3 = obj.sort_by_accessibility("3")
+            key = 'accs_h2'
+            key2 = 'accs_h3'
+            self.node_rankings[key] = h2
+            self.node_rankings[key2] = h3
+        else:
+            parameter = h[0][1]
+            sorted_by_accs = obj.sort_by_accessibility(parameter)
+            key = 'accs_h' + parameter
+            self.node_rankings[key] = sorted_by_accs
+            #results = [acc]
+
+        #return results
+
 
     def generalized_accessibility(self, parameters=None):
         print "measuring generalized accesibility"
         obj = hierarchical.GeneralizedAccesibility(self.network)
         sorted_by_generalized = obj.sort_by_accesibility()
-        print sorted_by_generalized
-        return sorted_by_generalized
+        self.node_rankings['gaccs'] = sorted_by_generalized
+        #print sorted_by_generalized
+        #return sorted_by_generalized
 
 
     def all_measures(self, parameters=None):
@@ -365,34 +411,44 @@ class NodeManager(object):
         self.measures = measures
 
     def ranking(self):
-        actual_network = self.networks['op94ag07-a'][0]
-        #print actual_network
-        obj = CNMeasures(actual_network)
-        dictionary = obj.manage_measures()
-        #print self.measures
-        #print dictionary
-
+        allRankings = dict()
         if find_term(self.measures, 'ccts'):
             self.measures = utils.manage_vector(self.measures, 'ccts')
-
         if find_term(self.measures, 'sym'):
             self.measures = utils.manage_vector(self.measures, 'sym')
+        print "obtained measures", self.measures
 
+        for i in self.networks.items():
+            document_name = i[0]
+            actual_network = i[1][0]
+            obj = CNMeasures(actual_network)
+            dictionary = obj.manage_measures()
+            for i in self.measures:
+                measure_parameter = i.split('_')
+                measure = measure_parameter[0]
+                parameters = measure_parameter[1:]
+                dictionary[measure](parameters)
+            document_rankings = obj.get_node_rankings()
+            allRankings[document_name] = document_rankings
+        return allRankings
 
-        print "haberrrr" , self.measures
+        '''
+        actual_network = self.networks['op94ag07-a'][0]
+        obj = CNMeasures(actual_network)
+        dictionary = obj.manage_measures()
+        if find_term(self.measures, 'ccts'):
+            self.measures = utils.manage_vector(self.measures, 'ccts')
+        if find_term(self.measures, 'sym'):
+            self.measures = utils.manage_vector(self.measures, 'sym')
+        print "obtained measures" , self.measures
 
         for i in self.measures:
             measure_parameter =  i.split('_')
             measure = measure_parameter[0]
             parameters = measure_parameter[1:]
-
             dictionary[measure](parameters)
 
-
-
+        print "Final rankings de todas las medidas!!!!!"
+        the_rankings = obj.get_node_rankings()
+        return the_rankings
         '''
-        *
-
-        '''
-
-

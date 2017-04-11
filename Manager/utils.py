@@ -12,7 +12,7 @@ from scipy import spatial
 from configuration import extras
 from igraph import *
 from subprocess import call
-
+import subprocess
 
 def write_data_to_disk(file, data):
     with open(file, 'wb') as fid:
@@ -243,7 +243,7 @@ def generate_xnet(graph):
 
 def execute_concentric(command):
     # tener cuidado,, single ok ,, multi noseeeee
-    print command
+    #print command
     sub_espace = command[command.find('..'):]
     sub_espace = sub_espace[:sub_espace.rfind('..') - 1]
     first_part = command[:command.find('..') - 1]
@@ -313,6 +313,15 @@ def read_csv_file():
         aux+=1
     return [[backbone_h2, backbone_h3] , [merged_h2,  merged_h3]]
 
+def get_terminal_values(command):
+    #values = command.split(' ')  ### cuando es single !!!!!!!!!!
+    sub_space = command[command.rfind('/')+1:]
+    sub_normal = command[:command.rfind('/')+1]
+    values = sub_normal.split(' ')
+    values[3] = values[3] + sub_space
+    output = subprocess.Popen(values, stdout=subprocess.PIPE).communicate()[0]
+    return output
+
 
 def inverse_weights(weights):
     nuevo = []
@@ -327,6 +336,29 @@ def inverse_weights(weights):
             nuevo2.append(1/float(i))
 
     return [nuevo, nuevo2]
+
+
+def remove_punctuation(sentence):
+    for c in string.punctuation:
+        sentence = sentence.replace(c,"")
+    return sentence
+
+
+def selectSentencesSingle(sentences, measures, resumo_size):
+    limit = 0
+    result = []
+    name_measure = measures[0]
+    ranked = measures[1]
+    for index, sents in enumerate(sentences):
+        index_selected = ranked[index]
+        selected = sentences[index_selected]
+        result.append(selected)
+        selected = remove_punctuation(selected)
+        #result.append(selected)
+        limit+=len(word_tokenize(selected))
+        if limit > resumo_size:
+            break
+    return (name_measure,result)
 
 
 

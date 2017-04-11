@@ -2,6 +2,7 @@ import numpy as np
 import utils
 from configuration import extras
 from utils import execute_concentric , read_dat_files, reverseSortList, execute_symmetry, read_csv_file, sortList, specialSortList
+from utils import get_terminal_values
 
 class Concentric(object):
 
@@ -79,9 +80,13 @@ class Accessibility(object):
         self.location = extras['XNetAux']
 
     def sort_by_accessibility(self, h):
-        command = "./CVAccessibility -l " + h + " " + self.graph
-
-
+        command = "./CVAccessibility -l " + h + " " + self.location
+        print command
+        values = get_terminal_values(command)
+        values = values.split('\n')
+        values = values[:len(values) - 1]
+        values = [float(i) for i in values]
+        return reverseSortList(values)
 
 
 class GeneralizedAccesibility(object):
