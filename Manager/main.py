@@ -163,8 +163,8 @@ class Summarizer(object):
         intra = 0
         inter = 0
         dictionary = dict()
-        dictionary['language'] = 'ptg'
-        #dictionary['language'] = 'eng'
+        #dictionary['language'] = 'ptg'
+        dictionary['language'] = 'eng'
         dictionary['type'] = ('SDS' , None)
         #dictionary['type'] = ('MDS', 1)
         dictionary['corpus'] = 0
@@ -174,9 +174,9 @@ class Summarizer(object):
         # ('mln', ['noun', intra, inter]), ('mln', ['tfidf', intra, inter, True, 0, 'dist_cos']), ('mln' , ['d2v', intra, inter, 300, True, 1, 'dist_euc', True])]
 
 
-        #dictionary['network'] = ('noun', [])
+        dictionary['network'] = ('noun', [])
         #dictionary['network'] = ('tfidf', [True, -1, 'cos'])
-        dictionary['network'] = ('d2v', [True, 3, 'cos', 300, False])
+        #dictionary['network'] = ('d2v', [True, 3, 'cos', 300, False])
         #dictionary['network'] = ('mln', ['noun', 0.5, 0.5])
         #dictionary['network'] = ('mln', ['tfidf', True, -1, 'cos', 0.5, 0.5])
         # dictionary['network'] = ('mln', ['d2v', True, 0, 'euc', 100, False, 0.5, 0.5])
@@ -212,4 +212,11 @@ if __name__ == '__main__':
 
     obj = Summarizer('test1.txt')
     obj.execute()
+
+    '''
+    1. Ingles problemas con SDS para  el momento de calcular therehold para red de nouns , vector de cosenos 0
+    2. Ingles problemas con SDS para medidas con pesos, basadas en shortest paths, max weight min weight
+
+
+    '''
 

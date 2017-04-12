@@ -75,7 +75,9 @@ class CNetwork(object):
 
         network.add_edges(network_edges)
         network.es['weight'] = weight_list
-        threshold = (max(cosine_sim_list) + min(cosine_sim_list))/2
+        #print cosine_sim_list  ###### PROBLEMAS PARA INGLES sds
+        #threshold = (max(cosine_sim_list) + min(cosine_sim_list))/2  #PROBLMAS PARA INGLES sds
+        threshold = 0
         return [network, threshold] #None es el valor de treshold para MDS, para NOUns debe calcularse en la misma etapa de generacion
 
 
