@@ -1,5 +1,6 @@
 
-from utils import selectSentencesSingle
+from utils import selectSentencesSingle , folder_creation, summary_creation, summary_random_top_creation
+
 
 class SummaryGenerator(object):
 
@@ -9,6 +10,10 @@ class SummaryGenerator(object):
         self.node_rankings = node_rankings    # dictionario , key:documento value: dictionarios con todos los rankings
         self.selection_method = selection_method   # si simple, votacion o ML
         self.anti_redundancy_method = anti_redundancy_method # tipo de antitrdundancia para MDS
+        folder_creation(self.node_rankings)
+
+
+
 
 
     def generate_summaries(self):
@@ -32,7 +37,6 @@ class SummaryGenerator(object):
             selection =2
 
 
-
         for i in self.corpus.items():
             document_name = i[0]
             sentences = i[1][0]
@@ -44,6 +48,15 @@ class SummaryGenerator(object):
             print document_name
 
             selected_sentences = sentence_selection_methods[selection](sentences, document_rankings, resumo_size)  # llamar a los metodos de seleccion de sentencias
+            resumo_name = document_name + '_system1.txt'
+            summary_creation(resumo_name ,selected_sentences)
+
+            summary_random_top_creation(resumo_name, sentences, resumo_size)
+
+
+
+
+
 
 
     def generate_for_MDS(self):

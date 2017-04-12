@@ -4,6 +4,7 @@ from embeddings_generator import Vectorization
 from text_conversion import CorpusConversion
 from network import NetworkManager , NodeManager
 from summarization import SummaryGenerator
+from validation import Validation
 
 class Summarizer(object):
     def __init__(self, test):
@@ -36,7 +37,7 @@ class Summarizer(object):
         inter_edge = extracted_net_parameters['inter_edge']
         intra_edge = extracted_net_parameters['intra_edge']
 
-        anti_redundancy_threshold = None  # si los documentos no requieren vectorizacion , este es calculado en la generacion de los sumarios
+        #anti_redundancy_threshold = None  # si los documentos no requieren vectorizacion , este es calculado en la generacion de los sumarios
         # basado en la distancia coseno de las palabras, sin necesidad de generar los vectores de cada documento
         # si los documentos requierein vectorizacion, entonces este valor sera atribuido a partir del valor calculado en la etapa de vectorizacion
 
@@ -120,7 +121,6 @@ class Summarizer(object):
         5. Node weighting and node ranking
         '''
 
-
         obj = NodeManager(complex_networks, network_measures)
         all_documentRankings = obj.ranking()
         '''
@@ -135,11 +135,17 @@ class Summarizer(object):
         #corpus, rankings, sentence_selection, anti_redundancy
         '''
         print "Summarization!!!"
-        obj = SummaryGenerator(processed_corpus, complex_networks, all_documentRankings, selection_method, anti_redundancy_method)
-        obj.generate_summaries()
+        #obj = SummaryGenerator(processed_corpus, complex_networks, all_documentRankings, selection_method, anti_redundancy_method)
+        #obj.generate_summaries()
 
 
+        '''
+        7. Validation
+        '''
+        # validation language type_summary corpus_name
+        obj = Validation(validation, language, type_summary, corpus_name)
 
+        obj.validate('results.csv')
 
 
 
@@ -190,6 +196,7 @@ class Summarizer(object):
         # dictionary['validation'] = 'R'  # rouge1
         # dictionary['validation'] = 'ST' # P-R-F
         return dictionary
+
 
 
 if __name__ == '__main__':

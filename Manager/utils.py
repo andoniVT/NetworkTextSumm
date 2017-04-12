@@ -13,6 +13,8 @@ from configuration import extras
 from igraph import *
 from subprocess import call
 import subprocess
+import random
+import os
 
 def write_data_to_disk(file, data):
     with open(file, 'wb') as fid:
@@ -363,12 +365,132 @@ def selectSentencesSingle(sentences, measures, resumo_size):
 
 
 
+def folder_creation(dictionary_rankings):
+    key = random.choice(dictionary_rankings.keys())
+    dict_measures = dictionary_rankings[key]
+    measures = []
+    for i in dict_measures.items():
+        measures.append(i[0])
+
+    measures.append('random')
+    measures.append('top')
+
+    for i in measures:
+        path = "Automatic/" + i
+        if not os.path.exists(path):
+            os.makedirs(path)
+
+
+def saveSummary(location, summary_sentences):
+    file = open(location, 'w')
+    for i in summary_sentences:
+        file.write(i + "\n")
+
+
+def summary_creation(resumo_name, selected_sentences):
+    print "Generacion de sumarios en file"
+    print resumo_name
+    location = "Automatic/"
+    for i in selected_sentences.items():
+        measure = i[0]
+        sentences = i[1]
+        path = location + measure + '/' + resumo_name
+        saveSummary(path, sentences)
+
+
+
+def summary_random_top_creation(resumo_name, sentences, resumo_size):
+    print "Creando random y top baseline"
+    ranking_top = [x for x in range(len(sentences))]
+    ranking_random = ranking_top[:]
+    random.shuffle(ranking_random)
+
+    path = "Automatic/top/" + resumo_name
+    path2 = "Automatic/random/" + resumo_name
+
+    measures = ('top' , ranking_top)
+    sentences_top = selectSentencesSingle(sentences, measures, resumo_size)[1]
+
+    measures2 = ('random', ranking_random)
+    sentences_random = selectSentencesSingle(sentences, measures2, resumo_size)[1]
+
+    saveSummary(path, sentences_top)
+    saveSummary(path2, sentences_random)
+
+
+def deleteFiles(type):
+    files = os.listdir(type)
+    for f in files:
+        os.remove(type +f)
+
+def get_csv_values(file):
+    avg_precision = 0
+    avg_recall = 0
+    avg_fmeasure = 0
+    doc = open(file, 'r')
+    index = 0
+    for i in doc:
+        if index != 0:
+            fila = i.split(',')
+            recall = float('0.' + fila[4])
+            precision = float('0.' + fila[6])
+            fmeasure = float('0.' + fila[8])
+            avg_recall += recall
+            avg_precision += precision
+            avg_fmeasure += fmeasure
+        index += 1
+    print index
+    return round(avg_precision / (index - 1), 4), round(avg_recall / (index - 1), 4), round(avg_fmeasure / (index - 1),
+                                                                                            4)
+
+
+def sort_results(matrix):
+    dictionary = dict()
+    dictionary_positions = dict()
+    pos = 0
+    for i in matrix:
+        dictionary[i[0]] = i[2]
+        dictionary_positions[i[0]] = pos
+        pos+=1
+    sorted_x = sorted(dictionary.items(), key=operator.itemgetter(1), reverse=True)
+    ordered_matrix = []
+    titles = ['MEASURE', 'P', 'R', 'F']
+    ordered_matrix.append(titles)
+    for i in sorted_x:
+        key = i[0]
+        position = dictionary_positions[key]
+        ordered_matrix.append(matrix[position])
+
+    return ordered_matrix
+
+
 
 if __name__ == '__main__':
 
-    haber = [0, 5, 8, 15, 19, 21, 23, 11, 7, 1, 12, 24, 4, 10, 9, 17, 6, 14, 22, 16, 18, 3, 20, 2, 13]
-    #haber2 = [13, 2, 20, 3, 18, 16, 22, 14, 6, 17, 9, 10, 4, 24, 12, 1, 7, 11, 0, 5, 8, 15, 19, 21, 23]
-    print specialSortList(haber)
+    matrix = [['sp_w2', '0.434', '0.473', '0.4523'], ['top', '0.4421', '0.4757', '0.458'],
+              ['random', '0.4261', '0.4594', '0.4417'], ['stg', '0.4346', '0.4734', '0.4528'],
+              ['sp_w', '0.4346', '0.4729', '0.4525'], ['sp', '0.4394', '0.475', '0.4561'],
+              ['dg', '0.4382', '0.4748', '0.4553']]
+
+
+    for i in  matrix:
+        print i
+
+    print ""
+    sort_results(matrix)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
