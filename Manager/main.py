@@ -1,10 +1,11 @@
 from corpus_loader import Loader
-from utils import parameter_extractor
+from utils import parameter_extractor, deleteFolders
 from embeddings_generator import Vectorization
 from text_conversion import CorpusConversion
 from network import NetworkManager , NodeManager
 from summarization import SummaryGenerator
 from validation import Validation
+from configuration import extras
 
 class Summarizer(object):
     def __init__(self, test):
@@ -135,8 +136,8 @@ class Summarizer(object):
         #corpus, rankings, sentence_selection, anti_redundancy
         '''
         print "Summarization!!!"
-        #obj = SummaryGenerator(processed_corpus, complex_networks, all_documentRankings, selection_method, anti_redundancy_method)
-        #obj.generate_summaries()
+        obj = SummaryGenerator(processed_corpus, complex_networks, all_documentRankings, selection_method, anti_redundancy_method)
+        obj.generate_summaries()
 
 
         '''
@@ -146,6 +147,12 @@ class Summarizer(object):
         obj = Validation(validation, language, type_summary, corpus_name)
 
         obj.validate('results.csv')
+
+
+        deleteFolders(extras['Automatics'])
+
+
+
 
 
 
@@ -167,9 +174,9 @@ class Summarizer(object):
         # ('mln', ['noun', intra, inter]), ('mln', ['tfidf', intra, inter, True, 0, 'dist_cos']), ('mln' , ['d2v', intra, inter, 300, True, 1, 'dist_euc', True])]
 
 
-        dictionary['network'] = ('noun', [])
+        #dictionary['network'] = ('noun', [])
         #dictionary['network'] = ('tfidf', [True, -1, 'cos'])
-        #dictionary['network'] = ('d2v', [True, 3, 'cos', 300, False])
+        dictionary['network'] = ('d2v', [True, 3, 'cos', 300, False])
         #dictionary['network'] = ('mln', ['noun', 0.5, 0.5])
         #dictionary['network'] = ('mln', ['tfidf', True, -1, 'cos', 0.5, 0.5])
         # dictionary['network'] = ('mln', ['d2v', True, 0, 'euc', 100, False, 0.5, 0.5])
@@ -181,7 +188,9 @@ class Summarizer(object):
         #dictionary['measures'] = ['dg', 'ccts_2_h2', 'ccts_4_h3', 'ccts_7_h2']
         #dictionary['measures'] = ['dg', 'ccts']
         #dictionary['measures'] = ['sym_h_m_h2', 'sym_l_b_h3' , 'dg', 'sym_h_b_h3']
-        dictionary['measures'] = ['dg' , 'sp' ]
+        #dictionary['measures'] = ['dg' , 'sp' ]
+        dictionary['measures'] = ['*']
+        #dictionary['measures'] = ['ccts']
         #dictionary['measures'] = ['accs_h2' , 'ccts_4_h3' , 'dg', 'sym_h_m_h2']
         #dictionary['measures'] = ['sp' , 'pr' , 'btw' , 'cc']
         #dictionary['measures'] = ['ccts_2_h2', 'ccts_4_h3']

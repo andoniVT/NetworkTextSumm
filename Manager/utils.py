@@ -15,6 +15,7 @@ from subprocess import call
 import subprocess
 import random
 import os
+import shutil
 
 def write_data_to_disk(file, data):
     with open(file, 'wb') as fid:
@@ -376,7 +377,8 @@ def folder_creation(dictionary_rankings):
     measures.append('top')
 
     for i in measures:
-        path = "Automatic/" + i
+        #path = "Automatic/" + i
+        path = extras['Automatics'] + i
         if not os.path.exists(path):
             os.makedirs(path)
 
@@ -390,7 +392,7 @@ def saveSummary(location, summary_sentences):
 def summary_creation(resumo_name, selected_sentences):
     print "Generacion de sumarios en file"
     print resumo_name
-    location = "Automatic/"
+    location = extras['Automatics']
     for i in selected_sentences.items():
         measure = i[0]
         sentences = i[1]
@@ -405,8 +407,9 @@ def summary_random_top_creation(resumo_name, sentences, resumo_size):
     ranking_random = ranking_top[:]
     random.shuffle(ranking_random)
 
-    path = "Automatic/top/" + resumo_name
-    path2 = "Automatic/random/" + resumo_name
+    #path = "Automatic/top/" + resumo_name
+    path = extras['Automatics'] + 'top/' + resumo_name
+    path2 = extras['Automatics'] + 'random/' + resumo_name
 
     measures = ('top' , ranking_top)
     sentences_top = selectSentencesSingle(sentences, measures, resumo_size)[1]
@@ -422,6 +425,14 @@ def deleteFiles(type):
     files = os.listdir(type)
     for f in files:
         os.remove(type +f)
+
+def deleteFolders(location):
+    files = os.listdir(location)
+    for f in files:
+        shutil.rmtree(location + f)
+
+
+
 
 def get_csv_values(file):
     avg_precision = 0

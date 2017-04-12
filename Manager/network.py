@@ -368,15 +368,22 @@ class CNMeasures(object):
 
     def all_measures(self, parameters=None):
         print "measuring all"
-        '''
-        [self.degree, self.shortest_path, self.page_rank, self.betweenness, self.clustering_coefficient,
-         self.concentrics, self.symmetry, self.accessibility, self.generalized_accessibility,
-         self.absortion_time]
-         '''
+        self.degree()
+        self.shortest_path()
+        self.page_rank()
+        self.betweenness()
+        self.clustering_coefficient()
+        self.generalized_accessibility()
+        #self.absortion_time()
+        self.concentrics([])
+        self.symmetry([])
+        self.accessibility([])
+
 
     def traditional_measures(self, parameters=None):
         print "measuring traditional measures"
-        sorted_by_degree = self.degree()
+        self.degree()
+
         #sorted_by_shortest_path
         #print sorted_by_degree
         '''

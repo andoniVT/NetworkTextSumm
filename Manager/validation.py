@@ -2,7 +2,7 @@ import os
 from shutil import copyfile, rmtree
 import glob
 
-from configuration import references_dir
+from configuration import references_dir, extras
 from utils import deleteFiles , get_csv_values, sort_results
 import csv
 
@@ -27,9 +27,10 @@ class Validation(object):
         print self.path_references
         results = []
 
-        folders = os.listdir('Automatic/')
+        #folders = os.listdir('Automatic/')
+        folders = os.listdir(extras['Automatics'])
         for i in folders:
-            path_systems = 'Automatic/' + i
+            path_systems = extras['Automatics'] + i
             rouge_values = self.evaluate(path_systems)
             values = [i , str(rouge_values[0]), str(rouge_values[1]), str(rouge_values[2])]
             results.append(values)
