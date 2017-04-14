@@ -13,7 +13,7 @@ OutNet_hier8.dat <- Hier. Convergence Ratio.
 SUMMARY:
 Network Type: 10
 Exported Network File: OutNet.net
-47 Vertices.
-194 Edges
-Average Degree: 8.26
+29 Vertices.
+16 Edges
+Average Degree: 1.1
 -------

@@ -2,12 +2,213 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d1670ea-0095-471a-9959-e5c303d54b2c" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Corpus/DUC2002/docs/d062j/LA102089-0177" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Corpus/DUC2002/docs/d077b/LA102089-0177" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/ce94ab10-a_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/ce94ab17-a_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/ce94ab24-c_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/ce94ab24-e_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/ce94ab24-f_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/ce94ja21-d_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/ce94ja21-e_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/ce94ja21-f_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/ce94ja25-a_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/ce94ja25-b_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/ce94ja8-a_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/ce94jl10-a_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/ce94jl11-a_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/ce94jl11-b_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/ce94jl11-c_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/ce94jl31-a_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/ce94jl31-b_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/ce94jl31-c_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/ce94jl31-d_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/ce94jl31-e_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/in96ab09-b_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/in96ab18-b_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/in96ab19-a_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/in96ab25-a_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/in96ab26-b_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/in96ab30-a_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/in96fe08-a_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/in96fe13-a_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/in96fe14-a_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/in96fe15-a_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/in96fe26-a_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/in96fe26-b_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/in96fe29-a_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/in96fe29-b_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/in96jl01-a_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/in96jl02-a_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/in96ju10-a_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/in96ju13-a_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/in96ju18-a_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/in96ju19-a_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/mu94ab02-b_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/mu94ab03-a_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/mu94ab04-a_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/mu94ab09-a_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/mu94ag06-a_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/mu94ag07-b_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/mu94ag09-a_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/mu94ag16-a_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/mu94de02-a_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/mu94de04-b_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/mu94de04-c_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/mu94de04-d_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/mu94de05-a_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/mu94de07-a_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/mu94de09-a_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/mu94de11-a_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/mu94de14-a_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/mu94de21-a_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/mu94de22-a_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/mu94de27-a_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/op94ab01-a_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/op94ab01-b_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/op94ab02-a_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/op94ab03-b_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/op94ab04-a_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/op94ab06-a_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/op94ab10-a_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/op94ab18-a_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/op94ab21-a_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/op94ab24-a_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/op94ab26-a_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/op94ag07-a_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/op94ag07-b_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/op94ag07-c_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/op94ag09-a_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/op94ag10-a_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/op94ag14-a_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/op94ag14-b_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/op94ag21-a_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/op94ag24-a_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/po96ab09-a_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/po96ab09-c_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/po96ab19-a_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/po96ab19-b_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/po96fe07-b_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/po96fe09-a_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/po96fe09-b_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/po96fe13-a_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/po96fe14-a_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/po96fe14-b_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/po96fe14-c_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/po96fe14-d_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/po96fe15-a_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/po96fe26-a_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/po96fe28-a_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/po96jl01-a_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/po96jl01-b_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/po96jl02-a_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/po96ju10-a_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/po96ju13-a_reference1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/ce94ab10-a_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/ce94ab17-a_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/ce94ab24-c_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/ce94ab24-e_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/ce94ab24-f_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/ce94ja21-d_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/ce94ja21-e_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/ce94ja21-f_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/ce94ja25-a_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/ce94ja25-b_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/ce94ja8-a_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/ce94jl10-a_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/ce94jl11-a_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/ce94jl11-b_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/ce94jl11-c_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/ce94jl31-a_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/ce94jl31-b_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/ce94jl31-c_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/ce94jl31-d_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/ce94jl31-e_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/in96ab09-b_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/in96ab18-b_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/in96ab19-a_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/in96ab25-a_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/in96ab26-b_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/in96ab30-a_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/in96fe08-a_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/in96fe13-a_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/in96fe14-a_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/in96fe15-a_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/in96fe26-a_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/in96fe26-b_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/in96fe29-a_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/in96fe29-b_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/in96jl01-a_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/in96jl02-a_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/in96ju10-a_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/in96ju13-a_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/in96ju18-a_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/in96ju19-a_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/mu94ab02-b_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/mu94ab03-a_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/mu94ab04-a_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/mu94ab09-a_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/mu94ag06-a_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/mu94ag07-b_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/mu94ag09-a_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/mu94ag16-a_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/mu94de02-a_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/mu94de04-b_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/mu94de04-c_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/mu94de04-d_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/mu94de05-a_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/mu94de07-a_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/mu94de09-a_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/mu94de11-a_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/mu94de14-a_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/mu94de21-a_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/mu94de22-a_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/mu94de27-a_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/op94ab01-a_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/op94ab01-b_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/op94ab02-a_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/op94ab03-b_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/op94ab04-a_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/op94ab06-a_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/op94ab10-a_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/op94ab18-a_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/op94ab21-a_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/op94ab24-a_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/op94ab26-a_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/op94ag07-a_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/op94ag07-b_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/op94ag07-c_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/op94ag09-a_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/op94ag10-a_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/op94ag14-a_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/op94ag14-b_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/op94ag21-a_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/op94ag24-a_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/po96ab09-a_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/po96ab09-c_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/po96ab19-a_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/po96ab19-b_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/po96fe07-b_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/po96fe09-a_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/po96fe09-b_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/po96fe13-a_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/po96fe14-a_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/po96fe14-b_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/po96fe14-c_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/po96fe14-d_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/po96fe15-a_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/po96fe26-a_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/po96fe28-a_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/po96jl01-a_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/po96jl01-b_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/po96jl02-a_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/po96ju10-a_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/po96ju13-a_system1.txt" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Extras/auxiliar.NET" afterPath="$PROJECT_DIR$/Extras/auxiliar.NET" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Extras/auxiliarX.xnet" afterPath="$PROJECT_DIR$/Extras/auxiliarX.xnet" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Extras/auxiliar_symmetry.csv" afterPath="$PROJECT_DIR$/Extras/auxiliar_symmetry.csv" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Extras/concentrics/OutNet.net" afterPath="$PROJECT_DIR$/Extras/concentrics/OutNet.net" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Extras/concentrics/OutNet_MEANS.legend" afterPath="$PROJECT_DIR$/Extras/concentrics/OutNet_MEANS.legend" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Extras/concentrics/OutNet_MEANS.mean" afterPath="$PROJECT_DIR$/Extras/concentrics/OutNet_MEANS.mean" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Extras/concentrics/OutNet_SUMMARY.txt" afterPath="$PROJECT_DIR$/Extras/concentrics/OutNet_SUMMARY.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Extras/concentrics/OutNet_hier1.dat" afterPath="$PROJECT_DIR$/Extras/concentrics/OutNet_hier1.dat" />
@@ -20,6 +221,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Extras/concentrics/OutNet_hier8.dat" afterPath="$PROJECT_DIR$/Extras/concentrics/OutNet_hier8.dat" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/main.py" afterPath="$PROJECT_DIR$/Manager/main.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/network.py" afterPath="$PROJECT_DIR$/Manager/network.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/results.csv" afterPath="$PROJECT_DIR$/Manager/results.csv" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,11 +236,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Manager/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="217" column="104" lean-forward="false" selection-start-line="217" selection-start-column="104" selection-end-line="217" selection-end-column="104" />
+            <state relative-caret-position="15">
+              <caret line="181" column="63" lean-forward="false" selection-start-line="181" selection-start-column="63" selection-end-line="181" selection-end-column="63" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -46,11 +248,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="network.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="text_conversion.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Manager/text_conversion.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="network.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Manager/network.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
-              <caret line="69" column="31" lean-forward="true" selection-start-line="69" selection-start-column="31" selection-end-line="69" selection-end-column="31" />
+            <state relative-caret-position="1155">
+              <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -59,7 +271,7 @@
       <file leaf-file-name="utils.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Manager/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="73">
+            <state relative-caret-position="4710">
               <caret line="331" column="0" lean-forward="false" selection-start-line="331" selection-start-column="0" selection-end-line="331" selection-end-column="0" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
@@ -150,6 +362,7 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -178,7 +391,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -416,26 +628,26 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="0" width="1368" height="741" extended-state="6" />
-    <editor active="false" />
+    <frame x="-1" y="0" width="1368" height="741" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24816984" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.422292" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3987441" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38932496" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3987441" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -784,13 +996,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Manager/text_conversion.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="17" column="34" lean-forward="true" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Manager/corpus_loader.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -826,7 +1031,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Manager/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
+        <state relative-caret-position="4710">
           <caret line="331" column="0" lean-forward="false" selection-start-line="331" selection-start-column="0" selection-end-line="331" selection-end-column="0" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
@@ -834,21 +1039,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Manager/main.py">
+    <entry file="file://$PROJECT_DIR$/Manager/text_conversion.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="217" column="104" lean-forward="false" selection-start-line="217" selection-start-column="104" selection-end-line="217" selection-end-column="104" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="300">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Manager/network.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="69" column="31" lean-forward="true" selection-start-line="69" selection-start-column="31" selection-end-line="69" selection-end-column="31" />
+        <state relative-caret-position="1155">
+          <caret line="83" column="0" lean-forward="false" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Manager/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="181" column="63" lean-forward="false" selection-start-line="181" selection-start-column="63" selection-end-line="181" selection-end-column="63" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

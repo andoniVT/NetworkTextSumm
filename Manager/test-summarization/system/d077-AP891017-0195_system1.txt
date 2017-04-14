@@ -1,0 +1,6 @@
+A 7 reading is a ``major'' earthquake, capable of widespread heavy damage; 8 is a ``great'' quake, capable of tremendous damage.
+An earthquake of 3.5 on the Richter scale can cause slight damage in the local area, 4 moderate damage, 5 considerable damage, 6 severe damage.
+Thus a reading of 7.5 reflects an earthquake 10 times stronger than one of 6.5.
+The Richter scale is a measure of ground motion as recorded on seismographs.
+The quake knocked out phones and power, including electricity at The Associated Press' bureau in San Francisco.
+The quake shook buildings in Sacramento, 95 miles to the northeast, and was felt as far away as Reno, Nev., 225 miles to the east.

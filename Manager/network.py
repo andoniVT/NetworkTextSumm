@@ -28,7 +28,7 @@ class NetworkManager(object):
             if self.vector_representation is not None:
                 doc_vector = self.vector_representation[doc_name]
             document_data = [doc_sentences, doc_vector]
-
+            #print "problem:" , doc_name
             obj = CNetwork(self.network_type, self.network_sub_type, document_data, self.distance,
                            self.inter_edge, self.intra_edge, self.limiar_value)
 
@@ -75,9 +75,10 @@ class CNetwork(object):
 
         network.add_edges(network_edges)
         network.es['weight'] = weight_list
+        #print network.es['weight']
         #print cosine_sim_list  ###### PROBLEMAS PARA INGLES sds
-        #threshold = (max(cosine_sim_list) + min(cosine_sim_list))/2  #PROBLMAS PARA INGLES sds
-        threshold = 0
+        threshold = (max(cosine_sim_list) + min(cosine_sim_list))/2  #PROBLMAS PARA INGLES sds
+        #threshold = 0
         return [network, threshold] #None es el valor de treshold para MDS, para NOUns debe calcularse en la misma etapa de generacion
 
 
