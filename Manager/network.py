@@ -113,6 +113,8 @@ class CNetwork(object):
             network = self.remove_redundant_edges(network)
 
         print len(network_edges) , len(network.get_edgelist())
+        print network.get_edgelist()
+        print network.es['weight']
         return [network , threshold]
 
     def remove_redundant_edges(self, network):
@@ -121,10 +123,15 @@ class CNetwork(object):
         max_weight = max(weight_list)
         min_weight = min(weight_list)
 
+
         average = (max_weight + min_weight) / 2
+        min_average = (average + min_weight)/2
+
         average2 = (max_weight + average) / 2
         average3 = (max_weight + average2) / 2
         average4 = (max_weight + average3) / 2
+        average5 = (max_weight + average4) / 2
+        average6 = (max_weight + average5) / 2
         limiar=-1
         if self.limiar_value==0:
             limiar = average
@@ -134,6 +141,14 @@ class CNetwork(object):
             limiar=average3
         elif self.limiar_value==3:
             limiar=average4
+        elif self.limiar_value==4:
+            limiar=average5
+        elif self.limiar_value==5:
+            limiar=average6
+        elif self.limiar_value==-1:
+            limiar = min_average
+
+
 
 
         new_weight_list = []
@@ -386,7 +401,10 @@ class CNMeasures(object):
     def traditional_measures(self, parameters=None):
         print "measuring traditional measures"
         self.degree()
-
+        self.shortest_path()
+        self.page_rank()
+        self.betweenness()
+        self.clustering_coefficient()
         #sorted_by_shortest_path
         #print sorted_by_degree
         '''

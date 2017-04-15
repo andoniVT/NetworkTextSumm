@@ -118,9 +118,14 @@ class Summarizer(object):
             print network
         '''
 
+
+
         '''
+
         5. Node weighting and node ranking
         '''
+
+
 
         obj = NodeManager(complex_networks, network_measures)
         all_documentRankings = obj.ranking()
@@ -131,14 +136,19 @@ class Summarizer(object):
 
 
 
+
+
         '''
         6. Summarization
         #corpus, rankings, sentence_selection, anti_redundancy
+
         '''
 
         print "Summarization!!!"
         obj = SummaryGenerator(processed_corpus, complex_networks, all_documentRankings, selection_method, anti_redundancy_method)
         obj.generate_summaries()
+
+
 
 
         '''
@@ -152,6 +162,8 @@ class Summarizer(object):
 
 
         deleteFolders(extras['Automatics'])
+
+
 
 
 
@@ -179,7 +191,11 @@ class Summarizer(object):
 
         #dictionary['network'] = ('noun', [])
         #dictionary['network'] = ('tfidf', [True, -1, 'cos'])
-        dictionary['network'] = ('d2v', [False, 2, 'cos', 300, False])
+        # todas las preuvas que iniclaes fueron con limiar=2
+        # 5-4 no sirve, muy alto
+        # 3(no)-2 si,  puede ser alto
+        # 1 ok  normal
+        dictionary['network'] = ('d2v', [False, -1, 'cos', 300, False])
         #dictionary['network'] = ('mln', ['noun', 0.5, 0.5])
         #dictionary['network'] = ('mln', ['tfidf', True, -1, 'cos', 0.5, 0.5])
         # dictionary['network'] = ('mln', ['d2v', True, 0, 'euc', 100, False, 0.5, 0.5])
@@ -192,8 +208,8 @@ class Summarizer(object):
         #dictionary['measures'] = ['dg', 'ccts']
         #dictionary['measures'] = ['sym_h_m_h2', 'sym_l_b_h3' , 'dg', 'sym_h_b_h3']
         #dictionary['measures'] = ['dg' , 'sp' ]
-        dictionary['measures'] = ['*']
-        #dictionary['measures'] = ['ccts']
+        #dictionary['measures'] = ['accs']
+        dictionary['measures'] = ['trad']
         #dictionary['measures'] = ['accs_h2' , 'ccts_4_h3' , 'dg', 'sym_h_m_h2']
         #dictionary['measures'] = ['sp' , 'pr' , 'btw' , 'cc']
         #dictionary['measures'] = ['ccts_2_h2', 'ccts_4_h3']
