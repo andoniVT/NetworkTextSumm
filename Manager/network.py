@@ -1,7 +1,7 @@
 import igraph
 from igraph import *
 from utils import has_common_elements, cosineSimilarity, calculate_similarity, reverseSortList, sortList, average
-from utils import inverse_weights , find_term
+from utils import inverse_weights , find_term, sort_network
 import utils
 
 import hierarchical
@@ -84,7 +84,7 @@ class CNetwork(object):
 
 
     def tfidf_d2v_based_network(self):
-        print "creando red de vectorres tfidf o doc2vec"
+        #print "creando red de vectorres tfidf o doc2vec"
         network_size = len(self.document_data[0])
         #document_sentences = self.document_data[0]
         document_vectors = self.document_data[1]
@@ -111,10 +111,12 @@ class CNetwork(object):
 
         if self.network_type=='d2v':
             network = self.remove_redundant_edges(network)
+            #network = self.remove_redundant_edges_2(network)
 
-        print len(network_edges) , len(network.get_edgelist())
-        print network.get_edgelist()
-        print network.es['weight']
+        #print len(all_edges) ,  len(network_edges) , len(network.get_edgelist())
+        print len(all_edges) , len(network_edges), len(network.get_edgelist())
+        #print network.get_edgelist()
+        #print network.es['weight']
         return [network , threshold]
 
     def remove_redundant_edges(self, network):
@@ -148,9 +150,6 @@ class CNetwork(object):
         elif self.limiar_value==-1:
             limiar = min_average
 
-
-
-
         new_weight_list = []
         for i , edge in enumerate(edgesList):
             weight = weight_list[i]
@@ -161,6 +160,35 @@ class CNetwork(object):
 
         network.es['weight'] = new_weight_list
         return network
+
+
+    def remove_redundant_edges_2(self, network):
+        #print 'removing'
+        #self.limiar_value=0.30 - 0.50 - 0.7
+        network_size = network.vcount()
+        edgesList = network.get_edgelist()
+        weight_list = network.es['weight']
+
+        limiar_per = self.limiar_value
+        x = (len(edgesList) * limiar_per)
+        new_size = int(len(edgesList) - x)
+        sorted_values = sort_network(edgesList, weight_list)
+
+        new_weights = []
+        new_edges = []
+        for i in range(new_size):
+            values = sorted_values[i]
+            edge = values[0].split('-')
+            edge_pair = (int(edge[0]), int(edge[1]))
+            new_edges.append(edge_pair)
+            weight = values[1]
+            new_weights.append(weight)
+
+        new_network = Graph()
+        new_network.add_vertices(network_size)
+        new_network.add_edges(new_edges)
+        new_network.es['weight'] = new_weights
+        return new_network
 
 
     def multilayer_based_network(self):
@@ -198,8 +226,8 @@ class CNMeasures(object):
         graph_stg = self.network.strength(weights=self.network.es['weight'])
         ranked_by_degree = reverseSortList(graph_degree)
         ranked_by_stg = reverseSortList(graph_stg)
-        #print ranked_by_degree
-        #print ranked_by_stg
+        print ranked_by_degree
+        print ranked_by_stg
         self.node_rankings['dg'] = ranked_by_degree
         self.node_rankings['stg'] = ranked_by_stg
         #return [ranked_by_degree, ranked_by_stg]
@@ -227,9 +255,9 @@ class CNMeasures(object):
         ranked_by_sp = sortList(measure)
         ranked_by_sp_w = sortList(measure2)
         ranked_by_sp_w2 = sortList(measure3)
-        #print ranked_by_sp
-        #print ranked_by_sp_w
-        #print ranked_by_sp_w2
+        print ranked_by_sp
+        print ranked_by_sp_w
+        print ranked_by_sp_w2
         self.node_rankings['sp'] = ranked_by_sp
         self.node_rankings['sp_w'] = ranked_by_sp_w
         self.node_rankings['sp_w2'] = ranked_by_sp_w2
@@ -243,8 +271,8 @@ class CNMeasures(object):
         graph_pr_w = self.network.pagerank(weights=self.network.es['weight'])
         ranked_by_pr = reverseSortList(graph_pr)
         ranked_by_pr_w = reverseSortList(graph_pr_w)
-        #print ranked_by_pr
-        #print ranked_by_pr_w
+        print ranked_by_pr
+        print ranked_by_pr_w
         self.node_rankings['pr'] = ranked_by_pr
         self.node_rankings['pr_w'] = ranked_by_pr_w
         #return [ranked_by_pr, ranked_by_pr_w]
@@ -256,8 +284,8 @@ class CNMeasures(object):
         graph_btw_w = self.network.betweenness(weights=self.network.es['weight'])
         ranked_by_btw = reverseSortList(graph_btw)
         ranked_by_btw_w = reverseSortList(graph_btw_w)
-        #print ranked_by_btw
-        #print ranked_by_btw_w
+        print ranked_by_btw
+        print ranked_by_btw_w
         self.node_rankings['btw'] = ranked_by_btw
         self.node_rankings['btw_w'] = ranked_by_btw_w
         #return [ranked_by_btw , ranked_by_btw_w]
@@ -269,8 +297,8 @@ class CNMeasures(object):
         graph__cc_w = self.network.transitivity_local_undirected(weights=self.network.es['weight'])
         ranked_by_cc = reverseSortList(graph__cc)
         ranked_by_cc_w = reverseSortList(graph__cc_w)
-        #print ranked_by_cc
-        #print ranked_by_cc_w
+        print ranked_by_cc
+        print ranked_by_cc_w
         self.node_rankings['cc'] = ranked_by_cc
         self.node_rankings['cc_w'] = ranked_by_cc_w
         #return [ranked_by_cc, ranked_by_cc_w]
@@ -326,6 +354,16 @@ class CNMeasures(object):
             self.node_rankings['sym_l_b_h3'] = sorted_l_b_h3
             self.node_rankings['sym_l_m_h2'] = sorted_l_m_h2
             self.node_rankings['sym_l_m_h3'] = sorted_l_m_h3
+            '''
+            print sorted_h_b_h2
+            print sorted_h_b_h3
+            print sorted_h_m_h2
+            print sorted_h_m_h3
+            print sorted_l_b_h2
+            print sorted_l_b_h3
+            print sorted_l_m_h2
+            print sorted_l_m_h3
+            '''
             #results = [sorted_h_b_h2, sorted_h_b_h3, sorted_h_m_h2, sorted_h_m_h3, sorted_l_b_h2,
             #           sorted_l_b_h3, sorted_l_m_h2, sorted_l_m_h3]
         #return results
@@ -349,6 +387,7 @@ class CNMeasures(object):
             for h in range(2,4):
                 for type in range(8):
                     sorted_by_ccts = obj.sort_by_concentric(type, h)
+                    print sorted_by_ccts
                     key = 'ccts_' + str(type+1) + '_h' + str(h)
                     self.node_rankings[key] = sorted_by_ccts
                     #results.append(sorted_by_ccts)

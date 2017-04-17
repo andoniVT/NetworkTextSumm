@@ -474,6 +474,13 @@ def sort_results(matrix):
 
     return ordered_matrix
 
+def sort_network(edges, weights):
+	dictionary = dict()
+	for index,  edge in  enumerate(edges):
+		key = str(edge[0]) + '-' +str(edge[1])
+		dictionary[key] = weights[index]
+	sorted_x = sorted(dictionary.items(), key=operator.itemgetter(1), reverse=True)
+	return sorted_x
 
 
 if __name__ == '__main__':

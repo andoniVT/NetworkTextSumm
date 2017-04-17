@@ -103,9 +103,10 @@ class Summarizer(object):
         3. Creacion de la red  y  4. Eliminacion de nodos, limiares
 
         obj = CNetwork(network_type, mln_type, processed_corpus, vectorized_corpus, distance, inter_edge, intra_edge, limiar_value)
-        networks = obj.generate_networks()
+        networks = obj.generate_networks()   nooo
         print networks
         '''
+
 
         obj = NetworkManager(network_type, mln_type, processed_corpus, vectorized_corpus, distance, inter_edge, intra_edge, limiar_value)
         complex_networks = obj.create_networks()
@@ -120,10 +121,13 @@ class Summarizer(object):
 
 
 
+
+
+        '''
+        5. Node weighting and node ranking
+
         '''
 
-        5. Node weighting and node ranking
-        '''
 
 
 
@@ -135,18 +139,24 @@ class Summarizer(object):
 
 
 
-
-
-
         '''
         6. Summarization
         #corpus, rankings, sentence_selection, anti_redundancy
-
         '''
+
+
+
 
         print "Summarization!!!"
         obj = SummaryGenerator(processed_corpus, complex_networks, all_documentRankings, selection_method, anti_redundancy_method)
         obj.generate_summaries()
+
+
+
+
+
+
+
 
 
 
@@ -169,17 +179,12 @@ class Summarizer(object):
 
 
 
-
-
-
-
-
     def parse_file(self, file):
         intra = 0
         inter = 0
         dictionary = dict()
-        #dictionary['language'] = 'ptg'
-        dictionary['language'] = 'eng'
+        dictionary['language'] = 'ptg'
+        #dictionary['language'] = 'eng'
         dictionary['type'] = ('SDS' , None)
         #dictionary['type'] = ('MDS', 1)
         dictionary['corpus'] = 0
@@ -195,7 +200,8 @@ class Summarizer(object):
         # 5-4 no sirve, muy alto
         # 3(no)-2 si,  puede ser alto
         # 1 ok  normal
-        dictionary['network'] = ('d2v', [False, -1, 'cos', 300, False])
+        dictionary['network'] = ('d2v', [False, 2,  'cos', 300, False])
+        #dictionary['network'] = ('d2v', [False, 0.5, 'cos', 300, False])  # ahora con porcentajes , nueva funcion de redundancia
         #dictionary['network'] = ('mln', ['noun', 0.5, 0.5])
         #dictionary['network'] = ('mln', ['tfidf', True, -1, 'cos', 0.5, 0.5])
         # dictionary['network'] = ('mln', ['d2v', True, 0, 'euc', 100, False, 0.5, 0.5])
@@ -208,8 +214,8 @@ class Summarizer(object):
         #dictionary['measures'] = ['dg', 'ccts']
         #dictionary['measures'] = ['sym_h_m_h2', 'sym_l_b_h3' , 'dg', 'sym_h_b_h3']
         #dictionary['measures'] = ['dg' , 'sp' ]
-        #dictionary['measures'] = ['accs']
-        dictionary['measures'] = ['trad']
+        dictionary['measures'] = ['*']
+        #dictionary['measures'] = ['*']
         #dictionary['measures'] = ['accs_h2' , 'ccts_4_h3' , 'dg', 'sym_h_m_h2']
         #dictionary['measures'] = ['sp' , 'pr' , 'btw' , 'cc']
         #dictionary['measures'] = ['ccts_2_h2', 'ccts_4_h3']
