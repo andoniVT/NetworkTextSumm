@@ -14,6 +14,6 @@ SUMMARY:
 Network Type: 10
 Exported Network File: OutNet.net
 28 Vertices.
-286 Edges
-Average Degree: 20.43
+151 Edges
+Average Degree: 10.79
 -------

@@ -17,6 +17,7 @@ class CorpusConversion(object):
         self.mln_type = mln_type
         self.remove_sw = remove_sw
         self.noun_list = load_data_from_disk(extras['NounsList'])
+        self.not_noun_list = load_data_from_disk(extras['NotNounsList'])
 
     def convert(self):
         processed_corpus = dict()
@@ -35,7 +36,8 @@ class CorpusConversion(object):
             valid_sentences = []
             processed_sentences = []
             for j in sentences:
-                tp = proccesing(j, only_nouns, self.remove_sw, self.noun_list)
+                #tp = proccesing(j, only_nouns, self.remove_sw, self.noun_list) #########
+                tp = proccesing(j, only_nouns, self.remove_sw, self.not_noun_list)
                 value = tp.process()
                 if len(value)!=0:
                     processed_sentences.append(value)
@@ -54,7 +56,8 @@ class PortugueseProcessing(object):
         self.text = text
         self.remove_nouns = remove_nouns
         self.remove_sw = remove_sw
-        self.noun_list = noun_list
+        #self.noun_list = noun_list
+        self.not_noun_list = noun_list
 
     def remove_unused(self, text): # aqui se decide si se remove o no los stopwords
         text = text.lower()
@@ -91,7 +94,8 @@ class PortugueseProcessing(object):
         procesed = self.lemas(procesed)
         if self.remove_nouns: # print "removerrrr nouns"
             for i in procesed:
-                if self.noun_list.has_key(i):
+                #if self.noun_list.has_key(i):
+                if i not in self.not_noun_list:
                     pSentence.append(i)
         else:
             pSentence = procesed

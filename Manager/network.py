@@ -1,9 +1,9 @@
 import igraph
 from igraph import *
 from utils import has_common_elements, cosineSimilarity, calculate_similarity, reverseSortList, sortList, average
-from utils import inverse_weights , find_term, sort_network
+from utils import inverse_weights , find_term, sort_network, draw_graph
 import utils
-
+import absorption
 import hierarchical
 
 class NetworkManager(object):
@@ -51,7 +51,7 @@ class CNetwork(object):
         self.limiar_value = limiar_value
 
     def noun_based_network(self):
-        print "creando red de sustantivos"
+        #print "creando red de sustantivos"
         network_size = len(self.document_data[0])
         document_sentences = self.document_data[0]
 
@@ -79,6 +79,12 @@ class CNetwork(object):
         #print cosine_sim_list  ###### PROBLEMAS PARA INGLES sds
         threshold = (max(cosine_sim_list) + min(cosine_sim_list))/2  #PROBLMAS PARA INGLES sds
         #threshold = 0
+        #draw_graph(network)
+        diameter = network.diameter()
+        print diameter
+        #if diameter == 6:
+        #    draw_graph(network)
+
         return [network, threshold] #None es el valor de treshold para MDS, para NOUns debe calcularse en la misma etapa de generacion
 
 
@@ -110,13 +116,19 @@ class CNetwork(object):
         threshold = (max(weight_list)+min(weight_list))/2
 
         if self.network_type=='d2v':
-            network = self.remove_redundant_edges(network)
-            #network = self.remove_redundant_edges_2(network)
+            #network = self.remove_redundant_edges(network)
+            network = self.remove_redundant_edges_2(network)
 
         #print len(all_edges) ,  len(network_edges) , len(network.get_edgelist())
-        print len(all_edges) , len(network_edges), len(network.get_edgelist())
+        #print len(all_edges) , len(network_edges), len(network.get_edgelist())
+        #draw_graph(network)
         #print network.get_edgelist()
         #print network.es['weight']
+        diameter = network.diameter()
+        print diameter
+        #if diameter == 2 or diameter==1:
+        #   draw_graph(network)
+
         return [network , threshold]
 
     def remove_redundant_edges(self, network):
@@ -198,6 +210,7 @@ class CNetwork(object):
 
     def generate(self):
         if self.network_type == 'noun':
+            #print "creando red de sustantivos"
             return self.noun_based_network()
         if self.network_type == 'tfidf' or self.network_type == 'd2v':
             return self.tfidf_d2v_based_network()
@@ -307,6 +320,12 @@ class CNMeasures(object):
 
     def absortion_time(self, paremeters=None):
         print "measuring at"
+        obj = absorption.AbsorptionTime(self.network)
+        absorption_time = obj.get_all_times()
+        ranked_by_absorption = sortList(absorption_time)
+        print ranked_by_absorption
+        self.node_rankings['at'] = ranked_by_absorption
+
 
     '''
     type = backbone / merged
@@ -382,6 +401,26 @@ class CNMeasures(object):
                 key = 'ccts_' + str(type+1) + '_h' + str(h)
                 self.node_rankings[key] = sorted_by_ccts
                 #results.append(sorted_by_ccts)
+
+
+        else:
+            print "medidas concentricas con las 8 tipos de medidas, pero h adaptado al diametro de la red"
+            diameter = self.network.diameter()
+            if diameter<=4:
+                h = 2
+            else:
+                h = 3
+
+            for type in range(8):
+                sorted_by_ccts = obj.sort_by_concentric(type, h)
+                key = 'ccts_' + str(type + 1)
+                print diameter, h, key, sorted_by_ccts
+                self.node_rankings[key] = sorted_by_ccts
+
+
+
+        '''
+        # modificar, adaptar las concentricas para que h=2 o h=3 dependiendo del diametro de la red en cuestion
         else:
             print "todas las concentricas con todas las h, o solo un subconjunto de las mejores, devuelve las 16"
             for h in range(2,4):
@@ -391,7 +430,12 @@ class CNMeasures(object):
                     key = 'ccts_' + str(type+1) + '_h' + str(h)
                     self.node_rankings[key] = sorted_by_ccts
                     #results.append(sorted_by_ccts)
-        #return results
+        '''
+
+
+
+
+
 
     def accessibility(self, h):
         print "measuring accesibility"

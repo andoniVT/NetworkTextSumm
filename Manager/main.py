@@ -62,7 +62,11 @@ class Summarizer(object):
         processed_corpus = obj.convert()
 
         #for i in processed_corpus.items():
-        #    print i
+        #    sentences = i[1][0]
+        #    preprocesadas = i[1][1]
+        #    for j in range(len(sentences)):
+        #        print sentences[j] , preprocesadas[j]
+        #        print ""
 
         '''
         2. Vectorizacion de los corpus (auxiliar - caso sea requerido)
@@ -102,22 +106,19 @@ class Summarizer(object):
         '''
         3. Creacion de la red  y  4. Eliminacion de nodos, limiares
 
-        obj = CNetwork(network_type, mln_type, processed_corpus, vectorized_corpus, distance, inter_edge, intra_edge, limiar_value)
-        networks = obj.generate_networks()   nooo
+        #obj = CNetwork(network_type, mln_type, processed_corpus, vectorized_corpus, distance, inter_edge, intra_edge, limiar_value)
+        #networks = obj.generate_networks()   nooo
         print networks
         '''
+
+
 
 
         obj = NetworkManager(network_type, mln_type, processed_corpus, vectorized_corpus, distance, inter_edge, intra_edge, limiar_value)
         complex_networks = obj.create_networks()
         #print complex_networks
 
-        '''
-        for i in complex_networks.items():
-            network = i[1][0]
-            #print network.es['weight']
-            print network
-        '''
+
 
 
 
@@ -125,10 +126,7 @@ class Summarizer(object):
 
         '''
         5. Node weighting and node ranking
-
         '''
-
-
 
 
         obj = NodeManager(complex_networks, network_measures)
@@ -139,11 +137,16 @@ class Summarizer(object):
 
 
 
+
+
+
+
+
         '''
         6. Summarization
         #corpus, rankings, sentence_selection, anti_redundancy
-        '''
 
+        '''
 
 
 
@@ -160,11 +163,10 @@ class Summarizer(object):
 
 
 
-
         '''
         7. Validation
-        '''
 
+        '''
         # validation language type_summary corpus_name
         obj = Validation(validation, language, type_summary, corpus_name)
 
@@ -172,6 +174,12 @@ class Summarizer(object):
 
 
         deleteFolders(extras['Automatics'])
+
+
+
+
+
+
 
 
 
@@ -200,8 +208,8 @@ class Summarizer(object):
         # 5-4 no sirve, muy alto
         # 3(no)-2 si,  puede ser alto
         # 1 ok  normal
-        dictionary['network'] = ('d2v', [False, 2,  'cos', 300, False])
-        #dictionary['network'] = ('d2v', [False, 0.5, 'cos', 300, False])  # ahora con porcentajes , nueva funcion de redundancia
+        #dictionary['network'] = ('d2v', [False, 2,  'cos', 300, False])
+        dictionary['network'] = ('d2v', [True, 0.4, 'cos', 300, False])  # ahora con porcentajes , nueva funcion de redundancia
         #dictionary['network'] = ('mln', ['noun', 0.5, 0.5])
         #dictionary['network'] = ('mln', ['tfidf', True, -1, 'cos', 0.5, 0.5])
         # dictionary['network'] = ('mln', ['d2v', True, 0, 'euc', 100, False, 0.5, 0.5])
@@ -214,7 +222,9 @@ class Summarizer(object):
         #dictionary['measures'] = ['dg', 'ccts']
         #dictionary['measures'] = ['sym_h_m_h2', 'sym_l_b_h3' , 'dg', 'sym_h_b_h3']
         #dictionary['measures'] = ['dg' , 'sp' ]
-        dictionary['measures'] = ['*']
+        #dictionary['measures'] = ['ccts']
+        dictionary['measures'] = ['at']
+        #dictionary['measures'] = ['trad']
         #dictionary['measures'] = ['*']
         #dictionary['measures'] = ['accs_h2' , 'ccts_4_h3' , 'dg', 'sym_h_m_h2']
         #dictionary['measures'] = ['sp' , 'pr' , 'btw' , 'cc']

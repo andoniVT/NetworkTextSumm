@@ -483,6 +483,20 @@ def sort_network(edges, weights):
 	return sorted_x
 
 
+def draw_graph(g):
+    size  = g.vcount()
+    vec = [x for x in range(size)]
+    layout = g.layout("kk")
+    visual_style = {}
+    visual_style["vertex_label"] = vec
+    visual_style["vertex_size"] = 15
+    visual_style["layout"] = layout
+    visual_style["bbox"] = (800, 600)
+    visual_style["margin"] = 70
+    plot(g, **visual_style)
+
+
+
 if __name__ == '__main__':
 
     matrix = [['sp_w2', '0.434', '0.473', '0.4523'], ['top', '0.4421', '0.4757', '0.458'],
