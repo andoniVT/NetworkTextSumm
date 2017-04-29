@@ -78,10 +78,11 @@ class CNetwork(object):
         #print network.es['weight']
         #print cosine_sim_list  ###### PROBLEMAS PARA INGLES sds
         threshold = (max(cosine_sim_list) + min(cosine_sim_list))/2  #PROBLMAS PARA INGLES sds
+        #print threshold ####################
         #threshold = 0
-        #draw_graph(network)
         diameter = network.diameter()
-        print diameter
+        #print diameter
+        #draw_graph(network)
         #if diameter == 6:
         #    draw_graph(network)
 
@@ -125,7 +126,8 @@ class CNetwork(object):
         #print network.get_edgelist()
         #print network.es['weight']
         diameter = network.diameter()
-        print diameter
+        #print diameter
+        #draw_graph(network)
         #if diameter == 2 or diameter==1:
         #   draw_graph(network)
 

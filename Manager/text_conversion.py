@@ -47,6 +47,7 @@ class CorpusConversion(object):
             sizes = corpus_data[1] #### ahi difiere el corpus para ptg y el corpus para ingles (el corpus de ingles son 100 o 200)
             processed_corpus[doc_name] = [valid_sentences, processed_sentences, sizes]
 
+
         return processed_corpus
 
 

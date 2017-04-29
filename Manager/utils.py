@@ -363,18 +363,67 @@ def selectSentencesSingle(sentences, measures, resumo_size):
             break
     return (name_measure,result)
 
+def isRedundant(index, psentences, selected, limit):
+    actual_sentence = psentences[index]
+    for i in selected:
+        sentence = psentences[i]
+        similarity = cosineSimilarity(actual_sentence, sentence)  ##### verificar si aplicando los vectores ya calculado faz diferencia
+        if similarity > limit:
+            return True
+    return False
+
+def selectSentencesMulti_ribaldo(sentences, ranking, resumo_size, threshold, pSentences):
+    selected = []
+    name_measure = ranking[0]
+    ranked = ranking[1]
+    initial_index = ranked[0]
+    selected.append(initial_index)
+    size_sentence = len(word_tokenize(sentences[initial_index]))
+    for i in range(1, len(ranked)):
+        index = ranked[i]
+        if not isRedundant(index, pSentences, selected, threshold):
+            selected.append(index)
+            #selected = remove_punctuation(selected)
+            #auxi = sentences[index]
+            size_sentence+= len(word_tokenize(sentences[index]))
+
+        if size_sentence > resumo_size:
+            break
+
+    selected_sentences = []
+    for i in range(len(selected)):
+        index = selected[i]
+        sentence = sentences[index]
+        selected_sentences.append(sentence)
+
+    return (name_measure, selected_sentences)
+
+
+def selectSentencesMulti(sentences, ranking, resumo_size, anti_redundancy, threshold, pSentences):
+    #print ranking
+    if anti_redundancy==0:
+        #print "Seleccion sin anti-redundancia"
+        return selectSentencesSingle(sentences, ranking, resumo_size)
+    elif anti_redundancy==1:
+        #print "Seleccion Rivaldo"
+        return selectSentencesMulti_ribaldo(sentences, ranking, resumo_size, threshold, pSentences)
+
+    elif anti_redundancy==2:
+        print "Seleccion MMR"
 
 
 
-def folder_creation(dictionary_rankings):
+
+def folder_creation(dictionary_rankings, type):
     key = random.choice(dictionary_rankings.keys())
     dict_measures = dictionary_rankings[key]
     measures = []
     for i in dict_measures.items():
         measures.append(i[0])
 
-    measures.append('random')
-    measures.append('top')
+    if type is None:
+        measures.append('random')
+        measures.append('top')
 
     for i in measures:
         #path = "Automatic/" + i

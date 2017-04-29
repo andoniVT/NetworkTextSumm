@@ -24,7 +24,7 @@ class Validation(object):
 
     def validate(self, output):
         print "Saving results in: " +  output
-        print self.path_references
+        print "testttt", self.path_references
         results = []
 
         #folders = os.listdir('Automatic/')
@@ -52,12 +52,14 @@ class Validation(object):
         deleteFiles(references_dir['rougeReferences'])
         deleteFiles(references_dir['rougeSystems'])
         references = os.listdir(self.path_references)
+        print references
         for i in references:
             source = self.path_references + i
             destination = references_dir['rougeReferences'] + i
             copyfile(source, destination)
 
         systems = os.listdir(path_systems)
+        print systems
 
         for i in systems:
             source = path_systems + '/' + i
