@@ -378,14 +378,18 @@ def selectSentencesMulti_ribaldo(sentences, ranking, resumo_size, threshold, pSe
     ranked = ranking[1]
     initial_index = ranked[0]
     selected.append(initial_index)
-    size_sentence = len(word_tokenize(sentences[initial_index]))
+    sentences_sin_punct = remove_punctuation(sentences[initial_index])
+
+    size_sentence = len(word_tokenize(sentences_sin_punct))
     for i in range(1, len(ranked)):
         index = ranked[i]
         if not isRedundant(index, pSentences, selected, threshold):
             selected.append(index)
             #selected = remove_punctuation(selected)
             #auxi = sentences[index]
-            size_sentence+= len(word_tokenize(sentences[index]))
+            sentences_sin_punct = remove_punctuation(sentences[index])
+            #size_sentence+= len(word_tokenize(sentences[index]))
+            size_sentence += len(word_tokenize(sentences_sin_punct))
 
         if size_sentence > resumo_size:
             break
@@ -421,9 +425,11 @@ def folder_creation(dictionary_rankings, type):
     for i in dict_measures.items():
         measures.append(i[0])
 
-    if type is None:
-        measures.append('random')
-        measures.append('top')
+    measures.append('random')
+    measures.append('top')
+
+    #if type is None:
+    #    measures.append('top')
 
     for i in measures:
         #path = "Automatic/" + i
@@ -451,7 +457,7 @@ def summary_creation(resumo_name, selected_sentences):
 
 
 def summary_random_top_creation(resumo_name, sentences, resumo_size):
-    print "Creando random y top baseline"
+    print "Creando random y top baseline for SDS"
     ranking_top = [x for x in range(len(sentences))]
     ranking_random = ranking_top[:]
     random.shuffle(ranking_random)
@@ -468,6 +474,28 @@ def summary_random_top_creation(resumo_name, sentences, resumo_size):
 
     saveSummary(path, sentences_top)
     saveSummary(path2, sentences_random)
+
+
+
+def summary_random_top_creation_mds(resumo_name, sentences, resumo_size, top_sentences):
+    print "Creando random y top baseline for MDS"
+    ranking_top = [x for x in range(len(sentences))]
+    ranking_random = ranking_top[:]
+    random.shuffle(ranking_random)
+    path = extras['Automatics'] + 'random/' + resumo_name
+    measures = ('random', ranking_random)
+    sentences_random = selectSentencesSingle(sentences, measures, resumo_size)[1]
+    saveSummary(path, sentences_random)
+
+    ranking_top2 = [x for x in range(len(top_sentences))]
+    ranking_random2 = ranking_top2[:]
+    random.shuffle(ranking_random2)
+    path2 = extras['Automatics'] + 'top/' + resumo_name
+    measures2 = ('top', ranking_random2)
+    sentences_top = selectSentencesSingle(top_sentences, measures2, resumo_size)[1]
+    saveSummary(path2, sentences_top)
+
+
 
 
 def deleteFiles(type):

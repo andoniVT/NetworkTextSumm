@@ -1,15 +1,16 @@
 
-from utils import selectSentencesSingle , folder_creation, summary_creation, summary_random_top_creation, selectSentencesMulti
+from utils import selectSentencesSingle , folder_creation, summary_creation, summary_random_top_creation, selectSentencesMulti, summary_random_top_creation_mds
 import re
 
 class SummaryGenerator(object):
 
-    def __init__(self, corpus, complex_networks, node_rankings, selection_method, anti_redundancy_method):
+    def __init__(self, corpus, complex_networks, node_rankings, selection_method, anti_redundancy_method, top_sentences_mds):
         self.corpus = corpus  # sentencias originales, preprocesadas , tamanio del sumario en palabras
         self.networks = complex_networks  # para obtener el threhold para MDS
         self.node_rankings = node_rankings    # dictionario , key:documento value: dictionarios con todos los rankings
         self.selection_method = selection_method   # si simple, votacion o ML
         self.anti_redundancy_method = anti_redundancy_method # tipo de antitrdundancia para MDS
+        self.top_sentences_for_mds = top_sentences_mds
         folder_creation(self.node_rankings, self.anti_redundancy_method)
 
 
@@ -74,6 +75,9 @@ class SummaryGenerator(object):
             resumo_name = re.sub('_', '', document_name) + '_system1.txt'  ###### verificar si para el ingles no hay problemas
             #resumo_name = document_name + '_system1.txt'
             summary_creation(resumo_name, selected_sentences)
+            the_top =  self.top_sentences_for_mds[document_name]
+
+            summary_random_top_creation_mds(resumo_name, sentences, resumo_size, the_top)
 
 
 

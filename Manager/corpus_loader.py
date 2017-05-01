@@ -85,19 +85,25 @@ class Loader(object):
             for i in clusters:
                 sub_path = path + i + '/' + corpus_dir['textosFonte']
                 documents = os.listdir(sub_path)
+                #print len(documents) ,
                 allSentences = []
                 document_lenghts = []
+                top_sentences = []
 
                 for j in documents:
                     document = sub_path + j
                     document_sentences = read_document(document, self.language)
+                    for k in  range(3):
+                        top_sentences.append(document_sentences[k])
+
+
                     document_size = count_words(document, self.language)
                     document_lenghts.append(document_size)
                     allSentences.extend(document_sentences)
 
                 size_cluster = max(document_lenghts)
                 size_summary = (30 * size_cluster) / 100
-                corpus_dictionary[i] = [allSentences, size_summary]
+                corpus_dictionary[i] = [allSentences, size_summary, top_sentences]
 
         else:
             print 'version 2'
@@ -129,15 +135,24 @@ class Loader(object):
             print "MDS"
             for i in clusters:
                 allSentences = []
+                top_sentences = []
                 sub_path = path + i + '/'
                 documents = os.listdir(sub_path)
+                if len(documents)>6:
+                    top_n = 1
+                else:
+                    top_n = 2
+
                 for j in documents:
                     document = sub_path + j
                     document_sentences = read_document_english(document)
+                    for k in range(top_n):
+                        top_sentences.append(document_sentences[k])
+
                     allSentences.extend(document_sentences)
 
                 name = i[:len(i) - 1]
-                corpus_dictionary[name] = [allSentences, 200]
+                corpus_dictionary[name] = [allSentences, 200, top_sentences]
 
             print len(corpus_dictionary)
 
