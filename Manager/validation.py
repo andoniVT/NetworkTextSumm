@@ -40,7 +40,8 @@ class Validation(object):
         myfile = open(output, 'wb')
         wr = csv.writer(myfile, quoting=csv.QUOTE_ALL)
         for i in results:
-            print i
+            #print i
+            print i[0] , i[2]
             wr.writerow(i)
 
 

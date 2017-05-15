@@ -158,7 +158,7 @@ class Summarizer(object):
         #dictionary['language'] = 'ptg'
         dictionary['language'] = 'eng'
         #dictionary['type'] = ('SDS' , None)
-        dictionary['type'] = ('MDS', 0)  #0->sin antiredundancia, 1->metodo de ribaldo 2->metodo de maximum marginal relevance
+        dictionary['type'] = ('MDS', 1)  #0->sin antiredundancia, 1->metodo de ribaldo 2->metodo de maximum marginal relevance
         dictionary['corpus'] = 0
         dictionary['size'] = 'w'
 
@@ -166,8 +166,8 @@ class Summarizer(object):
         # ('mln', ['noun', intra, inter]), ('mln', ['tfidf', intra, inter, True, 0, 'dist_cos']), ('mln' , ['d2v', intra, inter, 300, True, 1, 'dist_euc', True])]
 
 
-        dictionary['network'] = ('noun', [])
-        #dictionary['network'] = ('tfidf', [True, -1, 'cos'])
+        #dictionary['network'] = ('noun', [])
+        dictionary['network'] = ('tfidf', [True, -1, 'cos'])
         # todas las preuvas que iniclaes fueron con limiar=2
         # 5-4 no sirve, muy alto
         # 3(no)-2 si,  puede ser alto
@@ -187,7 +187,7 @@ class Summarizer(object):
         #dictionary['measures'] = ['sym_h_m_h2', 'sym_l_b_h3' , 'dg', 'sym_h_b_h3']
         #dictionary['measures'] = ['dg' , 'sp' ]
         #dictionary['measures'] = ['ccts']
-        dictionary['measures'] = ['dg']
+        dictionary['measures'] = ['accs_h3']
         #dictionary['measures'] = ['at']
         #dictionary['measures'] = ['dg']
         #dictionary['measures'] = ['*']

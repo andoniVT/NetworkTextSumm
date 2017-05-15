@@ -404,7 +404,18 @@ class CNMeasures(object):
                 self.node_rankings[key] = sorted_by_ccts
                 #results.append(sorted_by_ccts)
 
+        else:
+            print "todas las concentricas con todas las h, o solo un subconjunto de las mejores, devuelve las 16"
+            for h in range(2,4):
+                for type in range(8):
+                    sorted_by_ccts = obj.sort_by_concentric(type, h)
+                    print sorted_by_ccts
+                    key = 'ccts_' + str(type+1) + '_h' + str(h)
+                    self.node_rankings[key] = sorted_by_ccts
+                    #results.append(sorted_by_ccts)
 
+
+        '''
         else:
             print "medidas concentricas con las 8 tipos de medidas, pero h adaptado al diametro de la red"
             diameter = self.network.diameter()
@@ -418,24 +429,9 @@ class CNMeasures(object):
                 key = 'ccts_' + str(type + 1)
                 print diameter, h, key, sorted_by_ccts
                 self.node_rankings[key] = sorted_by_ccts
-
-
-
         '''
+
         # modificar, adaptar las concentricas para que h=2 o h=3 dependiendo del diametro de la red en cuestion
-        else:
-            print "todas las concentricas con todas las h, o solo un subconjunto de las mejores, devuelve las 16"
-            for h in range(2,4):
-                for type in range(8):
-                    sorted_by_ccts = obj.sort_by_concentric(type, h)
-                    print sorted_by_ccts
-                    key = 'ccts_' + str(type+1) + '_h' + str(h)
-                    self.node_rankings[key] = sorted_by_ccts
-                    #results.append(sorted_by_ccts)
-        '''
-
-
-
 
 
 
@@ -445,11 +441,11 @@ class CNMeasures(object):
         obj = hierarchical.Accessibility(self.network)
         if len(h)==0:
             h2 = obj.sort_by_accessibility("2")
-            h3 = obj.sort_by_accessibility("3")
+            #h3 = obj.sort_by_accessibility("3")
             key = 'accs_h2'
             key2 = 'accs_h3'
             self.node_rankings[key] = h2
-            self.node_rankings[key2] = h3
+            #self.node_rankings[key2] = h3
         else:
             parameter = h[0][1]
             sorted_by_accs = obj.sort_by_accessibility(parameter)
@@ -531,11 +527,14 @@ class NodeManager(object):
             self.measures = utils.manage_vector(self.measures, 'sym')
         print "obtained measures", self.measures
 
+        index = 1
         for i in self.networks.items():
             document_name = i[0]
             actual_network = i[1][0]
             obj = CNMeasures(actual_network)
             dictionary = obj.manage_measures()
+            print index, document_name
+            index+=1
             for i in self.measures:
                 measure_parameter = i.split('_')
                 measure = measure_parameter[0]
