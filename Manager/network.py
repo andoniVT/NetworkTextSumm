@@ -1,7 +1,7 @@
 import igraph
 from igraph import *
 from utils import has_common_elements, cosineSimilarity, calculate_similarity, reverseSortList, sortList, average
-from utils import inverse_weights , find_term, sort_network, draw_graph
+from utils import inverse_weights , find_term, sort_network, draw_graph , get_weights
 import utils
 import absorption
 import hierarchical
@@ -33,6 +33,8 @@ class NetworkManager(object):
                            self.inter_edge, self.intra_edge, self.limiar_value)
 
             networkData = obj.generate()
+
+
 
             corpus_networks[doc_name] = networkData
 
@@ -118,14 +120,17 @@ class CNetwork(object):
 
         if self.network_type=='d2v':
             #network = self.remove_redundant_edges(network)
-            network = self.remove_redundant_edges_2(network)
+            if self.limiar_value == 'knn':
+                network = self.generate_knn_network(network)
+            else:
+                network = self.remove_redundant_edges_2(network)
 
         #print len(all_edges) ,  len(network_edges) , len(network.get_edgelist())
         #print len(all_edges) , len(network_edges), len(network.get_edgelist())
         #draw_graph(network)
         #print network.get_edgelist()
         #print network.es['weight']
-        diameter = network.diameter()
+        #diameter = network.diameter()
         #print diameter
         #draw_graph(network)
         #if diameter == 2 or diameter==1:
@@ -203,6 +208,73 @@ class CNetwork(object):
         new_network.add_edges(new_edges)
         new_network.es['weight'] = new_weights
         return new_network
+
+    def generate_knn_network(self, network):
+        k = 5
+        print "knn red"
+        network_size = network.vcount()
+        edgesList = network.get_edgelist()
+        weight_list = network.es['weight']
+        dict_weights = get_weights(edgesList, weight_list)
+
+        new_network = Graph()
+        new_network.add_vertices(network_size)
+
+        k_edges = []
+        for i in range(network_size):
+            edges_to_analize = dict()
+            vertex = i
+            vecinos = network.neighbors(vertex)
+            #print vertex , vecinos
+            for j in vecinos:
+                if vertex < j:
+                    key = str(vertex) + '-' + str(j)
+                else:
+                    key = str(j) + '-' + str(vertex)
+
+                weight = dict_weights[key]
+                edges_to_analize[key] = weight
+            edges_to_analize_sorted = sorted(edges_to_analize.items(), key=operator.itemgetter(1), reverse=True)
+            #edges_to_analize_sorted = sorted(edges_to_analize.items(), key=operator.itemgetter(1))
+            number_vecinos = len(vecinos)
+            index_remove = number_vecinos - k
+            #print number_vecinos, k, index_remove
+            k_best = edges_to_analize_sorted[0:k]
+            removed = edges_to_analize_sorted[k:]
+            #print k_best
+
+
+            for j in k_best:
+                key = j[0]
+                aresta = key.split('-')
+                aresta_i = int(aresta[0])
+                aresta_f = int(aresta[1])
+                edge_pair = (aresta_i, aresta_f)
+                k_edges.append(edge_pair)
+
+        #print k_edges
+        new_network.add_edges(k_edges)
+
+
+        #print len(edgesList) , len(new_network.get_edgelist())
+        new_edge_list =  new_network.get_edgelist()
+        k_weights = []
+
+        for i in new_edge_list:
+            key = str(i[0]) + '-' + str(i[1])
+            weight = dict_weights[key]
+            k_weights.append(weight)
+
+
+        new_network.es['weight'] = k_weights
+        #draw_graph(new_network)
+        return new_network
+
+
+
+
+
+
 
 
     def multilayer_based_network(self):
@@ -441,11 +513,11 @@ class CNMeasures(object):
         obj = hierarchical.Accessibility(self.network)
         if len(h)==0:
             h2 = obj.sort_by_accessibility("2")
-            #h3 = obj.sort_by_accessibility("3")
+            h3 = obj.sort_by_accessibility("3")
             key = 'accs_h2'
             key2 = 'accs_h3'
             self.node_rankings[key] = h2
-            #self.node_rankings[key2] = h3
+            self.node_rankings[key2] = h3
         else:
             parameter = h[0][1]
             sorted_by_accs = obj.sort_by_accessibility(parameter)
@@ -473,7 +545,7 @@ class CNMeasures(object):
         self.betweenness()
         self.clustering_coefficient()
         self.generalized_accessibility()
-        #self.absortion_time()
+        self.absortion_time()
         self.concentrics([])
         self.symmetry([])
         self.accessibility([])

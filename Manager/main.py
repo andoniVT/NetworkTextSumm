@@ -120,6 +120,7 @@ class Summarizer(object):
 
 
 
+
         '''
         6. Summarization
         #corpus, rankings, sentence_selection, anti_redundancy
@@ -128,6 +129,7 @@ class Summarizer(object):
         print "Summarization!!!"
         obj = SummaryGenerator(processed_corpus, complex_networks, all_documentRankings, selection_method, anti_redundancy_method, top_sentences)
         obj.generate_summaries()
+
 
 
 
@@ -151,14 +153,15 @@ class Summarizer(object):
 
 
 
+
     def parse_file(self, file):
         intra = 0
         inter = 0
         dictionary = dict()
-        #dictionary['language'] = 'ptg'
-        dictionary['language'] = 'eng'
-        #dictionary['type'] = ('SDS' , None)
-        dictionary['type'] = ('MDS', 1)  #0->sin antiredundancia, 1->metodo de ribaldo 2->metodo de maximum marginal relevance
+        dictionary['language'] = 'ptg'
+        #dictionary['language'] = 'eng'
+        dictionary['type'] = ('SDS' , None)
+        #dictionary['type'] = ('MDS', 1)  #0->sin antiredundancia, 1->metodo de ribaldo 2->metodo de maximum marginal relevance
         dictionary['corpus'] = 0
         dictionary['size'] = 'w'
 
@@ -167,13 +170,14 @@ class Summarizer(object):
 
 
         #dictionary['network'] = ('noun', [])
-        dictionary['network'] = ('tfidf', [True, -1, 'cos'])
+        #dictionary['network'] = ('tfidf', [True, -1, 'cos'])
         # todas las preuvas que iniclaes fueron con limiar=2
         # 5-4 no sirve, muy alto
         # 3(no)-2 si,  puede ser alto
         # 1 ok  normal
         #dictionary['network'] = ('d2v', [False, 2,  'cos', 300, False])
         #dictionary['network'] = ('d2v', [True, 0.4, 'cos', 300, False])  # ahora con porcentajes , nueva funcion de redundancia
+        dictionary['network'] = ('d2v', [True, 'knn', 'cos', 300, False])  # ahora red knn
         #dictionary['network'] = ('mln', ['noun', 0.5, 0.5])
         #dictionary['network'] = ('mln', ['tfidf', True, -1, 'cos', 0.5, 0.5])
         # dictionary['network'] = ('mln', ['d2v', True, 0, 'euc', 100, False, 0.5, 0.5])
@@ -187,7 +191,7 @@ class Summarizer(object):
         #dictionary['measures'] = ['sym_h_m_h2', 'sym_l_b_h3' , 'dg', 'sym_h_b_h3']
         #dictionary['measures'] = ['dg' , 'sp' ]
         #dictionary['measures'] = ['ccts']
-        dictionary['measures'] = ['accs_h3']
+        dictionary['measures'] = ['*']
         #dictionary['measures'] = ['at']
         #dictionary['measures'] = ['dg']
         #dictionary['measures'] = ['*']

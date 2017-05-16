@@ -573,6 +573,17 @@ def draw_graph(g):
     plot(g, **visual_style)
 
 
+def get_weights(edgesList, weight_list):
+    dictionary = dict()
+    for index in range(len(edgesList)):
+        edge = edgesList[index]
+        weight = weight_list[index]
+        key = str(edge[0]) + '-' + str(edge[1])
+        dictionary[key] = weight
+    return dictionary
+
+
+
 
 if __name__ == '__main__':
 
