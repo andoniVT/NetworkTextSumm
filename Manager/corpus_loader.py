@@ -1,4 +1,4 @@
-from utils import read_document, count_words, read_document_english
+from utils import read_document, count_words, read_document_english, tag_sentence
 from configuration import corpus_dir, summaries_dir
 import os
 
@@ -89,17 +89,25 @@ class Loader(object):
                 allSentences = []
                 document_lenghts = []
                 top_sentences = []
+                index = 1
 
                 for j in documents:
                     document = sub_path + j
                     document_sentences = read_document(document, self.language)
+
                     for k in  range(3):
                         top_sentences.append(document_sentences[k])
 
 
                     document_size = count_words(document, self.language)
                     document_lenghts.append(document_size)
-                    allSentences.extend(document_sentences)
+
+                    #print document_sentences , index
+                    taggedSentences = tag_sentence(document_sentences, index)
+                    #print taggedSentences
+                    index+=1
+                    #allSentences.extend(document_sentences)
+                    allSentences.extend(taggedSentences)
 
                 size_cluster = max(document_lenghts)
                 size_summary = (30 * size_cluster) / 100

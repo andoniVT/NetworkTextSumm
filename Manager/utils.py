@@ -583,6 +583,11 @@ def get_weights(edgesList, weight_list):
     return dictionary
 
 
+def tag_sentence(document_sentences, index):
+    tagged = []
+    for i in document_sentences:
+        tagged.append((i , index))
+    return tagged
 
 
 if __name__ == '__main__':

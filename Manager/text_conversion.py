@@ -32,12 +32,17 @@ class CorpusConversion(object):
 
         for i in self.corpus.items():
             doc_name = i[0]
+
             sentences = i[1][0]
             valid_sentences = []
             processed_sentences = []
             for j in sentences:
                 #tp = proccesing(j, only_nouns, self.remove_sw, self.noun_list) #########
-                tp = proccesing(j, only_nouns, self.remove_sw, self.not_noun_list)
+
+                sentence = j[0]  ##### modificadaaaaaa para MLN aun no seee
+                tp = proccesing(sentence, only_nouns, self.remove_sw, self.not_noun_list) ## modificadaa
+
+
                 value = tp.process()
                 if len(value)!=0:
                     processed_sentences.append(value)

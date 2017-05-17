@@ -53,6 +53,17 @@ class Summarizer(object):
         obj = Loader(language=language, type_summary=type_summary, corpus=corpus_name, size=resumo_size_parameter, mln=mln_type_flag)
         loaded_corpus = obj.load()  # diccionario que tiene como key el nombre del documento o nombre del grupo y como claves los documentos y sus sizes
 
+        '''
+        for i in loaded_corpus.items():
+            grupos =  i[1]
+            sentences = grupos[0]
+            sizes = grupos[1]
+            for j in sentences:
+                print j[0] , j[1]
+        '''
+
+
+
         top_sentences = dict()   # solo para MDS
         if anti_redundancy_method is not None:
             for i in loaded_corpus.items():
@@ -65,15 +76,17 @@ class Summarizer(object):
         1. Pre-procesamiento de los corpus
         '''
 
+
         obj = CorpusConversion(loaded_corpus, language, network_type, mln_type, sw_removal)
         processed_corpus = obj.convert()
 
 
 
 
+
         '''
         2. Vectorizacion de los corpus (auxiliar - caso sea requerido)
-        '''
+
 
         vectorized_corpus = None
 
@@ -96,14 +109,17 @@ class Summarizer(object):
                 processed_auxiliar = obj.convert()
                 obj = Vectorization(processed_corpus, network_type, inference_d2v, size_d2v, processed_auxiliar)
                 vectorized_corpus = obj.calculate()
+        '''
+
 
 
         '''
         3. Creacion de la red  y  4. Eliminacion de nodos, limiares
-        '''
+
 
         obj = NetworkManager(network_type, mln_type, processed_corpus, vectorized_corpus, distance, inter_edge, intra_edge, limiar_value)
         complex_networks = obj.create_networks()
+        '''
 
 
 
@@ -113,9 +129,10 @@ class Summarizer(object):
 
         '''
         5. Node weighting and node ranking
-        '''
+
         obj = NodeManager(complex_networks, network_measures)
         all_documentRankings = obj.ranking()
+        '''
 
 
 
@@ -124,11 +141,12 @@ class Summarizer(object):
         '''
         6. Summarization
         #corpus, rankings, sentence_selection, anti_redundancy
-        '''
+
 
         print "Summarization!!!"
         obj = SummaryGenerator(processed_corpus, complex_networks, all_documentRankings, selection_method, anti_redundancy_method, top_sentences)
         obj.generate_summaries()
+        '''
 
 
 
@@ -137,12 +155,13 @@ class Summarizer(object):
 
         '''
         7. Validation
-        '''
+
 
         # validation language type_summary corpus_name
         obj = Validation(validation, language, type_summary, corpus_name)
         obj.validate('results.csv')
         deleteFolders(extras['Automatics'])
+        '''
 
 
 
@@ -160,8 +179,8 @@ class Summarizer(object):
         dictionary = dict()
         dictionary['language'] = 'ptg'
         #dictionary['language'] = 'eng'
-        dictionary['type'] = ('SDS' , None)
-        #dictionary['type'] = ('MDS', 1)  #0->sin antiredundancia, 1->metodo de ribaldo 2->metodo de maximum marginal relevance
+        #dictionary['type'] = ('SDS' , None)
+        dictionary['type'] = ('MDS', 1)  #0->sin antiredundancia, 1->metodo de ribaldo 2->metodo de maximum marginal relevance
         dictionary['corpus'] = 0
         dictionary['size'] = 'w'
 
