@@ -48,7 +48,7 @@ class Summarizer(object):
         validation = data['validation']
 
         '''
-        0 cargar el corpus indicado y dejarlo listo para ser pre-procesado
+        0 cargar el corpus indicado y dejarlo listo para ser pre-procesado    falta para el ingles!!!!!
         '''
         obj = Loader(language=language, type_summary=type_summary, corpus=corpus_name, size=resumo_size_parameter, mln=mln_type_flag)
         loaded_corpus = obj.load()  # diccionario que tiene como key el nombre del documento o nombre del grupo y como claves los documentos y sus sizes
@@ -59,8 +59,10 @@ class Summarizer(object):
             sentences = grupos[0]
             sizes = grupos[1]
             for j in sentences:
-                print j[0] , j[1]
+                print j
+                #print j[0] , j[1]
         '''
+
 
 
 
@@ -87,7 +89,7 @@ class Summarizer(object):
         '''
         2. Vectorizacion de los corpus (auxiliar - caso sea requerido)
 
-
+        '''
         vectorized_corpus = None
 
         if network_type == 'noun' or mln_type == 'noun':
@@ -109,7 +111,10 @@ class Summarizer(object):
                 processed_auxiliar = obj.convert()
                 obj = Vectorization(processed_corpus, network_type, inference_d2v, size_d2v, processed_auxiliar)
                 vectorized_corpus = obj.calculate()
-        '''
+
+
+
+
 
 
 
@@ -189,14 +194,14 @@ class Summarizer(object):
 
 
         #dictionary['network'] = ('noun', [])
-        #dictionary['network'] = ('tfidf', [True, -1, 'cos'])
+        dictionary['network'] = ('tfidf', [True, -1, 'cos'])
         # todas las preuvas que iniclaes fueron con limiar=2
         # 5-4 no sirve, muy alto
         # 3(no)-2 si,  puede ser alto
         # 1 ok  normal
         #dictionary['network'] = ('d2v', [False, 2,  'cos', 300, False])
         #dictionary['network'] = ('d2v', [True, 0.4, 'cos', 300, False])  # ahora con porcentajes , nueva funcion de redundancia
-        dictionary['network'] = ('d2v', [True, 'knn', 'cos', 300, False])  # ahora red knn
+        #dictionary['network'] = ('d2v', [True, 'knn', 'cos', 300, False])  # ahora red knn
         #dictionary['network'] = ('mln', ['noun', 0.5, 0.5])
         #dictionary['network'] = ('mln', ['tfidf', True, -1, 'cos', 0.5, 0.5])
         # dictionary['network'] = ('mln', ['d2v', True, 0, 'euc', 100, False, 0.5, 0.5])

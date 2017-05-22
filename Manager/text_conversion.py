@@ -40,13 +40,14 @@ class CorpusConversion(object):
                 #tp = proccesing(j, only_nouns, self.remove_sw, self.noun_list) #########
 
                 sentence = j[0]  ##### modificadaaaaaa para MLN aun no seee
+                group_sent_id = j[1]
                 tp = proccesing(sentence, only_nouns, self.remove_sw, self.not_noun_list) ## modificadaa
-
 
                 value = tp.process()
                 if len(value)!=0:
-                    processed_sentences.append(value)
-                    valid_sentences.append(j)
+                    processed_sentences.append((value, group_sent_id))  # adicionar id de documento , o valor nulo , dependiendo
+                    #valid_sentences.append(j)
+                    valid_sentences.append(sentence)
 
             corpus_data = self.corpus[doc_name]
             sizes = corpus_data[1] #### ahi difiere el corpus para ptg y el corpus para ingles (el corpus de ingles son 100 o 200)

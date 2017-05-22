@@ -589,6 +589,14 @@ def tag_sentence(document_sentences, index):
         tagged.append((i , index))
     return tagged
 
+def naive_tag(document_sentences):
+    tagged = []
+    for i in document_sentences:
+        tagged.append((i, None))
+    return tagged
+
+
+
 
 if __name__ == '__main__':
 

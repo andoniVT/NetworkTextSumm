@@ -1,4 +1,4 @@
-from utils import read_document, count_words, read_document_english, tag_sentence
+from utils import read_document, count_words, read_document_english, tag_sentence , naive_tag
 from configuration import corpus_dir, summaries_dir
 import os
 
@@ -55,8 +55,10 @@ class Loader(object):
                 document_name = document_name[:-4]
 
                 document_sentences = read_document(docPath, self.language)
+                naive_tagged_sentences = naive_tag(document_sentences)
 
-                corpus_dictionary[document_name] = [document_sentences]
+                #corpus_dictionary[document_name] = [document_sentences]
+                corpus_dictionary[document_name] = [naive_tagged_sentences]
 
             for i in sumarios:
                 summPath = path_sumarios + i

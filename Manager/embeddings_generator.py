@@ -40,19 +40,34 @@ class TfIdfModel(object):
         print "vectorization tfidf!!"
         self.corpus = corpus
         self.auxiliar = auxiliar
+    '''
+            for i in processed_corpus.items():
+            valores =  i[1]
+            psentences = valores[1]
+            for j in psentences:
+                print j[0] , j[1]
+    '''
 
     def train(self):
         allSentences = []
         for i in self.corpus.items():
-            allSentences.extend(i[1][1])
+            sentence_values = i[1]
+            psentences = sentence_values[1]
+            for j in psentences:
+                allSentences.append(j[0])
+
 
         if self.auxiliar is not None:
             for i in self.auxiliar.items():
-                allSentences.extend(i[1][1])
+                sentence_values = i[1]
+                psentences = sentence_values[1]
+                for j in psentences:
+                    allSentences.append(j[0])
 
         self.dictionary = corpora.Dictionary(allSentences)
         theCorpus = [self.dictionary.doc2bow(text) for text in allSentences]
         self.tfidf = models.TfidfModel(theCorpus)
+
 
     def get_matrix_tfidf(self):
         corpus_matrix = dict()
@@ -61,7 +76,7 @@ class TfIdfModel(object):
             doc_sentences = i[1][1]
             doc_matrix = []
             for j in doc_sentences:
-                vec_bow = self.dictionary.doc2bow(j)
+                vec_bow = self.dictionary.doc2bow(j[0])  # modificar aquii,, preprocesed (content  , id=null)
                 vec_tfidf = self.tfidf[vec_bow]
                 doc_matrix.append(vec_tfidf)
 
@@ -82,19 +97,18 @@ class Doc2VecModel(object):
         allSentences = []
         for i in self.corpus.items():
             doc_name = i[0]
-            sentences = i[1][1]
+            sentences = i[1][1]     # modificar aquiii!!
             for index, sent in enumerate(sentences):
                 sent_name = doc_name + "_" + str(index)
-                allSentences.append((sent, sent_name))
+                allSentences.append((sent[0], sent_name))
 
         if self.auxiliar is not None:
             for i in self.auxiliar.items():
                 doc_name = i[0]
-                sentences = i[1][1]
+                sentences = i[1][1]     # modificar aqui?
                 for index, sent in enumerate(sentences):
                     sent_name = doc_name + "_" + str(index)
-                    allSentences.append((sent, sent_name))
-
+                    allSentences.append((sent[0], sent_name))
 
         labeled_sentences = []
         if self.inference:
