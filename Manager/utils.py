@@ -372,6 +372,13 @@ def isRedundant(index, psentences, selected, limit):
             return True
     return False
 
+def extract_only_sentences(sentences):
+    result = []
+    for i in sentences:
+        result.append(i[0])
+    return result
+
+
 def selectSentencesMulti_ribaldo(sentences, ranking, resumo_size, threshold, pSentences):
     selected = []
     name_measure = ranking[0]
@@ -379,6 +386,7 @@ def selectSentencesMulti_ribaldo(sentences, ranking, resumo_size, threshold, pSe
     initial_index = ranked[0]
     selected.append(initial_index)
     sentences_sin_punct = remove_punctuation(sentences[initial_index])
+    pSentences = extract_only_sentences(pSentences)
 
     size_sentence = len(word_tokenize(sentences_sin_punct))
     for i in range(1, len(ranked)):

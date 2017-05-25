@@ -57,6 +57,8 @@ class CNetwork(object):
         network_size = len(self.document_data[0])
         document_sentences = self.document_data[0]
 
+
+
         only_auxiliar = Graph.Full(network_size)
         all_edges  = only_auxiliar.get_edgelist()
 
@@ -68,11 +70,13 @@ class CNetwork(object):
         for i in all_edges:
             index1 = i[0]
             index2 = i[1]
-            common_elements = has_common_elements(document_sentences[index1] , document_sentences[index2])
+            #common_elements = has_common_elements(document_sentences[index1] , document_sentences[index2])
+            common_elements = has_common_elements(document_sentences[index1][0], document_sentences[index2][0])
             if common_elements>0:
                 network_edges.append((index1,index2))
-                weight_list.append(common_elements)
-                cosine = cosineSimilarity(document_sentences[index1], document_sentences[index2])
+                weight_list.append(common_elements)    # MLN     -------
+                #cosine = cosineSimilarity(document_sentences[index1], document_sentences[index2])
+                cosine = cosineSimilarity(document_sentences[index1][0], document_sentences[index2][0])
                 cosine_sim_list.append(cosine)
 
         network.add_edges(network_edges)
@@ -110,6 +114,12 @@ class CNetwork(object):
             index1 = i[0]
             index2 = i[1]
             similarity = calculate_similarity(document_vectors[index1] , document_vectors[index2], self.network_type, self.distance)
+
+            #belong_same_document=  document_sentences[index1][1] == document_sentences[index2][1]   #True -> son del mismo documento  False->son de distintos documentos
+            #print self.inter_edge , self.intra_edge , belong_same_document
+
+
+
             if similarity>0:
                 network_edges.append((index1, index2))
                 weight_list.append(similarity)
@@ -279,7 +289,66 @@ class CNetwork(object):
 
     def multilayer_based_network(self):
         print "creando red MLN !"
+        '''
+        noun
+        tfidf
+        d2v
+        '''
+        if self.network_sub_type  == 'noun':
+            print ""
+        elif self.network_sub_type == 'tfidf':
+            return self.multilayer_tfidf_based_network()
+
+        elif self.network_sub_type == 'd2v':
+            print ""
+
         return ['mln']
+
+    def multilayer_noun_based_network(self):
+        pass
+
+    def multilayer_tfidf_based_network(self):
+        print 'MLN-TfIdf'
+
+        network_size = len(self.document_data[0])
+        document_sentences = self.document_data[0]
+        document_vectors = self.document_data[1]
+
+        only_auxiliar = Graph.Full(network_size)
+        all_edges = only_auxiliar.get_edgelist()
+        network = Graph()
+        network.add_vertices(network_size)
+        network_edges = []
+        weight_list = []
+        auxiliar_list = []
+
+        for i in all_edges:
+            index1 = i[0]
+            index2 = i[1]
+            similarity = calculate_similarity(document_vectors[index1], document_vectors[index2], self.network_sub_type, self.distance)
+            belong_same_document=  document_sentences[index1][1] == document_sentences[index2][1]   #True -> son del mismo documento  False->son de distintos documentos
+            #print  belong_same_document
+
+
+            if similarity > 0:
+                network_edges.append((index1, index2))
+                auxiliar_list.append(similarity)
+
+                if belong_same_document:
+                    weight_list.append(similarity*self.intra_edge)
+                else:
+                    weight_list.append(similarity*self.inter_edge)
+
+
+        network.add_edges(network_edges)
+        network.es['weight'] = weight_list
+        #print 'Intra-edge:' , self.intra_edge
+        #print 'Inter-edge' , self.inter_edge
+
+        #threshold = (max(weight_list) + min(weight_list)) / 2
+        threshold = (max(auxiliar_list) + min(auxiliar_list)) / 2
+
+        return [network, threshold]
 
 
     def generate(self):

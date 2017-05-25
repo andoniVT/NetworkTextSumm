@@ -21,4 +21,11 @@ if __name__ == '__main__':
 	#print utext
 
 	print (lemma(u'meninas'))
-	print lemma(u"criancas")
+	print lemma(u"crianças")
+	print (lemma(u'garotinha'))
+	print lemma(u'portugueses')
+	print lemma(u'milhões')
+
+
+
+
