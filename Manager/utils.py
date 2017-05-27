@@ -77,18 +77,19 @@ def parameter_extractor(network_type, data):
     return parameters
 
 def read_document(file, language='ptg'):
-	document = codecs.open(file, encoding="utf-8", errors='ignore')
-	content = ""
-	for i in document:
-		i = i.rstrip()
-		i = unicodedata.normalize('NFKD', i).encode('ascii', 'ignore')
-		content+=i + " "
+    #document = codecs.open(file, encoding="utf-8", errors='ignore')
+    document = codecs.open(file, encoding="utf-8")
+    content = ""
+    for i in document:
+        i = i.rstrip()
+        #i = unicodedata.normalize('NFKD', i).encode('ascii', 'ignore')
+        content += i + " "
 
-	if language == 'ptg':
-		sentences = sent_tokenize(content, language='portuguese')
-	else:
-		sentences = sent_tokenize(content, language='english')
-	return sentences
+    if language == 'ptg':
+        sentences = sent_tokenize(content, language='portuguese')
+    else:
+        sentences = sent_tokenize(content, language='english')
+    return sentences
 
 
 def wordCountString(source):

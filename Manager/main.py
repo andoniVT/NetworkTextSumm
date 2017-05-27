@@ -53,6 +53,7 @@ class Summarizer(object):
         obj = Loader(language=language, type_summary=type_summary, corpus=corpus_name, size=resumo_size_parameter, mln=mln_type_flag)
         loaded_corpus = obj.load()  # diccionario que tiene como key el nombre del documento o nombre del grupo y como claves los documentos y sus sizes
 
+
         '''
         for i in loaded_corpus.items():
             grupos =  i[1]
@@ -62,6 +63,7 @@ class Summarizer(object):
                 print j
                 #print j[0] , j[1]
         '''
+
 
 
 
@@ -82,6 +84,10 @@ class Summarizer(object):
         obj = CorpusConversion(loaded_corpus, language, network_type, mln_type, sw_removal)
         processed_corpus = obj.convert()
 
+        for i in processed_corpus.items():
+            print i
+
+
 
 
 
@@ -89,7 +95,7 @@ class Summarizer(object):
         '''
         2. Vectorizacion de los corpus (auxiliar - caso sea requerido)
 
-        '''
+
         vectorized_corpus = None
 
         if network_type == 'noun' or mln_type == 'noun':
@@ -119,25 +125,28 @@ class Summarizer(object):
                 #obj = Vectorization(processed_corpus, network_type, inference_d2v, size_d2v, processed_auxiliar)
                 obj = Vectorization(processed_corpus, network_type_subtype, inference_d2v, size_d2v, processed_auxiliar)
                 vectorized_corpus = obj.calculate()
+        '''
 
 
         '''
         3. Creacion de la red  y  4. Eliminacion de nodos, limiares
-        '''
+
 
 
         obj = NetworkManager(network_type, mln_type, processed_corpus, vectorized_corpus, distance, inter_edge, intra_edge, limiar_value)
         complex_networks = obj.create_networks()
+        '''
 
 
 
         '''
         5. Node weighting and node ranking
-        '''
+
 
 
         obj = NodeManager(complex_networks, network_measures)
         all_documentRankings = obj.ranking()
+        '''
 
 
 
@@ -147,12 +156,13 @@ class Summarizer(object):
         '''
         6. Summarization
         #corpus, rankings, sentence_selection, anti_redundancy
-        '''
+
 
 
         print "Summarization!!!"
         obj = SummaryGenerator(processed_corpus, complex_networks, all_documentRankings, selection_method, anti_redundancy_method, top_sentences)
         obj.generate_summaries()
+        '''
 
 
 
@@ -162,13 +172,14 @@ class Summarizer(object):
 
         '''
         7. Validation
-        '''
+
 
 
         # validation language type_summary corpus_name
         obj = Validation(validation, language, type_summary, corpus_name)
         obj.validate('results.csv')
         deleteFolders(extras['Automatics'])
+        '''
 
 
 

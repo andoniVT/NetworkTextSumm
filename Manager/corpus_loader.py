@@ -96,7 +96,6 @@ class Loader(object):
                 for j in documents:
                     document = sub_path + j
                     document_sentences = read_document(document, self.language)
-
                     for k in  range(3):
                         top_sentences.append(document_sentences[k])
 

@@ -7,6 +7,8 @@ import string
 import nltk
 from nltk import word_tokenize , sent_tokenize
 from gensim import corpora, models, similarities , matutils
+from gensim.models import Doc2Vec
+from gensim.models.doc2vec import LabeledSentence
 
 documents = os.listdir(corpus_dir['temario_v1'])
 
@@ -37,15 +39,45 @@ for sentence in sentences:
     psentences.append(psentence)
 
 
+valores = psentences[0]
+testes = dict()
+for i in valores:
+    testes[i] = 0
+
+for i in testes.items():
+    print i
+
+
+'''
 dictionary = corpora.Dictionary(psentences)
 theCorpus = [dictionary.doc2bow(text) for text in psentences]
 tfidf = models.TfidfModel(theCorpus)
 
-print tfidf
+#print tfidf
 
 
 
+allSentences = []
+for i , sent in enumerate(psentences):
+    sent_name = str(i)
+    allSentences.append((sent, sent_name))
 
+
+labeled_sentences = []
+for i in allSentences:
+    sentence = i[0]
+    label = i[1]
+    labeled_sentences.append(LabeledSentence(sentence, [label]))
+
+
+model = Doc2Vec(min_count=1, window=10, size=len(allSentences), sample=1e-4, negative=5, workers=8)
+model.build_vocab(labeled_sentences)
+print "training d2v ...."
+model.train(labeled_sentences, total_examples=model.corpus_count, epochs=model.iter)
+
+
+
+'''
 
 
 

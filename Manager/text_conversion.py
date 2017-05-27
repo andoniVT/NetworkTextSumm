@@ -19,6 +19,9 @@ class CorpusConversion(object):
         self.noun_list = load_data_from_disk(extras['NounsList'])
         self.not_noun_list = load_data_from_disk(extras['NotNounsList'])
 
+        print len(self.not_noun_list)
+        a = input()
+
     def convert(self):
         processed_corpus = dict()
         if self.language == 'ptg':
@@ -78,13 +81,18 @@ class PortugueseProcessing(object):
         stopwords = nltk.corpus.stopwords.words('portuguese')
         words = text.split()
         result = []
-        stopsP = []
-        for i in stopwords:
-            i = unicodedata.normalize('NFKD', i).encode('ascii', 'ignore')
-            stopsP.append(i)
+        #stopsP = []
+        #for i in stopwords:
+        #    #i = unicodedata.normalize('NFKD', i).encode('ascii', 'ignore')
+        #    stopsP.append(i)
+
+
+
+
 
         for word in words:
-            if not word in stopsP:
+            #if not word in stopsP:
+            if not word in stopwords:
                 result.append(word)
 
         return result
