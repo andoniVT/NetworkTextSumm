@@ -36,6 +36,7 @@ extras = dict()
 extras['MarisaTree'] = '../Extras/lexicon/DELAF_PT.marisa'
 extras['NounsList'] = '../Extras/substantivosDict.pk'
 extras['NotNounsList'] = '../Extras/not_nouns.pk'
+extras['NotNounsList_v2'] = '../Extras/not_nouns_2.pk'
 extras['NetAux'] = '../Extras/auxiliar.NET'
 extras['XNetAux'] = '../Extras/auxiliarX.xnet'
 extras['FolderAux'] = '../Extras/concentrics/'

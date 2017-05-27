@@ -85,7 +85,7 @@ class Summarizer(object):
         processed_corpus = obj.convert()
 
         for i in processed_corpus.items():
-            print i
+            print i[1][1]
 
 
 

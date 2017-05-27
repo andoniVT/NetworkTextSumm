@@ -39,13 +39,15 @@ for sentence in sentences:
     psentences.append(psentence)
 
 
-valores = psentences[0]
-testes = dict()
-for i in valores:
-    testes[i] = 0
+file = codecs.open('PRUEBA.txt',  'w', 'utf-8')
+for i in sentences:
+    file.write(i + '\n')
 
-for i in testes.items():
-    print i
+
+
+#file = open(location, 'w')
+#    for i in summary_sentences:
+#        file.write(i + "\n")
 
 
 '''

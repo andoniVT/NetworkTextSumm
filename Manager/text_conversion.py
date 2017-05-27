@@ -17,10 +17,12 @@ class CorpusConversion(object):
         self.mln_type = mln_type
         self.remove_sw = remove_sw
         self.noun_list = load_data_from_disk(extras['NounsList'])
-        self.not_noun_list = load_data_from_disk(extras['NotNounsList'])
+        #self.not_noun_list = load_data_from_disk(extras['NotNounsList'])
+        self.not_noun_list = load_data_from_disk(extras['NotNounsList_v2'])
 
-        print len(self.not_noun_list)
-        a = input()
+
+        #print len(self.not_noun_list)
+        #a = input()
 
     def convert(self):
         processed_corpus = dict()
