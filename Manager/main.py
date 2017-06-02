@@ -68,6 +68,7 @@ class Summarizer(object):
 
 
 
+
         top_sentences = dict()   # solo para MDS
         if anti_redundancy_method is not None:
             for i in loaded_corpus.items():
@@ -84,17 +85,14 @@ class Summarizer(object):
         obj = CorpusConversion(loaded_corpus, language, network_type, mln_type, sw_removal)
         processed_corpus = obj.convert()
 
-        for i in processed_corpus.items():
-            print i[1][1]
-
-
-
+        #for i in processed_corpus.items():
+        #    print i[1][1]
 
 
 
         '''
         2. Vectorizacion de los corpus (auxiliar - caso sea requerido)
-
+        '''
 
         vectorized_corpus = None
 
@@ -125,30 +123,30 @@ class Summarizer(object):
                 #obj = Vectorization(processed_corpus, network_type, inference_d2v, size_d2v, processed_auxiliar)
                 obj = Vectorization(processed_corpus, network_type_subtype, inference_d2v, size_d2v, processed_auxiliar)
                 vectorized_corpus = obj.calculate()
-        '''
+
+
 
 
         '''
         3. Creacion de la red  y  4. Eliminacion de nodos, limiares
-
-
-
+        '''
         obj = NetworkManager(network_type, mln_type, processed_corpus, vectorized_corpus, distance, inter_edge, intra_edge, limiar_value)
         complex_networks = obj.create_networks()
-        '''
+
+
 
 
 
         '''
         5. Node weighting and node ranking
-
+        '''
 
 
         obj = NodeManager(complex_networks, network_measures)
         all_documentRankings = obj.ranking()
-        '''
 
-
+        #for i in complex_networks.items():
+        #    print i[1]
 
 
 
@@ -156,13 +154,17 @@ class Summarizer(object):
         '''
         6. Summarization
         #corpus, rankings, sentence_selection, anti_redundancy
+        '''
 
 
 
         print "Summarization!!!"
         obj = SummaryGenerator(processed_corpus, complex_networks, all_documentRankings, selection_method, anti_redundancy_method, top_sentences)
         obj.generate_summaries()
-        '''
+
+
+
+
 
 
 
@@ -172,14 +174,18 @@ class Summarizer(object):
 
         '''
         7. Validation
-
+        '''
 
 
         # validation language type_summary corpus_name
         obj = Validation(validation, language, type_summary, corpus_name)
         obj.validate('results.csv')
         deleteFolders(extras['Automatics'])
-        '''
+
+
+
+
+
 
 
 
@@ -208,7 +214,7 @@ class Summarizer(object):
 
 
         #dictionary['network'] = ('noun', [])
-        dictionary['network'] = ('tfidf', [True, -1, 'cos'])
+        #dictionary['network'] = ('tfidf', [True, -1, 'cos'])
         # todas las preuvas que iniclaes fueron con limiar=2
         # 5-4 no sirve, muy alto
         # 3(no)-2 si,  puede ser alto
@@ -216,8 +222,8 @@ class Summarizer(object):
         #dictionary['network'] = ('d2v', [False, 2,  'cos', 300, False])
         #dictionary['network'] = ('d2v', [True, 0.4, 'cos', 300, False])  # ahora con porcentajes , nueva funcion de redundancia
         #dictionary['network'] = ('d2v', [True, 'knn', 'cos', 300, False])  # ahora red knn
-        #dictionary['network'] = ('mln', ['noun', 0.5, 0.5])
-        #dictionary['network'] = ('mln', ['tfidf', True, -1, 'cos', 1.2, 1.0])  # inter - intra
+        #dictionary['network'] = ('mln', ['noun', 1.5, 1.0])
+        dictionary['network'] = ('mln', ['tfidf', True, -1, 'cos', 1.5, 1.0])  # inter - intra
         #dictionary['network'] = ('mln', ['d2v', True, 0, 'euc', 100, False, 0.5, 0.5])
 
 
@@ -227,11 +233,11 @@ class Summarizer(object):
         #dictionary['measures'] = ['dg', 'ccts_2_h2', 'ccts_4_h3', 'ccts_7_h2']
         #dictionary['measures'] = ['dg', 'ccts']
         #dictionary['measures'] = ['sym_h_m_h2', 'sym_l_b_h3' , 'dg', 'sym_h_b_h3']
-        #dictionary['measures'] = ['dg' , 'sp' ]
+        #dictionary['measures'] = ['dg']
         #dictionary['measures'] = ['ccts']
-        #dictionary['measures'] = ['*']
+        dictionary['measures'] = ['*']
         #dictionary['measures'] = ['at']
-        dictionary['measures'] = ['trad']
+        #dictionary['measures'] = ['trad']
         #dictionary['measures'] = ['*']
         #dictionary['measures'] = ['accs_h2' , 'ccts_4_h3' , 'dg', 'sym_h_m_h2']
         #dictionary['measures'] = ['sp' , 'pr' , 'btw' , 'cc']

@@ -77,12 +77,12 @@ def parameter_extractor(network_type, data):
     return parameters
 
 def read_document(file, language='ptg'):
-    #document = codecs.open(file, encoding="utf-8", errors='ignore')
-    document = codecs.open(file, encoding="utf-8")
+    document = codecs.open(file, encoding="utf-8", errors='ignore')
+    #document = codecs.open(file, encoding="utf-8")
     content = ""
     for i in document:
         i = i.rstrip()
-        #i = unicodedata.normalize('NFKD', i).encode('ascii', 'ignore')
+        i = unicodedata.normalize('NFKD', i).encode('ascii', 'ignore')
         content += i + " "
 
     if language == 'ptg':
@@ -90,6 +90,12 @@ def read_document(file, language='ptg'):
     else:
         sentences = sent_tokenize(content, language='english')
     return sentences
+
+def remove_portuguese_caracteres(sentence):
+    news = []
+    for word in sentence:
+        news.append(unicodedata.normalize('NFKD', word).encode('ascii', 'ignore'))
+    return news
 
 
 def wordCountString(source):
@@ -447,8 +453,16 @@ def folder_creation(dictionary_rankings, type):
             os.makedirs(path)
 
 
+'''
+file = codecs.open('PRUEBA.txt',  'w', 'utf-8')
+for i in sentences:
+    file.write(i + '\n')
+'''
+
+
 def saveSummary(location, summary_sentences):
     file = open(location, 'w')
+    #file = codecs.open(location, 'w', 'utf-8')
     for i in summary_sentences:
         file.write(i + "\n")
 

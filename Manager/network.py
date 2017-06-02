@@ -281,12 +281,6 @@ class CNetwork(object):
         return new_network
 
 
-
-
-
-
-
-
     def multilayer_based_network(self):
         print "creando red MLN !"
         '''
@@ -295,7 +289,7 @@ class CNetwork(object):
         d2v
         '''
         if self.network_sub_type  == 'noun':
-            print ""
+            return self.multilayer_noun_based_network()
         elif self.network_sub_type == 'tfidf':
             return self.multilayer_tfidf_based_network()
 
@@ -305,7 +299,45 @@ class CNetwork(object):
         return ['mln']
 
     def multilayer_noun_based_network(self):
-        pass
+        print 'MLN-Noun'
+        network_size = len(self.document_data[0])
+        document_sentences = self.document_data[0]
+        only_auxiliar = Graph.Full(network_size)
+        all_edges = only_auxiliar.get_edgelist()
+        network = Graph()
+        network.add_vertices(network_size)
+        network_edges = []
+        weight_list = []
+        auxiliar_list = []
+
+        for i in all_edges:
+            index1 = i[0]
+            index2 = i[1]
+            #common_elements = has_common_elements(document_sentences[index1][0], document_sentences[index2][0])
+            similarity = cosineSimilarity(document_sentences[index1][0], document_sentences[index2][0])
+            belong_same_document = document_sentences[index1][1] == document_sentences[index2][1]
+            if similarity > 0:
+                network_edges.append((index1, index2))
+                auxiliar_list.append(similarity)
+
+                if belong_same_document:
+                    weight_list.append(similarity*self.intra_edge)
+                else:
+                    weight_list.append(similarity*self.inter_edge)
+
+        network.add_edges(network_edges)
+        network.es['weight'] = weight_list
+        threshold = (max(auxiliar_list) + min(auxiliar_list)) / 2
+        #print threshold
+
+        auxiliar_network = self.remove_edges_for_mln(network, 0.4)
+        #print len(network.get_edgelist()) , len(auxiliar_network.get_edgelist())
+        #return [network, threshold]
+        return [(network, auxiliar_network), threshold]
+
+
+
+
 
     def multilayer_tfidf_based_network(self):
         print 'MLN-TfIdf'
@@ -348,7 +380,36 @@ class CNetwork(object):
         #threshold = (max(weight_list) + min(weight_list)) / 2
         threshold = (max(auxiliar_list) + min(auxiliar_list)) / 2
 
-        return [network, threshold]
+        auxiliar_network = self.remove_edges_for_mln(network, 0.3)
+        #return [network, threshold]
+        return [(network,auxiliar_network), threshold]
+
+    def remove_edges_for_mln(self, network, percentage):
+        #self.limiar_value=0.30 - 0.50 - 0.7
+        network_size = network.vcount()
+        edgesList = network.get_edgelist()
+        weight_list = network.es['weight']
+
+        limiar_per = percentage
+        x = (len(edgesList) * limiar_per)
+        new_size = int(len(edgesList) - x)
+        sorted_values = sort_network(edgesList, weight_list)
+
+        new_weights = []
+        new_edges = []
+        for i in range(new_size):
+            values = sorted_values[i]
+            edge = values[0].split('-')
+            edge_pair = (int(edge[0]), int(edge[1]))
+            new_edges.append(edge_pair)
+            weight = values[1]
+            new_weights.append(weight)
+
+        new_network = Graph()
+        new_network.add_vertices(network_size)
+        new_network.add_edges(new_edges)
+        new_network.es['weight'] = new_weights
+        return new_network
 
 
     def generate(self):
@@ -369,8 +430,11 @@ class CNetwork(object):
 
 class CNMeasures(object):
 
-    def __init__(self, network):
+    def __init__(self, network, extra_network_mln=None):
         self.network = network
+        self.extra_network = extra_network_mln
+        if self.extra_network is None:
+            self.extra_network = self.network
         self.node_rankings = dict()
 
     def get_node_rankings(self):
@@ -378,7 +442,8 @@ class CNMeasures(object):
 
     def degree(self, paremeters=None):
         print "measuring degree"
-        graph_degree = self.network.degree()
+        #graph_degree = self.network.degree()
+        graph_degree = self.extra_network.degree()
         graph_stg = self.network.strength(weights=self.network.es['weight'])
         ranked_by_degree = reverseSortList(graph_degree)
         ranked_by_stg = reverseSortList(graph_stg)
@@ -399,7 +464,8 @@ class CNMeasures(object):
         weight2 = new_weights[1]
 
         for i in range(network_size):
-            lenghts = self.network.shortest_paths(i)[0]
+            #lenghts = self.network.shortest_paths(i)[0]
+            lenghts = self.extra_network.shortest_paths(i)[0]
             lenghts2 = self.network.shortest_paths(i, weights=weight)[0]
             lenghts3 = self.network.shortest_paths(i, weights=weight2)[0]
             sp = average(lenghts)
@@ -423,7 +489,8 @@ class CNMeasures(object):
 
     def page_rank(self, paremeters=None):
         print "measuring pr"
-        graph_pr = self.network.pagerank()
+        #graph_pr = self.network.pagerank()
+        graph_pr = self.extra_network.pagerank()
         graph_pr_w = self.network.pagerank(weights=self.network.es['weight'])
         ranked_by_pr = reverseSortList(graph_pr)
         ranked_by_pr_w = reverseSortList(graph_pr_w)
@@ -436,7 +503,8 @@ class CNMeasures(object):
 
     def betweenness(self, paremeters=None):
         print "measuring btw"
-        graph_btw = self.network.betweenness()
+        #graph_btw = self.network.betweenness()
+        graph_btw = self.extra_network.betweenness()
         graph_btw_w = self.network.betweenness(weights=self.network.es['weight'])
         ranked_by_btw = reverseSortList(graph_btw)
         ranked_by_btw_w = reverseSortList(graph_btw_w)
@@ -449,7 +517,8 @@ class CNMeasures(object):
 
     def clustering_coefficient(self, paremeters=None):
         print "measuring cc"
-        graph__cc = self.network.transitivity_local_undirected()
+        #graph__cc = self.network.transitivity_local_undirected()
+        graph__cc = self.extra_network.transitivity_local_undirected()
         graph__cc_w = self.network.transitivity_local_undirected(weights=self.network.es['weight'])
         ranked_by_cc = reverseSortList(graph__cc)
         ranked_by_cc_w = reverseSortList(graph__cc_w)
@@ -463,7 +532,8 @@ class CNMeasures(object):
 
     def absortion_time(self, paremeters=None):
         print "measuring at"
-        obj = absorption.AbsorptionTime(self.network)
+        #obj = absorption.AbsorptionTime(self.network)
+        obj = absorption.AbsorptionTime(self.extra_network)
         absorption_time = obj.get_all_times()
         ranked_by_absorption = sortList(absorption_time)
         print ranked_by_absorption
@@ -477,7 +547,8 @@ class CNMeasures(object):
     #def symmetry(self, type, order, h):
     def symmetry(self, parameters):
         print "measuring symetry"
-        obj = hierarchical.Symmetry(self.network)
+        #obj = hierarchical.Symmetry(self.network)
+        obj = hierarchical.Symmetry(self.extra_network)
         results = []
         # order : h - l
         # type: b - m
@@ -533,7 +604,8 @@ class CNMeasures(object):
     def concentrics(self, parameters):
         print "measuring concentrics"
         results = []
-        obj = hierarchical.Concentric(self.network)
+        #obj = hierarchical.Concentric(self.network)
+        obj = hierarchical.Concentric(self.extra_network)
 
         if len(parameters)!=0:
             print "algunas measures" , parameters
@@ -579,7 +651,8 @@ class CNMeasures(object):
     def accessibility(self, h):
         print "measuring accesibility"
         results = []
-        obj = hierarchical.Accessibility(self.network)
+        #obj = hierarchical.Accessibility(self.network)
+        obj = hierarchical.Accessibility(self.extra_network)
         if len(h)==0:
             h2 = obj.sort_by_accessibility("2")
             h3 = obj.sort_by_accessibility("3")
@@ -599,7 +672,8 @@ class CNMeasures(object):
 
     def generalized_accessibility(self, parameters=None):
         print "measuring generalized accesibility"
-        obj = hierarchical.GeneralizedAccesibility(self.network)
+        #obj = hierarchical.GeneralizedAccesibility(self.network)
+        obj = hierarchical.GeneralizedAccesibility(self.extra_network)
         sorted_by_generalized = obj.sort_by_accesibility()
         self.node_rankings['gaccs'] = sorted_by_generalized
         #print sorted_by_generalized
@@ -660,6 +734,7 @@ class NodeManager(object):
         self.networks = networks
         self.measures = measures
 
+
     def ranking(self):
         allRankings = dict()
         if find_term(self.measures, 'ccts'):
@@ -671,8 +746,15 @@ class NodeManager(object):
         index = 1
         for i in self.networks.items():
             document_name = i[0]
-            actual_network = i[1][0]
-            obj = CNMeasures(actual_network)
+            actual_network = i[1][0] ######
+            if type(actual_network) is not tuple: # para verificar si usar los dos tipos de grafos para MLN
+                obj = CNMeasures(actual_network)
+            else:
+                normal_network = actual_network[0]  # network sin aristas removidas
+                extra_network = actual_network[1]   # network con aristas removidas por limiares
+                obj = CNMeasures(normal_network, extra_network)
+
+            #obj = CNMeasures(actual_network)
             dictionary = obj.manage_measures()
             print index, document_name
             index+=1

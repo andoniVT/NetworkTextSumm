@@ -9,6 +9,7 @@ from nltk import word_tokenize , sent_tokenize
 from gensim import corpora, models, similarities , matutils
 from gensim.models import Doc2Vec
 from gensim.models.doc2vec import LabeledSentence
+import unicodedata
 
 documents = os.listdir(corpus_dir['temario_v1'])
 
@@ -39,11 +40,20 @@ for sentence in sentences:
     psentences.append(psentence)
 
 
+for i in psentences:
+    for word in i:
+        haber = word
+        word = unicodedata.normalize('NFKD', word).encode('ascii', 'ignore')
+        print (haber ,word) ,
+    print ""
+
+
+'''
 file = codecs.open('PRUEBA.txt',  'w', 'utf-8')
 for i in sentences:
     file.write(i + '\n')
 
-
+'''
 
 #file = open(location, 'w')
 #    for i in summary_sentences:

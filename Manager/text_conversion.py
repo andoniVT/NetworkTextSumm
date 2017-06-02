@@ -3,7 +3,7 @@ import unicodedata
 import nltk
 from morphological_analysis import lemma
 from configuration import extras
-from utils import load_data_from_disk
+from utils import load_data_from_disk, remove_portuguese_caracteres
 from nltk import word_tokenize
 from  nltk.stem.wordnet import WordNetLemmatizer
 noun_list = []
@@ -17,8 +17,8 @@ class CorpusConversion(object):
         self.mln_type = mln_type
         self.remove_sw = remove_sw
         self.noun_list = load_data_from_disk(extras['NounsList'])
-        #self.not_noun_list = load_data_from_disk(extras['NotNounsList'])
-        self.not_noun_list = load_data_from_disk(extras['NotNounsList_v2'])
+        self.not_noun_list = load_data_from_disk(extras['NotNounsList'])
+        #self.not_noun_list = load_data_from_disk(extras['NotNounsList_v2'])
 
 
         #print len(self.not_noun_list)
@@ -52,6 +52,10 @@ class CorpusConversion(object):
                 if len(value)!=0:
                     processed_sentences.append((value, group_sent_id))  # adicionar id de documento , o valor nulo , dependiendo
                     #valid_sentences.append(j)
+                    #sentence = remove_portuguese_caracteres(sentence)
+                    #sentence = unicodedata.normalize('NFKD', sentence).encode('ascii', 'ignore')
+                    #print  sentence
+                    #a = input()
                     valid_sentences.append(sentence)
 
             corpus_data = self.corpus[doc_name]
@@ -83,18 +87,15 @@ class PortugueseProcessing(object):
         stopwords = nltk.corpus.stopwords.words('portuguese')
         words = text.split()
         result = []
-        #stopsP = []
-        #for i in stopwords:
-        #    #i = unicodedata.normalize('NFKD', i).encode('ascii', 'ignore')
-        #    stopsP.append(i)
-
-
-
+        stopsP = []
+        for i in stopwords:
+            i = unicodedata.normalize('NFKD', i).encode('ascii', 'ignore')
+            stopsP.append(i)
 
 
         for word in words:
-            #if not word in stopsP:
-            if not word in stopwords:
+            if not word in stopsP:
+            #if not word in stopwords:
                 result.append(word)
 
         return result
@@ -109,6 +110,7 @@ class PortugueseProcessing(object):
         pSentence = []
         procesed = self.remove_unused(self.text)
         procesed = self.lemas(procesed)
+        #procesed = remove_portuguese_caracteres(procesed)
         if self.remove_nouns: # print "removerrrr nouns"
             for i in procesed:
                 #if self.noun_list.has_key(i):
