@@ -1,0 +1,107 @@
+
+TfIdf - Ingles Multi 
+
+sp_w2 0.4208
+pr_w 0.4192
+stg 0.4177
+top 0.4142
+sp_w 0.3987
+pr 0.3959
+sp 0.394
+dg 0.3939
+gaccs 0.3931
+btw 0.3848
+random 0.3671
+cc_w 0.34
+btw_w 0.3322
+cc 0.3145
+
+TfIdf-MLN Ingles Multi , 1.5 , 0.3
+pr_w 0.4238
+stg 0.4226
+sp_w2 0.4211
+sp 0.4203
+dg 0.4194
+pr 0.4186
+gaccs 0.4157
+top 0.4117
+btw 0.4082
+sp_w 0.4019
+random 0.3614
+cc_w 0.3371
+cc 0.3324
+btw_w 0.3266
+
+TfIdf-MLN Ingles Multi , 1.5 , 0.4
+dg 0.4248
+sp 0.4238
+pr_w 0.4238
+pr 0.4232
+stg 0.4226
+gaccs 0.4213
+sp_w2 0.4211
+top 0.4109
+btw 0.4087
+sp_w 0.4019
+random 0.3598
+cc_w 0.3371
+cc 0.3369
+btw_w 0.3266
+
+
+
+
+-------
+Nouns
+top 0.4119
+dg 0.408
+stg 0.4065
+pr_w 0.4065
+pr 0.4063
+sp_w 0.4059
+sp 0.4057
+gaccs 0.4056
+sp_w2 0.4049
+btw 0.3976
+btw_w 0.3921
+random 0.3647
+cc 0.3299
+cc_w 0.328
+
+
+
+
+
+Nouns-MLN  1.5 0.3
+pr_w 0.4193
+pr 0.4168
+stg 0.4165
+sp_w2 0.4145
+dg 0.4135
+sp_w 0.4135
+top 0.411
+gaccs 0.4064
+sp 0.4056
+btw 0.4054
+btw_w 0.38
+random 0.3652
+cc_w 0.3294
+cc 0.327
+
+
+
+Nouns-MLN  1.5 0.4
+pr_w 0.4193
+stg 0.4165
+sp_w2 0.4145
+sp_w 0.4135
+pr 0.4125
+top 0.4107
+dg 0.4083
+sp 0.4076
+btw 0.4061
+gaccs 0.3958
+btw_w 0.38
+random 0.3724
+cc_w 0.3294
+cc 0.3266

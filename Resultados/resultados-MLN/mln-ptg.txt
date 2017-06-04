@@ -1,0 +1,301 @@
+
+
+4261530030203485
+
+
+
+
+
+
+----------
+
+
+
+04-101-256958
+Jorge 
+
+Banco de la Nación Cuenta de Ahorros
+Jorge Valverde Pacheco
+
+
+
+------
+
+
+4214-1001-5731-7662
+362
+1005
+
+
+
+
+
+
+
+00052662302100001001
+4261
+
+
+
+
+
+https://www.facebook.com/permalink.php?story_fbid=1962605543968360&id=1583644465197805
+
+
+
+
+
+
+Please find results file in: results.csv
+101
+0.4125 0.4305 0.421
+FINAL RESULTS
+MEASURE R
+pr_w 0.4667
+pr 0.4659
+dg 0.4659
+sp 0.4651
+stg 0.4648
+sp_w 0.4648
+sp_w2 0.4622
+btw 0.4618
+top 0.4611
+btw_w 0.4533
+random 0.4488
+cc_w 0.4313
+cc 0.4305
+
+
+
+-----
+Tf-Idf Normal Tf-idf,  removiendo 0% aristas - 1.5 inter-edge
+
+FINAL RESULTS
+MEASURE R
+sp_w 0.5612
+pr_w 0.5594
+at 0.5581
+stg 0.555
+gaccs 0.5529
+top 0.5521
+dg 0.5511
+sp_w2 0.5507
+sp 0.5501
+sym_l_b_h2 0.5476
+btw 0.5452
+pr 0.5435
+ccts_5_h3 0.538
+ccts_8_h3 0.5369
+ccts_6_h3 0.5369
+ccts_3_h3 0.5164
+accs_h2 0.5106
+ccts_4_h3 0.5077
+ccts_2_h3 0.507
+sym_l_m_h3 0.4902
+sym_l_b_h3 0.4899
+random 0.4758
+sym_h_m_h2 0.4749
+btw_w 0.4747
+sym_l_m_h2 0.4727
+sym_h_m_h3 0.47
+cc_w 0.4521
+cc 0.4467
+ccts_1_h3 0.4463
+sym_h_b_h3 0.4459
+ccts_7_h3 0.4403
+ccts_8_h2 0.4392
+accs_h3 0.4371
+ccts_6_h2 0.4346
+ccts_5_h2 0.4329
+sym_h_b_h2 0.4237
+ccts_3_h2 0.4155
+ccts_1_h2 0.4089
+ccts_4_h2 0.4062
+ccts_2_h2 0.4044
+ccts_7_h2 0.3939
+
+
+----
+Tf-idf,  removiendo 30% aristas - 1.5 inter-edge
+MEASURE R
+sp 0.5701
+gaccs 0.5689
+dg 0.5684
+sp_w 0.5612
+at 0.5609
+pr_w 0.5594
+pr 0.5591
+stg 0.555
+sp_w2 0.5507
+btw 0.5454
+top 0.5424
+accs_h2 0.5406
+sym_l_b_h2 0.5078
+sym_l_b_h3 0.505
+ccts_8_h3 0.4946
+ccts_5_h3 0.4936
+ccts_6_h3 0.493
+accs_h3 0.4923
+sym_l_m_h3 0.4895
+sym_l_m_h2 0.488
+btw_w 0.4747
+sym_h_m_h2 0.4724
+random 0.4668
+sym_h_m_h3 0.4587
+cc_w 0.4521
+cc 0.4477
+ccts_3_h3 0.443
+sym_h_b_h2 0.4263
+ccts_1_h2 0.4252
+ccts_4_h3 0.4162
+ccts_8_h2 0.4122
+ccts_2_h3 0.4042
+ccts_3_h2 0.4041
+ccts_4_h2 0.404
+sym_h_b_h3 0.4014
+ccts_2_h2 0.4006
+ccts_7_h2 0.3953
+ccts_7_h3 0.3908
+ccts_1_h3 0.3882
+ccts_6_h2 0.3825
+ccts_5_h2 0.3819
+
+
+-......
+Red MLN Noun, limiar=0.0 , inter-edge 1.5
+
+MEASURE R
+sp_w 0.5607
+sp 0.556
+stg 0.5559
+pr_w 0.5558
+gaccs 0.5534
+at 0.5513
+sp_w2 0.547
+dg 0.5466
+pr 0.5444
+btw 0.5339
+ccts_5_h3 0.5327
+ccts_6_h3 0.5315
+ccts_8_h3 0.5312
+top 0.5277
+sym_l_b_h2 0.5261
+accs_h2 0.5036
+btw_w 0.5015
+random 0.4883
+sym_l_b_h3 0.4825
+sym_l_m_h3 0.4808
+sym_h_m_h2 0.4784
+sym_l_m_h2 0.4694
+ccts_3_h3 0.4645
+sym_h_m_h3 0.4599
+accs_h3 0.4585
+ccts_4_h3 0.4545
+ccts_2_h3 0.4475
+ccts_5_h2 0.4331
+ccts_8_h2 0.4296
+ccts_1_h3 0.4279
+sym_h_b_h2 0.4267
+ccts_6_h2 0.4248
+cc 0.4227
+ccts_7_h3 0.422
+cc_w 0.4211
+ccts_3_h2 0.4197
+ccts_1_h2 0.4176
+sym_h_b_h3 0.4172
+ccts_2_h2 0.4136
+ccts_7_h2 0.4132
+ccts_4_h2 0.4131
+
+--
+Red MLN Noun, limiar=0.3 , inter-edge 1.5
+sp_w 0.5607
+pr 0.5598
+sp 0.557
+stg 0.5559
+pr_w 0.5558
+dg 0.554
+gaccs 0.5514
+at 0.5488
+sp_w2 0.547
+btw 0.5411
+accs_h2 0.5366
+top 0.5333
+sym_l_b_h3 0.5129
+btw_w 0.5015
+sym_l_m_h3 0.4947
+accs_h3 0.4874
+sym_l_b_h2 0.4846
+ccts_5_h3 0.4828
+sym_l_m_h2 0.4795
+random 0.4773
+ccts_6_h3 0.4662
+ccts_8_h3 0.4656
+sym_h_m_h2 0.4611
+ccts_3_h3 0.46
+sym_h_m_h3 0.45
+cc 0.4424
+sym_h_b_h2 0.4358
+ccts_4_h2 0.4349
+ccts_2_h2 0.4347
+ccts_1_h2 0.4341
+ccts_8_h2 0.4335
+ccts_3_h2 0.4226
+ccts_7_h2 0.4214
+cc_w 0.4211
+ccts_4_h3 0.4147
+ccts_1_h3 0.4128
+ccts_2_h3 0.412
+sym_h_b_h3 0.4114
+ccts_6_h2 0.4074
+ccts_7_h3 0.4054
+ccts_5_h2 0.3973
+
+
+
+Red MLN Noun, limiar=0.2 , inter-edge 1.5
+MEASURE R
+at 0.5616
+sp_w 0.5607
+dg 0.5589
+sp 0.5585
+stg 0.5559
+pr_w 0.5558
+gaccs 0.5538
+btw 0.5482
+sp_w2 0.547
+top 0.5398
+pr 0.5393
+accs_h2 0.5351
+btw_w 0.5015
+ccts_5_h3 0.4947
+sym_l_m_h2 0.4939
+ccts_6_h3 0.4918
+ccts_8_h3 0.49
+sym_l_b_h3 0.4893
+sym_l_b_h2 0.4848
+random 0.4816
+ccts_3_h3 0.4814
+sym_l_m_h3 0.4799
+accs_h3 0.4783
+sym_h_m_h2 0.475
+ccts_4_h3 0.4506
+sym_h_m_h3 0.4482
+ccts_2_h3 0.4473
+sym_h_b_h2 0.4396
+ccts_1_h2 0.4314
+ccts_2_h2 0.4295
+ccts_4_h2 0.429
+cc_w 0.4211
+ccts_8_h2 0.42
+ccts_3_h2 0.4158
+ccts_7_h3 0.4134
+cc 0.4116
+ccts_5_h2 0.4109
+ccts_7_h2 0.4105
+ccts_6_h2 0.4097
+sym_h_b_h3 0.4068
+ccts_1_h3 0.406
+
+
+---
