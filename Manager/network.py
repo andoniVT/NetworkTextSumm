@@ -688,10 +688,10 @@ class CNMeasures(object):
         self.betweenness()
         self.clustering_coefficient()
         self.generalized_accessibility()
-        self.absortion_time()
-        self.concentrics([])
-        self.symmetry([])
-        self.accessibility([])
+        #self.absortion_time()
+        #self.concentrics([])
+        #self.symmetry([])
+        #self.accessibility([])
 
 
     def traditional_measures(self, parameters=None):

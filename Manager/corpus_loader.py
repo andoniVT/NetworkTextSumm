@@ -136,9 +136,13 @@ class Loader(object):
                     document_sentences = read_document_english(document)
                     # print document_sentences
 
+                    tagged_sentences = naive_tag(document_sentences)
+                    #print tagged_sentences
+
                     name = i + "_" + j
                     name = name[:name.find('_') - 1] + '-' + name[name.find('_') + 1:]
-                    corpus_dictionary[name] = [document_sentences, 100]
+                    #corpus_dictionary[name] = [document_sentences, 100]
+                    corpus_dictionary[name] = [tagged_sentences, 100]
 
         else:
             print "MDS"
@@ -147,6 +151,7 @@ class Loader(object):
                 top_sentences = []
                 sub_path = path + i + '/'
                 documents = os.listdir(sub_path)
+                index = 1
                 if len(documents)>6:
                     top_n = 1
                 else:
@@ -158,12 +163,15 @@ class Loader(object):
                     for k in range(top_n):
                         top_sentences.append(document_sentences[k])
 
-                    allSentences.extend(document_sentences)
+                    tagged_sentences = tag_sentence(document_sentences, index)
+                    #allSentences.extend(document_sentences)
+                    allSentences.extend(tagged_sentences)
+                    index+=1
 
                 name = i[:len(i) - 1]
                 corpus_dictionary[name] = [allSentences, 200, top_sentences]
 
-            print len(corpus_dictionary)
+            #print len(corpus_dictionary)
 
         return corpus_dictionary
 

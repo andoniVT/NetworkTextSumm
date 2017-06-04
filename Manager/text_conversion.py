@@ -16,16 +16,20 @@ class CorpusConversion(object):
         self.network_type = network_type
         self.mln_type = mln_type
         self.remove_sw = remove_sw
-        self.noun_list = load_data_from_disk(extras['NounsList'])
+        #self.noun_list = load_data_from_disk(extras['NounsList'])
         self.not_noun_list = load_data_from_disk(extras['NotNounsList'])
         #self.not_noun_list = load_data_from_disk(extras['NotNounsList_v2'])
-
-
+        self.__corpus_size = len(self.corpus) # 59
         #print len(self.not_noun_list)
         #a = input()
 
     def convert(self):
         processed_corpus = dict()
+        if self.__corpus_size == 59:
+            short_sentence_remove_parameter = 3
+        else:
+            short_sentence_remove_parameter = 0
+
         if self.language == 'ptg':
             print 'ptg'
             proccesing = PortugueseProcessing
@@ -49,14 +53,19 @@ class CorpusConversion(object):
                 tp = proccesing(sentence, only_nouns, self.remove_sw, self.not_noun_list) ## modificadaa
 
                 value = tp.process()
-                if len(value)!=0:
+                #if len(value)!=0:
+                if len(value) > short_sentence_remove_parameter:
                     processed_sentences.append((value, group_sent_id))  # adicionar id de documento , o valor nulo , dependiendo
+                    #print len(value) ,
                     #valid_sentences.append(j)
                     #sentence = remove_portuguese_caracteres(sentence)
                     #sentence = unicodedata.normalize('NFKD', sentence).encode('ascii', 'ignore')
                     #print  sentence
                     #a = input()
                     valid_sentences.append(sentence)
+
+            #print len(valid_sentences)
+
 
             corpus_data = self.corpus[doc_name]
             sizes = corpus_data[1] #### ahi difiere el corpus para ptg y el corpus para ingles (el corpus de ingles son 100 o 200)
