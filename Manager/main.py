@@ -134,14 +134,16 @@ class Summarizer(object):
         obj = NetworkManager(network_type, mln_type, processed_corpus, vectorized_corpus, distance, inter_edge, intra_edge, limiar_value)
         complex_networks = obj.create_networks()
 
-
-
+        #for i in complex_networks.items():
+        #    print i
 
         '''
         5. Node weighting and node ranking
         '''
+
         obj = NodeManager(complex_networks, network_measures)
         all_documentRankings = obj.ranking()
+
 
 
 
@@ -151,9 +153,11 @@ class Summarizer(object):
         '''
 
 
+
         print "Summarization!!!"
         obj = SummaryGenerator(processed_corpus, complex_networks, all_documentRankings, selection_method, anti_redundancy_method, top_sentences)
         obj.generate_summaries()
+
 
 
 
@@ -163,23 +167,11 @@ class Summarizer(object):
         '''
 
 
+
         # validation language type_summary corpus_name
         obj = Validation(validation, language, type_summary, corpus_name)
         obj.validate('results.csv')
         deleteFolders(extras['Automatics'])
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -200,18 +192,18 @@ class Summarizer(object):
         # ('mln', ['noun', intra, inter]), ('mln', ['tfidf', intra, inter, True, 0, 'dist_cos']), ('mln' , ['d2v', intra, inter, 300, True, 1, 'dist_euc', True])]
 
 
-        dictionary['network'] = ('noun', [])
+        #dictionary['network'] = ('noun', [])
         #dictionary['network'] = ('tfidf', [True, -1, 'cos'])
         # todas las preuvas que iniclaes fueron con limiar=2
         # 5-4 no sirve, muy alto
         # 3(no)-2 si,  puede ser alto
         # 1 ok  normal
         #dictionary['network'] = ('d2v', [False, 2,  'cos', 300, False])
-        #dictionary['network'] = ('d2v', [True, 0.4, 'cos', 300, False])  # ahora con porcentajes , nueva funcion de redundancia
-        #dictionary['network'] = ('d2v', [True, 'knn', 'cos', 300, False])  # ahora red knn
+        #dictionary['network'] = ('d2v', [False, 0.3, 'cos', 300, False])  # ahora con porcentajes , nueva funcion de redundancia
+        #dictionary['network'] = ('d2v', [False, 0.3, 'cos', 300, False])  # ahora red knn
         #dictionary['network'] = ('mln', ['noun', 1.5, 1.0])
         #dictionary['network'] = ('mln', ['tfidf', True, -1, 'cos', 1.5, 1.0])  # inter - intra
-        #dictionary['network'] = ('mln', ['d2v', True, 0, 'euc', 100, False, 0.5, 0.5])
+        dictionary['network'] = ('mln', ['d2v', False, 0.3, 'cos', 300, False, 1.5, 1.0])
 
 
 

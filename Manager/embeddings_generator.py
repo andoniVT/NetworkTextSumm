@@ -120,12 +120,16 @@ class Doc2VecModel(object):
                 label = i[1]
                 labeled_sentences.append(LabeledSentence(sentence, [label]))
 
-        self.model = Doc2Vec(min_count=1, window=10, size=self.size, sample=1e-4, negative=5, workers=8)
+        #self.model = Doc2Vec(min_count=1, window=10, size=self.size, sample=1e-4, negative=5, workers=8)
+        #self.model = Doc2Vec(min_count=1, window=10, size=self.size, sample=1e-4, workers=8)
+        self.model = Doc2Vec(min_count=1, window=10, size=self.size, workers=8)  # okk
         self.model.build_vocab(labeled_sentences)
         print "training d2v ...."
         #for epoch in range(10):
         #    self.model.train(permutate_data(labeled_sentences), total_examples=self.model.corpus_count)
         self.model.train(labeled_sentences, total_examples=self.model.corpus_count, epochs=self.model.iter)
+        #self.model.train(labeled_sentences, total_examples=self.model.corpus_count, epochs=10)
+
 
 
 

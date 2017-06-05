@@ -220,7 +220,7 @@ class CNetwork(object):
         return new_network
 
     def generate_knn_network(self, network):
-        k = 5
+        k = 7
         print "knn red"
         network_size = network.vcount()
         edgesList = network.get_edgelist()
@@ -290,11 +290,10 @@ class CNetwork(object):
         '''
         if self.network_sub_type  == 'noun':
             return self.multilayer_noun_based_network()
-        elif self.network_sub_type == 'tfidf':
-            return self.multilayer_tfidf_based_network()
-
-        elif self.network_sub_type == 'd2v':
-            print ""
+        elif self.network_sub_type == 'tfidf' or self.network_sub_type == 'd2v':
+            return self.multilayer_tfidf_d2v_based_network()
+        #elif self.network_sub_type == 'd2v':
+        #    print "-"
 
         return ['mln']
 
@@ -339,8 +338,11 @@ class CNetwork(object):
 
 
 
-    def multilayer_tfidf_based_network(self):
-        print 'MLN-TfIdf'
+    def multilayer_tfidf_d2v_based_network(self):
+        if self.network_sub_type=='tfidf':
+            print 'MLN-TfIdf'
+        else:
+            print 'MLN-Doc2vec'
 
         network_size = len(self.document_data[0])
         document_sentences = self.document_data[0]
@@ -380,7 +382,7 @@ class CNetwork(object):
         #threshold = (max(weight_list) + min(weight_list)) / 2
         threshold = (max(auxiliar_list) + min(auxiliar_list)) / 2
 
-        auxiliar_network = self.remove_edges_for_mln(network, 0.3)
+        auxiliar_network = self.remove_edges_for_mln(network, 0.2)
         #return [network, threshold]
         return [(network,auxiliar_network), threshold]
 

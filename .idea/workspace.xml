@@ -1,7 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3d1670ea-0095-471a-9959-e5c303d54b2c" name="Default" comment="" />
+    <list default="true" id="3d1670ea-0095-471a-9959-e5c303d54b2c" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/embeddings_generator.py" afterPath="$PROJECT_DIR$/Manager/embeddings_generator.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/main.py" afterPath="$PROJECT_DIR$/Manager/main.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/network.py" afterPath="$PROJECT_DIR$/Manager/network.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/results.csv" afterPath="$PROJECT_DIR$/Manager/results.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d061_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d061_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d062_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d062_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d063_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d063_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d064_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d064_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d065_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d065_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d066_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d066_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d067_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d067_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d068_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d068_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d069_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d069_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d070_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d070_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d071_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d071_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d072_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d072_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d073_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d073_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d074_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d074_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d075_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d075_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d076_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d076_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d077_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d077_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d078_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d078_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d079_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d079_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d080_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d080_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d081_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d081_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d082_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d082_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d083_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d083_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d084_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d084_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d085_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d085_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d086_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d086_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d087_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d087_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d089_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d089_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d090_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d090_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d091_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d091_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d092_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d092_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d093_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d093_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d094_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d094_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d095_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d095_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d096_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d096_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d097_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d097_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d098_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d098_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d099_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d099_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d100_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d100_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d101_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d101_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d102_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d102_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d103_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d103_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d104_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d104_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d105_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d105_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d106_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d106_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d107_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d107_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d108_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d108_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d109_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d109_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d110_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d110_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d111_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d111_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d112_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d112_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d113_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d113_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d114_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d114_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d115_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d115_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d116_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d116_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d117_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d117_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d118_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d118_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d119_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d119_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d120_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d120_system1.txt" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,8 +83,8 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Manager/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="193" column="44" lean-forward="true" selection-start-line="193" selection-start-column="44" selection-end-line="193" selection-end-column="44" />
+            <state relative-caret-position="115">
+              <caret line="186" column="126" lean-forward="false" selection-start-line="186" selection-start-column="126" selection-end-line="186" selection-end-column="126" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -30,7 +95,7 @@
       <file leaf-file-name="corpus_loader.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Manager/corpus_loader.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
+            <state relative-caret-position="2535">
               <caret line="171" column="37" lean-forward="false" selection-start-line="171" selection-start-column="37" selection-end-line="171" selection-end-column="37" />
               <folding />
             </state>
@@ -40,8 +105,8 @@
       <file leaf-file-name="embeddings_generator.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Manager/embeddings_generator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="133" column="30" lean-forward="false" selection-start-line="133" selection-start-column="30" selection-end-line="133" selection-end-column="30" />
+            <state relative-caret-position="210">
+              <caret line="129" column="8" lean-forward="false" selection-start-line="129" selection-start-column="8" selection-end-line="129" selection-end-column="8" />
               <folding>
                 <element signature="e#0#59#0" expanded="true" />
               </folding>
@@ -52,8 +117,8 @@
       <file leaf-file-name="network.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Manager/network.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="332" column="64" lean-forward="false" selection-start-line="332" selection-start-column="64" selection-end-line="332" selection-end-column="64" />
+            <state relative-caret-position="145">
+              <caret line="384" column="65" lean-forward="false" selection-start-line="384" selection-start-column="65" selection-end-line="384" selection-end-column="65" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -86,8 +151,8 @@
       <file leaf-file-name="text_conversion.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Manager/text_conversion.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="97">
-              <caret line="17" column="34" lean-forward="true" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
+            <state relative-caret-position="1320">
+              <caret line="95" column="32" lean-forward="false" selection-start-line="95" selection-start-column="32" selection-end-line="95" selection-end-column="32" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -144,15 +209,15 @@
         <option value="$PROJECT_DIR$/Manager/absorption.py" />
         <option value="$PROJECT_DIR$/Manager/validation.py" />
         <option value="$PROJECT_DIR$/Manager/morphological_analysis.py" />
-        <option value="$PROJECT_DIR$/Manager/embeddings_generator.py" />
         <option value="$PROJECT_DIR$/Manager/testes.py" />
         <option value="$PROJECT_DIR$/Manager/summarization.py" />
         <option value="$PROJECT_DIR$/Manager/configuration.py" />
         <option value="$PROJECT_DIR$/Manager/utils.py" />
         <option value="$PROJECT_DIR$/Manager/corpus_loader.py" />
+        <option value="$PROJECT_DIR$/Manager/text_conversion.py" />
+        <option value="$PROJECT_DIR$/Manager/embeddings_generator.py" />
         <option value="$PROJECT_DIR$/Manager/network.py" />
         <option value="$PROJECT_DIR$/Manager/main.py" />
-        <option value="$PROJECT_DIR$/Manager/text_conversion.py" />
       </list>
     </option>
   </component>
@@ -214,7 +279,7 @@
   </component>
   <component name="RunManager" selected="Python.main">
     <configuration default="false" name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <output_file path="$USER_HOME$/Escritorio/Outputs/prueba.txt" is_save="true" />
+      <output_file path="$USER_HOME$/Escritorio/output/testes.txt" is_save="true" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -475,7 +540,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43171114" sideWeight="0.5058565" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5502318" sideWeight="0.4941435" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.568779" sideWeight="0.4941435" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -885,16 +950,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Manager/corpus_loader.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
+        <state relative-caret-position="2535">
           <caret line="171" column="37" lean-forward="false" selection-start-line="171" selection-start-column="37" selection-end-line="171" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Manager/text_conversion.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1320">
+          <caret line="95" column="32" lean-forward="false" selection-start-line="95" selection-start-column="32" selection-end-line="95" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Manager/embeddings_generator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="133" column="30" lean-forward="false" selection-start-line="133" selection-start-column="30" selection-end-line="133" selection-end-column="30" />
+        <state relative-caret-position="210">
+          <caret line="129" column="8" lean-forward="false" selection-start-line="129" selection-start-column="8" selection-end-line="129" selection-end-column="8" />
           <folding>
             <element signature="e#0#59#0" expanded="true" />
           </folding>
@@ -903,18 +978,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Manager/network.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="332" column="64" lean-forward="false" selection-start-line="332" selection-start-column="64" selection-end-line="332" selection-end-column="64" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Manager/text_conversion.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="17" column="34" lean-forward="true" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
+        <state relative-caret-position="145">
+          <caret line="384" column="65" lean-forward="false" selection-start-line="384" selection-start-column="65" selection-end-line="384" selection-end-column="65" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
@@ -923,8 +988,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Manager/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="193" column="44" lean-forward="true" selection-start-line="193" selection-start-column="44" selection-end-line="193" selection-end-column="44" />
+        <state relative-caret-position="115">
+          <caret line="186" column="126" lean-forward="false" selection-start-line="186" selection-start-column="126" selection-end-line="186" selection-end-column="126" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
