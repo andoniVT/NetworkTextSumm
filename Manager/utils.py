@@ -618,7 +618,22 @@ def naive_tag(document_sentences):
         tagged.append((i, None))
     return tagged
 
+def vector_normalize(lista):
+    normalized = []
+    maximo = max(lista)
+    for i in lista:
+        value = i/float(maximo)
+        normalized.append(value)
+    return normalized
 
+def assign_mln_weight(normalized, flag_list, inter, intra):
+    weights = []
+    for i in range(len(normalized)):
+        if flag_list[i]:
+            weights.append(normalized[i]*intra)
+        else:
+            weights.append(normalized[i]*inter)
+    return weights
 
 
 if __name__ == '__main__':

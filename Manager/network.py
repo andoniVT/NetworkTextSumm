@@ -1,7 +1,7 @@
 import igraph
 from igraph import *
 from utils import has_common_elements, cosineSimilarity, calculate_similarity, reverseSortList, sortList, average
-from utils import inverse_weights , find_term, sort_network, draw_graph , get_weights
+from utils import inverse_weights , find_term, sort_network, draw_graph , get_weights, vector_normalize, assign_mln_weight
 import utils
 import absorption
 import hierarchical
@@ -308,11 +308,14 @@ class CNetwork(object):
         network_edges = []
         weight_list = []
         auxiliar_list = []
+        flag_list = []
+        cosines = []
 
         for i in all_edges:
             index1 = i[0]
             index2 = i[1]
-            #common_elements = has_common_elements(document_sentences[index1][0], document_sentences[index2][0])
+            common_elements = has_common_elements(document_sentences[index1][0], document_sentences[index2][0])
+            '''
             similarity = cosineSimilarity(document_sentences[index1][0], document_sentences[index2][0])
             belong_same_document = document_sentences[index1][1] == document_sentences[index2][1]
             if similarity > 0:
@@ -323,16 +326,33 @@ class CNetwork(object):
                     weight_list.append(similarity*self.intra_edge)
                 else:
                     weight_list.append(similarity*self.inter_edge)
+            '''
+            belong_same_document = document_sentences[index1][1] == document_sentences[index2][1]
+            similarity = cosineSimilarity(document_sentences[index1][0], document_sentences[index2][0])
+            if common_elements > 0:
+                network_edges.append((index1, index2))
+                auxiliar_list.append(common_elements)
+                cosines.append(similarity)
+                if belong_same_document:
+                    flag_list.append(True)
+                else:
+                    flag_list.append(False)
+
+        normalized = vector_normalize(auxiliar_list)
+        weight_list = assign_mln_weight(normalized, flag_list, self.inter_edge, self.intra_edge)
+
 
         network.add_edges(network_edges)
         network.es['weight'] = weight_list
-        threshold = (max(auxiliar_list) + min(auxiliar_list)) / 2
+        #threshold = (max(auxiliar_list) + min(auxiliar_list)) / 2
+        threshold = (max(cosines) + min(cosines)) / 2
         #print threshold
 
         auxiliar_network = self.remove_edges_for_mln(network, 0.4)
-        #print len(network.get_edgelist()) , len(auxiliar_network.get_edgelist())
         #return [network, threshold]
         return [(network, auxiliar_network), threshold]
+
+
 
 
 
@@ -690,7 +710,7 @@ class CNMeasures(object):
         self.betweenness()
         self.clustering_coefficient()
         self.generalized_accessibility()
-        #self.absortion_time()
+        self.absortion_time()
         #self.concentrics([])
         #self.symmetry([])
         #self.accessibility([])
