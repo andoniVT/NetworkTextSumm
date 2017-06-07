@@ -220,7 +220,7 @@ class CNetwork(object):
         return new_network
 
     def generate_knn_network(self, network):
-        k = 7
+        k = 15
         print "knn red"
         network_size = network.vcount()
         edgesList = network.get_edgelist()
@@ -314,8 +314,7 @@ class CNetwork(object):
         for i in all_edges:
             index1 = i[0]
             index2 = i[1]
-            common_elements = has_common_elements(document_sentences[index1][0], document_sentences[index2][0])
-            '''
+            #common_elements = has_common_elements(document_sentences[index1][0], document_sentences[index2][0])
             similarity = cosineSimilarity(document_sentences[index1][0], document_sentences[index2][0])
             belong_same_document = document_sentences[index1][1] == document_sentences[index2][1]
             if similarity > 0:
@@ -326,7 +325,7 @@ class CNetwork(object):
                     weight_list.append(similarity*self.intra_edge)
                 else:
                     weight_list.append(similarity*self.inter_edge)
-            '''
+        '''
             belong_same_document = document_sentences[index1][1] == document_sentences[index2][1]
             similarity = cosineSimilarity(document_sentences[index1][0], document_sentences[index2][0])
             if common_elements > 0:
@@ -340,12 +339,13 @@ class CNetwork(object):
 
         normalized = vector_normalize(auxiliar_list)
         weight_list = assign_mln_weight(normalized, flag_list, self.inter_edge, self.intra_edge)
+        '''
 
 
         network.add_edges(network_edges)
         network.es['weight'] = weight_list
-        #threshold = (max(auxiliar_list) + min(auxiliar_list)) / 2
-        threshold = (max(cosines) + min(cosines)) / 2
+        threshold = (max(auxiliar_list) + min(auxiliar_list)) / 2
+        #threshold = (max(cosines) + min(cosines)) / 2
         #print threshold
 
         auxiliar_network = self.remove_edges_for_mln(network, 0.4)
@@ -402,7 +402,7 @@ class CNetwork(object):
         #threshold = (max(weight_list) + min(weight_list)) / 2
         threshold = (max(auxiliar_list) + min(auxiliar_list)) / 2
 
-        auxiliar_network = self.remove_edges_for_mln(network, 0.2)
+        auxiliar_network = self.remove_edges_for_mln(network, 0.3)
         #return [network, threshold]
         return [(network,auxiliar_network), threshold]
 
@@ -698,7 +698,7 @@ class CNMeasures(object):
         obj = hierarchical.GeneralizedAccesibility(self.extra_network)
         sorted_by_generalized = obj.sort_by_accesibility()
         self.node_rankings['gaccs'] = sorted_by_generalized
-        #print sorted_by_generalized
+        print sorted_by_generalized
         #return sorted_by_generalized
 
 
@@ -710,7 +710,7 @@ class CNMeasures(object):
         self.betweenness()
         self.clustering_coefficient()
         self.generalized_accessibility()
-        self.absortion_time()
+        #self.absortion_time()
         #self.concentrics([])
         #self.symmetry([])
         #self.accessibility([])

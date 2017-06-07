@@ -181,8 +181,8 @@ class Summarizer(object):
         intra = 0
         inter = 0
         dictionary = dict()
-        dictionary['language'] = 'ptg'
-        #dictionary['language'] = 'eng'
+        #dictionary['language'] = 'ptg'
+        dictionary['language'] = 'eng'
         #dictionary['type'] = ('SDS' , None)
         dictionary['type'] = ('MDS', 1)  #0->sin antiredundancia, 1->metodo de ribaldo 2->metodo de maximum marginal relevance
         dictionary['corpus'] = 0
@@ -199,11 +199,11 @@ class Summarizer(object):
         # 3(no)-2 si,  puede ser alto
         # 1 ok  normal
         #dictionary['network'] = ('d2v', [False, 2,  'cos', 300, False])
-        #dictionary['network'] = ('d2v', [False, 0.3, 'cos', 300, False])  # ahora con porcentajes , nueva funcion de redundancia
-        #dictionary['network'] = ('d2v', [False, 0.3, 'cos', 300, False])  # ahora red knn
-        dictionary['network'] = ('mln', ['noun', 1.5, 1.0])
+        #dictionary['network'] = ('d2v', [False, 0.4, 'cos', 200, False])  # ahora con porcentajes , nueva funcion de redundancia
+        #dictionary['network'] = ('d2v', [False, 'knn', 'cos', 300, False])  # ahora red knn
+        #dictionary['network'] = ('mln', ['noun', 1.5, 1.0])
         #dictionary['network'] = ('mln', ['tfidf', True, -1, 'cos', 1.5, 1.0])  # inter - intra
-        #dictionary['network'] = ('mln', ['d2v', False, 0.3, 'cos', 300, False, 1.5, 1.0])
+        dictionary['network'] = ('mln', ['d2v', False, 0.3, 'cos', 300, False, 1.5, 1.0])
 
 
 
