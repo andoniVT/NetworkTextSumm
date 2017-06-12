@@ -1,10 +1,12 @@
 import igraph
 from igraph import *
+import networkx as nx
 from utils import has_common_elements, cosineSimilarity, calculate_similarity, reverseSortList, sortList, average
 from utils import inverse_weights , find_term, sort_network, draw_graph , get_weights, vector_normalize, assign_mln_weight
 import utils
 import absorption
 import hierarchical
+
 
 class NetworkManager(object):
 
@@ -702,6 +704,30 @@ class CNMeasures(object):
         #return sorted_by_generalized
 
 
+    def katz_centrality(self, parameters=None):
+        print "measuring katz centrality"
+        network_edges = self.extra_network.get_edgelist()
+        nx_network = nx.Graph()
+        nodes = [x for x in range(self.extra_network.vcount())]
+        nx_network.add_nodes_from(nodes)
+        nx_network.add_edges_from(network_edges)
+
+        phi = (1 + math.sqrt(self.extra_network.vcount()+1)) / 2.0  # largest eigenvalue of adj matrix
+        parameter = 1 / phi - 0.01
+        centrality = nx.katz_centrality_numpy(nx_network)
+
+        list_centrality = []
+        for i in range(len(centrality)):
+            list_centrality.append(centrality[i])
+
+        ranked_by_kc = reverseSortList(list_centrality)
+        self.node_rankings['katz'] = ranked_by_kc
+
+        print ranked_by_kc
+
+
+
+
     def all_measures(self, parameters=None):
         print "measuring all"
         self.degree()
@@ -710,6 +736,7 @@ class CNMeasures(object):
         self.betweenness()
         self.clustering_coefficient()
         self.generalized_accessibility()
+        self.katz_centrality()
         #self.absortion_time()
         #self.concentrics([])
         #self.symmetry([])
@@ -741,6 +768,8 @@ class CNMeasures(object):
         dictionary['sym'] = self.symmetry
         dictionary['accs'] = self.accessibility
         dictionary['ccts'] = self.concentrics # con parametrossss
+        dictionary['katz'] = self.katz_centrality  # con parametrossss
+
 
         dictionary['trad'] = self.traditional_measures
         dictionary['*'] = self.all_measures
