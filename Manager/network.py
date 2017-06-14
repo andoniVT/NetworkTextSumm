@@ -10,14 +10,16 @@ import hierarchical
 
 class NetworkManager(object):
 
-    def __init__(self, network_type, network_sub_type, corpus, vector_representation, distance, inter_edge, intra_edge, limiar_value):
+    #def __init__(self, network_type, network_sub_type, corpus, vector_representation, distance, inter_edge, intra_edge, limiar_value):
+    def __init__(self, network_type, network_sub_type, corpus, vector_representation, distance, inter_edge, limiar_mln, limiar_value):
         self.network_type = network_type
         self.network_sub_type = network_sub_type
         self.corpus = corpus
         self.vector_representation = vector_representation
         self.distance = distance
         self.inter_edge = inter_edge
-        self.intra_edge = intra_edge
+        #self.intra_edge = intra_edge
+        self.limiar_mln = limiar_mln
         self.limiar_value = limiar_value
 
     def create_networks(self):
@@ -31,8 +33,8 @@ class NetworkManager(object):
                 doc_vector = self.vector_representation[doc_name]
             document_data = [doc_sentences, doc_vector]
             #print "problem:" , doc_name
-            obj = CNetwork(self.network_type, self.network_sub_type, document_data, self.distance,
-                           self.inter_edge, self.intra_edge, self.limiar_value)
+            obj = CNetwork(self.network_type, self.network_sub_type, document_data, self.distance, # hice modificacion limiar_mln
+                           self.inter_edge, self.limiar_mln, self.limiar_value)
 
             networkData = obj.generate()
 
@@ -45,13 +47,15 @@ class NetworkManager(object):
 
 class CNetwork(object):
 
-    def __init__(self, network_type, network_sub_type, document_data, distance, inter_edge, intra_edge, limiar_value):
+    #def __init__(self, network_type, network_sub_type, document_data, distance, inter_edge, intra_edge, limiar_value):
+    def __init__(self, network_type, network_sub_type, document_data, distance, inter_edge, limiar_mln, limiar_value):
         self.network_type = network_type
         self.network_sub_type = network_sub_type
         self.document_data = document_data
         self.distance = distance
         self.inter_edge = inter_edge
-        self.intra_edge = intra_edge
+        #self.intra_edge = intra_edge
+        self.limiar_mln = limiar_mln
         self.limiar_value = limiar_value
 
     def noun_based_network(self):
@@ -222,7 +226,7 @@ class CNetwork(object):
         return new_network
 
     def generate_knn_network(self, network):
-        k = 15
+        k = 21
         print "knn red"
         network_size = network.vcount()
         edgesList = network.get_edgelist()
@@ -324,7 +328,8 @@ class CNetwork(object):
                 auxiliar_list.append(similarity)
 
                 if belong_same_document:
-                    weight_list.append(similarity*self.intra_edge)
+                    weight_list.append(similarity)
+                    #weight_list.append(similarity*self.intra_edge)
                 else:
                     weight_list.append(similarity*self.inter_edge)
         '''
@@ -350,7 +355,8 @@ class CNetwork(object):
         #threshold = (max(cosines) + min(cosines)) / 2
         #print threshold
 
-        auxiliar_network = self.remove_edges_for_mln(network, 0.4)
+        #auxiliar_network = self.remove_edges_for_mln(network, 0.4)
+        auxiliar_network = self.remove_edges_for_mln(network, self.limiar_mln)
         #return [network, threshold]
         return [(network, auxiliar_network), threshold]
 
@@ -391,7 +397,8 @@ class CNetwork(object):
                 auxiliar_list.append(similarity)
 
                 if belong_same_document:
-                    weight_list.append(similarity*self.intra_edge)
+                    #weight_list.append(similarity*self.intra_edge)
+                    weight_list.append(similarity)
                 else:
                     weight_list.append(similarity*self.inter_edge)
 
@@ -404,7 +411,8 @@ class CNetwork(object):
         #threshold = (max(weight_list) + min(weight_list)) / 2
         threshold = (max(auxiliar_list) + min(auxiliar_list)) / 2
 
-        auxiliar_network = self.remove_edges_for_mln(network, 0.3)
+        #auxiliar_network = self.remove_edges_for_mln(network, 0.3)
+        auxiliar_network = self.remove_edges_for_mln(network, self.limiar_mln)
         #return [network, threshold]
         return [(network,auxiliar_network), threshold]
 
@@ -529,13 +537,13 @@ class CNMeasures(object):
         print "measuring btw"
         #graph_btw = self.network.betweenness()
         graph_btw = self.extra_network.betweenness()
-        graph_btw_w = self.network.betweenness(weights=self.network.es['weight'])
+        #graph_btw_w = self.network.betweenness(weights=self.network.es['weight'])
         ranked_by_btw = reverseSortList(graph_btw)
-        ranked_by_btw_w = reverseSortList(graph_btw_w)
+        #ranked_by_btw_w = reverseSortList(graph_btw_w)
         print ranked_by_btw
-        print ranked_by_btw_w
+        #print ranked_by_btw_w
         self.node_rankings['btw'] = ranked_by_btw
-        self.node_rankings['btw_w'] = ranked_by_btw_w
+        #self.node_rankings['btw_w'] = ranked_by_btw_w
         #return [ranked_by_btw , ranked_by_btw_w]
 
 
@@ -543,13 +551,13 @@ class CNMeasures(object):
         print "measuring cc"
         #graph__cc = self.network.transitivity_local_undirected()
         graph__cc = self.extra_network.transitivity_local_undirected()
-        graph__cc_w = self.network.transitivity_local_undirected(weights=self.network.es['weight'])
+        #graph__cc_w = self.network.transitivity_local_undirected(weights=self.network.es['weight'])
         ranked_by_cc = reverseSortList(graph__cc)
-        ranked_by_cc_w = reverseSortList(graph__cc_w)
+        #ranked_by_cc_w = reverseSortList(graph__cc_w)
         print ranked_by_cc
-        print ranked_by_cc_w
+        #print ranked_by_cc_w
         self.node_rankings['cc'] = ranked_by_cc
-        self.node_rankings['cc_w'] = ranked_by_cc_w
+        #self.node_rankings['cc_w'] = ranked_by_cc_w
         #return [ranked_by_cc, ranked_by_cc_w]
 
 
@@ -737,7 +745,7 @@ class CNMeasures(object):
         self.clustering_coefficient()
         self.generalized_accessibility()
         self.katz_centrality()
-        #self.absortion_time()
+        self.absortion_time()
         #self.concentrics([])
         #self.symmetry([])
         #self.accessibility([])

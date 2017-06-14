@@ -72,7 +72,8 @@ def parameter_extractor(network_type, data):
     parameters['size_d2v'] = size_d2v
     parameters['inference_d2v'] = inference_d2v
     parameters['inter_edge'] = inter_edge
-    parameters['intra_edge'] = intra_edge
+    #parameters['intra_edge'] = intra_edge
+    parameters['limiar_mln'] = intra_edge
 
     return parameters
 

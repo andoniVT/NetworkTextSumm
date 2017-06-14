@@ -36,7 +36,8 @@ class Summarizer(object):
         size_d2v = extracted_net_parameters['size_d2v']
         inference_d2v = extracted_net_parameters['inference_d2v']
         inter_edge = extracted_net_parameters['inter_edge']
-        intra_edge = extracted_net_parameters['intra_edge']
+        #intra_edge = extracted_net_parameters['intra_edge']
+        limiar_mln = extracted_net_parameters['limiar_mln']
 
         #anti_redundancy_threshold = None  # si los documentos no requieren vectorizacion , este es calculado en la generacion de los sumarios
         # basado en la distancia coseno de las palabras, sin necesidad de generar los vectores de cada documento
@@ -131,7 +132,7 @@ class Summarizer(object):
         3. Creacion de la red  y  4. Eliminacion de nodos, limiares
         '''
 
-        obj = NetworkManager(network_type, mln_type, processed_corpus, vectorized_corpus, distance, inter_edge, intra_edge, limiar_value)
+        obj = NetworkManager(network_type, mln_type, processed_corpus, vectorized_corpus, distance, inter_edge, limiar_mln, limiar_value)
         complex_networks = obj.create_networks()
 
         #for i in complex_networks.items():
@@ -188,8 +189,8 @@ class Summarizer(object):
         dictionary = dict()
         dictionary['language'] = 'ptg'
         #dictionary['language'] = 'eng'
-        dictionary['type'] = ('SDS' , None)
-        #dictionary['type'] = ('MDS', 1)  #0->sin antiredundancia, 1->metodo de ribaldo 2->metodo de maximum marginal relevance
+        #dictionary['type'] = ('SDS' , None)
+        dictionary['type'] = ('MDS', 1)  #0->sin antiredundancia, 1->metodo de ribaldo 2->metodo de maximum marginal relevance
         dictionary['corpus'] = 0
         dictionary['size'] = 'w'
 
@@ -197,16 +198,16 @@ class Summarizer(object):
         # ('mln', ['noun', intra, inter]), ('mln', ['tfidf', intra, inter, True, 0, 'dist_cos']), ('mln' , ['d2v', intra, inter, 300, True, 1, 'dist_euc', True])]
 
 
-        dictionary['network'] = ('noun', [])
+        #dictionary['network'] = ('noun', [])
         #dictionary['network'] = ('tfidf', [True, -1, 'cos'])
         # todas las preuvas que iniclaes fueron con limiar=2
         # 5-4 no sirve, muy alto
         # 3(no)-2 si,  puede ser alto
         # 1 ok  normal
         #dictionary['network'] = ('d2v', [False, 2,  'cos', 300, False])
-        #dictionary['network'] = ('d2v', [False, 0.4, 'cos', 200, False])  # ahora con porcentajes , nueva funcion de redundancia
-        #dictionary['network'] = ('d2v', [False, 'knn', 'cos', 300, False])  # ahora red knn
-        #dictionary['network'] = ('mln', ['noun', 1.5, 1.0])
+        #dictionary['network'] = ('d2v', [False, 0.1, 'cos', 200, False])  # ahora con porcentajes , nueva funcion de redundancia
+        #dictionary['network'] = ('d2v', [False, 'knn', 'cos', 200, False])  # ahora red knn
+        dictionary['network'] = ('mln', ['noun', 1.9, 0.5])  # inter - limiar remocion
         #dictionary['network'] = ('mln', ['tfidf', True, -1, 'cos', 1.5, 1.0])  # inter - intra
         #dictionary['network'] = ('mln', ['d2v', False, 0.3, 'cos', 300, False, 1.5, 1.0])
 
