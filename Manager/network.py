@@ -476,13 +476,13 @@ class CNMeasures(object):
         print "measuring degree"
         #graph_degree = self.network.degree()
         graph_degree = self.extra_network.degree()
-        graph_stg = self.network.strength(weights=self.network.es['weight'])
+        #graph_stg = self.network.strength(weights=self.network.es['weight'])
         ranked_by_degree = reverseSortList(graph_degree)
-        ranked_by_stg = reverseSortList(graph_stg)
+        #ranked_by_stg = reverseSortList(graph_stg)
         print ranked_by_degree
-        print ranked_by_stg
+        #print ranked_by_stg
         self.node_rankings['dg'] = ranked_by_degree
-        self.node_rankings['stg'] = ranked_by_stg
+        #self.node_rankings['stg'] = ranked_by_stg
         #return [ranked_by_degree, ranked_by_stg]
 
     def shortest_path(self, paremeters=None):
@@ -507,14 +507,14 @@ class CNMeasures(object):
             measure2.append(sp2)
             measure3.append(sp3)
         ranked_by_sp = sortList(measure)
-        ranked_by_sp_w = sortList(measure2)
-        ranked_by_sp_w2 = sortList(measure3)
+        #ranked_by_sp_w = sortList(measure2)
+        #ranked_by_sp_w2 = sortList(measure3)
         print ranked_by_sp
-        print ranked_by_sp_w
-        print ranked_by_sp_w2
+        #print ranked_by_sp_w
+        #print ranked_by_sp_w2
         self.node_rankings['sp'] = ranked_by_sp
-        self.node_rankings['sp_w'] = ranked_by_sp_w
-        self.node_rankings['sp_w2'] = ranked_by_sp_w2
+        #self.node_rankings['sp_w'] = ranked_by_sp_w
+        #self.node_rankings['sp_w2'] = ranked_by_sp_w2
         #return [ranked_by_sp, ranked_by_sp_w, ranked_by_sp_w2]
 
 
@@ -523,13 +523,13 @@ class CNMeasures(object):
         print "measuring pr"
         #graph_pr = self.network.pagerank()
         graph_pr = self.extra_network.pagerank()
-        graph_pr_w = self.network.pagerank(weights=self.network.es['weight'])
+        #graph_pr_w = self.network.pagerank(weights=self.network.es['weight'])
         ranked_by_pr = reverseSortList(graph_pr)
-        ranked_by_pr_w = reverseSortList(graph_pr_w)
+        #ranked_by_pr_w = reverseSortList(graph_pr_w)
         print ranked_by_pr
-        print ranked_by_pr_w
+        #print ranked_by_pr_w
         self.node_rankings['pr'] = ranked_by_pr
-        self.node_rankings['pr_w'] = ranked_by_pr_w
+        #self.node_rankings['pr_w'] = ranked_by_pr_w
         #return [ranked_by_pr, ranked_by_pr_w]
 
 

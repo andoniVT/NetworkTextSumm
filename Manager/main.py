@@ -207,8 +207,8 @@ class Summarizer(object):
         #dictionary['network'] = ('d2v', [False, 2,  'cos', 300, False])
         #dictionary['network'] = ('d2v', [False, 0.1, 'cos', 200, False])  # ahora con porcentajes , nueva funcion de redundancia
         #dictionary['network'] = ('d2v', [False, 'knn', 'cos', 200, False])  # ahora red knn
-        dictionary['network'] = ('mln', ['noun', 1.9, 0.5])  # inter - limiar remocion
-        #dictionary['network'] = ('mln', ['tfidf', True, -1, 'cos', 1.5, 1.0])  # inter - intra
+        #dictionary['network'] = ('mln', ['noun', 1.9, 0.5])  # inter - limiar remocion
+        dictionary['network'] = ('mln', ['tfidf', True, -1, 'cos', 1.9, 0.5])  # inter - intra (pasado)    inter - limiar remocion (ahora)
         #dictionary['network'] = ('mln', ['d2v', False, 0.3, 'cos', 300, False, 1.5, 1.0])
 
 
