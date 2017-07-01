@@ -5,7 +5,7 @@ import string
 import xml.etree.ElementTree as ET
 import re
 import cPickle
-from random import shuffle
+from random import shuffle, choice
 from collections import Counter
 from gensim import matutils
 from scipy import spatial
@@ -13,9 +13,13 @@ from configuration import extras
 from igraph import *
 from subprocess import call
 import subprocess
-import random
+#import random
+#random.choice
 import os
 import shutil
+import matplotlib.pyplot as plt
+import numpy as np
+from pylab import *
 
 def write_data_to_disk(file, data):
     with open(file, 'wb') as fid:
@@ -33,44 +37,50 @@ def parameter_extractor(network_type, data):
     mln_type = None
     sw_removal = None
     limiar_value = None
-    distance = None
+    limiar_type = None
+    #distance = None
     size_d2v = None
-    inference_d2v = None
+    #inference_d2v = None
     inter_edge = None
     intra_edge = None
 
+    '''
+    dictionary['network'] = ('mln', ['noun', [1.7, 1.9], [0.4, 0.45, 0.5]]) # size:3
+    dictionary['network'] = ('mln', ['tfidf', [1.7, 1.9], [0.4, 0.45, 0.5]])  # inter - limiar remocion  # size:3
+    dictionary['network'] = ('mln', ['d2v', False, ('limiar', [0.3]), 300, [1.7, 1.9], [0.4, 0.45, 0.5]])  # size:6
+    '''
+
     if network_type == 'mln':
         mln_type = data[0]
-        if size_parameter > 3:
+        if size_parameter == 6:
             sw_removal = data[1]
-            limiar_value = data[2]
-            distance = data[3]
-            if size_parameter == 6:
-                inter_edge = data[4]
-                intra_edge = data[5]
-            else:
-                size_d2v = data[4]
-                inference_d2v = data[5]
-                inter_edge = data[6]
-                intra_edge = data[7]
+            limiar_type = data[2][0]
+            limiar_value = data[2][1]
+            size_d2v = data[3]
+            inter_edge = data[4]
+            intra_edge = data[5]
         else:
             inter_edge = data[1]
             intra_edge = data[2]
     else:
+        # [False, ('limiar', [0.15]), 200]
         if size_parameter != 0:
-            sw_removal = data[0]
-            limiar_value = data[1]
-            distance = data[2]
-            if size_parameter == 5:
-                size_d2v = data[3]
-                inference_d2v = data[4]
+            sw_removal = data[0] #ok
+            limiar_type = data[1][0]
+            limiar_value = data[1][1]
+            size_d2v = data[2]
+            #distance = data[2]
+            #if size_parameter == 5:
+            #    size_d2v = data[3]
+            #    inference_d2v = data[4]
 
     parameters['mln_type'] = mln_type
     parameters['sw_removal'] = sw_removal
+    parameters['limiar_type'] = limiar_type
     parameters['limiar_value'] = limiar_value
-    parameters['distance'] = distance
+    #parameters['distance'] = distance
     parameters['size_d2v'] = size_d2v
-    parameters['inference_d2v'] = inference_d2v
+    #parameters['inference_d2v'] = inference_d2v
     parameters['inter_edge'] = inter_edge
     #parameters['intra_edge'] = intra_edge
     parameters['limiar_mln'] = intra_edge
@@ -162,9 +172,10 @@ def cosineSimilarity(sentence1, sentence2):
         return 1 - spatial.distance.cosine(vec_sentence1, vec_sentence2)  doc2vec
         '''
 
-def calculate_similarity(vec_sentence1 , vec_sentence2, network_type, distance_method):
-    if distance_method=='euc':
-        return ['falta implementar']
+#def calculate_similarity(vec_sentence1 , vec_sentence2, network_type, distance_method):
+def calculate_similarity(vec_sentence1 , vec_sentence2, network_type):
+    #if distance_method=='euc':
+    #    return ['falta implementar']
     if network_type=='tfidf':
         return matutils.cossim(vec_sentence1, vec_sentence2)
     if network_type=='d2v':
@@ -435,23 +446,41 @@ def selectSentencesMulti(sentences, ranking, resumo_size, anti_redundancy, thres
 
 
 def folder_creation(dictionary_rankings, type):
-    key = random.choice(dictionary_rankings.keys())
+    #random.choice
+    print dictionary_rankings.keys()
+    #key = random.choice(dictionary_rankings.keys())
+    key = choice(dictionary_rankings.keys())
+
     dict_measures = dictionary_rankings[key]
+
     measures = []
-    for i in dict_measures.items():
+    for i in dict_measures[0].items(): #### modificacion aqui ,
         measures.append(i[0])
 
-    measures.append('random')
-    measures.append('top')
+    #measures.append('random')
+    #measures.append('top')
 
     #if type is None:
     #    measures.append('top')
+    index = 1
 
+    for i in range(len(dict_measures)):
+        for j in measures:
+            path = extras['Automatics'] + str(index) + '/' + j
+            if not os.path.exists(path):
+                os.makedirs(path)
+            #print path
+        index+=1
+
+
+    ''' 
     for i in measures:
         #path = "Automatic/" + i
         path = extras['Automatics'] + i
-        if not os.path.exists(path):
-            os.makedirs(path)
+        print path
+        #if not os.path.exists(path):
+        #    os.makedirs(path)
+    '''
 
 
 '''
@@ -468,14 +497,15 @@ def saveSummary(location, summary_sentences):
         file.write(i + "\n")
 
 
-def summary_creation(resumo_name, selected_sentences):
+def summary_creation(resumo_name, selected_sentences, index):
     print "Generacion de sumarios en file"
     print resumo_name
-    location = extras['Automatics']
+    location = extras['Automatics'] + str(index) + '/'
     for i in selected_sentences.items():
         measure = i[0]
         sentences = i[1]
         path = location + measure + '/' + resumo_name
+        print path
         saveSummary(path, sentences)
 
 
@@ -484,7 +514,7 @@ def summary_random_top_creation(resumo_name, sentences, resumo_size):
     print "Creando random y top baseline for SDS"
     ranking_top = [x for x in range(len(sentences))]
     ranking_random = ranking_top[:]
-    random.shuffle(ranking_random)
+    shuffle(ranking_random)
 
     #path = "Automatic/top/" + resumo_name
     path = extras['Automatics'] + 'top/' + resumo_name
@@ -636,20 +666,57 @@ def assign_mln_weight(normalized, flag_list, inter, intra):
             weights.append(normalized[i]*inter)
     return weights
 
+def generate_comparative_graphic(matrix, x):
+    plt.plot(x, matrix[0], color='blue', linewidth=3.0)  ##4.0
+    plt.plot(x, matrix[1], color='red', linewidth=3.0)
+    plt.plot(x, matrix[2], color='darkgreen', linewidth=3.0)  ## 2.0
+    plt.plot(x, matrix[3], color='black', linewidth=3.2)
+    plt.plot(x, matrix[4], color='yellow', linewidth=3.3)  ## 6.0
+    plt.plot(x, matrix[5], color='brown', linewidth=3.0)
+    plt.plot(x, matrix[6], color='cyan', linewidth=3.0)  ## 8.0
+    plt.plot(x, matrix[7], color='m', linewidth=3.3)
+    plt.plot(x, matrix[8], color='y', linewidth=3.0)
+    plt.plot(x, matrix[9], color='deeppink', linewidth=3.0)
+
+    plt.ylim(0.450, 0.480)
+    plt.legend(['dg', 'stg', 'pr', 'pr_w', 'sp', 'sp_w', 'gaccs', 'at', 'kats', 'btw'], loc='upper right')
+    plt.xlabel('Number of removed edges (%)')
+    # plt.xlabel('K (3-19)')
+    # plt.xlabel('K (3-21)')
+    plt.ylabel('Rouge Recall')
+    plt.title('Portuguese SDS - Limiares')
+    # plt.title('Portuguese SDS - Knn network')
+    # plt.title('Portuguese MDS - Limiares')
+    # plt.title('Portuguese MDS - Knn network')
+    plt.show()
+
+
+def test_folders():
+    medidas = ''
+
+
+
 
 if __name__ == '__main__':
 
-    matrix = [['sp_w2', '0.434', '0.473', '0.4523'], ['top', '0.4421', '0.4757', '0.458'],
-              ['random', '0.4261', '0.4594', '0.4417'], ['stg', '0.4346', '0.4734', '0.4528'],
-              ['sp_w', '0.4346', '0.4729', '0.4525'], ['sp', '0.4394', '0.475', '0.4561'],
-              ['dg', '0.4382', '0.4748', '0.4553']]
+    x = [10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60]
+    degree = [0.4728, 0.4686, 0.4643, 0.4679, 0.4665, 0.4655, 0.4682, 0.4659, 0.4618, 0.4605, 0.4621]
+    strengt = [0.4528, 0.46, 0.4588, 0.4586, 0.4522, 0.4555, 0.4533, 0.4587, 0.4542, 0.4534, 0.4539]
+    page_rank = [0.4572, 0.4615, 0.4594, 0.455, 0.461, 0.4655, 0.4586, 0.4621, 0.4618, 0.4558, 0.4622]
+    page_rank_w = [0.4522, 0.4613, 0.4599, 0.4584, 0.4511, 0.4552, 0.4534, 0.4584, 0.4549, 0.4533, 0.4548]
+    shortest_paths = [0.4739, 0.4702, 0.4663, 0.4679, 0.4666, 0.4661, 0.468, 0.4652, 0.462, 0.4606, 0.4621]
+    shortest_paths_w = [0.4534, 0.4628, 0.4596, 0.4577, 0.451, 0.4561, 0.4532, 0.4584, 0.4542, 0.4525, 0.4542]
+    btw = [0.4727, 0.4689, 0.4663, 0.4678, 0.469, 0.4667, 0.4677, 0.4642, 0.4617, 0.4602, 0.461]
+    kats = [0.4592, 0.4602, 0.4609, 0.4589, 0.4539, 0.4633, 0.4545, 0.4549, 0.4618, 0.4589, 0.4643]
+    generalized = [0.466, 0.47, 0.4689, 0.4717, 0.47, 0.468, 0.4773, 0.4729, 0.4725, 0.4752, 0.4767]
+    at = [0.4562, 0.4629, 0.456, 0.456, 0.4561, 0.4543, 0.4588, 0.4593, 0.4576, 0.4529, 0.4584]
 
 
-    for i in  matrix:
-        print i
+    matrix = [degree, strengt, page_rank, page_rank_w, shortest_paths, shortest_paths_w, btw, kats, generalized, at]
 
-    print ""
-    sort_results(matrix)
+    generate_comparative_graphic(matrix, x)
+
+
 
 
 

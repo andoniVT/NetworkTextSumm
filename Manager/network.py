@@ -11,16 +11,20 @@ import hierarchical
 class NetworkManager(object):
 
     #def __init__(self, network_type, network_sub_type, corpus, vector_representation, distance, inter_edge, intra_edge, limiar_value):
-    def __init__(self, network_type, network_sub_type, corpus, vector_representation, distance, inter_edge, limiar_mln, limiar_value):
+    #def __init__(self, network_type, network_sub_type, corpus, vector_representation, distance, inter_edge, limiar_mln, limiar_value):
+    def __init__(self, network_type, network_sub_type, corpus, vector_representation, inter_edge, limiar_mln, limiar_value, limiar_type):
         self.network_type = network_type
         self.network_sub_type = network_sub_type
         self.corpus = corpus
         self.vector_representation = vector_representation
-        self.distance = distance
+        #self.distance = distance
         self.inter_edge = inter_edge
         #self.intra_edge = intra_edge
         self.limiar_mln = limiar_mln
-        self.limiar_value = limiar_value
+        self.limiar_value = limiar_value  ## recorrer el vector de limiares
+        self.limiar_type = limiar_type
+        #print network_type, network_sub_type, inter_edge, limiar_mln, limiar_value, limiar_type
+
 
     def create_networks(self):
         corpus_networks = dict()
@@ -33,12 +37,10 @@ class NetworkManager(object):
                 doc_vector = self.vector_representation[doc_name]
             document_data = [doc_sentences, doc_vector]
             #print "problem:" , doc_name
-            obj = CNetwork(self.network_type, self.network_sub_type, document_data, self.distance, # hice modificacion limiar_mln
-                           self.inter_edge, self.limiar_mln, self.limiar_value)
+            #obj = CNetwork(self.network_type, self.network_sub_type, document_data, self.distance, self.inter_edge, self.limiar_mln, self.limiar_value)
+            obj = CNetwork(self.network_type, self.network_sub_type, document_data, self.inter_edge, self.limiar_mln, self.limiar_value, self.limiar_type)
 
             networkData = obj.generate()
-
-
 
             corpus_networks[doc_name] = networkData
 
@@ -48,15 +50,17 @@ class NetworkManager(object):
 class CNetwork(object):
 
     #def __init__(self, network_type, network_sub_type, document_data, distance, inter_edge, intra_edge, limiar_value):
-    def __init__(self, network_type, network_sub_type, document_data, distance, inter_edge, limiar_mln, limiar_value):
+    #def __init__(self, network_type, network_sub_type, document_data, distance, inter_edge, limiar_mln, limiar_value):
+    def __init__(self, network_type, network_sub_type, document_data, inter_edge, limiar_mln, limiar_value, limiar_type):
         self.network_type = network_type
         self.network_sub_type = network_sub_type
         self.document_data = document_data
-        self.distance = distance
+        #self.distance = distance
         self.inter_edge = inter_edge
         #self.intra_edge = intra_edge
         self.limiar_mln = limiar_mln
         self.limiar_value = limiar_value
+        self.limiar_type = limiar_type
 
     def noun_based_network(self):
         #print "creando red de sustantivos"
@@ -98,7 +102,8 @@ class CNetwork(object):
         #if diameter == 6:
         #    draw_graph(network)
 
-        return [network, threshold] #None es el valor de treshold para MDS, para NOUns debe calcularse en la misma etapa de generacion
+        #return [network, threshold] #None es el valor de treshold para MDS, para NOUns debe calcularse en la misma etapa de generacion
+        return ([network], threshold)
 
 
 
@@ -119,7 +124,9 @@ class CNetwork(object):
         for i in all_edges:
             index1 = i[0]
             index2 = i[1]
-            similarity = calculate_similarity(document_vectors[index1] , document_vectors[index2], self.network_type, self.distance)
+            #similarity = calculate_similarity(document_vectors[index1] , document_vectors[index2], self.network_type, self.distance)
+            similarity = calculate_similarity(document_vectors[index1], document_vectors[index2], self.network_type)
+
 
             #belong_same_document=  document_sentences[index1][1] == document_sentences[index2][1]   #True -> son del mismo documento  False->son de distintos documentos
             #print self.inter_edge , self.intra_edge , belong_same_document
@@ -134,12 +141,29 @@ class CNetwork(object):
         network.es['weight'] = weight_list
         threshold = (max(weight_list)+min(weight_list))/2
 
+
+        '''
         if self.network_type=='d2v':
             #network = self.remove_redundant_edges(network)
             if self.limiar_value == 'knn':
                 network = self.generate_knn_network(network)
             else:
                 network = self.remove_redundant_edges_2(network)
+        '''
+
+
+        if self.network_type=='d2v':
+            networks = []
+            limiar_function = ''
+            if self.limiar_type == 'limiar':
+                limiar_function = self.remove_redundant_edges_2
+            elif self.limiar_type == 'knn':
+                limiar_function = self.generate_knn_network
+            for i in self.limiar_value:
+                current_network = limiar_function(network, i)
+                networks.append(current_network)
+            return (networks, threshold)
+
 
         #print len(all_edges) ,  len(network_edges) , len(network.get_edgelist())
         #print len(all_edges) , len(network_edges), len(network.get_edgelist())
@@ -152,7 +176,7 @@ class CNetwork(object):
         #if diameter == 2 or diameter==1:
         #   draw_graph(network)
 
-        return [network , threshold]
+        return ([network] , threshold)
 
     def remove_redundant_edges(self, network):
         edgesList = network.get_edgelist()
@@ -197,14 +221,14 @@ class CNetwork(object):
         return network
 
 
-    def remove_redundant_edges_2(self, network):
+    def remove_redundant_edges_2(self, network, limiar):
         #print 'removing'
         #self.limiar_value=0.30 - 0.50 - 0.7
         network_size = network.vcount()
         edgesList = network.get_edgelist()
         weight_list = network.es['weight']
 
-        limiar_per = self.limiar_value
+        limiar_per = limiar
         x = (len(edgesList) * limiar_per)
         new_size = int(len(edgesList) - x)
         sorted_values = sort_network(edgesList, weight_list)
@@ -225,8 +249,8 @@ class CNetwork(object):
         new_network.es['weight'] = new_weights
         return new_network
 
-    def generate_knn_network(self, network):
-        k = 21
+    def generate_knn_network(self, network, k):
+        #k = 21
         print "knn red"
         network_size = network.vcount()
         edgesList = network.get_edgelist()
@@ -309,59 +333,55 @@ class CNetwork(object):
         document_sentences = self.document_data[0]
         only_auxiliar = Graph.Full(network_size)
         all_edges = only_auxiliar.get_edgelist()
-        network = Graph()
-        network.add_vertices(network_size)
+
         network_edges = []
-        weight_list = []
         auxiliar_list = []
-        flag_list = []
-        cosines = []
+        weight_list = []
+        for i in range(len(self.inter_edge)):
+            weight_list.append([])
+
 
         for i in all_edges:
             index1 = i[0]
             index2 = i[1]
-            #common_elements = has_common_elements(document_sentences[index1][0], document_sentences[index2][0])
             similarity = cosineSimilarity(document_sentences[index1][0], document_sentences[index2][0])
             belong_same_document = document_sentences[index1][1] == document_sentences[index2][1]
+
             if similarity > 0:
                 network_edges.append((index1, index2))
                 auxiliar_list.append(similarity)
 
                 if belong_same_document:
-                    weight_list.append(similarity)
-                    #weight_list.append(similarity*self.intra_edge)
+                    for index , j in enumerate(self.inter_edge):
+                        weight_list[index].append(similarity)
+                    #weight_list.append(similarity)
                 else:
-                    weight_list.append(similarity*self.inter_edge)
-        '''
-            belong_same_document = document_sentences[index1][1] == document_sentences[index2][1]
-            similarity = cosineSimilarity(document_sentences[index1][0], document_sentences[index2][0])
-            if common_elements > 0:
-                network_edges.append((index1, index2))
-                auxiliar_list.append(common_elements)
-                cosines.append(similarity)
-                if belong_same_document:
-                    flag_list.append(True)
-                else:
-                    flag_list.append(False)
+                    for index, j in enumerate(self.inter_edge):
+                        weight_list[index].append(similarity*j)
+                    #weight_list.append(similarity*self.inter_edge) # [1.7, 1.9]
 
-        normalized = vector_normalize(auxiliar_list)
-        weight_list = assign_mln_weight(normalized, flag_list, self.inter_edge, self.intra_edge)
-        '''
-
-
-        network.add_edges(network_edges)
-        network.es['weight'] = weight_list
-        threshold = (max(auxiliar_list) + min(auxiliar_list)) / 2
-        #threshold = (max(cosines) + min(cosines)) / 2
-        #print threshold
-
+        networks = []
+        for i in weight_list:
+            for j in self.limiar_mln:
+                network = Graph()
+                network.add_vertices(network_size)
+                network.add_edges(network_edges)
+                network.es['weight'] = i
+                auxiliar_network = self.remove_edges_for_mln(network, j)
+                pair = (network, auxiliar_network)
+                networks.append(pair)
+        #network = Graph()
+        #network.add_vertices(network_size)
+        #network.add_edges(network_edges)
+        #network.es['weight'] = weight_list
         #auxiliar_network = self.remove_edges_for_mln(network, 0.4)
-        auxiliar_network = self.remove_edges_for_mln(network, self.limiar_mln)
+        #auxiliar_network = self.remove_edges_for_mln(network, self.limiar_mln)
         #return [network, threshold]
-        return [(network, auxiliar_network), threshold]
-
-
-
+        #return [(network, auxiliar_network), threshold]
+        #print len(networks)
+        #a = input()
+        threshold = (max(auxiliar_list) + min(auxiliar_list)) / 2
+        return (networks , threshold)
 
 
 
@@ -378,33 +398,50 @@ class CNetwork(object):
 
         only_auxiliar = Graph.Full(network_size)
         all_edges = only_auxiliar.get_edgelist()
-        network = Graph()
-        network.add_vertices(network_size)
+
         network_edges = []
         weight_list = []
+        for i in range(len(self.inter_edge)):
+            weight_list.append([])
         auxiliar_list = []
 
         for i in all_edges:
             index1 = i[0]
             index2 = i[1]
-            similarity = calculate_similarity(document_vectors[index1], document_vectors[index2], self.network_sub_type, self.distance)
+            similarity = calculate_similarity(document_vectors[index1], document_vectors[index2], self.network_sub_type)
             belong_same_document=  document_sentences[index1][1] == document_sentences[index2][1]   #True -> son del mismo documento  False->son de distintos documentos
-            #print  belong_same_document
-
 
             if similarity > 0:
                 network_edges.append((index1, index2))
                 auxiliar_list.append(similarity)
 
                 if belong_same_document:
+                    for index , j in enumerate(self.inter_edge):
+                        weight_list[index].append(similarity)
                     #weight_list.append(similarity*self.intra_edge)
-                    weight_list.append(similarity)
+                    #weight_list.append(similarity)
                 else:
-                    weight_list.append(similarity*self.inter_edge)
+                    for index, j in enumerate(self.inter_edge):
+                        weight_list[index].append(similarity*j)
+                    #weight_list.append(similarity*self.inter_edge)
 
 
-        network.add_edges(network_edges)
-        network.es['weight'] = weight_list
+        networks = []
+        for i in weight_list:
+            for j in self.limiar_mln:
+                network = Graph()
+                network.add_vertices(network_size)
+                network.add_edges(network_edges)
+                network.es['weight'] = i
+                auxiliar_network = self.remove_edges_for_mln(network, j)
+                pair = (network, auxiliar_network)
+                networks.append(pair)
+
+        #network = Graph()
+        #network.add_vertices(network_size)
+
+        #network.add_edges(network_edges)
+        #network.es['weight'] = weight_list
         #print 'Intra-edge:' , self.intra_edge
         #print 'Inter-edge' , self.inter_edge
 
@@ -412,9 +449,10 @@ class CNetwork(object):
         threshold = (max(auxiliar_list) + min(auxiliar_list)) / 2
 
         #auxiliar_network = self.remove_edges_for_mln(network, 0.3)
-        auxiliar_network = self.remove_edges_for_mln(network, self.limiar_mln)
+        #auxiliar_network = self.remove_edges_for_mln(network, self.limiar_mln)
         #return [network, threshold]
-        return [(network,auxiliar_network), threshold]
+        #return [(network,auxiliar_network), threshold]
+        return (networks, threshold)
 
     def remove_edges_for_mln(self, network, percentage):
         #self.limiar_value=0.30 - 0.50 - 0.7
@@ -803,9 +841,12 @@ class NodeManager(object):
         print "obtained measures", self.measures
 
         index = 1
+        '''
         for i in self.networks.items():
             document_name = i[0]
             actual_network = i[1][0] ######
+            print  actual_network
+            a = input()
             if type(actual_network) is not tuple: # para verificar si usar los dos tipos de grafos para MLN
                 obj = CNMeasures(actual_network)
             else:
@@ -825,24 +866,32 @@ class NodeManager(object):
             document_rankings = obj.get_node_rankings()
             allRankings[document_name] = document_rankings
         return allRankings
-
         '''
-        actual_network = self.networks['op94ag07-a'][0]
-        obj = CNMeasures(actual_network)
-        dictionary = obj.manage_measures()
-        if find_term(self.measures, 'ccts'):
-            self.measures = utils.manage_vector(self.measures, 'ccts')
-        if find_term(self.measures, 'sym'):
-            self.measures = utils.manage_vector(self.measures, 'sym')
-        print "obtained measures" , self.measures
+        for i in self.networks.items():
+            document_name = i[0]
+            print document_name
+            network_list = i[1][0]
+            rankings = []
+            for network in network_list:
+                if type(network) is not tuple: # para verificar si usar los dos tipos de grafos para MLN
+                    obj = CNMeasures(network)
+                else:
+                    normal_network = network[0]  # network sin aristas removidas
+                    extra_network = network[1]  # network con aristas removidas por limiares
+                    obj = CNMeasures(normal_network, extra_network)
 
-        for i in self.measures:
-            measure_parameter =  i.split('_')
-            measure = measure_parameter[0]
-            parameters = measure_parameter[1:]
-            dictionary[measure](parameters)
+                dictionary = obj.manage_measures()
+                #print index , document_name
+                for j in self.measures:
+                    measure_parameter = j.split('_')
+                    measure = measure_parameter[0]
+                    parameters = measure_parameter[1:]
+                    dictionary[measure](parameters)
+                document_rankings = obj.get_node_rankings()
+                rankings.append(document_rankings)
+            allRankings[document_name] = rankings
+        return allRankings
 
-        print "Final rankings de todas las medidas!!!!!"
-        the_rankings = obj.get_node_rankings()
-        return the_rankings
-        '''
+
+
+

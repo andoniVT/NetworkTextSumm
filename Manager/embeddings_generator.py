@@ -7,10 +7,11 @@ from utils import permutate_data
 
 class Vectorization(object):
 
-    def __init__(self, corpus, vectorization_type, use_inference=None, vector_size=None, auxiliar_corpus=None):
+    #def __init__(self, corpus, vectorization_type, use_inference=None, vector_size=None, auxiliar_corpus=None):
+    def __init__(self, corpus, vectorization_type, vector_size=None, auxiliar_corpus=None):
         self.corpus = corpus
         self.vectorization_type = vectorization_type
-        self.use_inference = use_inference
+        #self.use_inference = use_inference
         self.vector_size = vector_size
         self.auxiliar_corpus = auxiliar_corpus
 
@@ -21,7 +22,8 @@ class Vectorization(object):
 
 
     def d2v_vectorization(self):
-        obj = Doc2VecModel(self.corpus, self.use_inference, self.vector_size, self.auxiliar_corpus)
+        #obj = Doc2VecModel(self.corpus, self.use_inference, self.vector_size, self.auxiliar_corpus)
+        obj = Doc2VecModel(self.corpus, self.vector_size, self.auxiliar_corpus)
         obj.train()
         return obj.get_matrix_doc2vec()
 
@@ -86,10 +88,11 @@ class TfIdfModel(object):
 
 class Doc2VecModel(object):
 
-    def __init__(self, corpus, inference, size, auxiliar):
+    #def __init__(self, corpus, inference, size, auxiliar):
+    def __init__(self, corpus, size, auxiliar):
         print "vectorizacion doc2vec!!"
         self.corpus = corpus
-        self.inference = inference
+        #self.inference = inference
         self.size = size
         self.auxiliar = auxiliar
 
@@ -111,14 +114,14 @@ class Doc2VecModel(object):
                     allSentences.append((sent[0], sent_name))
 
         labeled_sentences = []
-        if self.inference:
-            print "aun falta implementarrr!"
-            print "posible error aqui!"
-        else:
-            for i in allSentences:
-                sentence = i[0]
-                label = i[1]
-                labeled_sentences.append(LabeledSentence(sentence, [label]))
+        #if self.inference:
+        #    print "aun falta implementarrr!"
+        #    print "posible error aqui!"
+
+        for i in allSentences:
+            sentence = i[0]
+            label = i[1]
+            labeled_sentences.append(LabeledSentence(sentence, [label]))
 
         #self.model = Doc2Vec(min_count=1, window=10, size=self.size, sample=1e-4, negative=5, workers=8)
         #self.model = Doc2Vec(min_count=1, window=10, size=self.size, sample=1e-4, workers=8)

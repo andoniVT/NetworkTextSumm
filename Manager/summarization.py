@@ -14,6 +14,8 @@ class SummaryGenerator(object):
         folder_creation(self.node_rankings, self.anti_redundancy_method)
 
 
+
+
     def generate_summaries(self):
         if self.anti_redundancy_method is None:
             self.generate_for_SDS()
@@ -42,15 +44,17 @@ class SummaryGenerator(object):
             #threshold_mds = self.networks[document_name][1]  #not used
             document_rankings = self.node_rankings[document_name]
             #print document_name, sentences, resumo_size, threshold_mds
-            #print document_rankings
-            print document_name
+            for index, ranking in enumerate(document_rankings):
+                print index+1, ranking
+                selected_sentences = sentence_selection_methods[selection](sentences, ranking, resumo_size)  # llamar a los metodos de seleccion de sentencias
+                resumo_name = document_name + '_system1.txt'
+                summary_creation(resumo_name, selected_sentences, index+1)
+                #print selected_sentences
 
-            selected_sentences = sentence_selection_methods[selection](sentences, document_rankings, resumo_size)  # llamar a los metodos de seleccion de sentencias
-            resumo_name = document_name + '_system1.txt'
-            summary_creation(resumo_name ,selected_sentences)
-
-            summary_random_top_creation(resumo_name, sentences, resumo_size)
-
+            #selected_sentences = sentence_selection_methods[selection](sentences, document_rankings, resumo_size)  # llamar a los metodos de seleccion de sentencias okkk
+            #resumo_name = document_name + '_system1.txt'
+            #summary_creation(resumo_name ,selected_sentences)
+            #summary_random_top_creation(resumo_name, sentences, resumo_size)
 
     def generate_for_MDS(self):
         print "MDS!"
@@ -69,15 +73,24 @@ class SummaryGenerator(object):
             resumo_size = i[1][2]
             threshold_mds = self.networks[document_name][1]
             document_rankings = self.node_rankings[document_name]
-            print document_name
 
-            selected_sentences = sentence_selection_methods[selection](sentences, document_rankings, resumo_size,self.anti_redundancy_method, threshold_mds, pSentences)  # llamar a los metodos de seleccion de sentencias
-            resumo_name = re.sub('_', '', document_name) + '_system1.txt'  ###### verificar si para el ingles no hay problemas
+            for index, ranking in enumerate(document_rankings):
+                print index+1, ranking
+                selected_sentences = sentence_selection_methods[selection](sentences, ranking, resumo_size, self.anti_redundancy_method, threshold_mds, pSentences)  # llamar a los metodos de seleccion de sentencias
+                resumo_name = re.sub('_', '', document_name) + '_system1.txt'  ###### verificar si para el ingles no hay problemas
+                summary_creation(resumo_name, selected_sentences, index+1)
+                print resumo_name
+
+
+
+            #a = input()
+
+            #selected_sentences = sentence_selection_methods[selection](sentences, document_rankings, resumo_size,self.anti_redundancy_method, threshold_mds, pSentences)  # llamar a los metodos de seleccion de sentencias
+            #resumo_name = re.sub('_', '', document_name) + '_system1.txt'  ###### verificar si para el ingles no hay problemas
             #resumo_name = document_name + '_system1.txt'
-            summary_creation(resumo_name, selected_sentences)
-            the_top =  self.top_sentences_for_mds[document_name]
-
-            summary_random_top_creation_mds(resumo_name, sentences, resumo_size, the_top)
+            #summary_creation(resumo_name, selected_sentences)
+            #the_top =  self.top_sentences_for_mds[document_name]
+            #summary_random_top_creation_mds(resumo_name, sentences, resumo_size, the_top)
 
 
 

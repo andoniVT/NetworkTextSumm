@@ -2,38 +2,115 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d1670ea-0095-471a-9959-e5c303d54b2c" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/C10MundoBombardeioLibano_abstract1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/C11CotidianoPCC_abstract1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/C12MundoEnchenteCoreia_abstract1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/C13MundoSriLanka_abstract1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/C14MundoAcidenteTrens_abstract1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/C15MundoExplosaoMoscou_abstract1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/C16PoliticaSanguessugas_abstract1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/C17PoliticaEleicaoAlckmim_abstract1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/C18MundoAtaqueVirginia - concordanciaRST_abstract1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/C19EsportesMaradona - concordanciaCST_abstract1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/C1MundoAviaoCongo_abstract1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/C20PoliticaCPMF_abstract1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/C21CotidianoReformaCumbica_abstract1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/C22CotidianoDeslizamentoCongonhas_abstract1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/C23MundoEnchenteReinoUnido - concordanciaCST_abstract1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/C24EsportesFabianaMue_abstract1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/C25EsportesCopaAmerica_abstract1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/C26MundoFuracaoMexico_abstract1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/C27EsportesGoleadaEquador_abstract1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/C28EsportesHeptaVolei_abstract1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/C29MundoIndenizacaoIgreja_abstract1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/C2PoliticaReeleicaoLula_abstract1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/C30DinheiroLucroItau - concordanciaRST_abstract1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/C31EsportesJade - concordanciaCST_abstract1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/C32MundoFalhaNuclear_abstract1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/C33CotidianoLulaBio_abstract1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/C34CotidianoMalhaFina_abstract1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/C35MundoMegatraficante_abstract1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/C36CotidianoMorteACM_abstract1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/C37CotidianoMotimMaranh╞o - concordanciaCST_abstract1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/C38EsportesPanNatacao_abstract1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/C39CotidianoPFCongonhas - concordanciaRST_abstract1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/C3CotidianoAcidenteTAM_abstract1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/C40PolбticaProcuradorRenan_abstract1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/C41EsportesRecordeThiago_abstract1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/C42PolбticaRelatorRenan - concordanciaCST_abstract1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/C43PolбticaRenan_abstract1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/C44PolбticaRenan2 - concordanciaCST_abstract1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/C45CotidianoRolexLuciano_abstract1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/C46MundoTerremotoJapao_abstract1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/C47MundoTurquiaIraque_abstract1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/C48EsportesVaiaBernardinho - concordanciaCST_abstract1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/C49CotidianoVaiaLula_abstract1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/C4CotidianoAlagamentoSP_abstract1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/C50PolбticaCPMFPSDB - concordanciaRST_abstract1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/C5CotidianoANAC - concordanciaCST_abstract1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/C6CotidianoCanteiroObras_abstract1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/C7CienciaNovoPlaneta - concordanciaRST_abstract1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/C8EsportesLigaVolei_abstract1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/C9PoliticaDesvio_abstract1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C10MundoBombardeioLibano_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C11CotidianoPCC_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C12MundoEnchenteCoreia_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C13MundoSriLanka_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C14MundoAcidenteTrens_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C15MundoExplosaoMoscou_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C16PoliticaSanguessugas_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C17PoliticaEleicaoAlckmim_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C18MundoAtaqueVirginia - concordanciaRST_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C19EsportesMaradona - concordanciaCST_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C1MundoAviaoCongo_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C20PoliticaCPMF_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C21CotidianoReformaCumbica_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C22CotidianoDeslizamentoCongonhas_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C23MundoEnchenteReinoUnido - concordanciaCST_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C24EsportesFabianaMue_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C25EsportesCopaAmerica_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C26MundoFuracaoMexico_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C27EsportesGoleadaEquador_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C28EsportesHeptaVolei_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C29MundoIndenizacaoIgreja_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C2PoliticaReeleicaoLula_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C30DinheiroLucroItau - concordanciaRST_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C31EsportesJade - concordanciaCST_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C32MundoFalhaNuclear_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C33CotidianoLulaBio_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C34CotidianoMalhaFina_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C35MundoMegatraficante_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C36CotidianoMorteACM_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C37CotidianoMotimMaranh╞o - concordanciaCST_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C38EsportesPanNatacao_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C39CotidianoPFCongonhas - concordanciaRST_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C3CotidianoAcidenteTAM_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C40PolбticaProcuradorRenan_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C41EsportesRecordeThiago_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C42PolбticaRelatorRenan - concordanciaCST_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C43PolбticaRenan_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C44PolбticaRenan2 - concordanciaCST_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C45CotidianoRolexLuciano_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C46MundoTerremotoJapao_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C47MundoTurquiaIraque_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C48EsportesVaiaBernardinho - concordanciaCST_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C49CotidianoVaiaLula_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C4CotidianoAlagamentoSP_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C50PolбticaCPMFPSDB - concordanciaRST_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C5CotidianoANAC - concordanciaCST_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C6CotidianoCanteiroObras_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C7CienciaNovoPlaneta - concordanciaRST_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C8EsportesLigaVolei_system1.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C9PoliticaDesvio_system1.txt" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/NetworkTextSumm.iml" afterPath="$PROJECT_DIR$/.idea/NetworkTextSumm.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/embeddings_generator.py" afterPath="$PROJECT_DIR$/Manager/embeddings_generator.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/main.py" afterPath="$PROJECT_DIR$/Manager/main.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/network.py" afterPath="$PROJECT_DIR$/Manager/network.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/results.csv" afterPath="$PROJECT_DIR$/Manager/results.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C12MundoEnchenteCoreia_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/C12MundoEnchenteCoreia_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C14MundoAcidenteTrens_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/C14MundoAcidenteTrens_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C15MundoExplosaoMoscou_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/C15MundoExplosaoMoscou_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C17PoliticaEleicaoAlckmim_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/C17PoliticaEleicaoAlckmim_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C1MundoAviaoCongo_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/C1MundoAviaoCongo_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C21CotidianoReformaCumbica_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/C21CotidianoReformaCumbica_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C22CotidianoDeslizamentoCongonhas_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/C22CotidianoDeslizamentoCongonhas_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C24EsportesFabianaMue_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/C24EsportesFabianaMue_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C25EsportesCopaAmerica_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/C25EsportesCopaAmerica_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C26MundoFuracaoMexico_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/C26MundoFuracaoMexico_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C27EsportesGoleadaEquador_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/C27EsportesGoleadaEquador_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C28EsportesHeptaVolei_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/C28EsportesHeptaVolei_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C29MundoIndenizacaoIgreja_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/C29MundoIndenizacaoIgreja_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C32MundoFalhaNuclear_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/C32MundoFalhaNuclear_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C33CotidianoLulaBio_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/C33CotidianoLulaBio_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C35MundoMegatraficante_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/C35MundoMegatraficante_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C36CotidianoMorteACM_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/C36CotidianoMorteACM_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C38EsportesPanNatacao_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/C38EsportesPanNatacao_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C39CotidianoPFCongonhas - concordanciaRST_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/C39CotidianoPFCongonhas - concordanciaRST_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C40PolбticaProcuradorRenan_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/C40PolбticaProcuradorRenan_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C41EsportesRecordeThiago_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/C41EsportesRecordeThiago_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C42PolбticaRelatorRenan - concordanciaCST_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/C42PolбticaRelatorRenan - concordanciaCST_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C43PolбticaRenan_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/C43PolбticaRenan_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C45CotidianoRolexLuciano_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/C45CotidianoRolexLuciano_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C4CotidianoAlagamentoSP_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/C4CotidianoAlagamentoSP_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C50PolбticaCPMFPSDB - concordanciaRST_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/C50PolбticaCPMFPSDB - concordanciaRST_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C5CotidianoANAC - concordanciaCST_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/C5CotidianoANAC - concordanciaCST_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C6CotidianoCanteiroObras_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/C6CotidianoCanteiroObras_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C7CienciaNovoPlaneta - concordanciaRST_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/C7CienciaNovoPlaneta - concordanciaRST_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C8EsportesLigaVolei_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/C8EsportesLigaVolei_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/summarization.py" afterPath="$PROJECT_DIR$/Manager/summarization.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/utils.py" afterPath="$PROJECT_DIR$/Manager/utils.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -51,8 +128,8 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Manager/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3390">
-              <caret line="226" column="39" lean-forward="false" selection-start-line="226" selection-start-column="39" selection-end-line="226" selection-end-column="39" />
+            <state relative-caret-position="416">
+              <caret line="266" column="8" lean-forward="false" selection-start-line="266" selection-start-column="8" selection-end-line="266" selection-end-column="8" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -63,8 +140,8 @@
       <file leaf-file-name="validation.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Manager/validation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="44" column="26" lean-forward="false" selection-start-line="44" selection-start-column="26" selection-end-line="44" selection-end-column="26" />
+            <state relative-caret-position="360">
+              <caret line="71" column="1" lean-forward="false" selection-start-line="71" selection-start-column="1" selection-end-line="71" selection-end-column="1" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -75,18 +152,18 @@
       <file leaf-file-name="corpus_loader.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Manager/corpus_loader.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2355">
-              <caret line="159" column="23" lean-forward="false" selection-start-line="159" selection-start-column="23" selection-end-line="159" selection-end-column="23" />
+            <state relative-caret-position="2115">
+              <caret line="143" column="23" lean-forward="false" selection-start-line="143" selection-start-column="23" selection-end-line="143" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="embeddings_generator.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="embeddings_generator.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Manager/embeddings_generator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2160">
-              <caret line="144" column="49" lean-forward="false" selection-start-line="144" selection-start-column="49" selection-end-line="144" selection-end-column="49" />
+            <state relative-caret-position="2235">
+              <caret line="154" column="0" lean-forward="false" selection-start-line="154" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
               <folding>
                 <element signature="e#0#59#0" expanded="true" />
               </folding>
@@ -97,11 +174,10 @@
       <file leaf-file-name="network.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Manager/network.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8010">
-              <caret line="541" column="9" lean-forward="false" selection-start-line="541" selection-start-column="9" selection-end-line="541" selection-end-column="9" />
+            <state relative-caret-position="30">
+              <caret line="417" column="36" lean-forward="false" selection-start-line="417" selection-start-column="36" selection-end-line="417" selection-end-column="36" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
-                <marker date="1497661966943" expanded="true" signature="29023:29151" ph="..." />
               </folding>
             </state>
           </provider>
@@ -110,8 +186,8 @@
       <file leaf-file-name="utils.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Manager/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="885">
-              <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+            <state relative-caret-position="26">
+              <caret line="540" column="4" lean-forward="false" selection-start-line="540" selection-start-column="4" selection-end-line="540" selection-end-column="4" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -132,8 +208,8 @@
       <file leaf-file-name="text_conversion.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Manager/text_conversion.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1320">
-              <caret line="95" column="32" lean-forward="false" selection-start-line="95" selection-start-column="32" selection-end-line="95" selection-end-column="32" />
+            <state relative-caret-position="2145">
+              <caret line="150" column="14" lean-forward="false" selection-start-line="150" selection-start-column="14" selection-end-line="150" selection-end-column="14" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -141,11 +217,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="summarization.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="summarization.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Manager/summarization.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1515">
-              <caret line="102" column="42" lean-forward="false" selection-start-line="102" selection-start-column="42" selection-end-line="102" selection-end-column="42" />
+            <state relative-caret-position="221">
+              <caret line="84" column="0" lean-forward="true" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
               <folding>
                 <element signature="e#1#160#0" expanded="true" />
               </folding>
@@ -190,25 +266,24 @@
         <option value="$PROJECT_DIR$/Manager/absorption.py" />
         <option value="$PROJECT_DIR$/Manager/morphological_analysis.py" />
         <option value="$PROJECT_DIR$/Manager/testes.py" />
-        <option value="$PROJECT_DIR$/Manager/summarization.py" />
         <option value="$PROJECT_DIR$/Manager/configuration.py" />
         <option value="$PROJECT_DIR$/Manager/corpus_loader.py" />
         <option value="$PROJECT_DIR$/Manager/text_conversion.py" />
-        <option value="$PROJECT_DIR$/Manager/embeddings_generator.py" />
         <option value="$PROJECT_DIR$/Manager/validation.py" />
-        <option value="$PROJECT_DIR$/Manager/utils.py" />
+        <option value="$PROJECT_DIR$/Manager/embeddings_generator.py" />
         <option value="$PROJECT_DIR$/Manager/network.py" />
+        <option value="$PROJECT_DIR$/Manager/utils.py" />
         <option value="$PROJECT_DIR$/Manager/main.py" />
+        <option value="$PROJECT_DIR$/Manager/summarization.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1" />
-    <option name="width" value="1368" />
-    <option name="height" value="741" />
+    <option name="width" value="1440" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -221,78 +296,26 @@
       <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NetworkTextSumm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NetworkTextSumm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NetworkTextSumm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NetworkTextSumm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Manager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="FullScreen" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager" selected="Python.main">
-    <configuration default="false" name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <output_file path="$USER_HOME$/Escritorio/output/testes.txt" is_save="true" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Manager" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="NetworkTextSumm" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Manager/main.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="absorption" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Manager" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="NetworkTextSumm" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Manager/absorption.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
     <configuration default="false" name="unitex" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -308,6 +331,7 @@
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Manager/unitex.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
       <method />
     </configuration>
     <configuration default="false" name="morphological_analysis" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -325,6 +349,7 @@
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Manager/morphological_analysis.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
       <method />
     </configuration>
     <configuration default="false" name="testes" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -342,6 +367,44 @@
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Manager/testes.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <output_file path="$USER_HOME$/Escritorio/output/testes.txt" is_save="true" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/System/Library/Frameworks/Python.framework/Versions/2.7/bin/python2.7" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Manager" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="NetworkTextSumm" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Manager/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="utils" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Manager" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="NetworkTextSumm" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Manager/utils.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
@@ -359,6 +422,7 @@
       <option name="SCRIPT_NAME" value="" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="Tox" factoryName="Tox">
@@ -371,25 +435,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="NetworkTextSumm" />
-      <method />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Attests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="NetworkTextSumm" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -421,15 +466,10 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="NetworkTextSumm" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
+      <option name="_new_regexPattern" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;.&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
@@ -442,19 +482,44 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="NetworkTextSumm" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;.&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="NetworkTextSumm" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;.&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method />
+    </configuration>
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="Python.unitex" />
+      <item index="1" class="java.lang.String" itemvalue="Python.morphological_analysis" />
+      <item index="2" class="java.lang.String" itemvalue="Python.testes" />
+      <item index="3" class="java.lang.String" itemvalue="Python.main" />
+      <item index="4" class="java.lang.String" itemvalue="Python.utils" />
+    </list>
+    <recent_temporary>
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Python.main" />
+        <item index="1" class="java.lang.String" itemvalue="Python.utils" />
+        <item index="2" class="java.lang.String" itemvalue="Python.testes" />
+        <item index="3" class="java.lang.String" itemvalue="Python.morphological_analysis" />
+        <item index="4" class="java.lang.String" itemvalue="Python.unitex" />
+      </list>
+    </recent_temporary>
+    <configuration default="true" type="tests" factoryName="Attests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
@@ -471,29 +536,8 @@
       <option name="TEST_TYPE" value="TEST_SCRIPT" />
       <option name="PATTERN" value="" />
       <option name="USE_PATTERN" value="false" />
-      <option name="testToRun" value="" />
-      <option name="keywords" value="" />
-      <option name="params" value="" />
-      <option name="USE_PARAM" value="false" />
-      <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.main" />
-      <item index="1" class="java.lang.String" itemvalue="Python.absorption" />
-      <item index="2" class="java.lang.String" itemvalue="Python.unitex" />
-      <item index="3" class="java.lang.String" itemvalue="Python.morphological_analysis" />
-      <item index="4" class="java.lang.String" itemvalue="Python.testes" />
-    </list>
-    <recent_temporary>
-      <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.main" />
-        <item index="1" class="java.lang.String" itemvalue="Python.testes" />
-        <item index="2" class="java.lang.String" itemvalue="Python.morphological_analysis" />
-        <item index="3" class="java.lang.String" itemvalue="Python.unitex" />
-        <item index="4" class="java.lang.String" itemvalue="Python.absorption" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -512,26 +556,27 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="0" width="1368" height="741" extended-state="6" />
-    <editor active="false" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12811127" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43171114" sideWeight="0.5058565" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4021102" sideWeight="0.4941435" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3987441" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5729984" sideWeight="0.4941435" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3987441" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -539,7 +584,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -829,27 +874,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/gensim/models/word2vec.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="39">
-          <caret line="814" column="0" lean-forward="false" selection-start-line="814" selection-start-column="0" selection-end-line="814" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/gensim/models/doc2vec.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9300">
-          <caret line="622" column="0" lean-forward="false" selection-start-line="622" selection-start-column="0" selection-end-line="622" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/gensim/corpora/dictionary.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3482">
-          <caret line="152" column="56" lean-forward="false" selection-start-line="152" selection-start-column="56" selection-end-line="152" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/gensim/models/word2vec.py" />
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/gensim/models/doc2vec.py" />
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/gensim/corpora/dictionary.py" />
     <entry file="file://$PROJECT_DIR$/Manager/morphological_analysis.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -864,6 +891,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Manager/configuration.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Manager/text_conversion.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2145">
+          <caret line="150" column="14" lean-forward="false" selection-start-line="150" selection-start-column="14" selection-end-line="150" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Manager/testes.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
@@ -874,89 +919,70 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Manager/text_conversion.py">
+    <entry file="file://$PROJECT_DIR$/Manager/corpus_loader.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1320">
-          <caret line="95" column="32" lean-forward="false" selection-start-line="95" selection-start-column="32" selection-end-line="95" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Manager/configuration.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state relative-caret-position="2115">
+          <caret line="143" column="23" lean-forward="false" selection-start-line="143" selection-start-column="23" selection-end-line="143" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Manager/summarization.py">
+    <entry file="file://$PROJECT_DIR$/Manager/embeddings_generator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1515">
-          <caret line="102" column="42" lean-forward="false" selection-start-line="102" selection-start-column="42" selection-end-line="102" selection-end-column="42" />
+        <state relative-caret-position="2235">
+          <caret line="154" column="0" lean-forward="false" selection-start-line="154" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
           <folding>
-            <element signature="e#1#160#0" expanded="true" />
+            <element signature="e#0#59#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Manager/validation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="44" column="26" lean-forward="false" selection-start-line="44" selection-start-column="26" selection-end-line="44" selection-end-column="26" />
+        <state relative-caret-position="360">
+          <caret line="71" column="1" lean-forward="false" selection-start-line="71" selection-start-column="1" selection-end-line="71" selection-end-column="1" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Manager/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="885">
-          <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Manager/network.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8010">
-          <caret line="541" column="9" lean-forward="false" selection-start-line="541" selection-start-column="9" selection-end-line="541" selection-end-column="9" />
+        <state relative-caret-position="30">
+          <caret line="417" column="36" lean-forward="false" selection-start-line="417" selection-start-column="36" selection-end-line="417" selection-end-column="36" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
-            <marker date="1497661966943" expanded="true" signature="29023:29151" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Manager/corpus_loader.py">
+    <entry file="file://$PROJECT_DIR$/Manager/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2355">
-          <caret line="159" column="23" lean-forward="false" selection-start-line="159" selection-start-column="23" selection-end-line="159" selection-end-column="23" />
-          <folding />
+        <state relative-caret-position="26">
+          <caret line="540" column="4" lean-forward="false" selection-start-line="540" selection-start-column="4" selection-end-line="540" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Manager/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3390">
-          <caret line="226" column="39" lean-forward="false" selection-start-line="226" selection-start-column="39" selection-end-line="226" selection-end-column="39" />
+        <state relative-caret-position="416">
+          <caret line="266" column="8" lean-forward="false" selection-start-line="266" selection-start-column="8" selection-end-line="266" selection-end-column="8" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Manager/embeddings_generator.py">
+    <entry file="file://$PROJECT_DIR$/Manager/summarization.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2160">
-          <caret line="144" column="49" lean-forward="false" selection-start-line="144" selection-start-column="49" selection-end-line="144" selection-end-column="49" />
+        <state relative-caret-position="221">
+          <caret line="84" column="0" lean-forward="true" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
           <folding>
-            <element signature="e#0#59#0" expanded="true" />
+            <element signature="e#1#160#0" expanded="true" />
           </folding>
         </state>
       </provider>
