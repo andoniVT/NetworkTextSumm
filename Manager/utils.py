@@ -20,6 +20,7 @@ import shutil
 import matplotlib.pyplot as plt
 import numpy as np
 from pylab import *
+import csv
 
 def write_data_to_disk(file, data):
     with open(file, 'wb') as fid:
@@ -557,8 +558,15 @@ def deleteFiles(type):
     for f in files:
         os.remove(type +f)
 
+def delete_dsStore(vector):
+    special = '.DS_Store'
+    if special in vector: vector.remove(special)
+    return vector
+
+
 def deleteFolders(location):
     files = os.listdir(location)
+    files = delete_dsStore(files)
     for f in files:
         shutil.rmtree(location + f)
 
@@ -691,9 +699,91 @@ def generate_comparative_graphic(matrix, x):
     plt.show()
 
 
-def test_folders():
-    medidas = ''
+'''
+def sort_results(matrix):
+    pos = 0
+    dictionary = dict()
+    dictionary_positions = dict()
+    for i in matrix:
+        dictionary[i[0]] = i[2]
+        dictionary_positions[i[0]] = pos
+        pos+=1
+    sorted_x = sorted(dictionary.items(), key=operator.itemgetter(1), reverse=True)
+    ordered_matrix = []
+    titles = ['MEASURE', 'P', 'R', 'F']
+    ordered_matrix.append(titles)
+    for i in sorted_x:
+        key = i[0]
+        position = dictionary_positions[key]
+        ordered_matrix.append(matrix[position])
 
+    return ordered_matrix
+'''
+
+def sort_recall_results(results):
+    dictionary = dict()
+    for i in results:
+        element = i[0]
+        dictionary[element[0]] = element[1]
+    sorted_x = sorted(dictionary.items(), key=operator.itemgetter(1), reverse=True)
+    return sorted_x
+
+
+
+def generate_excel_simple(excel_name, results):
+    print 'Generating Excel Simple Version'
+    print excel_name
+    results_sorted = sort_recall_results(results)
+    first_row = ['Measurement' , 'Recall']
+    myfile = open(excel_name, 'wb')
+    wr = csv.writer(myfile, quoting=csv.QUOTE_ALL)
+    wr.writerow(first_row)
+
+    for i in results_sorted:
+        to_write = [i[0], i[1]]
+        wr.writerow(to_write)
+
+
+
+def generate_excel_d2v_mln(excel_name, results, parameters_table):
+    print 'Generating Excel Limiars and Inter-edges Version'
+    print excel_name
+    print results
+    print parameters_table
+    pesos_inter_edge_mln = parameters_table[0]
+    limiares = parameters_table[1]
+
+    first_row = ['Inter-edge Weight MLN' , 'Measurement']
+    for i in limiares:
+        first_row.append(str(i))
+
+    pesos_mln_table = []
+
+
+    if pesos_inter_edge_mln is not None:
+        divisions = len(results) / len(pesos_inter_edge_mln)
+        for i in pesos_inter_edge_mln:
+            peso = i
+            for j in range(divisions):
+                pesos_mln_table.append(peso)
+    else:
+        pesos_mln_table = ['None' for x in results]
+
+    print first_row
+    myfile = open(excel_name, 'wb')
+    wr = csv.writer(myfile, quoting=csv.QUOTE_ALL)
+    wr.writerow(first_row)
+
+    for index, actual_result in enumerate(results):
+        measure = actual_result[0][0]
+        recalls = []
+        for j in actual_result:
+            recalls.append(j[1])
+
+        write_line = [pesos_mln_table[index], measure]
+        write_line.extend(recalls)
+        wr.writerow(write_line)
+        print write_line
 
 
 

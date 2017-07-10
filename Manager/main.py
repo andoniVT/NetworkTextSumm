@@ -5,12 +5,14 @@ from text_conversion import CorpusConversion
 from network import NetworkManager , NodeManager
 from summarization import SummaryGenerator
 from validation import Validation
-from configuration import extras
+from configuration import extras, final_results
+from random import shuffle, choice
 
 
 class Summarizer(object):
-    def __init__(self, test):
+    def __init__(self, test, output):
         self.data = self.parse_file(test)
+        self.output_excel = output
 
     def execute(self):
         data = self.data
@@ -151,8 +153,11 @@ class Summarizer(object):
         obj = NodeManager(complex_networks, network_measures)
         all_documentRankings = obj.ranking()
 
-        for i in all_documentRankings.items():
-            print i
+
+
+
+        #for i in all_documentRankings.items():
+        #    print len(i[1][0])
 
 
 
@@ -175,13 +180,44 @@ class Summarizer(object):
 
         '''
         7. Validation
-        
+        '''
+        key = choice(all_documentRankings.keys())
+        number_of_measures = len(all_documentRankings[key][0])
+        print  limiar_mln
+        parameters_to_show_table = []
+
+        if limiar_mln is not None:
+            first_value =  len(inter_edge)
+            second_value = len(limiar_mln)
+            third_value = number_of_measures
+            parameters_to_show_table.append(inter_edge)
+            parameters_to_show_table.append(limiar_mln)
+            #third_value = len(inter_edge)
+            #first_value = number_of_measures * len(limiar_mln)
+        elif limiar_value is not None:
+            first_value = 1
+            second_value = len(limiar_value)
+            third_value = number_of_measures
+            parameters_to_show_table.append(None)
+            parameters_to_show_table.append(limiar_value)
+        else:
+            first_value = 1
+            second_value = 1
+            third_value = number_of_measures
+
+
+
+        #second_value = len(limiar_value)
+
+        print first_value , second_value , third_value
+
+
 
         # validation language type_summary corpus_name
-        obj = Validation(validation, language, type_summary, corpus_name)
+        obj = Validation(validation, language, type_summary, corpus_name, [first_value, second_value, third_value], self.output_excel, parameters_to_show_table)
         obj.validate('results.csv')
         deleteFolders(extras['Automatics'])
-        '''
+
 
 
     def parse_file(self, file):
@@ -191,7 +227,7 @@ class Summarizer(object):
         dictionary['language'] = 'ptg'
         #dictionary['language'] = 'eng'
         #dictionary['type'] = ('SDS' , None)
-        dictionary['type'] = ('MDS', 1)  #0->sin antiredundancia, 1->metodo de ribaldo 2->metodo de maximum marginal relevance
+        dictionary['type'] = ('MDS', 0)  #0->sin antiredundancia, 1->metodo de ribaldo 2->metodo de maximum marginal relevance
         dictionary['corpus'] = 0
         dictionary['size'] = 'w'
 
@@ -212,12 +248,16 @@ class Summarizer(object):
         #dictionary['network'] = ('d2v' , [False, ('limiar',[0.1,0.15,0.20,0.25,0.3]), 'cos', 200, False ])  # eliminar el ultimo False , ya que no se usara la prediccion
         #dictionary['network'] = ('d2v', [False, ('knn', [3,5,7,9,11,13,15]), 'cos', 200, False])  # eliminar el ultimo False , ya que no se usara la prediccion, eliminar tambien medicion del coseno
 
-        dictionary['network'] = ('d2v', [False, ('limiar', [0.15, 0.20, 0.25]), 200])
-
-        #dictionary['network'] = ('mln', ['noun', [1.7, 1.9], [0.4, 0.45, 0.5]])
-        #dictionary['network'] = ('mln', ['tfidf', [1.7, 1.9], [0.4, 0.45, 0.5]])  # inter - limiar remocion
 
 
+        #dictionary['network'] = ('d2v', [False, ('limiar', [0.15, 0.20, 0.25, 0.3, 0.35, 0.4]), 200])
+        #dictionary['network'] = ('d2v', [False, ('knn', [3,5,7,11,13,15]), 200])
+
+        dictionary['network'] = ('mln', ['noun', [1.1, 1.3, 1.5, 1.7, 1.9], [0.1, 0.15, 0.20, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5]])
+        #dictionary['network'] = ('mln', ['tfidf', [1.7, 1.9, 2.0], [0.35, 0.4, 0.45, 0.5]])  # inter - limiar remocion
+
+
+    
         '''
         dictionary['network'] = ('d2v', [False, ('limiar', [0.1, 0.15, 0.20, 0.25, 0.3]), 200])  # eliminar el ultimo False , ya que no se usara la prediccion
         dictionary['network'] = ('d2v', [False, ('knn', [3, 5, 7, 9, 11, 13, 15]), 200])  # eliminar el ultimo False , ya que no se usara la prediccion, eliminar tambien medicion del coseno
@@ -238,9 +278,9 @@ class Summarizer(object):
         #dictionary['measures'] = ['dg', 'ccts_2_h2', 'ccts_4_h3', 'ccts_7_h2']
         #dictionary['measures'] = ['dg', 'ccts']
         #dictionary['measures'] = ['sym_h_m_h2', 'sym_l_b_h3' , 'dg', 'sym_h_b_h3']
-        dictionary['measures'] = ['dg' , 'pr']
+        #dictionary['measures'] = ['dg' , 'pr']
         #dictionary['measures'] = ['ccts']
-        #dictionary['measures'] = ['*']
+        dictionary['measures'] = ['*']
         #dictionary['measures'] = ['katz']
         #dictionary['measures'] = ['at']
         #dictionary['measures'] = ['trad']
@@ -264,13 +304,11 @@ class Summarizer(object):
 
 if __name__ == '__main__':
 
-    obj = Summarizer('test1.txt')
+    output = final_results['prueba']
+
+    #obj = Summarizer('input.txt' , 'output.csv')
+    obj = Summarizer('input.txt', output)
     obj.execute()
 
-    '''
-    1. Ingles problemas con SDS para  el momento de calcular therehold para red de nouns , vector de cosenos 0
-    2. Ingles problemas con SDS para medidas con pesos, basadas en shortest paths, max weight min weight
 
-
-    '''
 

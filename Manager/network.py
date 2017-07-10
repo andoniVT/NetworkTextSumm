@@ -514,13 +514,13 @@ class CNMeasures(object):
         print "measuring degree"
         #graph_degree = self.network.degree()
         graph_degree = self.extra_network.degree()
-        #graph_stg = self.network.strength(weights=self.network.es['weight'])
+        graph_stg = self.network.strength(weights=self.network.es['weight'])
         ranked_by_degree = reverseSortList(graph_degree)
-        #ranked_by_stg = reverseSortList(graph_stg)
+        ranked_by_stg = reverseSortList(graph_stg)
         print ranked_by_degree
-        #print ranked_by_stg
+        print ranked_by_stg
         self.node_rankings['dg'] = ranked_by_degree
-        #self.node_rankings['stg'] = ranked_by_stg
+        self.node_rankings['stg'] = ranked_by_stg
         #return [ranked_by_degree, ranked_by_stg]
 
     def shortest_path(self, paremeters=None):
@@ -537,21 +537,21 @@ class CNMeasures(object):
             #lenghts = self.network.shortest_paths(i)[0]
             lenghts = self.extra_network.shortest_paths(i)[0]
             lenghts2 = self.network.shortest_paths(i, weights=weight)[0]
-            lenghts3 = self.network.shortest_paths(i, weights=weight2)[0]
+            #lenghts3 = self.network.shortest_paths(i, weights=weight2)[0]
             sp = average(lenghts)
             sp2= average(lenghts2)
-            sp3 = average(lenghts3)
+            #sp3 = average(lenghts3)
             measure.append(sp)
             measure2.append(sp2)
-            measure3.append(sp3)
+            #measure3.append(sp3)
         ranked_by_sp = sortList(measure)
-        #ranked_by_sp_w = sortList(measure2)
+        ranked_by_sp_w = sortList(measure2)
         #ranked_by_sp_w2 = sortList(measure3)
         print ranked_by_sp
-        #print ranked_by_sp_w
+        print ranked_by_sp_w
         #print ranked_by_sp_w2
         self.node_rankings['sp'] = ranked_by_sp
-        #self.node_rankings['sp_w'] = ranked_by_sp_w
+        self.node_rankings['sp_w'] = ranked_by_sp_w
         #self.node_rankings['sp_w2'] = ranked_by_sp_w2
         #return [ranked_by_sp, ranked_by_sp_w, ranked_by_sp_w2]
 
@@ -561,13 +561,13 @@ class CNMeasures(object):
         print "measuring pr"
         #graph_pr = self.network.pagerank()
         graph_pr = self.extra_network.pagerank()
-        #graph_pr_w = self.network.pagerank(weights=self.network.es['weight'])
+        graph_pr_w = self.network.pagerank(weights=self.network.es['weight'])
         ranked_by_pr = reverseSortList(graph_pr)
-        #ranked_by_pr_w = reverseSortList(graph_pr_w)
+        ranked_by_pr_w = reverseSortList(graph_pr_w)
         print ranked_by_pr
-        #print ranked_by_pr_w
+        print ranked_by_pr_w
         self.node_rankings['pr'] = ranked_by_pr
-        #self.node_rankings['pr_w'] = ranked_by_pr_w
+        self.node_rankings['pr_w'] = ranked_by_pr_w
         #return [ranked_by_pr, ranked_by_pr_w]
 
 
@@ -575,13 +575,13 @@ class CNMeasures(object):
         print "measuring btw"
         #graph_btw = self.network.betweenness()
         graph_btw = self.extra_network.betweenness()
-        #graph_btw_w = self.network.betweenness(weights=self.network.es['weight'])
+        graph_btw_w = self.network.betweenness(weights=self.network.es['weight'])
         ranked_by_btw = reverseSortList(graph_btw)
-        #ranked_by_btw_w = reverseSortList(graph_btw_w)
+        ranked_by_btw_w = reverseSortList(graph_btw_w)
         print ranked_by_btw
-        #print ranked_by_btw_w
+        print ranked_by_btw_w
         self.node_rankings['btw'] = ranked_by_btw
-        #self.node_rankings['btw_w'] = ranked_by_btw_w
+        self.node_rankings['btw_w'] = ranked_by_btw_w
         #return [ranked_by_btw , ranked_by_btw_w]
 
 
@@ -780,9 +780,9 @@ class CNMeasures(object):
         self.shortest_path()
         self.page_rank()
         self.betweenness()
-        self.clustering_coefficient()
+        #self.clustering_coefficient()
         self.generalized_accessibility()
-        self.katz_centrality()
+        #self.katz_centrality()
         self.absortion_time()
         #self.concentrics([])
         #self.symmetry([])

@@ -11,6 +11,86 @@ from gensim.models import Doc2Vec
 from gensim.models.doc2vec import LabeledSentence
 import unicodedata
 
+import igraph
+from igraph import *
+
+def tfidf():
+	s1 = ['brazil', 'be', 'large', 'country', 'south', 'america']
+	s2 = ['be', 'world', 'five', 'large', 'country', 'area', 'population']
+	s3 = ['be', 'large', 'country', 'have', 'portuguese', 'official', 'language', 'one', 'america']
+	s4 = ['bound', 'atlantic', 'ocean', 'east', 'brazil', 'have', 'costline', 'kilometer']
+	s5 = ['border', 'south', 'american', 'country', 'ecuador', 'chile']
+	s6 = ['brazil', 'economy', 'be', 'world', 'nine', 'large', 'nominal', 'gdp']
+
+	allS = [s1,s2,s3,s4,s5,s6]
+
+
+	dictionary = corpora.Dictionary(allS)
+	theCorpus = [dictionary.doc2bow(text) for text in allS]
+	c_tfidf = models.TfidfModel(theCorpus)
+	corpus_tfidf = c_tfidf[theCorpus]
+
+	v1 = corpus_tfidf[0]
+	v2 = corpus_tfidf[1]
+	v3 = corpus_tfidf[2]
+	v4 = corpus_tfidf[3]
+	v5 = corpus_tfidf[4]
+	v6 = corpus_tfidf[5]
+
+	completo = Graph.Full(len(allS))
+	all_edges  = completo.get_edgelist()
+
+	network = Graph()
+	network.add_vertices(len(allS))
+
+	edges = []
+	weights = []
+
+	for i in all_edges:
+		in1 = i[0]
+		in2 = i[1]
+		sim = round(matutils.cossim(corpus_tfidf[in1], corpus_tfidf[in2]), 2)
+		if sim > 0:
+			edges.append((in1,in2))
+			weights.append(sim)
+
+	network.add_edges(edges)
+	network.es['weight'] = weights
+	#network.vs["color"] = ['#1AA1E4','cyan','magenta','#F11533','#52DF4B','#FC8405']
+	network.vs["color"] = ['#8272C8','#8272C8','#8272C8','#8272C8','#8272C8','#8272C8']
+
+
+	for index, edge in enumerate(edges):
+		print (edge[0]+1 , edge[1]+1) ,  weights[index]
+
+	return network
+
+
+
+
+def draw_graph(graph):
+	size = graph.vcount()
+	ids =  [x+1 for x in range(size)]
+
+
+	layout = graph.layout("kk")
+
+	visual_style = {}
+	visual_style["vertex_label"] = ids
+	visual_style["vertex_size"] = 35
+	visual_style["layout"] = layout
+	visual_style["bbox"] = (800,600)
+	visual_style["margin"] = 80
+	plot(graph, **visual_style)
+
+
+red = tfidf()
+draw_graph(red)
+
+
+
+
+'''
 documents = os.listdir(corpus_dir['temario_v1'])
 
 document_path = corpus_dir['temario_v1'] + '/' +documents[0]
@@ -48,19 +128,19 @@ for i in psentences:
     print ""
 
 
-'''
+
 file = codecs.open('PRUEBA.txt',  'w', 'utf-8')
 for i in sentences:
     file.write(i + '\n')
 
-'''
+
 
 #file = open(location, 'w')
 #    for i in summary_sentences:
 #        file.write(i + "\n")
 
 
-'''
+
 dictionary = corpora.Dictionary(psentences)
 theCorpus = [dictionary.doc2bow(text) for text in psentences]
 tfidf = models.TfidfModel(theCorpus)
@@ -89,13 +169,8 @@ model.train(labeled_sentences, total_examples=model.corpus_count, epochs=model.i
 
 
 
-'''
 
 
-
-
-
-'''
 for c in string.punctuation:
     content = content.replace(c, "")
 content = ''.join([i for i in content if not i.isdigit()])

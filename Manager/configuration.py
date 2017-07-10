@@ -43,3 +43,7 @@ extras['XNetAux'] = '../Extras/auxiliarX.xnet'
 extras['FolderAux'] = '../Extras/concentrics/'
 extras['CSVAux'] = '../Extras/auxiliar_symmetry.csv'
 extras['Automatics'] = '../Extras/automatics/'
+
+
+final_results = dict()
+final_results['prueba'] = '../Results/test1.csv'
