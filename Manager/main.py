@@ -141,38 +141,40 @@ class Summarizer(object):
         obj = NetworkManager(network_type, mln_type, processed_corpus, vectorized_corpus, inter_edge, limiar_mln, limiar_value, limiar_type)
         complex_networks = obj.create_networks()
 
-        #for i in complex_networks.items():
-        #    print i
+
+
+        for i in complex_networks.items():
+            print i
+
 
 
         '''
         5. Node weighting and node ranking
-        
         '''
+        
+
 
         obj = NodeManager(complex_networks, network_measures)
         all_documentRankings = obj.ranking()
 
 
-
-
-        #for i in all_documentRankings.items():
-        #    print len(i[1][0])
+        for i in all_documentRankings.items():
+            print i
 
 
 
         '''
         6. Summarization
         #corpus, rankings, sentence_selection, anti_redundancy
-        '''
-
-
+        
 
         print "Summarization!!!"
 
 
         obj = SummaryGenerator(processed_corpus, complex_networks, all_documentRankings, selection_method, anti_redundancy_method, top_sentences)
         obj.generate_summaries()
+        '''
+
 
 
 
@@ -180,7 +182,7 @@ class Summarizer(object):
 
         '''
         7. Validation
-        '''
+        
         key = choice(all_documentRankings.keys())
         number_of_measures = len(all_documentRankings[key][0])
         print  limiar_mln
@@ -211,12 +213,12 @@ class Summarizer(object):
 
         print first_value , second_value , third_value
 
-
-
         # validation language type_summary corpus_name
         obj = Validation(validation, language, type_summary, corpus_name, [first_value, second_value, third_value], self.output_excel, parameters_to_show_table)
         obj.validate('results.csv')
         deleteFolders(extras['Automatics'])
+        '''
+
 
 
 
@@ -253,7 +255,8 @@ class Summarizer(object):
         #dictionary['network'] = ('d2v', [False, ('limiar', [0.15, 0.20, 0.25, 0.3, 0.35, 0.4]), 200])
         #dictionary['network'] = ('d2v', [False, ('knn', [3,5,7,11,13,15]), 200])
 
-        dictionary['network'] = ('mln', ['noun', [1.1, 1.3, 1.5, 1.7, 1.9], [0.1, 0.15, 0.20, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5]])
+        #dictionary['network'] = ('mln', ['noun', [1.1, 1.3, 1.5, 1.7, 1.9], [0.1, 0.15, 0.20, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5]])
+        dictionary['network'] = ('mln', ['noun', [1.1, 1.3], [0.1, 0.15, 0.20]])
         #dictionary['network'] = ('mln', ['tfidf', [1.7, 1.9, 2.0], [0.35, 0.4, 0.45, 0.5]])  # inter - limiar remocion
 
 
@@ -280,7 +283,7 @@ class Summarizer(object):
         #dictionary['measures'] = ['sym_h_m_h2', 'sym_l_b_h3' , 'dg', 'sym_h_b_h3']
         #dictionary['measures'] = ['dg' , 'pr']
         #dictionary['measures'] = ['ccts']
-        dictionary['measures'] = ['*']
+        dictionary['measures'] = ['dg']
         #dictionary['measures'] = ['katz']
         #dictionary['measures'] = ['at']
         #dictionary['measures'] = ['trad']
@@ -304,7 +307,7 @@ class Summarizer(object):
 
 if __name__ == '__main__':
 
-    output = final_results['prueba']
+    output = final_results['prueba2']
 
     #obj = Summarizer('input.txt' , 'output.csv')
     obj = Summarizer('input.txt', output)

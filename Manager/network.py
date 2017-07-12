@@ -96,7 +96,7 @@ class CNetwork(object):
         threshold = (max(cosine_sim_list) + min(cosine_sim_list))/2  #PROBLMAS PARA INGLES sds
         #print threshold ####################
         #threshold = 0
-        diameter = network.diameter()
+        #diameter = network.diameter()
         #print diameter
         #draw_graph(network)
         #if diameter == 6:
@@ -362,12 +362,14 @@ class CNetwork(object):
 
         networks = []
         for i in weight_list:
-            for j in self.limiar_mln:
+            for j in self.limiar_mln: # [0.1, 0.15, 0.2]
                 network = Graph()
                 network.add_vertices(network_size)
                 network.add_edges(network_edges)
                 network.es['weight'] = i
                 auxiliar_network = self.remove_edges_for_mln(network, j)
+                #print j , len(network.get_edgelist()) , len(auxiliar_network.get_edgelist())
+                #a = input()
                 pair = (network, auxiliar_network)
                 networks.append(pair)
         #network = Graph()
@@ -889,6 +891,7 @@ class NodeManager(object):
                     dictionary[measure](parameters)
                 document_rankings = obj.get_node_rankings()
                 rankings.append(document_rankings)
+
             allRankings[document_name] = rankings
         return allRankings
 

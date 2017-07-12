@@ -47,3 +47,4 @@ extras['Automatics'] = '../Extras/automatics/'
 
 final_results = dict()
 final_results['prueba'] = '../Results/test1.csv'
+final_results['prueba2'] = '../Results/test2.csv'

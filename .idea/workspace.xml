@@ -2,514 +2,50 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d1670ea-0095-471a-9959-e5c303d54b2c" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/dg/C10MundoBombardeioLibano_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/dg/C11CotidianoPCC_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/dg/C12MundoEnchenteCoreia_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/dg/C13MundoSriLanka_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/dg/C14MundoAcidenteTrens_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/dg/C15MundoExplosaoMoscou_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/dg/C16PoliticaSanguessugas_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/dg/C17PoliticaEleicaoAlckmim_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/dg/C18MundoAtaqueVirginia - concordanciaRST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/dg/C19EsportesMaradona - concordanciaCST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/dg/C1MundoAviaoCongo_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/dg/C20PoliticaCPMF_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/dg/C21CotidianoReformaCumbica_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/dg/C22CotidianoDeslizamentoCongonhas_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/dg/C23MundoEnchenteReinoUnido - concordanciaCST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/dg/C24EsportesFabianaMue_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/dg/C25EsportesCopaAmerica_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/dg/C26MundoFuracaoMexico_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/dg/C27EsportesGoleadaEquador_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/dg/C28EsportesHeptaVolei_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/dg/C29MundoIndenizacaoIgreja_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/dg/C2PoliticaReeleicaoLula_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/dg/C30DinheiroLucroItau - concordanciaRST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/dg/C31EsportesJade - concordanciaCST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/dg/C32MundoFalhaNuclear_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/dg/C33CotidianoLulaBio_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/dg/C34CotidianoMalhaFina_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/dg/C35MundoMegatraficante_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/dg/C36CotidianoMorteACM_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/dg/C37CotidianoMotimMaranh╞o - concordanciaCST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/dg/C38EsportesPanNatacao_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/dg/C39CotidianoPFCongonhas - concordanciaRST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/dg/C3CotidianoAcidenteTAM_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/dg/C40PolбticaProcuradorRenan_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/dg/C41EsportesRecordeThiago_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/dg/C42PolбticaRelatorRenan - concordanciaCST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/dg/C43PolбticaRenan_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/dg/C44PolбticaRenan2 - concordanciaCST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/dg/C45CotidianoRolexLuciano_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/dg/C46MundoTerremotoJapao_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/dg/C47MundoTurquiaIraque_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/dg/C48EsportesVaiaBernardinho - concordanciaCST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/dg/C49CotidianoVaiaLula_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/dg/C4CotidianoAlagamentoSP_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/dg/C50PolбticaCPMFPSDB - concordanciaRST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/dg/C5CotidianoANAC - concordanciaCST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/dg/C6CotidianoCanteiroObras_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/dg/C7CienciaNovoPlaneta - concordanciaRST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/dg/C8EsportesLigaVolei_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/dg/C9PoliticaDesvio_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/pr/C10MundoBombardeioLibano_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/pr/C11CotidianoPCC_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/pr/C12MundoEnchenteCoreia_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/pr/C13MundoSriLanka_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/pr/C14MundoAcidenteTrens_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/pr/C15MundoExplosaoMoscou_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/pr/C16PoliticaSanguessugas_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/pr/C17PoliticaEleicaoAlckmim_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/pr/C18MundoAtaqueVirginia - concordanciaRST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/pr/C19EsportesMaradona - concordanciaCST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/pr/C1MundoAviaoCongo_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/pr/C20PoliticaCPMF_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/pr/C21CotidianoReformaCumbica_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/pr/C22CotidianoDeslizamentoCongonhas_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/pr/C23MundoEnchenteReinoUnido - concordanciaCST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/pr/C24EsportesFabianaMue_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/pr/C25EsportesCopaAmerica_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/pr/C26MundoFuracaoMexico_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/pr/C27EsportesGoleadaEquador_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/pr/C28EsportesHeptaVolei_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/pr/C29MundoIndenizacaoIgreja_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/pr/C2PoliticaReeleicaoLula_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/pr/C30DinheiroLucroItau - concordanciaRST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/pr/C31EsportesJade - concordanciaCST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/pr/C32MundoFalhaNuclear_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/pr/C33CotidianoLulaBio_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/pr/C34CotidianoMalhaFina_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/pr/C35MundoMegatraficante_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/pr/C36CotidianoMorteACM_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/pr/C37CotidianoMotimMaranh╞o - concordanciaCST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/pr/C38EsportesPanNatacao_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/pr/C39CotidianoPFCongonhas - concordanciaRST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/pr/C3CotidianoAcidenteTAM_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/pr/C40PolбticaProcuradorRenan_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/pr/C41EsportesRecordeThiago_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/pr/C42PolбticaRelatorRenan - concordanciaCST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/pr/C43PolбticaRenan_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/pr/C44PolбticaRenan2 - concordanciaCST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/pr/C45CotidianoRolexLuciano_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/pr/C46MundoTerremotoJapao_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/pr/C47MundoTurquiaIraque_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/pr/C48EsportesVaiaBernardinho - concordanciaCST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/pr/C49CotidianoVaiaLula_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/pr/C4CotidianoAlagamentoSP_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/pr/C50PolбticaCPMFPSDB - concordanciaRST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/pr/C5CotidianoANAC - concordanciaCST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/pr/C6CotidianoCanteiroObras_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/pr/C7CienciaNovoPlaneta - concordanciaRST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/pr/C8EsportesLigaVolei_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/1/pr/C9PoliticaDesvio_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/dg/C10MundoBombardeioLibano_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/dg/C11CotidianoPCC_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/dg/C12MundoEnchenteCoreia_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/dg/C13MundoSriLanka_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/dg/C14MundoAcidenteTrens_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/dg/C15MundoExplosaoMoscou_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/dg/C16PoliticaSanguessugas_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/dg/C17PoliticaEleicaoAlckmim_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/dg/C18MundoAtaqueVirginia - concordanciaRST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/dg/C19EsportesMaradona - concordanciaCST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/dg/C1MundoAviaoCongo_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/dg/C20PoliticaCPMF_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/dg/C21CotidianoReformaCumbica_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/dg/C22CotidianoDeslizamentoCongonhas_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/dg/C23MundoEnchenteReinoUnido - concordanciaCST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/dg/C24EsportesFabianaMue_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/dg/C25EsportesCopaAmerica_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/dg/C26MundoFuracaoMexico_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/dg/C27EsportesGoleadaEquador_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/dg/C28EsportesHeptaVolei_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/dg/C29MundoIndenizacaoIgreja_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/dg/C2PoliticaReeleicaoLula_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/dg/C30DinheiroLucroItau - concordanciaRST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/dg/C31EsportesJade - concordanciaCST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/dg/C32MundoFalhaNuclear_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/dg/C33CotidianoLulaBio_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/dg/C34CotidianoMalhaFina_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/dg/C35MundoMegatraficante_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/dg/C36CotidianoMorteACM_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/dg/C37CotidianoMotimMaranh╞o - concordanciaCST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/dg/C38EsportesPanNatacao_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/dg/C39CotidianoPFCongonhas - concordanciaRST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/dg/C3CotidianoAcidenteTAM_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/dg/C40PolбticaProcuradorRenan_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/dg/C41EsportesRecordeThiago_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/dg/C42PolбticaRelatorRenan - concordanciaCST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/dg/C43PolбticaRenan_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/dg/C44PolбticaRenan2 - concordanciaCST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/dg/C45CotidianoRolexLuciano_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/dg/C46MundoTerremotoJapao_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/dg/C47MundoTurquiaIraque_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/dg/C48EsportesVaiaBernardinho - concordanciaCST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/dg/C49CotidianoVaiaLula_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/dg/C4CotidianoAlagamentoSP_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/dg/C50PolбticaCPMFPSDB - concordanciaRST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/dg/C5CotidianoANAC - concordanciaCST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/dg/C6CotidianoCanteiroObras_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/dg/C7CienciaNovoPlaneta - concordanciaRST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/dg/C8EsportesLigaVolei_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/dg/C9PoliticaDesvio_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/pr/C10MundoBombardeioLibano_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/pr/C11CotidianoPCC_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/pr/C12MundoEnchenteCoreia_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/pr/C13MundoSriLanka_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/pr/C14MundoAcidenteTrens_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/pr/C15MundoExplosaoMoscou_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/pr/C16PoliticaSanguessugas_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/pr/C17PoliticaEleicaoAlckmim_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/pr/C18MundoAtaqueVirginia - concordanciaRST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/pr/C19EsportesMaradona - concordanciaCST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/pr/C1MundoAviaoCongo_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/pr/C20PoliticaCPMF_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/pr/C21CotidianoReformaCumbica_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/pr/C22CotidianoDeslizamentoCongonhas_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/pr/C23MundoEnchenteReinoUnido - concordanciaCST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/pr/C24EsportesFabianaMue_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/pr/C25EsportesCopaAmerica_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/pr/C26MundoFuracaoMexico_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/pr/C27EsportesGoleadaEquador_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/pr/C28EsportesHeptaVolei_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/pr/C29MundoIndenizacaoIgreja_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/pr/C2PoliticaReeleicaoLula_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/pr/C30DinheiroLucroItau - concordanciaRST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/pr/C31EsportesJade - concordanciaCST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/pr/C32MundoFalhaNuclear_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/pr/C33CotidianoLulaBio_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/pr/C34CotidianoMalhaFina_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/pr/C35MundoMegatraficante_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/pr/C36CotidianoMorteACM_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/pr/C37CotidianoMotimMaranh╞o - concordanciaCST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/pr/C38EsportesPanNatacao_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/pr/C39CotidianoPFCongonhas - concordanciaRST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/pr/C3CotidianoAcidenteTAM_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/pr/C40PolбticaProcuradorRenan_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/pr/C41EsportesRecordeThiago_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/pr/C42PolбticaRelatorRenan - concordanciaCST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/pr/C43PolбticaRenan_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/pr/C44PolбticaRenan2 - concordanciaCST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/pr/C45CotidianoRolexLuciano_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/pr/C46MundoTerremotoJapao_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/pr/C47MundoTurquiaIraque_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/pr/C48EsportesVaiaBernardinho - concordanciaCST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/pr/C49CotidianoVaiaLula_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/pr/C4CotidianoAlagamentoSP_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/pr/C50PolбticaCPMFPSDB - concordanciaRST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/pr/C5CotidianoANAC - concordanciaCST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/pr/C6CotidianoCanteiroObras_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/pr/C7CienciaNovoPlaneta - concordanciaRST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/pr/C8EsportesLigaVolei_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/2/pr/C9PoliticaDesvio_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/dg/C10MundoBombardeioLibano_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/dg/C11CotidianoPCC_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/dg/C12MundoEnchenteCoreia_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/dg/C13MundoSriLanka_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/dg/C14MundoAcidenteTrens_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/dg/C15MundoExplosaoMoscou_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/dg/C16PoliticaSanguessugas_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/dg/C17PoliticaEleicaoAlckmim_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/dg/C18MundoAtaqueVirginia - concordanciaRST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/dg/C19EsportesMaradona - concordanciaCST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/dg/C1MundoAviaoCongo_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/dg/C20PoliticaCPMF_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/dg/C21CotidianoReformaCumbica_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/dg/C22CotidianoDeslizamentoCongonhas_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/dg/C23MundoEnchenteReinoUnido - concordanciaCST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/dg/C24EsportesFabianaMue_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/dg/C25EsportesCopaAmerica_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/dg/C26MundoFuracaoMexico_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/dg/C27EsportesGoleadaEquador_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/dg/C28EsportesHeptaVolei_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/dg/C29MundoIndenizacaoIgreja_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/dg/C2PoliticaReeleicaoLula_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/dg/C30DinheiroLucroItau - concordanciaRST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/dg/C31EsportesJade - concordanciaCST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/dg/C32MundoFalhaNuclear_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/dg/C33CotidianoLulaBio_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/dg/C34CotidianoMalhaFina_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/dg/C35MundoMegatraficante_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/dg/C36CotidianoMorteACM_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/dg/C37CotidianoMotimMaranh╞o - concordanciaCST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/dg/C38EsportesPanNatacao_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/dg/C39CotidianoPFCongonhas - concordanciaRST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/dg/C3CotidianoAcidenteTAM_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/dg/C40PolбticaProcuradorRenan_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/dg/C41EsportesRecordeThiago_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/dg/C42PolбticaRelatorRenan - concordanciaCST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/dg/C43PolбticaRenan_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/dg/C44PolбticaRenan2 - concordanciaCST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/dg/C45CotidianoRolexLuciano_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/dg/C46MundoTerremotoJapao_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/dg/C47MundoTurquiaIraque_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/dg/C48EsportesVaiaBernardinho - concordanciaCST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/dg/C49CotidianoVaiaLula_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/dg/C4CotidianoAlagamentoSP_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/dg/C50PolбticaCPMFPSDB - concordanciaRST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/dg/C5CotidianoANAC - concordanciaCST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/dg/C6CotidianoCanteiroObras_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/dg/C7CienciaNovoPlaneta - concordanciaRST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/dg/C8EsportesLigaVolei_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/dg/C9PoliticaDesvio_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/pr/C10MundoBombardeioLibano_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/pr/C11CotidianoPCC_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/pr/C12MundoEnchenteCoreia_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/pr/C13MundoSriLanka_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/pr/C14MundoAcidenteTrens_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/pr/C15MundoExplosaoMoscou_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/pr/C16PoliticaSanguessugas_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/pr/C17PoliticaEleicaoAlckmim_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/pr/C18MundoAtaqueVirginia - concordanciaRST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/pr/C19EsportesMaradona - concordanciaCST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/pr/C1MundoAviaoCongo_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/pr/C20PoliticaCPMF_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/pr/C21CotidianoReformaCumbica_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/pr/C22CotidianoDeslizamentoCongonhas_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/pr/C23MundoEnchenteReinoUnido - concordanciaCST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/pr/C24EsportesFabianaMue_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/pr/C25EsportesCopaAmerica_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/pr/C26MundoFuracaoMexico_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/pr/C27EsportesGoleadaEquador_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/pr/C28EsportesHeptaVolei_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/pr/C29MundoIndenizacaoIgreja_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/pr/C2PoliticaReeleicaoLula_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/pr/C30DinheiroLucroItau - concordanciaRST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/pr/C31EsportesJade - concordanciaCST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/pr/C32MundoFalhaNuclear_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/pr/C33CotidianoLulaBio_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/pr/C34CotidianoMalhaFina_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/pr/C35MundoMegatraficante_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/pr/C36CotidianoMorteACM_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/pr/C37CotidianoMotimMaranh╞o - concordanciaCST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/pr/C38EsportesPanNatacao_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/pr/C39CotidianoPFCongonhas - concordanciaRST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/pr/C3CotidianoAcidenteTAM_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/pr/C40PolбticaProcuradorRenan_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/pr/C41EsportesRecordeThiago_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/pr/C42PolбticaRelatorRenan - concordanciaCST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/pr/C43PolбticaRenan_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/pr/C44PolбticaRenan2 - concordanciaCST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/pr/C45CotidianoRolexLuciano_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/pr/C46MundoTerremotoJapao_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/pr/C47MundoTurquiaIraque_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/pr/C48EsportesVaiaBernardinho - concordanciaCST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/pr/C49CotidianoVaiaLula_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/pr/C4CotidianoAlagamentoSP_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/pr/C50PolбticaCPMFPSDB - concordanciaRST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/pr/C5CotidianoANAC - concordanciaCST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/pr/C6CotidianoCanteiroObras_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/pr/C7CienciaNovoPlaneta - concordanciaRST_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/pr/C8EsportesLigaVolei_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Extras/automatics/3/pr/C9PoliticaDesvio_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/ce94ab10-a_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/ce94ab17-a_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/ce94ab24-c_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/ce94ab24-e_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/ce94ab24-f_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/ce94ja21-d_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/ce94ja21-e_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/ce94ja21-f_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/ce94ja25-a_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/ce94ja25-b_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/ce94ja8-a_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/ce94jl10-a_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/ce94jl11-a_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/ce94jl11-b_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/ce94jl11-c_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/ce94jl31-a_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/ce94jl31-b_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/ce94jl31-c_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/ce94jl31-d_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/ce94jl31-e_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/in96ab09-b_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/in96ab18-b_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/in96ab19-a_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/in96ab25-a_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/in96ab26-b_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/in96ab30-a_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/in96fe08-a_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/in96fe13-a_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/in96fe14-a_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/in96fe15-a_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/in96fe26-a_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/in96fe26-b_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/in96fe29-a_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/in96fe29-b_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/in96jl01-a_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/in96jl02-a_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/in96ju10-a_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/in96ju13-a_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/in96ju18-a_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/in96ju19-a_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/mu94ab02-b_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/mu94ab03-a_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/mu94ab04-a_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/mu94ab09-a_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/mu94ag06-a_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/mu94ag07-b_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/mu94ag09-a_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/mu94ag16-a_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/mu94de02-a_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/mu94de04-b_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/mu94de04-c_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/mu94de04-d_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/mu94de05-a_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/mu94de07-a_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/mu94de09-a_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/mu94de11-a_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/mu94de14-a_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/mu94de21-a_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/mu94de22-a_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/mu94de27-a_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/op94ab01-a_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/op94ab01-b_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/op94ab02-a_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/op94ab03-b_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/op94ab04-a_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/op94ab06-a_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/op94ab10-a_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/op94ab18-a_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/op94ab21-a_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/op94ab24-a_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/op94ab26-a_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/op94ag07-a_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/op94ag07-b_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/op94ag07-c_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/op94ag09-a_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/op94ag10-a_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/op94ag14-a_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/op94ag14-b_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/op94ag21-a_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/op94ag24-a_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/po96ab09-a_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/po96ab09-c_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/po96ab19-a_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/po96ab19-b_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/po96fe07-b_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/po96fe09-a_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/po96fe09-b_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/po96fe13-a_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/po96fe14-a_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/po96fe14-b_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/po96fe14-c_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/po96fe14-d_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/po96fe15-a_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/po96fe26-a_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/po96fe28-a_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/po96jl01-a_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/po96jl01-b_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/po96jl02-a_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/po96ju10-a_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/reference/po96ju13-a_reference1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/ce94ab10-a_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/ce94ab17-a_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/ce94ab24-c_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/ce94ab24-e_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/ce94ab24-f_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/ce94ja21-d_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/ce94ja21-e_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/ce94ja21-f_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/ce94ja25-a_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/ce94ja25-b_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/ce94ja8-a_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/ce94jl10-a_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/ce94jl11-a_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/ce94jl11-b_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/ce94jl11-c_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/ce94jl31-a_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/ce94jl31-b_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/ce94jl31-c_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/ce94jl31-d_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/ce94jl31-e_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/in96ab09-b_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/in96ab18-b_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/in96ab19-a_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/in96ab25-a_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/in96ab26-b_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/in96ab30-a_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/in96fe08-a_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/in96fe13-a_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/in96fe14-a_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/in96fe15-a_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/in96fe26-a_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/in96fe26-b_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/in96fe29-a_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/in96fe29-b_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/in96jl01-a_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/in96jl02-a_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/in96ju10-a_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/in96ju13-a_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/in96ju18-a_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/in96ju19-a_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/mu94ab02-b_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/mu94ab03-a_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/mu94ab04-a_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/mu94ab09-a_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/mu94ag06-a_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/mu94ag07-b_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/mu94ag09-a_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/mu94ag16-a_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/mu94de02-a_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/mu94de04-b_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/mu94de04-c_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/mu94de04-d_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/mu94de05-a_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/mu94de07-a_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/mu94de09-a_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/mu94de11-a_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/mu94de14-a_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/mu94de21-a_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/mu94de22-a_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/mu94de27-a_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/op94ab01-a_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/op94ab01-b_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/op94ab02-a_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/op94ab03-b_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/op94ab04-a_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/op94ab06-a_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/op94ab10-a_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/op94ab18-a_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/op94ab21-a_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/op94ab24-a_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/op94ab26-a_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/op94ag07-a_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/op94ag07-b_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/op94ag07-c_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/op94ag09-a_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/op94ag10-a_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/op94ag14-a_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/op94ag14-b_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/op94ag21-a_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/op94ag24-a_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/po96ab09-a_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/po96ab09-c_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/po96ab19-a_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/po96ab19-b_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/po96fe07-b_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/po96fe09-a_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/po96fe09-b_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/po96fe13-a_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/po96fe14-a_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/po96fe14-b_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/po96fe14-c_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/po96fe14-d_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/po96fe15-a_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/po96fe26-a_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/po96fe28-a_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/po96jl01-a_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/po96jl01-b_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/po96jl02-a_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/po96ju10-a_system1.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/po96ju13-a_system1.txt" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/configuration.py" afterPath="$PROJECT_DIR$/Manager/configuration.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/main.py" afterPath="$PROJECT_DIR$/Manager/main.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/network.py" afterPath="$PROJECT_DIR$/Manager/network.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/results.csv" afterPath="$PROJECT_DIR$/Manager/results.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/testes.py" afterPath="$PROJECT_DIR$/Manager/testes.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/utils.py" afterPath="$PROJECT_DIR$/Manager/utils.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/validation.py" afterPath="$PROJECT_DIR$/Manager/validation.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C10MundoBombardeioLibano_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/C10MundoBombardeioLibano_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C11CotidianoPCC_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/C11CotidianoPCC_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C12MundoEnchenteCoreia_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/C12MundoEnchenteCoreia_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C15MundoExplosaoMoscou_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/C15MundoExplosaoMoscou_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C17PoliticaEleicaoAlckmim_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/C17PoliticaEleicaoAlckmim_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C18MundoAtaqueVirginia - concordanciaRST_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/C18MundoAtaqueVirginia - concordanciaRST_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C19EsportesMaradona - concordanciaCST_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/C19EsportesMaradona - concordanciaCST_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C1MundoAviaoCongo_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/C1MundoAviaoCongo_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C20PoliticaCPMF_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/C20PoliticaCPMF_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C21CotidianoReformaCumbica_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/C21CotidianoReformaCumbica_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C22CotidianoDeslizamentoCongonhas_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/C22CotidianoDeslizamentoCongonhas_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C24EsportesFabianaMue_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/C24EsportesFabianaMue_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C25EsportesCopaAmerica_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/C25EsportesCopaAmerica_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C26MundoFuracaoMexico_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/C26MundoFuracaoMexico_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C27EsportesGoleadaEquador_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/C27EsportesGoleadaEquador_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C2PoliticaReeleicaoLula_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/C2PoliticaReeleicaoLula_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C30DinheiroLucroItau - concordanciaRST_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/C30DinheiroLucroItau - concordanciaRST_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C32MundoFalhaNuclear_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/C32MundoFalhaNuclear_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C33CotidianoLulaBio_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/C33CotidianoLulaBio_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C34CotidianoMalhaFina_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/C34CotidianoMalhaFina_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C35MundoMegatraficante_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/C35MundoMegatraficante_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C36CotidianoMorteACM_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/C36CotidianoMorteACM_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C37CotidianoMotimMaranh╞o - concordanciaCST_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/C37CotidianoMotimMaranh╞o - concordanciaCST_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C38EsportesPanNatacao_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/C38EsportesPanNatacao_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C3CotidianoAcidenteTAM_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/C3CotidianoAcidenteTAM_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C40PolбticaProcuradorRenan_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/C40PolбticaProcuradorRenan_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C41EsportesRecordeThiago_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/C41EsportesRecordeThiago_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C42PolбticaRelatorRenan - concordanciaCST_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/C42PolбticaRelatorRenan - concordanciaCST_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C43PolбticaRenan_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/C43PolбticaRenan_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C44PolбticaRenan2 - concordanciaCST_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/C44PolбticaRenan2 - concordanciaCST_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C45CotidianoRolexLuciano_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/C45CotidianoRolexLuciano_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C48EsportesVaiaBernardinho - concordanciaCST_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/C48EsportesVaiaBernardinho - concordanciaCST_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C49CotidianoVaiaLula_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/C49CotidianoVaiaLula_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C4CotidianoAlagamentoSP_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/C4CotidianoAlagamentoSP_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C50PolбticaCPMFPSDB - concordanciaRST_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/C50PolбticaCPMFPSDB - concordanciaRST_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C5CotidianoANAC - concordanciaCST_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/C5CotidianoANAC - concordanciaCST_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C6CotidianoCanteiroObras_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/C6CotidianoCanteiroObras_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C7CienciaNovoPlaneta - concordanciaRST_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/C7CienciaNovoPlaneta - concordanciaRST_system1.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/C8EsportesLigaVolei_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/C8EsportesLigaVolei_system1.txt" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -524,11 +60,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Manager/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="226" column="38" lean-forward="true" selection-start-line="226" selection-start-column="38" selection-end-line="226" selection-end-column="38" />
+            <state relative-caret-position="15">
+              <caret line="142" column="0" lean-forward="false" selection-start-line="142" selection-start-column="0" selection-end-line="142" selection-end-column="0" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -540,7 +76,7 @@
         <entry file="file://$PROJECT_DIR$/Manager/configuration.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="714">
-              <caret line="48" column="48" lean-forward="false" selection-start-line="48" selection-start-column="48" selection-end-line="48" selection-end-column="48" />
+              <caret line="49" column="49" lean-forward="false" selection-start-line="49" selection-start-column="49" selection-end-line="49" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -549,7 +85,7 @@
       <file leaf-file-name="corpus_loader.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Manager/corpus_loader.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2115">
+            <state relative-caret-position="774">
               <caret line="143" column="23" lean-forward="false" selection-start-line="143" selection-start-column="23" selection-end-line="143" selection-end-column="23" />
               <folding />
             </state>
@@ -568,11 +104,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="network.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="network.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Manager/network.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="558" column="0" lean-forward="false" selection-start-line="558" selection-start-column="0" selection-end-line="558" selection-end-column="0" />
+            <state relative-caret-position="-7131">
+              <caret line="377" column="29" lean-forward="false" selection-start-line="377" selection-start-column="29" selection-end-line="377" selection-end-column="29" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -583,8 +119,8 @@
       <file leaf-file-name="utils.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Manager/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="11775">
-              <caret line="807" column="0" lean-forward="false" selection-start-line="807" selection-start-column="0" selection-end-line="807" selection-end-column="0" />
+            <state relative-caret-position="11505">
+              <caret line="789" column="26" lean-forward="false" selection-start-line="789" selection-start-column="26" selection-end-line="789" selection-end-column="26" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -607,8 +143,8 @@
       <file leaf-file-name="summarization.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Manager/summarization.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1590">
-              <caret line="107" column="13" lean-forward="false" selection-start-line="107" selection-start-column="13" selection-end-line="107" selection-end-column="13" />
+            <state relative-caret-position="1620">
+              <caret line="109" column="48" lean-forward="false" selection-start-line="109" selection-start-column="48" selection-end-line="109" selection-end-column="48" />
               <folding>
                 <element signature="e#1#160#0" expanded="true" />
               </folding>
@@ -672,8 +208,8 @@
         <option value="$PROJECT_DIR$/Manager/validation.py" />
         <option value="$PROJECT_DIR$/Manager/utils.py" />
         <option value="$PROJECT_DIR$/Manager/configuration.py" />
-        <option value="$PROJECT_DIR$/Manager/main.py" />
         <option value="$PROJECT_DIR$/Manager/network.py" />
+        <option value="$PROJECT_DIR$/Manager/main.py" />
       </list>
     </option>
   </component>
@@ -961,7 +497,7 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12811127" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43171114" sideWeight="0.5058565" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.6975381" sideWeight="0.4941435" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48886284" sideWeight="0.4941435" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1293,28 +829,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Manager/corpus_loader.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2115">
-          <caret line="143" column="23" lean-forward="false" selection-start-line="143" selection-start-column="23" selection-end-line="143" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/shutil.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="356">
           <caret line="236" column="0" lean-forward="false" selection-start-line="236" selection-start-column="0" selection-end-line="236" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Manager/summarization.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1590">
-          <caret line="107" column="13" lean-forward="false" selection-start-line="107" selection-start-column="13" selection-end-line="107" selection-end-column="13" />
-          <folding>
-            <element signature="e#1#160#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1324,16 +842,6 @@
           <caret line="78" column="36" lean-forward="false" selection-start-line="78" selection-start-column="36" selection-end-line="78" selection-end-column="36" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Manager/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11775">
-          <caret line="807" column="0" lean-forward="false" selection-start-line="807" selection-start-column="0" selection-end-line="807" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1348,10 +856,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Manager/summarization.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1620">
+          <caret line="109" column="48" lean-forward="false" selection-start-line="109" selection-start-column="48" selection-end-line="109" selection-end-column="48" />
+          <folding>
+            <element signature="e#1#160#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Manager/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11505">
+          <caret line="789" column="26" lean-forward="false" selection-start-line="789" selection-start-column="26" selection-end-line="789" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Manager/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="142" column="0" lean-forward="false" selection-start-line="142" selection-start-column="0" selection-end-line="142" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Manager/configuration.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="714">
-          <caret line="48" column="48" lean-forward="false" selection-start-line="48" selection-start-column="48" selection-end-line="48" selection-end-column="48" />
+          <caret line="49" column="49" lean-forward="false" selection-start-line="49" selection-start-column="49" selection-end-line="49" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Manager/corpus_loader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="774">
+          <caret line="143" column="23" lean-forward="false" selection-start-line="143" selection-start-column="23" selection-end-line="143" selection-end-column="23" />
           <folding />
         </state>
       </provider>
@@ -1368,20 +914,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Manager/network.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="558" column="0" lean-forward="false" selection-start-line="558" selection-start-column="0" selection-end-line="558" selection-end-column="0" />
+        <state relative-caret-position="-7131">
+          <caret line="377" column="29" lean-forward="false" selection-start-line="377" selection-start-column="29" selection-end-line="377" selection-end-column="29" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Manager/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="226" column="38" lean-forward="true" selection-start-line="226" selection-start-column="38" selection-end-line="226" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
