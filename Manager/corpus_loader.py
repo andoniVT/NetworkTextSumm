@@ -14,7 +14,7 @@ class Loader(object):
         # self.dictionary['ptg'] = [['temario_v1' , 'temario_v2'] , ['cstnews_v1' , 'cstnews_v2']]
         self.dictionary['ptg'] = [['temario_v1', 'temario_v2'], ['cstnews_v1', 'cstnews_v2']]
         # self.dictionary['eng'] = [['duc2002' , 'duc2003'] , ['duc2002' , 'duc2003']]
-        self.dictionary['eng'] = ['duc2002', 'duc2003']
+        self.dictionary['eng'] = ['duc2002', 'duc2004']
 
         self.dictionary_corpus = dict()
         self.dictionary_corpus['temario_v1'] = self.load_temario
@@ -22,7 +22,7 @@ class Loader(object):
         self.dictionary_corpus['cstnews_v1'] = self.load_cst_news
         self.dictionary_corpus['cstnews_v2'] = self.load_cst_news
         self.dictionary_corpus['duc2002'] = self.load_duc2002
-        self.dictionary_corpus['duc2003'] = self.load_duc2003
+        self.dictionary_corpus['duc2004'] = self.load_duc2004
 
     def load(self):
         if self.language == 'ptg':
@@ -125,6 +125,8 @@ class Loader(object):
         corpus_dictionary = dict()
         path = corpus_dir[version]
         clusters = os.listdir(path)
+        if '.DS_Store' in clusters:
+            clusters.remove('.DS_Store')
 
         if summary_type == 0:
             print "SDS"
@@ -175,8 +177,31 @@ class Loader(object):
 
         return corpus_dictionary
 
-    def load_duc2003(self, version, summary_type):
-        print "duc2003 :)"
+    def load_duc2004(self, version, summary_type):
+        print "duc2004 :)"
+        corpus_dictionary = dict()
+        path = corpus_dir[version]
+        clusters = os.listdir(path)
+        if '.DS_Store' in clusters:
+            clusters.remove('.DS_Store')
+
+        print "MDS"
+        for i in clusters:
+            allSentences = []
+            sub_path = path + i + '/'
+            documents = os.listdir(sub_path)
+            index = 1
+            sumatoria = 0
+            for j in documents:
+                document = sub_path + j
+                document_sentences = read_document_english(document)
+                tagged_sentences = tag_sentence(document_sentences, index)
+                allSentences.extend(tagged_sentences)
+                index += 1
+
+            name = i[:len(i) - 1]
+            corpus_dictionary[name] = [allSentences, 665]  #### tener cuidado que es cantidad de caracteres, no de palabras
+        return corpus_dictionary
 
 
 if __name__ == '__main__':

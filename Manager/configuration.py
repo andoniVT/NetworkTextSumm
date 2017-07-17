@@ -5,6 +5,7 @@ corpus_dir = dict()
 corpus_dir['temario_v1'] = '../Corpus/Temario2004/Textos-fonte'
 corpus_dir['cstnews_v1'] = '../Corpus/CSTNews/'
 corpus_dir['duc2002'] = '../Corpus/DUC2002/docs/'
+corpus_dir['duc2004'] = '../Corpus/DUC2004/docs/'
 
 corpus_dir['textosFonte'] = "Textos-fonte segmentados/"
 
@@ -25,6 +26,8 @@ references_dir['temario_v1'] = 'References/Portuguese/temario2003/'
 references_dir['cstnews_v1'] = 'References/Portuguese/cstnews/'
 references_dir['duc2002_s'] = 'References/English/duc2002-single/'
 references_dir['duc2002_m'] = 'References/English/duc2002-multi/'
+references_dir['duc2004_m'] = 'References/English/duc2004-multi/'
+
 references_dir['rougeReferences'] = "test-summarization/reference/"
 references_dir['rougeSystems'] = "test-summarization/system/"
 

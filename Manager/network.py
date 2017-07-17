@@ -361,6 +361,8 @@ class CNetwork(object):
                     #weight_list.append(similarity*self.inter_edge) # [1.7, 1.9]
 
         networks = []
+
+
         for i in weight_list:
             for j in self.limiar_mln: # [0.1, 0.15, 0.2]
                 network = Graph()
@@ -785,7 +787,7 @@ class CNMeasures(object):
         #self.clustering_coefficient()
         self.generalized_accessibility()
         #self.katz_centrality()
-        self.absortion_time()
+        #self.absortion_time()
         #self.concentrics([])
         #self.symmetry([])
         #self.accessibility([])

@@ -126,8 +126,11 @@ def count_words(file, language):
 
 def clean_sentences(sentences):
     result = []
+    signos = '`"\''
     for i in sentences:
         i = i.replace('\n', ' ')
+        for c in signos:
+            i = i.replace(c, "")
         result.append(i)
     return result
 
