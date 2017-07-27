@@ -182,13 +182,16 @@ class EnglishProcessing(object):
         if self.remove_nouns:
             for i in tagged:
                 if i[1] in tags:
-                    pSentence.append(WordNetLemmatizer().lemmatize(i[0], 'n') + " ")
+                    #pSentence.append(WordNetLemmatizer().lemmatize(i[0], 'n') + " ")
+                    pSentence.append(WordNetLemmatizer().lemmatize(i[0], 'n'))
         else:
             for i in tagged:
                 if i[1] in verbTags:
-                    pSentence.append(WordNetLemmatizer().lemmatize(i[0], 'v') + " ")
+                    #pSentence.append(WordNetLemmatizer().lemmatize(i[0], 'v') + " ")
+                    pSentence.append(WordNetLemmatizer().lemmatize(i[0], 'v'))
                 else:
-                    pSentence.append(WordNetLemmatizer().lemmatize(i[0]) + " ")
+                    #pSentence.append(WordNetLemmatizer().lemmatize(i[0]) + " ")
+                    pSentence.append(WordNetLemmatizer().lemmatize(i[0]))
 
         return pSentence
         #return "procesado(eng): " + self.text

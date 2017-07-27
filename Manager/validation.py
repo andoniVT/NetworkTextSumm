@@ -17,7 +17,7 @@ class Validation(object):
 
         self.dictionary = dict()
         self.dictionary['ptg'] = [['temario_v1', 'temario_v2'], ['cstnews_v1', 'cstnews_v2']]
-        self.dictionary['eng'] = [['duc2002_s' , 'duc2003_s'] , ['duc2002_m' , 'duc2003_m']]
+        self.dictionary['eng'] = [['duc2002_s' , 'duc2004_s'] , ['duc2002_m' , 'duc2004_m']]
 
         reference_summaries_key = self.dictionary[self.language][self.type_summary][self.corpus_name]
         self.path_references = references_dir[reference_summaries_key]

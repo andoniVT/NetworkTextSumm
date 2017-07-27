@@ -152,7 +152,7 @@ class CNetwork(object):
         '''
 
 
-        if self.network_type=='d2v':
+        if self.network_type=='d2v' or self.network_type=='gd2v':
             networks = []
             limiar_function = ''
             if self.limiar_type == 'limiar':
@@ -490,7 +490,7 @@ class CNetwork(object):
         if self.network_type == 'noun':
             #print "creando red de sustantivos"
             return self.noun_based_network()
-        if self.network_type == 'tfidf' or self.network_type == 'd2v':
+        if self.network_type == 'tfidf' or self.network_type == 'd2v' or self.network_type == 'gd2v':
             return self.tfidf_d2v_based_network()
         if self.network_type == 'mln':
             return self.multilayer_based_network()

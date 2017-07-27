@@ -1,5 +1,5 @@
 import os
-from configuration import corpus_dir
+from configuration import corpus_dir , extras
 import codecs
 import re
 from morphological_analysis import lemma
@@ -13,7 +13,192 @@ import unicodedata
 
 import igraph
 from igraph import *
+from utils import read_document_english , write_data_to_disk , load_data_from_disk
+from  nltk.stem.wordnet import WordNetLemmatizer
+import numpy as np
+from sklearn.feature_extraction.text import CountVectorizer
 
+
+def find_ngrams(input_list, n):
+  return zip(*[input_list[i:] for i in range(n)])
+
+
+sentence = 'this is a foo bar sentences and i want to ngramize it'
+n = 2
+sixgrams = nltk.ngrams(sentence.split(), n)
+print sixgrams
+for grams in sixgrams:
+  print grams
+
+
+
+input_list = ['all', 'this', 'happened', 'more', 'or', 'less']
+
+
+print find_ngrams(input_list, 1)
+print find_ngrams(input_list, 2)
+print find_ngrams(input_list, 3)
+print find_ngrams(input_list, 4)
+print ''
+
+words = nltk.word_tokenize('hola yo me llamo jorge andoni valverde tohalino')
+my_bigrams = nltk.bigrams(words)
+my_trigrams = nltk.trigrams(words)
+haber = nltk.ngrams(4 , words)
+
+
+text = "this is a foo bar sentences and i want to ngramize it"
+text2 = "hola yo me llamo jorge andoni valverde tohalino"
+text3 = "hola yo me llamo"
+vectorizer = CountVectorizer(ngram_range=(1,6))
+analyzer = vectorizer.build_analyzer()
+#for i in analyzer(text3):
+#    print i
+
+
+
+
+
+
+
+
+
+
+
+'''
+def remover(text):
+	for c in string.punctuation:
+		text = text.replace(c, "")
+	text = ''.join([i for i in text if not i.isdigit()])
+	stopwords = nltk.corpus.stopwords.words('english')
+	words = text.split()
+
+	result = []
+
+	for word in words:
+		if not word in stopwords:
+			result.append(word)
+
+	tags = ['NN', 'NNP', 'NNPS', 'NNS']
+	verbTags = ['VB', 'VBD', 'VBG', 'VBN', 'VBP', 'VBZ']
+	tagged = nltk.pos_tag(result)
+
+	pSentence = []
+	for i in tagged:
+		if i[1] in verbTags:
+			#pSentence.append(WordNetLemmatizer().lemmatize(i[0], 'v') + " ")
+			pSentence.append(WordNetLemmatizer().lemmatize(i[0], 'v'))
+		else:
+			#pSentence.append(WordNetLemmatizer().lemmatize(i[0]) + " ")
+			pSentence.append(WordNetLemmatizer().lemmatize(i[0]))
+
+
+	return pSentence
+
+
+
+print "duc2002 :)"
+corpus_dictionary = dict()
+path = corpus_dir['duc2002']
+
+path2 = corpus_dir['duc2004']
+
+clusters = os.listdir(path)
+clusters2 = os.listdir(path2)
+
+if '.DS_Store' in clusters:
+	clusters.remove('.DS_Store')
+
+if '.DS_Store' in clusters2:
+	clusters2.remove('.DS_Store')
+
+
+
+vocabulary = dict()
+
+sentences = []
+
+for i in clusters:
+	sub_path = path + i + '/'
+	documents = os.listdir(sub_path)
+	for j in documents:
+		document = sub_path + j
+		document_sentences = read_document_english(document)
+		for sentence in document_sentences:
+			sentence = sentence.lower()
+			sentence = remover(sentence)
+			sentences.append(sentence)
+
+
+for i in clusters2:
+	sub_path = path2 + i + '/'
+	documents = os.listdir(sub_path)
+	for j in documents:
+		document = sub_path + j
+		document_sentences = read_document_english(document)
+		for sentence in document_sentences:
+			sentence = sentence.lower()
+			sentence = remover(sentence)
+			sentences.append(sentence)
+
+
+
+
+
+for sentence in sentences:
+	for word in sentence:
+		if word in vocabulary:
+			vocabulary[word]+=1
+		else:
+			vocabulary[word] = 1
+
+if '' in vocabulary:
+	del vocabulary['']
+
+
+
+write_data_to_disk('vocabulary.pk' , vocabulary)
+
+print len(vocabulary)
+'''
+
+
+
+'''
+ratings = np.array([[1,4,5,8],
+                    [2,5,3,4],
+                    [4,10,20,1]], dtype=np.float)
+a = np.array([1,4,5,8])
+b = np.array([2,5,3,4])
+c = np.array([4,10,20,1])
+vector = [a]
+#matrix = np.array([a , b , c])
+#print matrix
+#print ratings
+movie_means = np.mean(vector, axis=0)
+print movie_means
+'''
+
+
+'''
+import random
+from scipy import spatial
+w2v_vocabulary = load_data_from_disk(extras['google_w2v'])
+key = random.choice(w2v_vocabulary.keys())
+key2 = random.choice(w2v_vocabulary.keys())
+
+v1 = w2v_vocabulary[key]
+
+v2 = np.repeat(999999999999999, 300)
+
+v3 = w2v_vocabulary[key2]
+
+
+print 1 - spatial.distance.cosine(v2, v3)
+'''
+
+
+'''
 def tfidf():
 	s1 = ['brazil', 'be', 'large', 'country', 'south', 'america']
 	s2 = ['be', 'world', 'five', 'large', 'country', 'area', 'population']
@@ -84,10 +269,12 @@ def draw_graph(graph):
 	plot(graph, **visual_style)
 
 
-red = tfidf()
-draw_graph(red)
 
+sentence = 'hola que tal?'
 
+print sentence[:4]
+
+'''
 
 
 '''

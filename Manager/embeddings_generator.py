@@ -3,7 +3,8 @@ from gensim.models import Doc2Vec
 from gensim.models.doc2vec import LabeledSentence
 from random import shuffle
 from scipy import spatial
-from utils import permutate_data
+from utils import permutate_data , load_data_from_disk, get_w2v_vector
+from configuration import extras
 
 class Vectorization(object):
 
@@ -27,9 +28,17 @@ class Vectorization(object):
         obj.train()
         return obj.get_matrix_doc2vec()
 
+    def d2v_google_vectorization(self):
+        print 'd2v google!!!'
+        obj = Doc2VecModelGoogleNews(self.corpus)
+        return obj.get_matrix_doc2vec_google()
+
+
     def calculate(self):
         if self.vectorization_type == 'tfidf':
             return self.tf_idf_vectorization()
+        elif self.vectorization_type == 'gd2v':
+            return self.d2v_google_vectorization()
         else:
             return self.d2v_vectorization()
 
@@ -152,3 +161,21 @@ class Doc2VecModel(object):
         return corpus_matrix
 
 
+
+class Doc2VecModelGoogleNews(object):
+
+    def __init__(self, corpus):
+        self.corpus = corpus
+        self.w2v_vocabulary = load_data_from_disk(extras['google_w2v'])
+
+    def get_matrix_doc2vec_google(self):
+        corpus_matrix = dict()
+        for i in self.corpus.items():
+            doc_name = i[0]
+            sentences = i[1][1]
+            doc_matrix = []
+            for index, sentence in enumerate(sentences):
+                sentence_w2v_vector = get_w2v_vector(self.w2v_vocabulary  ,sentence[0])
+                doc_matrix.append(sentence_w2v_vector)
+            corpus_matrix[doc_name] = doc_matrix
+        return corpus_matrix

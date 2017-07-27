@@ -46,6 +46,8 @@ extras['XNetAux'] = '../Extras/auxiliarX.xnet'
 extras['FolderAux'] = '../Extras/concentrics/'
 extras['CSVAux'] = '../Extras/auxiliar_symmetry.csv'
 extras['Automatics'] = '../Extras/automatics/'
+extras['google_w2v'] = '../Extras/duc02_04_w2v_vectors.pk'
+
 
 
 final_results = dict()

@@ -21,6 +21,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 from pylab import *
 import csv
+from sklearn.feature_extraction.text import CountVectorizer
+import nltk
 
 def write_data_to_disk(file, data):
     with open(file, 'wb') as fid:
@@ -64,12 +66,18 @@ def parameter_extractor(network_type, data):
             inter_edge = data[1]
             intra_edge = data[2]
     else:
-        # [False, ('limiar', [0.15]), 200]
+        # []  0
+        # [('limiar', [0.10, 0.15])]  1
+        # [False, ('limiar', [0.15]), 200]  3
         if size_parameter != 0:
-            sw_removal = data[0] #ok
-            limiar_type = data[1][0]
-            limiar_value = data[1][1]
-            size_d2v = data[2]
+            if size_parameter == 3:
+                sw_removal = data[0] #ok
+                limiar_type = data[1][0]
+                limiar_value = data[1][1]
+                size_d2v = data[2]
+            else:
+                limiar_type = data[0][0]
+                limiar_value = data[0][1]
             #distance = data[2]
             #if size_parameter == 5:
             #    size_d2v = data[3]
@@ -178,11 +186,14 @@ def cosineSimilarity(sentence1, sentence2):
 
 #def calculate_similarity(vec_sentence1 , vec_sentence2, network_type, distance_method):
 def calculate_similarity(vec_sentence1 , vec_sentence2, network_type):
+    #print vec_sentence1
+    #print ''
+    #print vec_sentence2
     #if distance_method=='euc':
     #    return ['falta implementar']
     if network_type=='tfidf':
         return matutils.cossim(vec_sentence1, vec_sentence2)
-    if network_type=='d2v':
+    if network_type=='d2v' or network_type=='gd2v':
         return 1 - spatial.distance.cosine(vec_sentence1, vec_sentence2)
 
 
@@ -386,6 +397,24 @@ def selectSentencesSingle(sentences, measures, resumo_size):
             break
     return (name_measure,result)
 
+def selectSentencesSingle_bytes(sentences, measures, resumo_size):
+    limit = 0
+    result = []
+    name_measure = measures[0]
+    ranked = measures[1]
+    for index, sents in enumerate(sentences):
+        index_selected = ranked[index]
+        selected = sentences[index_selected]
+        result.append(selected)
+        limit += len(selected)
+        if limit > resumo_size:
+            break
+
+    result = remove_extra_caracters(result)
+    #print 'summary size: ', get_size_sentences(result)
+    return (name_measure, result)
+
+
 def isRedundant(index, psentences, selected, limit):
     actual_sentence = psentences[index]
     for i in selected:
@@ -434,14 +463,76 @@ def selectSentencesMulti_ribaldo(sentences, ranking, resumo_size, threshold, pSe
     return (name_measure, selected_sentences)
 
 
+def get_size_sentences(sentences):
+    size = 0
+    for i in sentences:
+        size+=len(i)
+    return size
+
+def remove_extra_caracters(sentences):
+    size = 0
+    for i in range(len(sentences) - 1):
+        size += len(sentences[i])
+
+    final_sentence = sentences[-1]
+    sentences.pop()
+    new_size = 665 - size
+    new_sentence = final_sentence[:new_size]
+    sentences.append(new_sentence)
+    return sentences
+
+
+
+def selectSentencesMulti_ribaldo_bytes(sentences, ranking, resumo_size, threshold, pSentences):
+    print 'waaaaaa!'
+    selected = []
+    name_measure = ranking[0]
+    ranked = ranking[1]
+    initial_index = ranked[0]
+    selected.append(initial_index)
+    pSentences = extract_only_sentences(pSentences)
+    #size_sentence = len(word_tokenize(sentences_sin_punct))
+    size_sentence = len(sentences[initial_index])
+    for i in range(1, len(ranked)):
+        index = ranked[i]
+        if not isRedundant(index, pSentences, selected, threshold):
+            selected.append(index)
+            #selected = remove_punctuation(selected)
+            #auxi = sentences[index]
+            sentences_sin_punct = remove_punctuation(sentences[index])
+            #size_sentence+= len(word_tokenize(sentences[index]))
+            size_sentence += len(sentences[index])
+
+        if size_sentence > resumo_size:
+            break
+
+    selected_sentences = []
+    for i in range(len(selected)):
+        index = selected[i]
+        sentence = sentences[index]
+        selected_sentences.append(sentence)
+
+    #print 'summary size: ' , get_size_sentences(selected_sentences)
+    selected_sentences = remove_extra_caracters(selected_sentences)
+    return (name_measure, selected_sentences)
+
+
+
 def selectSentencesMulti(sentences, ranking, resumo_size, anti_redundancy, threshold, pSentences):
-    #print ranking
+
+
     if anti_redundancy==0:
         #print "Seleccion sin anti-redundancia"
-        return selectSentencesSingle(sentences, ranking, resumo_size)
+        if resumo_size == 665:
+            return selectSentencesSingle_bytes(sentences, ranking, resumo_size)
+        else:
+            return selectSentencesSingle(sentences, ranking, resumo_size)
     elif anti_redundancy==1:
         #print "Seleccion Rivaldo"
-        return selectSentencesMulti_ribaldo(sentences, ranking, resumo_size, threshold, pSentences)
+        if resumo_size == 665: # resumo size in words
+            return selectSentencesMulti_ribaldo_bytes(sentences, ranking, resumo_size, threshold, pSentences)
+        else:
+            return selectSentencesMulti_ribaldo(sentences, ranking, resumo_size, threshold, pSentences)
 
     elif anti_redundancy==2:
         print "Seleccion MMR"
@@ -743,6 +834,7 @@ def generate_excel_simple(excel_name, results):
     wr.writerow(first_row)
 
     for i in results_sorted:
+        print i
         to_write = [i[0], i[1]]
         wr.writerow(to_write)
 
@@ -789,25 +881,79 @@ def generate_excel_d2v_mln(excel_name, results, parameters_table):
         print write_line
 
 
+def get_w2v_vector(vocabulary_vectors, sentence):
+    w2v_vectors = []
+    count = 0
+    for word in sentence:
+        if word in vocabulary_vectors:
+            count+=1
+            vector =  vocabulary_vectors[word]
+            w2v_vectors.append(vector)
+
+    if count==0:
+        final_vector = np.repeat(999999999999999, 300)
+    else:
+        final_vector = np.mean(w2v_vectors, axis=0)
+
+    return final_vector
+
+def extract_gramas(gramas):
+    if len(gramas)==1:
+        return gramas[0]
+    else:
+        value = ''
+        for i in gramas:
+            value+=i + ' '
+        value = value[:-1]
+        return value
+
+
+def n_gram_sim(sentence1 , sentence2):
+    N = 4
+    weights = [0.1 , 0.2 , 0.3 , 0.4]
+    similarity = 0
+    for i in range(N):
+        ngrams_s1 = nltk.ngrams(sentence1.split(), i+1)
+        conjunto_s1 = set()
+        for j in ngrams_s1:
+            grama = extract_gramas(j)
+            conjunto_s1.add(grama)
+        ngrams_s2 = nltk.ngrams(sentence2.split(), i+1)
+        conjunto_s2 = set()
+        for j in ngrams_s2:
+            grama = extract_gramas(j)
+            conjunto_s2.add(grama)
+        union = conjunto_s1 | conjunto_s2
+        interseccion = conjunto_s1 & conjunto_s2
+        similarity += weights[i] * (len(interseccion) /float(len(union)))
+    return similarity
+
 
 if __name__ == '__main__':
 
-    x = [10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60]
-    degree = [0.4728, 0.4686, 0.4643, 0.4679, 0.4665, 0.4655, 0.4682, 0.4659, 0.4618, 0.4605, 0.4621]
-    strengt = [0.4528, 0.46, 0.4588, 0.4586, 0.4522, 0.4555, 0.4533, 0.4587, 0.4542, 0.4534, 0.4539]
-    page_rank = [0.4572, 0.4615, 0.4594, 0.455, 0.461, 0.4655, 0.4586, 0.4621, 0.4618, 0.4558, 0.4622]
-    page_rank_w = [0.4522, 0.4613, 0.4599, 0.4584, 0.4511, 0.4552, 0.4534, 0.4584, 0.4549, 0.4533, 0.4548]
-    shortest_paths = [0.4739, 0.4702, 0.4663, 0.4679, 0.4666, 0.4661, 0.468, 0.4652, 0.462, 0.4606, 0.4621]
-    shortest_paths_w = [0.4534, 0.4628, 0.4596, 0.4577, 0.451, 0.4561, 0.4532, 0.4584, 0.4542, 0.4525, 0.4542]
-    btw = [0.4727, 0.4689, 0.4663, 0.4678, 0.469, 0.4667, 0.4677, 0.4642, 0.4617, 0.4602, 0.461]
-    kats = [0.4592, 0.4602, 0.4609, 0.4589, 0.4539, 0.4633, 0.4545, 0.4549, 0.4618, 0.4589, 0.4643]
-    generalized = [0.466, 0.47, 0.4689, 0.4717, 0.47, 0.468, 0.4773, 0.4729, 0.4725, 0.4752, 0.4767]
-    at = [0.4562, 0.4629, 0.456, 0.456, 0.4561, 0.4543, 0.4588, 0.4593, 0.4576, 0.4529, 0.4584]
+    sentence1 = 'hola yo me llamo jorge andoni valverde tohalino'
+    sentence2 = 'jorge valverde tiene una mac y se va a brasil'
+    sentence3 = 'hola yo me llamo que se llama jorge andoni valverde tohalino'
+
+    set1 = {'hola' , 'yo' ,  'me' ,  'llamo' ,  'jorge' ,  'andoni' ,  'valverde' , 'tohalino'}
+
+    set2 = {'jorge' , 'valverde' , 'tiene' , 'una' , 'mac' , 'y' , 'se' ,  'va' , 'a' , 'brasil'}
+
+    #print set1 | set2
+    #print set1 & set2
+
+    print n_gram_sim(sentence1, sentence3)
+
+    c1 = {1, 2, 3, 4, 5, 6}
+    c2 = {2, 4, 6, 8, 10}
+    c3 = {1, 2, 3}
+    c4 = {4, 5, 6}
 
 
-    matrix = [degree, strengt, page_rank, page_rank_w, shortest_paths, shortest_paths_w, btw, kats, generalized, at]
 
-    generate_comparative_graphic(matrix, x)
+    #print c1 | c2
+    #print c1 & c2
+
 
 
 
