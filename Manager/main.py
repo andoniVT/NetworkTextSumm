@@ -9,6 +9,17 @@ from configuration import extras, final_results
 from random import shuffle, choice
 
 
+'''
+Portuguese:
+   SDS: Temario2006 Abstracts
+   MDS: CSTNews Extracts
+English:
+   SDS: DUC2002 Abstracts   
+   MDS: DUC2002 Extracts - DUC2004 Abstracts
+'''
+
+
+
 class Summarizer(object):
     def __init__(self, test, output):
         self.data = self.parse_file(test)
@@ -61,6 +72,9 @@ class Summarizer(object):
         obj = Loader(language=language, type_summary=type_summary, corpus=corpus_name, size=resumo_size_parameter, mln=mln_type_flag)
         loaded_corpus = obj.load()  # diccionario que tiene como key el nombre del documento o nombre del grupo y como claves los documentos y sus sizes
 
+        for i in loaded_corpus.items():
+            print i
+
 
 
         #for i in loaded_corpus.items():
@@ -84,7 +98,7 @@ class Summarizer(object):
 
         '''
         1. Pre-procesamiento de los corpus
-        '''
+        
 
 
         obj = CorpusConversion(loaded_corpus, language, network_type, mln_type, sw_removal)
@@ -94,12 +108,13 @@ class Summarizer(object):
 
         #for i in processed_corpus.items():
         #    print len(i[1][1])
+        '''
 
 
 
         '''
         2. Vectorizacion de los corpus (auxiliar - caso sea requerido)
-        '''
+        
         vectorized_corpus = None
 
         if network_type == 'noun' or mln_type == 'noun':
@@ -131,17 +146,17 @@ class Summarizer(object):
                 #obj = Vectorization(processed_corpus, network_type_subtype, inference_d2v, size_d2v, processed_auxiliar)
                 obj = Vectorization(processed_corpus, network_type_subtype, size_d2v, processed_auxiliar)
                 vectorized_corpus = obj.calculate()
-
+        '''
 
 
         '''
         3. Creacion de la red  y  4. Eliminacion de nodos, limiares
-        '''
+        
 
         #obj = NetworkManager(network_type, mln_type, processed_corpus, vectorized_corpus, distance, inter_edge, limiar_mln, limiar_value)
         obj = NetworkManager(network_type, mln_type, processed_corpus, vectorized_corpus, inter_edge, limiar_mln, limiar_value, limiar_type)
         complex_networks = obj.create_networks()
-
+        '''
 
 
         #for i in complex_networks.items():
@@ -151,13 +166,11 @@ class Summarizer(object):
 
         '''
         5. Node weighting and node ranking
-        '''
-
+        
 
         obj = NodeManager(complex_networks, network_measures)
         all_documentRankings = obj.ranking()
-
-
+        '''
 
 
         #for i in all_documentRankings.items():
@@ -168,19 +181,18 @@ class Summarizer(object):
         '''
         6. Summarization
         #corpus, rankings, sentence_selection, anti_redundancy
-        '''
         
-
         print "Summarization!!!"
         obj = SummaryGenerator(processed_corpus, complex_networks, all_documentRankings, selection_method, anti_redundancy_method, top_sentences)
         obj.generate_summaries()
+        '''
 
 
 
 
         '''
         7. Validation
-        '''
+        
         
         key = choice(all_documentRankings.keys())
         number_of_measures = len(all_documentRankings[key][0])
@@ -212,10 +224,7 @@ class Summarizer(object):
         obj = Validation(validation, language, type_summary, corpus_name, [first_value, second_value, third_value], self.output_excel, parameters_to_show_table)
         obj.validate('results.csv')
         deleteFolders(extras['Automatics'])
-
-
-
-
+        '''
 
 
 
@@ -223,11 +232,11 @@ class Summarizer(object):
         intra = 0
         inter = 0
         dictionary = dict()
-        #dictionary['language'] = 'ptg'
-        dictionary['language'] = 'eng'
+        dictionary['language'] = 'ptg'
+        #dictionary['language'] = 'eng'
         #dictionary['type'] = ('SDS' , None)
-        dictionary['type'] = ('MDS', 1)  #0->sin antiredundancia, 1->metodo de ribaldo 2->metodo de maximum marginal relevance
-        dictionary['corpus'] = 1  #1  para DUC2004 en caso del ingles, solo para MDS
+        dictionary['type'] = ('MDS', 0)  #0->sin antiredundancia, 1->metodo de ribaldo 2->metodo de ngrams  3-> maximum marginal relevance
+        dictionary['corpus'] = 0  #1  para DUC2004 en caso del ingles, solo para MDS
         dictionary['size'] = 'w'
 
 
@@ -249,14 +258,14 @@ class Summarizer(object):
 
 
 
-        dictionary['network'] = ('d2v', [False, ('limiar', [0.10, 0.15, 0.20, 0.25, 0.3, 0.35, 0.4, 0.45,0.5]), 300])
+        #dictionary['network'] = ('d2v', [False, ('limiar', [0.10, 0.15, 0.20, 0.25, 0.3, 0.35, 0.4, 0.45,0.5]), 300])
         #dictionary['network'] = ('d2v', [False, ('knn', [3,5,7,11,13,15]), 200])
 
         #dictionary['network'] = ('gd2v', [('limiar', [0.10, 0.15, 0.20, 0.25, 0.3, 0.35, 0.4, 0.45,0.5])])
 
 
 
-        #dictionary['network'] = ('mln', ['tfidf', [1.1, 1.3, 1.5, 1.7, 1.9], [0.1, 0.15, 0.20, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5]])
+        dictionary['network'] = ('mln', ['tfidf', [1.1, 1.3, 1.5, 1.7, 1.9], [0.1, 0.15, 0.20, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5]])
         #dictionary['network'] = ('mln', ['noun', [1.1, 1.3, 1.5], [0.1, 0.15, 0.20]])
         #dictionary['network'] = ('mln', ['noun', [1.1, 1.3, 1.5, 1.7, 1.9], [0.1, 0.15, 0.20, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5]])  # inter - limiar remocion
 

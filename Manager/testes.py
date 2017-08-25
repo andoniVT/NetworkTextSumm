@@ -17,7 +17,104 @@ from utils import read_document_english , write_data_to_disk , load_data_from_di
 from  nltk.stem.wordnet import WordNetLemmatizer
 import numpy as np
 from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.naive_bayes import GaussianNB , MultinomialNB , BernoulliNB
+from sklearn.svm import SVC
+from sklearn import tree
+from sklearn.model_selection import KFold
 
+
+X = np.array([[10, 20], [30, 40], [11, 21], [32, 42], [50,60], [70,70], [3,5]])
+y = np.array([1, 0, 0, 0, 1, 1, 0])
+
+'''
+s1 , s2, s3, ... , sn (todo el corpus DUC2002)
+1_1 , 1_2 , 1_3 , 1_4 , 1_5 , ... , 2_1 , 2_2 , 2_3 , 2_4 , ... , 3_1 , 3_2 , 3_3 , ... 
+
+
+x_sentences = [[dg_1, stg_1, at_1, gacc_1, sp_1, btw_1, pr_1], [dg_2, stg_2, at_2, gacc_2, sp_2, btw_2, pr_2], [dg_3, stg_3, at_3, gacc_3, sp_3, btw_3, pr_3]]
+y_sentences = [1,1,0,0]
+1: faz parte do summario
+0: nao faz parte
+'''
+
+'''
+[0, 1, 2, 3, 4, 5, 6]
+[4, 40, 4, 20, 75, 50, 10]
+'''
+
+kf = KFold(n_splits=2)
+index_predictions = []
+predictions = []
+
+
+for train_index , test_index in kf.split(X):
+    x_train = X[train_index]
+    x_test = X[test_index]
+
+    y_train = y[train_index]
+    y_test = y[test_index]
+
+
+    print 'x_train:' ,  x_train
+    print 'x_test' , x_test
+    print 'y_train:' , y_train
+    print 'y_test: ' ,y_test
+
+
+    #clf = GaussianNB()
+    #clf = MultinomialNB()
+    clf = SVC(probability=True)
+    #clf = tree.DecisionTreeClassifier()
+    clf.fit(x_train, y_train)
+    prediction = clf.predict(x_test)
+    proba = clf.predict_proba(x_test)
+    #log_proba
+    print 'predicted/real', prediction  , y_test
+    print 'proba: ' , proba
+    print ''
+
+    index_predictions.extend(test_index)
+    predictions.extend(prediction)
+
+
+
+print index_predictions
+print predictions
+
+
+
+
+'''
+import pandas
+from sklearn import model_selection
+from sklearn.linear_model import LogisticRegression
+url = "https://archive.ics.uci.edu/ml/machine-learning-databases/pima-indians-diabetes/pima-indians-diabetes.data"
+names = ['preg', 'plas', 'pres', 'skin', 'test', 'mass', 'pedi', 'age', 'class']
+dataframe = pandas.read_csv(url, names=names)
+array = dataframe.values
+X = array[:,0:8]
+Y = array[:,8]
+num_instances = len(X)
+seed = 7
+kfold = model_selection.KFold(n_splits=10, random_state=seed)
+print kfold
+  
+model = LogisticRegression()
+results = model_selection.cross_val_score(model, X, Y, cv=kfold)
+print("Accuracy: %.3f%% (%.3f%%)") % (results.mean()*100.0, results.std()*100.0)
+'''
+
+
+
+
+
+
+
+
+
+
+
+'''
 
 def find_ngrams(input_list, n):
   return zip(*[input_list[i:] for i in range(n)])
@@ -56,7 +153,7 @@ analyzer = vectorizer.build_analyzer()
 #    print i
 
 
-
+'''
 
 
 

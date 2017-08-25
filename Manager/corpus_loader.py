@@ -1,5 +1,5 @@
 from utils import read_document, count_words, read_document_english, tag_sentence , naive_tag
-from configuration import corpus_dir, summaries_dir
+from configuration import corpus_dir, summaries_dir , extras
 import os
 
 class Loader(object):
@@ -84,9 +84,12 @@ class Loader(object):
         if version == 'cstnews_v1':
             path = corpus_dir[version]
             clusters = os.listdir(path)
+            special = '.DS_Store'
+            if special in clusters: clusters.remove(special)
             for i in clusters:
                 sub_path = path + i + '/' + corpus_dir['textosFonte']
                 documents = os.listdir(sub_path)
+                if special in documents: documents.remove(special)
                 #print len(documents) ,
                 allSentences = []
                 document_lenghts = []

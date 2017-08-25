@@ -1,4 +1,4 @@
-The Justice Department says that Microsofts practices must clear a higher hurdle: yielding net consumer benefits that are immediate and large enough to balance possible long-term harm to competition.
-Microsoft informed Compaq that if it removed Internet Explorer, the computer maker would lose its license for Windows, said Stephen Decker, Compaqs director of software procurement, in testimony to federal investigators.
-To win the deal, Microsoft offered to give America Online a start-up icon on the Windows desktop _ precisely the kind of equal treatment on the main Windows screen that Case had asked the Justice Department to require of Microsoft.
-Consider a 1985
+In a letter to the Justice Department, Netscape said that Microsoft was using its dominance in personal-computer operating systems to force or persuade computer makers to favor Microsofts browser, used to explore the World Wide Web, over the one marketed by Netscape.
+America Online had been complaining, a senior Netscape executive recalled, because Microsoft was bundling the Microsoft Network, a competing online service, with Windows.
+In the June ruling, a federal appeals court said that Microsoft could bundle its browser with its industry-standard Windows operating system and call them one product.
+In return, the people say, Netscape would give Microsoft a se

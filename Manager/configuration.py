@@ -8,6 +8,9 @@ corpus_dir['duc2002'] = '../Corpus/DUC2002/docs/'
 corpus_dir['duc2004'] = '../Corpus/DUC2004/docs/'
 
 corpus_dir['textosFonte'] = "Textos-fonte segmentados/"
+corpus_dir['cst_extratos'] = "Sumarios/Processed/Extratos/"
+corpus_dir['cst_extrato'] = "Sumarios/"
+corpus_dir['cst_extrato_name'] = "_extrato_humano.txt"
 
 
 summaries_dir = dict()
@@ -47,6 +50,14 @@ extras['FolderAux'] = '../Extras/concentrics/'
 extras['CSVAux'] = '../Extras/auxiliar_symmetry.csv'
 extras['Automatics'] = '../Extras/automatics/'
 extras['google_w2v'] = '../Extras/duc02_04_w2v_vectors.pk'
+
+extras['PtgSDS_labels'] = '../Extras/dictionary_temario_class_labels.pk'
+extras['PtgMDS_labels'] = '../Extras/dictionary_cstnews_class_labels.pk'
+extras['EngSDS_labels'] = '../Extras/dictionary_duc2002_sds_class_labels.pk'
+extras['EngMDS_labels_1'] = '../Extras/dictionary_duc2002_mds_class_labels.pk'
+extras['EngMDS_labels_2'] = '../Extras/dictionary_duc2004_mds_class_labels.pk'
+
+
 
 
 

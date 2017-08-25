@@ -105,11 +105,25 @@ def read_document(file, language='ptg'):
         i = unicodedata.normalize('NFKD', i).encode('ascii', 'ignore')
         content += i + " "
 
+    content = content[:-1]
+    content = " ".join(content.split())
     if language == 'ptg':
         sentences = sent_tokenize(content, language='portuguese')
     else:
         sentences = sent_tokenize(content, language='english')
     return sentences
+
+def read_document_extract_cst(file, language='ptg'):
+    sentences = read_document(file, language)
+    new_sentences = []
+    new_sentences.append(sentences[0])
+    for i in range(1,len(sentences)):
+        sent = sentences[i]
+        sent = sent[sent.find('>')+2:]
+        if len(sent)!= 0:
+            new_sentences.append(sent)
+    return new_sentences
+
 
 def remove_portuguese_caracteres(sentence):
     news = []
@@ -517,25 +531,132 @@ def selectSentencesMulti_ribaldo_bytes(sentences, ranking, resumo_size, threshol
     return (name_measure, selected_sentences)
 
 
+def n_gram_sim(sentence1 , sentence2):
+    N = 4
+    weights = [0.1 , 0.2 , 0.3 , 0.4]
+    similarity = 0
+    for i in range(N):
+        ngrams_s1 = nltk.ngrams(sentence1.split(), i+1)
+        conjunto_s1 = set()
+        for j in ngrams_s1:
+            grama = extract_gramas(j)
+            conjunto_s1.add(grama)
+        ngrams_s2 = nltk.ngrams(sentence2.split(), i+1)
+        conjunto_s2 = set()
+        for j in ngrams_s2:
+            grama = extract_gramas(j)
+            conjunto_s2.add(grama)
+        union = conjunto_s1 | conjunto_s2
+        interseccion = conjunto_s1 & conjunto_s2
+        similarity += weights[i] * (len(interseccion) /float(len(union)))
+    return similarity
+
+
+def special_proccesing_sentence(sentence):
+    text = sentence.lower()
+    for c in string.punctuation:
+        text = text.replace(c, '')
+    text = ''.join([i for i in text if not i.isdigit()])
+    return text
+
+
+def isRedundantNgrams(index, sentences, selected):
+    threshold_ngrams = 0.1
+    actual_sentence = sentences[index]
+    actual_sentence = special_proccesing_sentence(actual_sentence)
+    for i in selected:
+        sentence = sentences[i]
+        sentence = special_proccesing_sentence(sentence)
+        similarity = n_gram_sim(actual_sentence, sentence)
+        if similarity >= threshold_ngrams:
+            #print actual_sentence
+            #print sentence
+            #print similarity
+            #print ''
+            return True
+    return False
+
+
+
+
+def selectSentencesMulti_ngrams(sentences, ranking, resumo_size):
+    selected = []
+    name_measure = ranking[0]
+    ranked = ranking[1]
+    initial_index = ranked[0]
+    selected.append(initial_index)
+    sentences_sin_punct = remove_punctuation(sentences[initial_index])
+    size_sentence = len(word_tokenize(sentences_sin_punct))
+
+
+
+    for i in range(1, len(ranked)):
+        index = ranked[i]
+        isRedundantNgrams(index, sentences, selected)
+        if not isRedundantNgrams(index, sentences, selected):
+            selected.append(index)
+            sentences_sin_punct = remove_punctuation(sentences[index])
+            size_sentence += len(word_tokenize(sentences_sin_punct))
+
+        if size_sentence > resumo_size:
+            break
+
+    selected_sentences = []
+    for i in range(len(selected)):
+        index = selected[i]
+        sentence = sentences[index]
+        selected_sentences.append(sentence)
+    return (name_measure, selected_sentences)
+
+
+def selectSentencesMulti_ngrams_bytes(sentences, ranking, resumo_size):
+    selected = []
+    name_measure = ranking[0]
+    ranked = ranking[1]
+    initial_index = ranked[0]
+    selected.append(initial_index)
+    size_sentence = len(sentences[initial_index])
+    for i in range(1, len(ranked)):
+        index = ranked[i]
+        if not isRedundantNgrams (index, sentences, selected):
+            selected.append(index)
+            size_sentence += len(sentences[index])
+        if size_sentence > resumo_size:
+            break
+
+    selected_sentences = []
+    for i in range(len(selected)):
+        index = selected[i]
+        sentence = sentences[index]
+        selected_sentences.append(sentence)
+
+    # print 'summary size: ' , get_size_sentences(selected_sentences)
+    selected_sentences = remove_extra_caracters(selected_sentences)
+    return (name_measure, selected_sentences)
+
 
 def selectSentencesMulti(sentences, ranking, resumo_size, anti_redundancy, threshold, pSentences):
 
 
     if anti_redundancy==0:
-        #print "Seleccion sin anti-redundancia"
+        print "Seleccion sin anti-redundancia"
         if resumo_size == 665:
             return selectSentencesSingle_bytes(sentences, ranking, resumo_size)
         else:
             return selectSentencesSingle(sentences, ranking, resumo_size)
     elif anti_redundancy==1:
-        #print "Seleccion Rivaldo"
+        print "Seleccion Rivaldo"
         if resumo_size == 665: # resumo size in words
             return selectSentencesMulti_ribaldo_bytes(sentences, ranking, resumo_size, threshold, pSentences)
         else:
             return selectSentencesMulti_ribaldo(sentences, ranking, resumo_size, threshold, pSentences)
 
     elif anti_redundancy==2:
-        print "Seleccion MMR"
+        print "Seleccion Ngrams"
+        if resumo_size == 665:
+            return selectSentencesMulti_ngrams_bytes(sentences, ranking, resumo_size)
+        else:
+            return selectSentencesMulti_ngrams(sentences, ranking, resumo_size)
 
 
 
@@ -545,13 +666,10 @@ def folder_creation(dictionary_rankings, type):
     print dictionary_rankings.keys()
     #key = random.choice(dictionary_rankings.keys())
     key = choice(dictionary_rankings.keys())
-
     dict_measures = dictionary_rankings[key]
-
     measures = []
     for i in dict_measures[0].items(): #### modificacion aqui ,
         measures.append(i[0])
-
     #measures.append('random')
     #measures.append('top')
 
@@ -908,25 +1026,7 @@ def extract_gramas(gramas):
         return value
 
 
-def n_gram_sim(sentence1 , sentence2):
-    N = 4
-    weights = [0.1 , 0.2 , 0.3 , 0.4]
-    similarity = 0
-    for i in range(N):
-        ngrams_s1 = nltk.ngrams(sentence1.split(), i+1)
-        conjunto_s1 = set()
-        for j in ngrams_s1:
-            grama = extract_gramas(j)
-            conjunto_s1.add(grama)
-        ngrams_s2 = nltk.ngrams(sentence2.split(), i+1)
-        conjunto_s2 = set()
-        for j in ngrams_s2:
-            grama = extract_gramas(j)
-            conjunto_s2.add(grama)
-        union = conjunto_s1 | conjunto_s2
-        interseccion = conjunto_s1 & conjunto_s2
-        similarity += weights[i] * (len(interseccion) /float(len(union)))
-    return similarity
+
 
 
 if __name__ == '__main__':
