@@ -64,7 +64,7 @@ class Summarizer(object):
 
         network_measures = data['measures']
         selection_method = data['selection']
-        validation = data['validation']
+        #validation = data['validation']
 
         '''
         0 cargar el corpus indicado y dejarlo listo para ser pre-procesado    
@@ -72,8 +72,8 @@ class Summarizer(object):
         obj = Loader(language=language, type_summary=type_summary, corpus=corpus_name, size=resumo_size_parameter, mln=mln_type_flag)
         loaded_corpus = obj.load()  # diccionario que tiene como key el nombre del documento o nombre del grupo y como claves los documentos y sus sizes
 
-        for i in loaded_corpus.items():
-            print i
+        #for i in loaded_corpus.items():
+        #    print i
 
 
 
@@ -98,7 +98,7 @@ class Summarizer(object):
 
         '''
         1. Pre-procesamiento de los corpus
-        
+        '''
 
 
         obj = CorpusConversion(loaded_corpus, language, network_type, mln_type, sw_removal)
@@ -108,12 +108,13 @@ class Summarizer(object):
 
         #for i in processed_corpus.items():
         #    print len(i[1][1])
-        '''
+
 
 
 
         '''
         2. Vectorizacion de los corpus (auxiliar - caso sea requerido)
+        '''
         
         vectorized_corpus = None
 
@@ -146,17 +147,18 @@ class Summarizer(object):
                 #obj = Vectorization(processed_corpus, network_type_subtype, inference_d2v, size_d2v, processed_auxiliar)
                 obj = Vectorization(processed_corpus, network_type_subtype, size_d2v, processed_auxiliar)
                 vectorized_corpus = obj.calculate()
-        '''
+
 
 
         '''
         3. Creacion de la red  y  4. Eliminacion de nodos, limiares
+        '''
         
 
         #obj = NetworkManager(network_type, mln_type, processed_corpus, vectorized_corpus, distance, inter_edge, limiar_mln, limiar_value)
         obj = NetworkManager(network_type, mln_type, processed_corpus, vectorized_corpus, inter_edge, limiar_mln, limiar_value, limiar_type)
         complex_networks = obj.create_networks()
-        '''
+
 
 
         #for i in complex_networks.items():
@@ -166,15 +168,13 @@ class Summarizer(object):
 
         '''
         5. Node weighting and node ranking
-        
+        '''
 
         obj = NodeManager(complex_networks, network_measures)
         all_documentRankings = obj.ranking()
-        '''
 
 
-        #for i in all_documentRankings.items():
-        #    print i
+
 
 
 
@@ -221,7 +221,8 @@ class Summarizer(object):
         #second_value = len(limiar_value)
         print first_value , second_value , third_value
         # validation language type_summary corpus_name
-        obj = Validation(validation, language, type_summary, corpus_name, [first_value, second_value, third_value], self.output_excel, parameters_to_show_table)
+        #obj = Validation(validation, language, type_summary, corpus_name, [first_value, second_value, third_value], self.output_excel, parameters_to_show_table)
+        obj = Validation(language, type_summary, corpus_name, [first_value, second_value, third_value], self.output_excel, parameters_to_show_table)
         obj.validate('results.csv')
         deleteFolders(extras['Automatics'])
         '''
@@ -232,17 +233,18 @@ class Summarizer(object):
         intra = 0
         inter = 0
         dictionary = dict()
-        dictionary['language'] = 'ptg'
-        #dictionary['language'] = 'eng'
+        #dictionary['language'] = 'ptg'
+        dictionary['language'] = 'eng'
         #dictionary['type'] = ('SDS' , None)
         dictionary['type'] = ('MDS', 0)  #0->sin antiredundancia, 1->metodo de ribaldo 2->metodo de ngrams  3-> maximum marginal relevance
         dictionary['corpus'] = 0  #1  para DUC2004 en caso del ingles, solo para MDS
         dictionary['size'] = 'w'
+        dictionary['ml'] = True # False
 
 
 
 
-        #dictionary['network'] = ('noun', [])
+        dictionary['network'] = ('noun', [])
         #dictionary['network'] = ('tfidf', [True, -1, 'cos']) # remover todos los parametros, vacio como la red baseada en sustantivos
         #dictionary['network'] = ('tfidf', [])
         # todas las preuvas que iniclaes fueron con limiar=2
@@ -265,7 +267,7 @@ class Summarizer(object):
 
 
 
-        dictionary['network'] = ('mln', ['tfidf', [1.1, 1.3, 1.5, 1.7, 1.9], [0.1, 0.15, 0.20, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5]])
+        #dictionary['network'] = ('mln', ['tfidf', [1.1, 1.3, 1.5, 1.7, 1.9], [0.1, 0.15, 0.20, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5]])
         #dictionary['network'] = ('mln', ['noun', [1.1, 1.3, 1.5], [0.1, 0.15, 0.20]])
         #dictionary['network'] = ('mln', ['noun', [1.1, 1.3, 1.5, 1.7, 1.9], [0.1, 0.15, 0.20, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5]])  # inter - limiar remocion
 
@@ -298,9 +300,9 @@ class Summarizer(object):
         #dictionary['measures'] = ['ccts']
         #dictionary['measures'] = ['dg']
         #dictionary['measures'] = ['katz']
-        #dictionary['measures'] = ['at']
+        dictionary['measures'] = ['at']
         #dictionary['measures'] = ['trad']
-        dictionary['measures'] = ['*']
+        #dictionary['measures'] = ['*']
         #dictionary['measures'] = ['accs_h2' , 'ccts_4_h3' , 'dg', 'sym_h_m_h2']
         #dictionary['measures'] = ['sp' , 'pr' , 'btw' , 'cc']
         #dictionary['measures'] = ['ccts_2_h2', 'ccts_4_h3']
@@ -311,7 +313,7 @@ class Summarizer(object):
         # dictionary['selection'] = 'ml' # machine learning  ml
 
 
-        dictionary['validation'] = '*'  # todos
+        #dictionary['validation'] = '*'  # todos
         # dictionary['validation'] = 'R'  # rouge1
         # dictionary['validation'] = 'ST' # P-R-F
         return dictionary

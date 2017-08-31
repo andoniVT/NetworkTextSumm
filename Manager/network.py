@@ -605,9 +605,13 @@ class CNMeasures(object):
 
 
     def absortion_time(self, paremeters=None):
-        print "measuring at"
+        print "measuring at" , self.extra_network.vcount()
         #obj = absorption.AbsorptionTime(self.network)
         obj = absorption.AbsorptionTime(self.extra_network)
+        obj.calculate_all_times()
+
+        #a = input()
+
         absorption_time = obj.get_all_times()
         ranked_by_absorption = sortList(absorption_time)
         print ranked_by_absorption

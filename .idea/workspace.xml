@@ -2,66 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d1670ea-0095-471a-9959-e5c303d54b2c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Manager/lib/ml_classification.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Manager/testing2.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Manager/main2.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/absorption.py" afterPath="$PROJECT_DIR$/Manager/absorption.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/configuration.py" afterPath="$PROJECT_DIR$/Manager/configuration.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/corpus_loader.py" afterPath="$PROJECT_DIR$/Manager/corpus_loader.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/lib/ml_classification.py" afterPath="$PROJECT_DIR$/Manager/lib/ml_classification.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/main.py" afterPath="$PROJECT_DIR$/Manager/main.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/results.csv" afterPath="$PROJECT_DIR$/Manager/results.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d30001_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d30001_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d30002_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d30002_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d30003_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d30003_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d30005_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d30005_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d30006_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d30006_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d30007_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d30007_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d30008_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d30008_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d30010_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d30010_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d30011_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d30011_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d30015_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d30015_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d30017_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d30017_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d30020_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d30020_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d30022_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d30022_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d30024_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d30024_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d30026_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d30026_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d30027_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d30027_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d30028_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d30028_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d30029_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d30029_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d30031_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d30031_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d30033_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d30033_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d30034_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d30034_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d30036_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d30036_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d30037_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d30037_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d30038_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d30038_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d30040_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d30040_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d30042_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d30042_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d30044_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d30044_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d30045_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d30045_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d30046_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d30046_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d30047_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d30047_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d30048_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d30048_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d30049_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d30049_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d30050_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d30050_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d30051_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d30051_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d30053_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d30053_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d30055_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d30055_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d30056_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d30056_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d30059_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d30059_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d31001_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d31001_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d31008_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d31008_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d31009_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d31009_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d31013_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d31013_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d31022_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d31022_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d31026_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d31026_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d31031_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d31031_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d31032_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d31032_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d31033_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d31033_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d31038_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d31038_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d31043_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d31043_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/test-summarization/system/d31050_system1.txt" afterPath="$PROJECT_DIR$/Manager/test-summarization/system/d31050_system1.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/testes.py" afterPath="$PROJECT_DIR$/Manager/testes.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/network.py" afterPath="$PROJECT_DIR$/Manager/network.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/testing2.py" afterPath="$PROJECT_DIR$/Manager/testing2.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/utils.py" afterPath="$PROJECT_DIR$/Manager/utils.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Results/test2.csv" afterPath="$PROJECT_DIR$/Results/test2.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Manager/validation.py" afterPath="$PROJECT_DIR$/Manager/validation.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -79,8 +30,42 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Manager/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3495">
-              <caret line="241" column="0" lean-forward="false" selection-start-line="241" selection-start-column="0" selection-end-line="241" selection-end-column="0" />
+            <state relative-caret-position="273">
+              <caret line="245" column="0" lean-forward="true" selection-start-line="245" selection-start-column="0" selection-end-line="245" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="absorption.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Manager/absorption.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="41" column="37" lean-forward="false" selection-start-line="41" selection-start-column="37" selection-end-line="41" selection-end-column="37" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="network.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Manager/network.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="202">
+              <caret line="617" column="55" lean-forward="true" selection-start-line="617" selection-start-column="55" selection-end-line="617" selection-end-column="55" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main2.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Manager/main2.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="163">
+              <caret line="66" column="16" lean-forward="false" selection-start-line="66" selection-start-column="16" selection-end-line="66" selection-end-column="16" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -91,9 +76,11 @@
       <file leaf-file-name="ml_classification.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Manager/lib/ml_classification.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="32" column="12" lean-forward="false" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
-              <folding />
+            <state relative-caret-position="510">
+              <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#45#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -101,32 +88,10 @@
       <file leaf-file-name="corpus_loader.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Manager/corpus_loader.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="89" column="69" lean-forward="false" selection-start-line="89" selection-start-column="16" selection-end-line="89" selection-end-column="69" />
+            <state relative-caret-position="672">
+              <caret line="187" column="27" lean-forward="false" selection-start-line="187" selection-start-column="27" selection-end-line="187" selection-end-column="27" />
               <folding>
-                <element signature="e#0#93#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="configuration.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Manager/configuration.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="30" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="12" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="embeddings_generator.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Manager/embeddings_generator.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2430">
-              <caret line="168" column="71" lean-forward="false" selection-start-line="168" selection-start-column="13" selection-end-line="168" selection-end-column="71" />
-              <folding>
-                <element signature="e#0#59#0" expanded="true" />
+                <element signature="e#0#114#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -135,8 +100,8 @@
       <file leaf-file-name="utils.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Manager/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="122" column="18" lean-forward="false" selection-start-line="122" selection-start-column="18" selection-end-line="122" selection-end-column="18" />
+            <state relative-caret-position="12810">
+              <caret line="878" column="0" lean-forward="false" selection-start-line="878" selection-start-column="0" selection-end-line="878" selection-end-column="0" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -147,8 +112,8 @@
       <file leaf-file-name="text_conversion.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Manager/text_conversion.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2265">
-              <caret line="158" column="60" lean-forward="false" selection-start-line="154" selection-start-column="8" selection-end-line="158" selection-end-column="60" />
+            <state relative-caret-position="200">
+              <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -156,35 +121,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="testes.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Manager/testes.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-795">
-              <caret line="10" column="49" lean-forward="false" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="testing2.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="testing2.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Manager/testing2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
-              <caret line="113" column="0" lean-forward="true" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
+            <state relative-caret-position="1020">
+              <caret line="72" column="1" lean-forward="false" selection-start-line="72" selection-start-column="1" selection-end-line="72" selection-end-column="1" />
               <folding>
                 <element signature="e#1#63#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="validation.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Manager/validation.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="473">
-              <caret line="119" column="31" lean-forward="false" selection-start-line="119" selection-start-column="31" selection-end-line="119" selection-end-column="31" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -212,21 +155,22 @@
       <list>
         <option value="$PROJECT_DIR$/Manager/unitex.py" />
         <option value="$PROJECT_DIR$/Manager/hierarchical.py" />
-        <option value="$PROJECT_DIR$/Manager/absorption.py" />
         <option value="$PROJECT_DIR$/Manager/morphological_analysis.py" />
         <option value="$PROJECT_DIR$/Manager/summarization.py" />
-        <option value="$PROJECT_DIR$/Manager/validation.py" />
         <option value="$PROJECT_DIR$/Manager/text_conversion.py" />
         <option value="$PROJECT_DIR$/Manager/embeddings_generator.py" />
-        <option value="$PROJECT_DIR$/Manager/network.py" />
-        <option value="$PROJECT_DIR$/Manager/lib/ml_classification.py" />
         <option value="$PROJECT_DIR$/Manager/testes.py" />
-        <option value="$PROJECT_DIR$/Manager/main.py" />
-        <option value="$PROJECT_DIR$/Manager/corpus_loader.py" />
         <option value="$PROJECT_DIR$/Manager/testes2.py" />
+        <option value="$PROJECT_DIR$/Manager/lib/ml_classification.py" />
+        <option value="$PROJECT_DIR$/Manager/validation.py" />
         <option value="$PROJECT_DIR$/Manager/configuration.py" />
-        <option value="$PROJECT_DIR$/Manager/utils.py" />
+        <option value="$PROJECT_DIR$/Manager/main2.py" />
         <option value="$PROJECT_DIR$/Manager/testing2.py" />
+        <option value="$PROJECT_DIR$/Manager/utils.py" />
+        <option value="$PROJECT_DIR$/Manager/corpus_loader.py" />
+        <option value="$PROJECT_DIR$/Manager/network.py" />
+        <option value="$PROJECT_DIR$/Manager/main.py" />
+        <option value="$PROJECT_DIR$/Manager/absorption.py" />
       </list>
     </option>
   </component>
@@ -267,7 +211,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.testing2">
+  <component name="RunManager" selected="Python.main">
     <configuration default="false" name="testes" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -286,58 +230,6 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <output_file path="$USER_HOME$/Escritorio/output/testes.txt" is_save="true" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="/System/Library/Frameworks/Python.framework/Versions/2.7/bin/python2.7" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Manager" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="NetworkTextSumm" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Manager/main.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="utils" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Manager" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="NetworkTextSumm" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Manager/utils.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Unittests in testes2.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Manager" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="NetworkTextSumm" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/Manager/testes2.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method />
-    </configuration>
     <configuration default="false" name="testing2" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -351,6 +243,60 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="NetworkTextSumm" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Manager/testing2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="ml_classification" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Manager/lib" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="NetworkTextSumm" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Manager/lib/ml_classification.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="main2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Manager" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="NetworkTextSumm" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Manager/main2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Manager" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="NetworkTextSumm" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Manager/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -454,18 +400,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.testes" />
-      <item index="1" class="java.lang.String" itemvalue="Python.main" />
-      <item index="2" class="java.lang.String" itemvalue="Python.utils" />
-      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in testes2.py" />
-      <item index="4" class="java.lang.String" itemvalue="Python.testing2" />
+      <item index="1" class="java.lang.String" itemvalue="Python.testing2" />
+      <item index="2" class="java.lang.String" itemvalue="Python.ml_classification" />
+      <item index="3" class="java.lang.String" itemvalue="Python.main2" />
+      <item index="4" class="java.lang.String" itemvalue="Python.main" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.testing2" />
-        <item index="1" class="java.lang.String" itemvalue="Python.testes" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in testes2.py" />
-        <item index="3" class="java.lang.String" itemvalue="Python.main" />
-        <item index="4" class="java.lang.String" itemvalue="Python.utils" />
+        <item index="0" class="java.lang.String" itemvalue="Python.main" />
+        <item index="1" class="java.lang.String" itemvalue="Python.main2" />
+        <item index="2" class="java.lang.String" itemvalue="Python.testing2" />
+        <item index="3" class="java.lang.String" itemvalue="Python.ml_classification" />
+        <item index="4" class="java.lang.String" itemvalue="Python.testes" />
       </list>
     </recent_temporary>
     <configuration default="true" type="tests" factoryName="Attests">
@@ -522,7 +468,7 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12811127" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43171114" sideWeight="0.5058565" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5017585" sideWeight="0.4941435" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4091442" sideWeight="0.4941435" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -549,13 +495,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Manager/embeddings_generator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Manager/text_conversion.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1530">
@@ -779,13 +718,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Manager/absorption.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1230">
-          <caret line="84" column="21" lean-forward="false" selection-start-line="84" selection-start-column="21" selection-end-line="84" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Manager/unitex.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -824,13 +756,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Manager/network.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11730">
-          <caret line="789" column="9" lean-forward="false" selection-start-line="789" selection-start-column="9" selection-end-line="789" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Manager/summarization.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1635">
@@ -842,55 +767,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2430">
           <caret line="168" column="71" lean-forward="false" selection-start-line="168" selection-start-column="13" selection-end-line="168" selection-end-column="71" />
-          <folding>
-            <element signature="e#0#59#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Manager/lib/ml_classification.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="12" lean-forward="false" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Manager/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3495">
-          <caret line="241" column="0" lean-forward="false" selection-start-line="241" selection-start-column="0" selection-end-line="241" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Manager/text_conversion.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2265">
-          <caret line="158" column="60" lean-forward="false" selection-start-line="154" selection-start-column="8" selection-end-line="158" selection-end-column="60" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Manager/testes2.py" />
-    <entry file="file://$PROJECT_DIR$/Manager/corpus_loader.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="89" column="69" lean-forward="false" selection-start-line="89" selection-start-column="16" selection-end-line="89" selection-end-column="69" />
-          <folding>
-            <element signature="e#0#93#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Manager/validation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="119" column="31" lean-forward="false" selection-start-line="119" selection-start-column="31" selection-end-line="119" selection-end-column="31" />
+        <state relative-caret-position="60">
+          <caret line="12" column="23" lean-forward="false" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
@@ -899,15 +783,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Manager/configuration.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="30" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="12" selection-end-column="30" />
+        <state relative-caret-position="855">
+          <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="23" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Manager/testing2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1020">
+          <caret line="72" column="1" lean-forward="false" selection-start-line="72" selection-start-column="1" selection-end-line="72" selection-end-column="1" />
+          <folding>
+            <element signature="e#1#63#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Manager/testes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-795">
+        <state relative-caret-position="150">
           <caret line="10" column="49" lean-forward="false" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
           <folding />
         </state>
@@ -915,20 +809,78 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Manager/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="122" column="18" lean-forward="false" selection-start-line="122" selection-start-column="18" selection-end-line="122" selection-end-column="18" />
+        <state relative-caret-position="12810">
+          <caret line="878" column="0" lean-forward="false" selection-start-line="878" selection-start-column="0" selection-end-line="878" selection-end-column="0" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Manager/testing2.py">
+    <entry file="file://$PROJECT_DIR$/Manager/lib/ml_classification.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="113" column="0" lean-forward="true" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
+        <state relative-caret-position="510">
+          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding>
-            <element signature="e#1#63#0" expanded="true" />
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Manager/main2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="66" column="16" lean-forward="false" selection-start-line="66" selection-start-column="16" selection-end-line="66" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Manager/corpus_loader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="672">
+          <caret line="187" column="27" lean-forward="false" selection-start-line="187" selection-start-column="27" selection-end-line="187" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#114#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Manager/text_conversion.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Manager/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="245" column="0" lean-forward="true" selection-start-line="245" selection-start-column="0" selection-end-line="245" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Manager/network.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="617" column="55" lean-forward="true" selection-start-line="617" selection-start-column="55" selection-end-line="617" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Manager/absorption.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="41" column="37" lean-forward="false" selection-start-line="41" selection-start-column="37" selection-end-line="41" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>

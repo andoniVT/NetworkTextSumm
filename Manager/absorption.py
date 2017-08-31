@@ -1,7 +1,7 @@
 import numpy as np
 import igraph
 from igraph import *
-
+import itertools
 
 class AbsorptionTime(object):
 	
@@ -11,6 +11,7 @@ class AbsorptionTime(object):
 		self.matrix_data = self.calculate_transitive()
 		self.transitive_matrix = self.matrix_data[0]
 		self.big_component = self.matrix_data[1]
+		self.all_times = self.calculate_all_times()
 
 	def calculate_transitive(self):
 		mayor = -9999
@@ -59,6 +60,46 @@ class AbsorptionTime(object):
 		time = sum(t)
 		return time
 
+	def calculate_time_v2(self, node_initial, node_final):
+		Q = np.delete(self.transitive_matrix, (node_initial), axis=0)
+		Q = np.delete(Q, (node_final - 1), axis=0)
+		Q = np.delete(Q, (node_initial), axis=1)
+		Q = np.delete(Q, (node_final - 1), axis=1)
+		I = np.identity(Q.shape[0])
+		o = np.ones(Q.shape[0])
+		t = np.linalg.solve(I - Q, o)
+		time = sum(t)
+		return time
+
+	def calculate_all_times(self):
+		indexes = [x for x in range(len(self.big_component))]
+		node_combinations = itertools.combinations(indexes,2)
+		times = dict()
+
+		for i in node_combinations:
+			key = str(i[0]) + '-' + str(i[1])
+			time = self.calculate_time_v2(i[0], i[1])
+			times[key] = time
+		return times
+
+	def mean_absorption_time_v2(self, node_id):
+		mean = 0
+		for i in range(len(self.big_component)):
+			if node_id!=i:
+				if node_id < i:
+					key = str(node_id) + '-' + str(i)
+				else:
+					key = str(i) + '-' + str(node_id)
+
+				time = self.all_times[key]
+				mean+=time
+		denominador = float(len(self.big_component)-1)
+		if denominador!=0:
+			return mean/denominador
+		else:
+			return 9999999
+
+
 	def mean_absorption_time(self, node_id):
 		mean = 0
 		for i in range(len(self.big_component)):
@@ -77,7 +118,7 @@ class AbsorptionTime(object):
 		network_size = self.network.vcount()
 		for i in range(network_size):
 			if i in self.big_component:
-				value = self.mean_absorption_time(index)
+				value = self.mean_absorption_time_v2(index)
 				result.append(value)
 				index+=1
 			else:

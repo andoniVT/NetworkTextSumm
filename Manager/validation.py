@@ -9,8 +9,9 @@ import csv
 import random
 class Validation(object):
 
-    def __init__(self, validation, language, type_summary, corpus_name, table_parameters, excel_name=None, parameters_table=None):
-        self.validation = validation
+    #def __init__(self, validation, language, type_summary, corpus_name, table_parameters, excel_name=None, parameters_table=None):
+    def __init__(self, language, type_summary, corpus_name, table_parameters, excel_name=None, parameters_table=None):
+        #self.validation = validation
         self.language = language
         self.type_summary = type_summary
         self.corpus_name = corpus_name

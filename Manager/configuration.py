@@ -12,6 +12,10 @@ corpus_dir['cst_extratos'] = "Sumarios/Processed/Extratos/"
 corpus_dir['cst_extrato'] = "Sumarios/"
 corpus_dir['cst_extrato_name'] = "_extrato_humano.txt"
 
+corpus_dir['duc2002_extract_mds_200'] = '../Corpus/DUC2002/duc2002_mds_extracts_200.pk'
+corpus_dir['duc2002_extract_mds_400'] = '../Corpus/DUC2002/duc2002_mds_extracts_400.pk'
+
+
 
 summaries_dir = dict()
 

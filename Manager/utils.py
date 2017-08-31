@@ -41,9 +41,7 @@ def parameter_extractor(network_type, data):
     sw_removal = None
     limiar_value = None
     limiar_type = None
-    #distance = None
     size_d2v = None
-    #inference_d2v = None
     inter_edge = None
     intra_edge = None
 
@@ -125,6 +123,8 @@ def read_document_extract_cst(file, language='ptg'):
     return new_sentences
 
 
+
+
 def remove_portuguese_caracteres(sentence):
     news = []
     for word in sentence:
@@ -163,9 +163,12 @@ def read_document_english(document):
     for i in root.iter('TEXT'):
         data+= i.text + " "
     data = re.sub("\s\s+", " ", data)
+    data = ''.join(data)
+    data = " ".join(data.split())
 
     sentences = sent_tokenize(data)
     sentences = clean_sentences(sentences)
+
     return sentences
 
 def permutate_data(data):
@@ -856,17 +859,32 @@ def get_weights(edgesList, weight_list):
         dictionary[key] = weight
     return dictionary
 
+def get_class_label(sentence, dictionary):
+    if sentence in dictionary:
+        return 1
+    else:
+        return 0
 
-def tag_sentence(document_sentences, index):
+def tag_sentence(document_sentences, index, class_labels = None):
     tagged = []
-    for i in document_sentences:
-        tagged.append((i , index))
+    if class_labels is not None:
+        for i in document_sentences:
+            tagged.append((i , index, get_class_label(i, class_labels)))
+    else:
+        for i in document_sentences:
+            tagged.append((i , index, None))
     return tagged
 
-def naive_tag(document_sentences):
+
+
+def naive_tag(document_sentences, class_labels = None):
     tagged = []
-    for i in document_sentences:
-        tagged.append((i, None))
+    if class_labels is not None:
+        for i in document_sentences:
+            tagged.append((i, None, get_class_label(i,class_labels)))
+    else:
+        for i in document_sentences:
+            tagged.append((i, None, None))
     return tagged
 
 def vector_normalize(lista):

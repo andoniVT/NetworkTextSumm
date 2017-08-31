@@ -1,17 +1,39 @@
-from utils import read_document, count_words, read_document_english, tag_sentence , naive_tag
+from utils import read_document, count_words, read_document_english, tag_sentence , naive_tag, load_data_from_disk
 from configuration import corpus_dir, summaries_dir , extras
 import os
 
 class Loader(object):
 
-    def __init__(self, language, type_summary, corpus, size, mln):
+    def __init__(self, language, type_summary, corpus, size, mln, use_ml=None):
         self.dictionary = dict()
         self.language = language
         self.type_summary = type_summary
         self.corpus = corpus
         self.size = size
         self.mln = mln
-        # self.dictionary['ptg'] = [['temario_v1' , 'temario_v2'] , ['cstnews_v1' , 'cstnews_v2']]
+        self.use_machine_learning = use_ml
+        self.dictionary_class_labels = None
+
+        portuguese_class_labels = [extras['PtgSDS_labels'], extras['PtgMDS_labels']]
+        english_class_labels_mds = [extras['EngMDS_labels_1'], extras['EngMDS_labels_2']]
+
+
+        if self.use_machine_learning:
+            if self.language == 'ptg':
+                print portuguese_class_labels[self.type_summary]
+                self.dictionary_class_labels = load_data_from_disk(portuguese_class_labels[self.type_summary])
+            else:
+                if self.type_summary == 0:
+                    print extras['EngSDS_labels']
+                    #self.dictionary_class_labels = load_data_from_disk(extras['EngSDS_labels'])
+                else:
+                    print english_class_labels_mds[self.corpus]
+                    #self.dictionary_class_labels = load_data_from_disk(english_class_labels_mds[self.corpus])
+
+
+
+
+
         self.dictionary['ptg'] = [['temario_v1', 'temario_v2'], ['cstnews_v1', 'cstnews_v2']]
         # self.dictionary['eng'] = [['duc2002' , 'duc2003'] , ['duc2002' , 'duc2003']]
         self.dictionary['eng'] = ['duc2002', 'duc2004']
@@ -55,7 +77,13 @@ class Loader(object):
                 document_name = document_name[:-4]
 
                 document_sentences = read_document(docPath, self.language)
-                naive_tagged_sentences = naive_tag(document_sentences)
+                class_labels_ml = None
+                if self.dictionary_class_labels is not None:
+                    class_labels_ml = self.dictionary_class_labels[document_name]
+                naive_tagged_sentences = naive_tag(document_sentences, class_labels_ml) # modificado para tambien etiquetar las sentencias q hacen parte del sumario o no fazen parte
+
+                #print naive_tagged_sentences
+
 
                 #corpus_dictionary[document_name] = [document_sentences]
                 corpus_dictionary[document_name] = [naive_tagged_sentences]
