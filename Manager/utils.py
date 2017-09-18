@@ -317,6 +317,7 @@ def execute_symmetry(command):
     values = first_part.split(' ')
     values.append(sub_espace)
     values.append(second_part)
+    print values
     call(values)
 
 
@@ -369,11 +370,14 @@ def read_csv_file():
 
 def get_terminal_values(command):
     #values = command.split(' ')  ### cuando es single !!!!!!!!!!
+
     sub_space = command[command.rfind('/')+1:]
     sub_normal = command[:command.rfind('/')+1]
     values = sub_normal.split(' ')
     values[3] = values[3] + sub_space
+
     output = subprocess.Popen(values, stdout=subprocess.PIPE).communicate()[0]
+    #print 'test' , output
     return output
 
 

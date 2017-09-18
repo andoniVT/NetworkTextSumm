@@ -107,7 +107,7 @@ class Summarizer(object):
         
 
         #for i in processed_corpus.items():
-        #    print len(i[1][1])
+        #    print len(i[1][0]) #, len(i[1][1])
 
 
 
@@ -115,6 +115,7 @@ class Summarizer(object):
         '''
         2. Vectorizacion de los corpus (auxiliar - caso sea requerido)
         '''
+        
         
         vectorized_corpus = None
 
@@ -150,6 +151,8 @@ class Summarizer(object):
 
 
 
+
+
         '''
         3. Creacion de la red  y  4. Eliminacion de nodos, limiares
         '''
@@ -166,6 +169,8 @@ class Summarizer(object):
 
 
 
+
+
         '''
         5. Node weighting and node ranking
         '''
@@ -178,22 +183,28 @@ class Summarizer(object):
 
 
 
+
+
         '''
         6. Summarization
         #corpus, rankings, sentence_selection, anti_redundancy
-        
+        '''
+
         print "Summarization!!!"
         obj = SummaryGenerator(processed_corpus, complex_networks, all_documentRankings, selection_method, anti_redundancy_method, top_sentences)
         obj.generate_summaries()
-        '''
+
+        
+
+
 
 
 
 
         '''
         7. Validation
-        
-        
+        '''
+
         key = choice(all_documentRankings.keys())
         number_of_measures = len(all_documentRankings[key][0])
         print  limiar_mln
@@ -225,7 +236,9 @@ class Summarizer(object):
         obj = Validation(language, type_summary, corpus_name, [first_value, second_value, third_value], self.output_excel, parameters_to_show_table)
         obj.validate('results.csv')
         deleteFolders(extras['Automatics'])
-        '''
+
+
+
 
 
 
@@ -236,7 +249,7 @@ class Summarizer(object):
         #dictionary['language'] = 'ptg'
         dictionary['language'] = 'eng'
         #dictionary['type'] = ('SDS' , None)
-        dictionary['type'] = ('MDS', 0)  #0->sin antiredundancia, 1->metodo de ribaldo 2->metodo de ngrams  3-> maximum marginal relevance
+        dictionary['type'] = ('MDS', 2)  #0->sin antiredundancia, 1->metodo de ribaldo 2->metodo de ngrams  3-> maximum marginal relevance
         dictionary['corpus'] = 0  #1  para DUC2004 en caso del ingles, solo para MDS
         dictionary['size'] = 'w'
         dictionary['ml'] = True # False
@@ -244,9 +257,9 @@ class Summarizer(object):
 
 
 
-        dictionary['network'] = ('noun', [])
+        #dictionary['network'] = ('noun', [])
         #dictionary['network'] = ('tfidf', [True, -1, 'cos']) # remover todos los parametros, vacio como la red baseada en sustantivos
-        #dictionary['network'] = ('tfidf', [])
+        dictionary['network'] = ('tfidf', [])
         # todas las preuvas que iniclaes fueron con limiar=2
         # 5-4 no sirve, muy alto
         # 3(no)-2 si,  puede ser alto
@@ -272,7 +285,15 @@ class Summarizer(object):
         #dictionary['network'] = ('mln', ['noun', [1.1, 1.3, 1.5, 1.7, 1.9], [0.1, 0.15, 0.20, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5]])  # inter - limiar remocion
 
         #dictionary['network'] = ('mln', ['tfidf', [1.1, 1.3], [0.1, 0.15, 0.20]])  # inter - limiar remocion
-        #dictionary['network'] = ('mln', ['tfidf', [1.5, 1.7, 1.9], [0.1, 0.15, 0.20]])
+
+        #dictionary['network'] = ('mln', ['tfidf', [0.5, 0.6, 0.7, 0.8, 0.9], [0.1, 0.2, 0.3, 0.4, 0.5]])
+        #dictionary['network'] = ('mln', ['tfidf', [1.0, 1.1, 1.3, 1.5, 1.7, 1.9], [0.1, 0.2, 0.3, 0.4, 0.5]])
+
+
+        #dictionary['network'] = ('mln', ['tfidf', [0.5, 0.6, 0.7, 0.8, 0.9, 1.1, 1.3, 1.5, 1.7, 1.9], [0.1, 0.2, 0.3, 0.4, 0.5]])
+        #dictionary['network'] = ('mln', ['tfidf', [1.1, 1.3, 1.5, 1.7, 1.9], [0.1, 0.2, 0.3, 0.4, 0.5]])
+
+
 
 
     
@@ -297,16 +318,29 @@ class Summarizer(object):
         #dictionary['measures'] = ['dg', 'ccts']
         #dictionary['measures'] = ['sym_h_m_h2', 'sym_l_b_h3' , 'dg', 'sym_h_b_h3']
         #dictionary['measures'] = ['dg' , 'pr', 'btw']
-        #dictionary['measures'] = ['ccts']
-        #dictionary['measures'] = ['dg']
+
+        #dictionary['measures'] = ['gaccs']
         #dictionary['measures'] = ['katz']
-        dictionary['measures'] = ['at']
+        #dictionary['measures'] = ['at']
         #dictionary['measures'] = ['trad']
         #dictionary['measures'] = ['*']
         #dictionary['measures'] = ['accs_h2' , 'ccts_4_h3' , 'dg', 'sym_h_m_h2']
         #dictionary['measures'] = ['sp' , 'pr' , 'btw' , 'cc']
         #dictionary['measures'] = ['ccts_2_h2', 'ccts_4_h3']
         #dictionary['measures'] = ['accs' , 'sym' , 'ccts']
+
+        # ultimos tests con bad measurements
+        # export JAVA_TOOL_OPTIONS="-Dapple.awt.UIElement=true"
+        #dictionary['measures'] = ['ccts_1_h2', 'ccts_2_h2' , 'ccts_6_h2']
+        #dictionary['measures'] = ['ccts']
+        #dictionary['measures'] = ['accs_h2']
+        #dictionary['measures'] = ['accs']
+        dictionary['measures'] = ['sym_l_b_h2' , 'sym_h_b_h2', 'accs_h2']
+        #dictionary['measures'] = ['sym']
+
+
+
+
 
         dictionary['selection'] = 's'  # simple    s
         #dictionary['selection'] = 'v' # votacion  v
@@ -323,6 +357,9 @@ class Summarizer(object):
 if __name__ == '__main__':
 
     output = final_results['prueba2']
+    #output = final_results['prueba_cst']
+    #output = final_results['prueba_d2002']
+    #output = final_results['prueba_d2004']
 
     #obj = Summarizer('input.txt' , 'output.csv')
     obj = Summarizer('input.txt', output)

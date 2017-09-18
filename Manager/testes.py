@@ -13,7 +13,7 @@ import unicodedata
 
 import igraph
 from igraph import *
-from utils import read_document_english , write_data_to_disk , load_data_from_disk
+from utils import read_document_english , write_data_to_disk , load_data_from_disk, cosineSimilarity
 from  nltk.stem.wordnet import WordNetLemmatizer
 import numpy as np
 from sklearn.feature_extraction.text import CountVectorizer
@@ -22,20 +22,50 @@ from sklearn.svm import SVC
 from sklearn import tree
 from sklearn.model_selection import KFold
 
+import itertools
 
+
+
+s1 = ['arequipa', 'be', 'capital', 'large', 'city', 'arequipa', 'region' , 'peru']
+s2 = ['be', 'peru', 'second', 'populous', 'city', 'habitant']
+s3 = ['arequipa', 'second', 'industry', 'commerce', 'city', 'peru']
+s4 = ['industry', 'activity', 'include', 'manufacture', 'good', 'camelid', 'wool', 'product', 'export']
+s5 = ['city', 'have', 'trade', 'tie', 'chile', 'bolivia', 'brasil']
+s6 = ['city', 'be', 'found', 'august', 'garci', 'manuel', 'carbajal']
+s7 = ['history', 'center', 'arequipa', 'span', 'area', 'be', 'unesco', 'world', 'heritage', 'site']
+#s8 = ['history', 'heritage', 'natural', 'scenery', 'cultural', 'site', 'make', 'city', 'major', 'tourist', 'destination']
+
+sentences = [s1, s2, s3, s4, s5, s6, s7]
+
+indexes = [x for x in range(len(sentences))]
+sim_combinations = itertools.combinations(indexes,2)
+
+for i in sim_combinations:
+    print i, round(cosineSimilarity(sentences[i[0]], sentences[i[1]]),2)
+
+
+#print cosineSimilarity(s1, s2)
+
+
+
+
+
+
+
+'''
 X = np.array([[10, 20], [30, 40], [11, 21], [32, 42], [50,60], [70,70], [3,5]])
 y = np.array([1, 0, 0, 0, 1, 1, 0])
 
-'''
-s1 , s2, s3, ... , sn (todo el corpus DUC2002)
-1_1 , 1_2 , 1_3 , 1_4 , 1_5 , ... , 2_1 , 2_2 , 2_3 , 2_4 , ... , 3_1 , 3_2 , 3_3 , ... 
+
+#s1 , s2, s3, ... , sn (todo el corpus DUC2002)
+#1_1 , 1_2 , 1_3 , 1_4 , 1_5 , ... , 2_1 , 2_2 , 2_3 , 2_4 , ... , 3_1 , 3_2 , 3_3 , ... 
 
 
-x_sentences = [[dg_1, stg_1, at_1, gacc_1, sp_1, btw_1, pr_1], [dg_2, stg_2, at_2, gacc_2, sp_2, btw_2, pr_2], [dg_3, stg_3, at_3, gacc_3, sp_3, btw_3, pr_3]]
-y_sentences = [1,1,0,0]
-1: faz parte do summario
-0: nao faz parte
-'''
+#x_sentences = [[dg_1, stg_1, at_1, gacc_1, sp_1, btw_1, pr_1], [dg_2, stg_2, at_2, gacc_2, sp_2, btw_2, pr_2], [dg_3, stg_3, at_3, gacc_3, sp_3, btw_3, pr_3]]
+#y_sentences = [1,1,0,0]
+#1: faz parte do summario
+#0: nao faz parte
+
 
 '''
 [0, 1, 2, 3, 4, 5, 6]
@@ -80,7 +110,7 @@ for train_index , test_index in kf.split(X):
 
 print index_predictions
 print predictions
-
+'''
 
 
 

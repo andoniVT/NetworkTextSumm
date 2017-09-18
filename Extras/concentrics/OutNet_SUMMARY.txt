@@ -1,6 +1,6 @@
 File Columns: 200
 -------
-Working Dir: /home/andoni/PycharmProjects/NetworkTextSumm/Extras/concentrics
+Working Dir: /Users/jorgeandonivalverdetohalino/PycharmProjects/NetworkTextSumm/Extras/concentrics
 OutNet_hier1.dat <- Hier. Number of Nodes.
 OutNet_hier2.dat <- Hier. Number of Edges on Ring.
 OutNet_hier3.dat <- Hier. Clustering Coefficient.
@@ -13,7 +13,7 @@ OutNet_hier8.dat <- Hier. Convergence Ratio.
 SUMMARY:
 Network Type: 10
 Exported Network File: OutNet.net
-37 Vertices.
-240 Edges
-Average Degree: 12.97
+209 Vertices.
+5066 Edges
+Average Degree: 48.48
 -------

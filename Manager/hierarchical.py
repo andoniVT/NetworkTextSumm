@@ -41,7 +41,8 @@ class Symmetry(object):
         self.generate_measures()
 
     def generate_measures(self):
-        command = "./CVSymmetry.exe -c -M -l 3 " + self.location + " " + extras['CSVAux']
+        #command = "./CVSymmetry.exe -c -M -l 3 " + self.location + " " + extras['CSVAux']
+        command = "./CVSymmetry -c -M -l 3 " + self.location + " " + extras['CSVAux']
         print command
         execute_symmetry(command)
 
@@ -80,7 +81,8 @@ class Accessibility(object):
         self.location = extras['XNetAux']
 
     def sort_by_accessibility(self, h):
-        command = "./CVAccessibility -l " + h + " " + self.location
+        #command = "./CVAccessibility -l " + h + " " + self.location
+        command = "./CVAccessibility2 -l " + h + " " + self.location
         print command
         values = get_terminal_values(command)
         values = values.split('\n')

@@ -26,7 +26,7 @@ class CorpusConversion(object):
     def convert(self):
         processed_corpus = dict()
         if self.__corpus_size == 59 or self.__corpus_size == 50:
-            short_sentence_remove_parameter = 4
+            short_sentence_remove_parameter = 9
         else:
             short_sentence_remove_parameter = 0
 

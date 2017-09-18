@@ -608,7 +608,7 @@ class CNMeasures(object):
         print "measuring at" , self.extra_network.vcount()
         #obj = absorption.AbsorptionTime(self.network)
         obj = absorption.AbsorptionTime(self.extra_network)
-        obj.calculate_all_times()
+        #obj.calculate_all_times()
 
         #a = input()
 
@@ -657,6 +657,15 @@ class CNMeasures(object):
             sorted_l_b_h3 = obj.sort_by_symmetry('l', 'b', '3')
             sorted_l_m_h2 = obj.sort_by_symmetry('l', 'm', '2')
             sorted_l_m_h3 = obj.sort_by_symmetry('l', 'm', '3')
+
+            print '1' ,  sorted_h_b_h2
+            print '2' , sorted_h_b_h3
+            print '3' , sorted_h_m_h2
+            print '4', sorted_h_m_h3
+            print '5', sorted_l_b_h2
+            print '6', sorted_l_b_h3
+            print '7', sorted_l_m_h2
+            print '8' , sorted_l_m_h3
             self.node_rankings['sym_h_b_h2'] = sorted_h_b_h2
             self.node_rankings['sym_h_b_h3'] = sorted_h_b_h3
             self.node_rankings['sym_h_m_h2'] = sorted_h_m_h2
@@ -691,6 +700,7 @@ class CNMeasures(object):
                 type = int(parameters[i])-1
                 h = int(parameters[i+1][1])
                 sorted_by_ccts = obj.sort_by_concentric(type, h)
+                print sorted_by_ccts
                 key = 'ccts_' + str(type+1) + '_h' + str(h)
                 self.node_rankings[key] = sorted_by_ccts
                 #results.append(sorted_by_ccts)
@@ -731,6 +741,7 @@ class CNMeasures(object):
         results = []
         #obj = hierarchical.Accessibility(self.network)
         obj = hierarchical.Accessibility(self.extra_network)
+        print h
         if len(h)==0:
             h2 = obj.sort_by_accessibility("2")
             h3 = obj.sort_by_accessibility("3")
@@ -743,6 +754,7 @@ class CNMeasures(object):
             sorted_by_accs = obj.sort_by_accessibility(parameter)
             key = 'accs_h' + parameter
             self.node_rankings[key] = sorted_by_accs
+            print sorted_by_accs
             #results = [acc]
 
         #return results
@@ -787,11 +799,11 @@ class CNMeasures(object):
         self.degree()
         self.shortest_path()
         self.page_rank()
-        self.betweenness()
+        #self.betweenness()
         #self.clustering_coefficient()
         self.generalized_accessibility()
         #self.katz_centrality()
-        #self.absortion_time()
+        self.absortion_time()
         #self.concentrics([])
         #self.symmetry([])
         #self.accessibility([])
@@ -802,8 +814,8 @@ class CNMeasures(object):
         self.degree()
         self.shortest_path()
         self.page_rank()
-        self.betweenness()
-        self.clustering_coefficient()
+        #self.betweenness()
+        #self.clustering_coefficient()
         #sorted_by_shortest_path
         #print sorted_by_degree
         '''
@@ -875,12 +887,18 @@ class NodeManager(object):
             allRankings[document_name] = document_rankings
         return allRankings
         '''
+        index = 1
         for i in self.networks.items():
+            print '------ ANALYSING DOCUMENT NUMBER ' + str(index) + ' --------------'
+            index += 1
             document_name = i[0]
             print document_name
             network_list = i[1][0]
             rankings = []
+            index2 = 1
             for network in network_list:
+                print '--- ANALYSING network ' + str(index2) + ' -------'
+                index2 += 1
                 if type(network) is not tuple: # para verificar si usar los dos tipos de grafos para MLN
                     obj = CNMeasures(network)
                 else:
